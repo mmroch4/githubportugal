@@ -17,15 +17,15 @@ Junte-se às discussões, compartilhe seus projetos e vamos trabalhar juntos par
 
 ## 📝 Código Aberto
 
-Nos últimos anos, temos testemunhado um notável aumento no envolvimento com o movimento de Código Aberto em Portugal. Cada vez mais pessoas e organizações no país estão abraçando tecnologias de código aberto e fazendo contribuições significativas para a comunidade global.
+Nos últimos anos, temos assistido a um notável aumento do envolvimento no Movimento de Código Aberto em Portugal. Cada vez mais pessoas e organizações no país estão a adotar tecnologias de Código Aberto e a fazer contribuições significativas para a comunidade global.
 
-Em solo português, existem inúmeros projetos de código aberto que utilizamos em nosso cotidiano, muitas vezes sem sequer saber que foram criados ou são mantidos por talentosos desenvolvedores nacionais. Para dar destaque a essas realizações, reunimos alguns desses projetos e indivíduos no site githubportugal.pt.
+Em solo português, existem inúmeros projetos de Código Aberto que utilizamos no nosso dia a dia, muitas vezes sem sequer sabermos que foram criados ou são mantidos por talentosos desenvolvedores nacionais. Para dar destaque a estas realizações, reunimos alguns desses projetos e indivíduos no site **[GitHub Portugal](githubportugal.pt)**.
 
-No entanto, nossa lista está em constante evolução, e sabemos que há muitos mais projetos e mantenedores talentosos em Portugal que merecem reconhecimento. Se você conhece outros projetos ou mantenedores portugueses, não hesite em contribuir adicionando-os à nossa lista no arquivo **[CONTRIBUTING.MD](https://github.com/mmroch4/githubportugal/CONTRIBUTING.md)**.
+No entanto, a nossa lista está em constante evolução, e sabemos que há muitos mais projetos e mantenedores talentosos em Portugal que merecem reconhecimento. Se conhece outros projetos ou mantenedores portugueses, não hesite em contribuir adicionando-os à nossa lista no ficheiro **[CONTRIBUTING.MD](https://github.com/mmroch4/githubportugal/CONTRIBUTING.md)**.
 
-Para aqueles que desejam iniciar sua jornada no mundo do Código Aberto ou mantenedores experientes em busca de maneiras de fortalecer suas comunidades, oferecemos recursos abrangentes. Consulte nosso Guia de Código Aberto, repleto de informações sobre como iniciar um projeto de código aberto, construir comunidades colaborativas, adotar melhores práticas de manutenção de projetos e muito mais.
+Para aqueles que desejam iniciar a sua jornada no mundo do Código Aberto ou mantenedores experientes em busca de maneiras de fortalecer as suas comunidades, oferecemos recursos abrangentes. Consulte o nosso Guia de Código Aberto, repleto de informações sobre como iniciar um projeto de Código Aberto, construir comunidades colaborativas, adotar melhores práticas de manutenção de projetos e muito mais.
 
-Juntos, estamos fortalecendo o Código Aberto em Portugal e contribuindo para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junte-se a nós nessa jornada emocionante!
+Juntos, estamos a fortalecer o Código Aberto em Portugal e a contribuir para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junte-se a nós nesta jornada emocionante!
 
 ---
 
