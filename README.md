@@ -35,3 +35,8 @@ O website GitHub Portugal foi inspirado no website **[GitHub Brasil](https://git
 Todas os recursos da empresa **[GitHub](https://github.com/)** utilizados neste projeto **NÃO** tem o intuito de se apropriar da marca e sim, construir uma comunidade em benefício daqueles que utilizam a plataforma [GitHub](https://github.com/).
 
 Todos os recursos estão **devidamente identificados e referenciados** os respectivos proprietários dos direitos.
+
+
+## 🌐 Contacto 
+
+[Disocrd](https://discord.com/invite/cnJdppDkUp) 
