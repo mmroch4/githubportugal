@@ -4,6 +4,7 @@ import { SearchIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
 import { CartaoProjeto } from "@/components/CartaoProjeto";
+import { useFiltrosNoUrl } from "@/lib/filtros-url";
 import { normalizar } from "@/lib/formatar";
 import type { ResumoMantenedor } from "@/lib/mantenedores";
 import type { Projeto } from "@/lib/projetos";
@@ -30,6 +31,16 @@ export function DiretorioProjetos({
   const [categoria, setCategoria] = useState("");
   const [linguagem, setLinguagem] = useState("");
   const [ordenacao, setOrdenacao] = useState<Ordenacao>("estrelas");
+
+  useFiltrosNoUrl({
+    q: [pesquisa, setPesquisa],
+    categoria: [categoria, setCategoria],
+    linguagem: [linguagem, setLinguagem],
+    ordem: [
+      ordenacao === "estrelas" ? "" : ordenacao,
+      (v) => setOrdenacao(v === "atividade" || v === "nome" ? v : "estrelas"),
+    ],
+  });
 
   const linguagens = useMemo(
     () =>

@@ -9,6 +9,7 @@ import {
 } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
+import { useFiltrosNoUrl } from "@/lib/filtros-url";
 import type { Comunidade } from "@/lib/comunidades";
 import { normalizar } from "@/lib/formatar";
 
@@ -25,6 +26,7 @@ export function DiretorioComunidades({
   categorias: string[];
 }) {
   const [pesquisa, setPesquisa] = useState("");
+  useFiltrosNoUrl({ q: [pesquisa, setPesquisa] });
   const [categoria, setCategoria] = useState("");
   const [cidade, setCidade] = useState("");
 
