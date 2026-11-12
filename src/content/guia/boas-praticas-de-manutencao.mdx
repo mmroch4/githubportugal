@@ -1,0 +1,44 @@
+## Triagem de issues
+
+À medida que o projeto cresce, as issues acumulam-se. Uma triagem regular, mesmo que só uma vez por semana, mantém tudo sob controlo:
+
+- **Etiqueta cada issue nova** (`bug`, `funcionalidade`, `documentação`, `good first issue`, `help wanted`) para ser fácil de encontrar.
+- **Pede a informação em falta**, como os passos para reproduzir um erro ou a versão usada. Os modelos de issues ajudam a recebê-la logo à primeira.
+- **Fecha o que não vais fazer**, com uma explicação simpática. É melhor dizer "não" com clareza do que deixar uma issue aberta para sempre.
+- **Marca as duplicadas** e liga-as à issue original.
+
+## Rever contribuições
+
+- **Define o que é preciso para um PR ser aceite** no `CONTRIBUTING.md`: testes, lint, documentação atualizada.
+- **Automatiza o que puderes.** Deixa o GitHub Actions correr os testes e verificar a formatação, para que a revisão humana se concentre no que interessa.
+- **Separa o essencial do gosto pessoal.** Pede alterações quando há um problema real; para preferências de estilo, sugere sem bloquear.
+- **Não tenhas medo de dizer que não** a uma funcionalidade que não encaixa no projeto. Explica porquê e, se possível, sugere uma alternativa.
+- **Protege o ramo principal** com regras que exijam revisão e testes a passar antes do merge.
+
+## Versões e notas de lançamento
+
+- **Usa [versionamento semântico](https://semver.org/)**: `MAJOR.MINOR.PATCH`. Aumenta o MAJOR quando há alterações incompatíveis, o MINOR quando há funcionalidades novas compatíveis e o PATCH para correções.
+- **Publica releases no GitHub** com notas que digam o que mudou, o que deixou de funcionar e quem contribuiu. O GitHub consegue gerar uma primeira versão destas notas automaticamente.
+- **Mantém um `CHANGELOG.md`** se os teus utilizadores precisarem de acompanhar as alterações ao detalhe.
+
+## Segurança
+
+- **Ativa o Dependabot** para receberes alertas e pull requests automáticos quando uma dependência tem uma vulnerabilidade.
+- **Explica como reportar falhas em privado** num ficheiro `SECURITY.md` e ativa o **private vulnerability reporting** nas definições do repositório.
+- **Ativa a autenticação de dois fatores** na tua conta e exige-a a quem tem permissões de escrita.
+- **Nunca guardes segredos no repositório.** Chaves de API e palavras-passe vão para os _secrets_ do GitHub Actions ou para variáveis de ambiente.
+
+## Cuidar de ti
+
+Manter um projeto open source pode ser muito gratificante, mas também cansativo. O esgotamento (_burnout_) é um dos principais motivos para projetos serem abandonados.
+
+- **Define limites.** Não tens de responder a tudo no próprio dia. Diz no README quanto tempo costumas demorar a responder.
+- **Partilha o trabalho.** Dá permissões a contribuidores de confiança. Um projeto com vários mantenedores aguenta melhor as fases em que tens menos tempo.
+- **Aceita apoio.** O [GitHub Sponsors](https://github.com/sponsors) e o [Open Collective](https://opencollective.com/) permitem que utilizadores e empresas apoiem financeiramente o teu trabalho. Adiciona um ficheiro `.github/FUNDING.yml` para mostrar o botão **Sponsor** no repositório.
+- **Se quiseres parar, di-lo.** Arquivar o repositório ou procurar um novo mantenedor é melhor do que deixar as pessoas sem resposta. Um aviso no README chega.
+
+## Aprende com outros mantenedores
+
+Na página de **[mantenedores](/mantenedores)** conheces pessoas em Portugal que mantêm projetos open source. Fala com elas no [Discord](https://discord.com/invite/cnJdppDkUp) ou em **[eventos](/eventos)**: a experiência de quem já passou pelos mesmos problemas é o melhor recurso que existe.
+
+Para aprofundar, consulta os [Open Source Guides](https://opensource.guide/) do GitHub, que também estão traduzidos para português e cobrem todos estes temas com muito mais detalhe.

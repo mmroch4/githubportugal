@@ -1,0 +1,91 @@
+## Escolhe onde contribuir
+
+O mais fácil é começar por um projeto que já usas, porque conheces o problema que ele resolve. Se não tens nenhum em mente, explora o **[diretório de projetos portugueses](/projetos)**.
+
+Depois, procura uma tarefa adequada. Muitos mantenedores marcam as issues mais simples com etiquetas como `good first issue` ou `help wanted`. Juntámos essas issues dos projetos portugueses na página **[primeiras contribuições](/primeiras-contribuicoes)**, por isso é um bom ponto de partida.
+
+Antes de escolheres, confirma três coisas:
+
+- **O projeto está ativo?** Vê a data do último commit e se os pull requests recentes recebem resposta.
+- **Há um `CONTRIBUTING.md`?** Este ficheiro explica como o projeto gosta de receber contribuições. Lê-o com atenção.
+- **A issue está livre?** Se alguém já disse que estava a trabalhar nela, escolhe outra ou pergunta se precisa de ajuda.
+
+## Avisa antes de começar
+
+Deixa um comentário na issue a dizer que queres trabalhar nela, por exemplo:
+
+> Olá! Gostava de pegar nesta issue. A minha ideia é alterar a função X para tratar o caso Y. Parece-vos bem?
+
+Isto evita que duas pessoas façam o mesmo trabalho e dá ao mantenedor a oportunidade de te orientar antes de investires tempo. Para alterações maiores, que não tenham issue, abre primeiro uma issue para discutir a ideia.
+
+## Prepara o ambiente
+
+Se nunca usaste Git, instala-o e configura o teu nome e email:
+
+```bash
+git config --global user.name "O Teu Nome"
+git config --global user.email "o.teu.email@exemplo.pt"
+```
+
+Depois, segue estes passos:
+
+1. **Faz um fork** do repositório, com o botão **Fork** no canto superior direito da página do projeto no GitHub.
+2. **Clona o teu fork** para o teu computador:
+
+```bash
+git clone https://github.com/o-teu-utilizador/nome-do-projeto.git
+cd nome-do-projeto
+```
+
+3. **Liga o repositório original** como `upstream`, para poderes ir buscar as novidades:
+
+```bash
+git remote add upstream https://github.com/dono-original/nome-do-projeto.git
+```
+
+4. **Instala as dependências e corre o projeto** seguindo o README ou o `CONTRIBUTING.md`. Confirma que tudo funciona antes de alterares alguma coisa.
+
+## Faz a alteração
+
+Cria um ramo novo para a tua alteração, a partir da versão mais recente do ramo principal:
+
+```bash
+git fetch upstream
+git switch -c corrigir-erro-no-login upstream/main
+```
+
+Algumas dicas enquanto trabalhas:
+
+- **Mantém a alteração pequena e focada.** Um PR que resolve uma coisa só é muito mais fácil de rever do que um que mexe em tudo.
+- **Segue o estilo do projeto.** Usa as mesmas convenções de nomes, formatação e organização que já existem. Se o projeto tem lint ou formatação automática, corre-os.
+- **Adiciona ou atualiza testes** quando fizer sentido, e confirma que os testes existentes continuam a passar.
+- **Escreve mensagens de commit claras**, que expliquem o que muda e porquê. Alguns projetos usam um formato próprio, como o [Conventional Commits](https://www.conventionalcommits.org/); vê se o teu é um deles.
+
+```bash
+git add .
+git commit -m "Corrigir erro no login quando o email tem maiúsculas"
+git push -u origin corrigir-erro-no-login
+```
+
+## Abre o pull request
+
+Depois do `push`, o GitHub mostra um botão para abrires um pull request a partir do teu ramo. Na descrição:
+
+- Explica **o que mudaste e porquê**.
+- Liga a issue que resolves, escrevendo por exemplo `Closes #123`. Assim a issue fecha-se sozinha quando o PR for aceite.
+- Se mudaste algo visível, junta **capturas de ecrã** de antes e depois.
+- Se o projeto tem um modelo de PR, preenche-o.
+
+## Lida bem com a revisão
+
+É normal o mantenedor pedir alterações. Não é uma crítica a ti, é a forma de manter a qualidade do projeto. Responde com calma, faz as alterações pedidas no mesmo ramo e faz `push` outra vez; o PR atualiza-se sozinho.
+
+Se não concordares com um comentário, explica o teu ponto de vista com educação. E se o PR estiver parado há uma ou duas semanas, um comentário simpático a perguntar se há algo mais que possas fazer costuma resolver. Lembra-te de que muitos mantenedores trabalham no projeto no seu tempo livre.
+
+Se a tua contribuição não for aceite, não desanimes. Aprendeste algo pelo caminho e podes tentar outra issue.
+
+## E depois?
+
+Parabéns, já és contribuidor ou contribuidora de um projeto open source! 🎉 Contribuições públicas também contam para o **[ranking de programadores em Portugal](/ranking)**.
+
+Se quiseres ir mais longe, porque não criar o teu próprio projeto? Começa por perceber como **[escolher uma licença](/guia/licencas)**.

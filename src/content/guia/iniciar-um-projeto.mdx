@@ -1,0 +1,45 @@
+## Antes de criares o repositório
+
+Pergunta-te o que queres com o projeto. Pode ser só para aprenderes e partilhares, pode ser uma ferramenta que esperas que outras pessoas usem, ou pode ser algo que queres que cresça com uma comunidade à volta. Não há resposta errada, mas a resposta muda o tempo que vais dedicar à documentação e às pessoas.
+
+Vale também a pena procurar se já existe um projeto parecido. Às vezes faz mais sentido contribuir para ele do que começar do zero.
+
+## Os ficheiros essenciais
+
+Um projeto open source bem preparado tem, pelo menos, estes ficheiros na raiz do repositório:
+
+- **`README.md`:** a porta de entrada do projeto. Explica o que é e como se usa.
+- **`LICENSE`:** a licença, sem a qual o projeto não é open source. Vê o capítulo sobre **[licenças](/guia/licencas)**.
+- **`CONTRIBUTING.md`:** como contribuir, desde correr o projeto localmente até às regras para pull requests.
+- **`CODE_OF_CONDUCT.md`:** as regras de convivência da comunidade e o que acontece se forem quebradas. O [Contributor Covenant](https://www.contributor-covenant.org/) é um modelo muito usado, com tradução para português, que podes adotar.
+- **`SECURITY.md`:** como reportar uma falha de segurança em privado, sem a publicar numa issue.
+
+O GitHub reconhece estes ficheiros e mostra-os em vários sítios, por exemplo quando alguém abre uma issue ou um pull request. Podes ver o que falta em **Insights → Community Standards** no teu repositório.
+
+## Escrever um bom README
+
+O README é muitas vezes a única coisa que as pessoas leem antes de decidirem se usam o projeto. Um bom README responde a estas perguntas:
+
+1. **O que é?** Uma ou duas frases que expliquem o projeto a quem nunca ouviu falar dele.
+2. **Porque é útil?** Que problema resolve e em que é diferente das alternativas.
+3. **Como começo?** Instruções de instalação e um exemplo mínimo que funcione ao copiar e colar.
+4. **Onde encontro ajuda?** Link para a documentação, para as issues ou para um canal de conversa.
+5. **Como posso contribuir?** Link para o `CONTRIBUTING.md`.
+6. **Qual é a licença?**
+
+Uma captura de ecrã ou um GIF do projeto a funcionar vale muitas palavras.
+
+## Preparar o repositório para contribuições
+
+- **Modelos de issues e pull requests.** Em `.github/ISSUE_TEMPLATE/` e `.github/pull_request_template.md` podes pedir a informação de que precisas, como os passos para reproduzir um bug ou a versão usada.
+- **Etiquetas.** Usa `good first issue` e `help wanted` para as tarefas boas para quem está a chegar. É assim que as issues do teu projeto aparecem na página **[primeiras contribuições](/primeiras-contribuicoes)**.
+- **Integração contínua.** Um workflow do [GitHub Actions](https://docs.github.com/pt/actions) que corra os testes e o lint em cada pull request poupa-te muito trabalho de revisão.
+- **Descrição e tópicos.** Preenche a descrição do repositório e adiciona tópicos (por exemplo `python`, `cli`, `portugal`) para que seja mais fácil de encontrar.
+
+## Publicar
+
+Quando o projeto fizer algo útil, mesmo que ainda seja pouco, publica-o. Não esperes que esteja perfeito. Cria uma primeira release com notas que expliquem o que já funciona e o que ainda falta.
+
+Se és de Portugal ou o projeto é português, **adiciona-o ao [diretório de projetos](/projetos)** do GitHub Portugal com um pull request, seguindo o [CONTRIBUTING.md](https://github.com/mmroch4/githubportugal/blob/main/CONTRIBUTING.md) do nosso repositório. É uma forma simples de lhe dar visibilidade.
+
+O passo seguinte é trazer pessoas para o projeto: vê o capítulo **[Construir uma comunidade](/guia/construir-comunidade)**.
