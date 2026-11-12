@@ -1,0 +1,81 @@
+# Agenda de eventos tech em Portugal
+#
+# Para adicionar um evento, acrescenta uma entrada à lista `eventos` e abre um
+# pull request. Os eventos que já terminaram saem da agenda automaticamente e
+# passam para a lista de eventos passados.
+#
+# Campos de cada evento:
+#   nome       (obrigatório) nome do evento, por exemplo NDC Porto 2026
+#   descricao  (obrigatório) uma frase em português de Portugal, até 200 caracteres
+#   tipo       (obrigatório) um dos tipos listados abaixo
+#   inicio     (obrigatório) data de início, no formato AAAA-MM-DD
+#   fim        (opcional)    data de fim, se o evento durar mais de um dia
+#   cidade     (obrigatório) cidade onde decorre; para eventos só online, escreve Online
+#   formato    (opcional)    presencial (por omissão), online ou híbrido
+#   gratuito   (opcional)    true se a entrada for gratuita
+#   site       (obrigatório) página oficial do evento, começada por https://
+#
+# Instruções completas em CONTRIBUTING.md.
+
+tipos:
+  - Conferência
+  - Meetup
+  - Workshop
+  - Hackathon
+
+eventos:
+  - nome: DevFest Évora-Alentejo 2026
+    descricao: O DevFest do GDG Évora, com palestras sobre web, mobile, cloud e inteligência artificial.
+    tipo: Conferência
+    inicio: 2026-11-14
+    cidade: Évora
+    gratuito: true
+    site: https://gdg.community.dev/gdg-evora/
+
+  - nome: NDC Porto 2026
+    descricao: Conferência para programadores com workshops e palestras sobre .NET, arquitetura, cloud, segurança e boas práticas.
+    tipo: Conferência
+    inicio: 2026-11-17
+    fim: 2026-11-20
+    cidade: Vila Nova de Gaia
+    site: https://ndcporto.com
+
+  - nome: DevOpsDays Portugal e KCD Porto 2026
+    descricao: O DevOpsDays Portugal junta-se ao Kubernetes Community Days Porto em dois dias sobre DevOps, cloud native e plataformas.
+    tipo: Conferência
+    inicio: 2026-11-19
+    fim: 2026-11-20
+    cidade: Porto
+    site: https://devopsdays.org/events/2026-portugal/welcome/
+
+  - nome: Lisbon DevFest 2026
+    descricao: O DevFest anual do GDG Lisboa, um dia de palestras e workshops sobre as tecnologias de programação da Google.
+    tipo: Conferência
+    inicio: 2026-11-28
+    cidade: Lisboa
+    gratuito: true
+    site: https://gdg.community.dev/gdg-lisbon/
+
+  - nome: BSides Porto 2027
+    descricao: Conferência de cibersegurança feita pela comunidade, com palestras técnicas e workshops.
+    tipo: Conferência
+    inicio: 2027-05-06
+    fim: 2027-05-07
+    cidade: Porto
+    site: https://www.eventbrite.pt/o/115321854491
+
+  - nome: UXLx 2027
+    descricao: Conferência de experiência do utilizador com workshops e palestras sobre design de produto e investigação com utilizadores.
+    tipo: Conferência
+    inicio: 2027-05-11
+    fim: 2027-05-14
+    cidade: Lisboa
+    site: https://ux-lx.com
+
+  - nome: Web Summit 2027
+    descricao: Uma das maiores conferências de tecnologia do mundo, com startups, investidores e programadores na MEO Arena.
+    tipo: Conferência
+    inicio: 2027-11-08
+    fim: 2027-11-11
+    cidade: Lisboa
+    site: https://websummit.com
