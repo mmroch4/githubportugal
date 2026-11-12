@@ -30,7 +30,9 @@ const FICHEIRO_EXCLUIDOS = path.join(raiz, FICHEIRO_EXCLUIDOS_RELATIVO);
 const PADRAO_LOGIN = /^[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}$/;
 const TAMANHO_LISTA = 100;
 const POR_PAGINA = 100;
-const LOTE_CONTRIBUICOES = 20;
+const LOTE_CONTRIBUICOES = 8;
+const PEDIDOS_EM_PARALELO = 4;
+const TEMPO_MAXIMO_PEDIDO = 30_000;
 
 // Cidades do ranking. `pesquisas` são os termos usados na pesquisa do GitHub e
 // `padrao` reconhece a cidade no texto da localização (sem acentos, minúsculas).
@@ -168,12 +170,32 @@ async function graphql(query, variables = {}, tentativas = 4) {
         "User-Agent": "githubportugal-ranking",
       },
       body: JSON.stringify({ query, variables }),
-    });
+      signal: AbortSignal.timeout(TEMPO_MAXIMO_PEDIDO),
+    }).catch((e) => ({
+      ok: false,
+      status: 0,
+      headers: new Headers(),
+      json: async () => ({ errors: [{ message: e.message }] }),
+    }));
 
     const corpo = await resposta.json().catch(() => null);
     const falhou = !resposta.ok || (!corpo?.data && corpo?.errors);
 
     if (!falhou) return corpo;
+
+    // Limite de pedidos esgotado: espera pela renovação (no máximo 15 minutos)
+    // sem gastar tentativas.
+    if (resposta.headers.get("x-ratelimit-remaining") === "0") {
+      const renovacao =
+        Number(resposta.headers.get("x-ratelimit-reset")) * 1000;
+      const espera = Math.min(Math.max(renovacao - Date.now(), 1000), 900_000);
+      console.warn(
+        `  limite de pedidos esgotado, a esperar ${Math.round(espera / 1000)}s`
+      );
+      await esperar(espera + 1000);
+      tentativa--;
+      continue;
+    }
 
     if (tentativa >= tentativas) {
       throw new Error(
@@ -214,6 +236,7 @@ async function pesquisar(termo) {
 
   do {
     const { data } = await graphql(QUERY_PESQUISA, { q, depois });
+    if (!data?.search) break;
     for (const no of data.search.nodes) {
       if (no?.login) encontrados.push(no);
     }
@@ -226,62 +249,86 @@ async function pesquisar(termo) {
   return encontrados;
 }
 
-/** Perfil e contribuições públicas do último ano de cada login. */
+function camposDetalhes(lote) {
+  return lote
+    .map(
+      (login, j) => `u${j}: user(login: ${JSON.stringify(login)}) {
+        login name avatarUrl(size: 96) location
+        followers { totalCount }
+        contributionsCollection {
+          contributionCalendar { totalContributions }
+          restrictedContributionsCount
+        }
+      }`
+    )
+    .join("\n");
+}
+
+/**
+ * Lê um lote de perfis. As contribuições são caras de calcular e um lote grande
+ * pode exceder o tempo do GitHub (erro 502): nesse caso, divide o lote ao meio.
+ */
+async function lerLote(lote, resultado) {
+  let data;
+  try {
+    ({ data } = await graphql(`query { ${camposDetalhes(lote)} }`, {}, 2));
+  } catch (e) {
+    if (lote.length > 1) {
+      const meio = Math.ceil(lote.length / 2);
+      await lerLote(lote.slice(0, meio), resultado);
+      await lerLote(lote.slice(meio), resultado);
+    } else {
+      console.warn(`  ${lote[0]} ignorado: ${e.message.slice(0, 200)}`);
+    }
+    return;
+  }
+
+  lote.forEach((_, j) => {
+    const u = data?.[`u${j}`];
+    if (!u) return;
+    const c = u.contributionsCollection;
+    resultado.set(u.login.toLowerCase(), {
+      login: u.login,
+      nome: u.name || null,
+      avatar: u.avatarUrl,
+      localizacao: u.location || null,
+      seguidores: u.followers.totalCount,
+      contribuicoes: Math.max(
+        0,
+        c.contributionCalendar.totalContributions -
+          c.restrictedContributionsCount
+      ),
+    });
+  });
+}
+
+/** Perfil e contribuições públicas do último ano de cada login, com alguns pedidos em paralelo. */
 async function obterDetalhes(logins) {
   const resultado = new Map();
-
+  const lotes = [];
   for (let i = 0; i < logins.length; i += LOTE_CONTRIBUICOES) {
-    const lote = logins.slice(i, i + LOTE_CONTRIBUICOES);
-    const campos = lote
-      .map(
-        (login, j) => `u${j}: user(login: ${JSON.stringify(login)}) {
-          login name avatarUrl(size: 96) location
-          followers { totalCount }
-          contributionsCollection {
-            contributionCalendar { totalContributions }
-            restrictedContributionsCount
-          }
-        }`
-      )
-      .join("\n");
+    lotes.push(logins.slice(i, i + LOTE_CONTRIBUICOES));
+  }
 
-    let data;
-    try {
-      ({ data } = await graphql(`query { ${campos} }`));
-    } catch (e) {
-      console.warn(
-        `  lote ${i / LOTE_CONTRIBUICOES + 1} ignorado: ${e.message}`
-      );
-      continue;
-    }
+  let proximo = 0;
+  let concluidos = 0;
+  const inicio = Date.now();
 
-    lote.forEach((_, j) => {
-      const u = data?.[`u${j}`];
-      if (!u) return;
-      const c = u.contributionsCollection;
-      resultado.set(u.login.toLowerCase(), {
-        login: u.login,
-        nome: u.name || null,
-        avatar: u.avatarUrl,
-        localizacao: u.location || null,
-        seguidores: u.followers.totalCount,
-        contribuicoes: Math.max(
-          0,
-          c.contributionCalendar.totalContributions -
-            c.restrictedContributionsCount
-        ),
-      });
-    });
-
-    if ((i / LOTE_CONTRIBUICOES) % 10 === 9) {
-      console.log(
-        `  ${Math.min(i + LOTE_CONTRIBUICOES, logins.length)}/${
-          logins.length
-        } perfis`
-      );
+  async function trabalhador() {
+    while (proximo < lotes.length) {
+      const lote = lotes[proximo++];
+      await lerLote(lote, resultado);
+      concluidos++;
+      if (concluidos % 25 === 0 || concluidos === lotes.length) {
+        const segundos = Math.round((Date.now() - inicio) / 1000);
+        console.log(
+          `  ${concluidos}/${lotes.length} lotes (${resultado.size} perfis, ${segundos}s)`
+        );
+      }
     }
   }
 
+  await Promise.all(Array.from({ length: PEDIDOS_EM_PARALELO }, trabalhador));
   return resultado;
 }
 
