@@ -35,12 +35,15 @@ yarn build
 - `src/config/metadata.ts` — metadados do site e links da comunidade (Discord, WhatsApp, repositório).
 - `data/projetos.yml` — lista de projetos do diretório.
 - `data/mantenedores.yml` — lista de mantenedores.
+- `data/eventos.yml` — agenda de eventos e `data/comunidades.yml` — diretório de comunidades.
 - `data/ranking.json` — ranking gerado pela GitHub Action (não edites à mão) e `data/ranking-excluidos.yml` — quem pediu para sair do ranking.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
 - `src/lib/issues.ts` — procura nos projetos do diretório as issues para primeiras contribuições.
 - `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
 - `src/lib/ranking.ts` — lê o ranking e retira quem pediu para sair.
+- `src/lib/eventos.ts` e `src/lib/comunidades.ts` — leem a agenda e o diretório de comunidades.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
+- `scripts/validar-eventos.mjs` e `scripts/validar-comunidades.mjs` — validam a agenda e as comunidades.
 - `scripts/gerar-ranking.mjs` — gera o ranking (corre todas as semanas numa GitHub Action).
 
 ## Abrir um pull request
@@ -170,6 +173,93 @@ Acrescenta o teu nome de utilizador à lista `excluidos` em [`data/ranking-exclu
 ```bash
 GITHUB_TOKEN=o-teu-token yarn gerar-ranking   # gera data/ranking.json (demora alguns minutos)
 yarn gerar-ranking --validar                  # só valida data/ranking-excluidos.yml
+```
+
+## Adicionar um evento
+
+A [agenda de eventos](https://githubportugal.com/eventos) é gerada a partir do ficheiro [`data/eventos.yml`](./data/eventos.yml). Os eventos que já terminaram saem da agenda sozinhos e passam para a lista de eventos passados, por isso não precisas de os apagar.
+
+### Que eventos entram
+
+- Conferências, meetups, workshops e hackathons de tecnologia que decorrem em Portugal, ou online e organizados por comunidades portuguesas.
+- Eventos abertos ao público, gratuitos ou pagos. Formações comerciais e eventos internos de empresas não entram.
+- Para meetups que se repetem todos os meses, adiciona cada sessão com data marcada, ou adiciona a comunidade ao [diretório de comunidades](#adicionar-uma-comunidade).
+
+### Como adicionar
+
+1. Abre o ficheiro [`data/eventos.yml`](./data/eventos.yml) e carrega no ícone do lápis para o editares no GitHub.
+2. Acrescenta uma entrada à lista `eventos`, na posição certa por data de início:
+
+   ```yaml
+   - nome: Nome do Evento 2027
+     descricao: Uma frase em português de Portugal sobre o evento.
+     tipo: Conferência
+     inicio: 2027-05-06
+     fim: 2027-05-07 # opcional, só para eventos de mais de um dia
+     cidade: Porto
+     formato: presencial # opcional: presencial, online ou híbrido
+     gratuito: true # opcional
+     site: https://exemplo.pt
+   ```
+
+3. Abre um pull request com o título `Adicionar evento Nome do Evento 2027`.
+
+| Campo | Obrigatório | Regras |
+| --- | --- | --- |
+| `nome` | Sim | Nome do evento, com o ano se for uma edição anual. |
+| `descricao` | Sim | Uma frase em pt-PT, numa só linha, entre 10 e 200 caracteres. |
+| `tipo` | Sim | Um dos tipos listados no topo do ficheiro: Conferência, Meetup, Workshop ou Hackathon. |
+| `inicio` | Sim | Data no formato `AAAA-MM-DD`. |
+| `fim` | Não | Data de fim no mesmo formato, para eventos de vários dias (até 31). |
+| `cidade` | Sim | Cidade onde decorre. Para eventos só online, escreve `Online`. |
+| `formato` | Não | `presencial` (por omissão), `online` ou `híbrido`. |
+| `gratuito` | Não | `true` se a entrada for gratuita. |
+| `site` | Sim | Página oficial do evento ou da inscrição, começada por `https://`. |
+
+A agenda também está disponível como calendário em <https://githubportugal.com/eventos/calendario.ics>, que podes subscrever no Google Calendar, no Outlook ou no Calendário da Apple.
+
+## Adicionar uma comunidade
+
+O [diretório de comunidades](https://githubportugal.com/comunidades) é gerado a partir do ficheiro [`data/comunidades.yml`](./data/comunidades.yml).
+
+### Que comunidades entram
+
+- Meetups, grupos de utilizadores, associações, fóruns e hackerspaces de tecnologia em Portugal, ou comunidades online portuguesas.
+- Só comunidades ativas, com atividade no último ano. Se uma comunidade da lista parou, abre um pull request a removê-la.
+- Comunidades abertas a qualquer pessoa. Empresas e cursos pagos não entram.
+
+### Como adicionar
+
+1. Abre o ficheiro [`data/comunidades.yml`](./data/comunidades.yml) e acrescenta uma entrada à lista `comunidades`:
+
+   ```yaml
+   - nome: Nome da Comunidade
+     descricao: Uma frase em português de Portugal sobre a comunidade.
+     categoria: Linguagens e frameworks
+     cidade: Braga # opcional; sem cidade, é uma comunidade nacional ou online
+     site: https://exemplo.pt
+     github: organizacao-no-github # opcional
+   ```
+
+2. Abre um pull request com o título `Adicionar comunidade Nome da Comunidade`.
+
+| Campo | Obrigatório | Regras |
+| --- | --- | --- |
+| `nome` | Sim | Nome da comunidade. Não pode estar repetido. |
+| `descricao` | Sim | Uma frase em pt-PT, numa só linha, entre 10 e 200 caracteres. |
+| `categoria` | Sim | Uma das categorias listadas no topo do ficheiro. Se nenhuma encaixa, propõe uma nova no pull request. |
+| `cidade` | Não | Cidade onde a comunidade se reúne. Deixa vazio para comunidades nacionais ou só online. |
+| `site` | Sim | Site, página no Meetup, Luma, Discord ou outra página da comunidade, começada por `https://`. |
+| `github` | Não | Conta ou organização da comunidade no GitHub, sem `@`. |
+
+### Validação automática
+
+A mesma GitHub Action dos projetos valida os dois ficheiros. Para validares localmente:
+
+```bash
+yarn validar-eventos
+yarn validar-comunidades            # valida o formato
+yarn validar-comunidades --github   # também confirma as contas do GitHub
 ```
 
 ## Comunidade

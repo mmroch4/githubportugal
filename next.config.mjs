@@ -2,9 +2,12 @@ import createMDX from "@next/mdx";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // A página /projetos lê data/projetos.yml quando volta a ser gerada no servidor.
+  // Estas páginas leem os ficheiros de data/ quando voltam a ser geradas no servidor.
   outputFileTracingIncludes: {
     "/projetos": ["./data/projetos.yml"],
+    "/eventos": ["./data/eventos.yml"],
+    "/eventos/calendario.ics": ["./data/eventos.yml"],
+    "/comunidades": ["./data/comunidades.yml"],
   },
 };
 

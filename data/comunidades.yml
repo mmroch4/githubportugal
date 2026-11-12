@@ -1,0 +1,122 @@
+# Diretório de comunidades tech em Portugal
+#
+# Para adicionar uma comunidade, acrescenta uma entrada à lista `comunidades` e
+# abre um pull request. Só entram comunidades ativas: se uma comunidade deixar
+# de ter atividade, abre um pull request a removê-la.
+#
+# Campos de cada comunidade:
+#   nome       (obrigatório) nome da comunidade
+#   descricao  (obrigatório) uma frase em português de Portugal, até 200 caracteres
+#   categoria  (obrigatório) uma das categorias listadas abaixo
+#   cidade     (opcional)    cidade onde se reúne; sem cidade, é uma comunidade nacional ou online
+#   site       (obrigatório) página da comunidade (site, Meetup, Luma, Discord...), começada por https://
+#   github     (opcional)    organização da comunidade no GitHub, por exemplo GitHub-Portugal
+#
+# Instruções completas em CONTRIBUTING.md.
+
+categorias:
+  - Programação
+  - Linguagens e frameworks
+  - Cloud e DevOps
+  - Dados e inteligência artificial
+  - Segurança
+  - Software livre e conhecimento aberto
+  - Jogos
+  - Diversidade
+  - Makers e hackerspaces
+
+comunidades:
+  - nome: Portugal-a-Programar
+    descricao: A maior comunidade portuguesa de programação, com fórum, wiki e a Revista PROGRAMAR.
+    categoria: Programação
+    site: https://www.portugal-a-programar.pt
+
+  - nome: Porto Codes
+    descricao: Meetup de programadores no Porto, com palestras curtas sobre qualquer tema de desenvolvimento de software.
+    categoria: Programação
+    cidade: Porto
+    site: https://porto.codes
+
+  - nome: GDG Lisboa
+    descricao: O Google Developer Group de Lisboa, que organiza meetups, workshops e o Lisbon DevFest.
+    categoria: Programação
+    cidade: Lisboa
+    site: https://gdg.community.dev/gdg-lisbon/
+
+  - nome: GDG Évora
+    descricao: O Google Developer Group de Évora, que organiza o DevFest Évora-Alentejo e encontros para quem aprende a programar.
+    categoria: Programação
+    cidade: Évora
+    site: https://gdg.community.dev/gdg-evora/
+
+  - nome: Python Portugal
+    descricao: Comunidade portuguesa de Python desde 2009, com eventos, ofertas de emprego, blogue e Slack.
+    categoria: Linguagens e frameworks
+    site: https://python.pt
+
+  - nome: LisboaJS
+    descricao: Comunidade de JavaScript em Lisboa, com meetups e sessões de co-working.
+    categoria: Linguagens e frameworks
+    cidade: Lisboa
+    site: https://lisboajs.org
+
+  - nome: PHP Portugal
+    descricao: Meetups de PHP e desenvolvimento web que vão passando por várias cidades do país.
+    categoria: Linguagens e frameworks
+    site: https://php-portugal.com
+
+  - nome: Laravel Portugal
+    descricao: Comunidade de programadores Laravel em Portugal, com Discord, meetups e vídeos no YouTube.
+    categoria: Linguagens e frameworks
+    site: https://laravel.pt
+
+  - nome: Cloud Native Lisbon
+    descricao: Meetup sobre Kubernetes, cloud native e plataformas, em parceria com outras comunidades de Lisboa.
+    categoria: Cloud e DevOps
+    cidade: Lisboa
+    site: https://www.meetup.com/cloudnativelx/
+
+  - nome: DSPA
+    descricao: Associação portuguesa de ciência de dados e inteligência artificial, com eventos e formação para a comunidade.
+    categoria: Dados e inteligência artificial
+    cidade: Lisboa
+    site: https://dspa.pt
+
+  - nome: OWASP Porto
+    descricao: Capítulo do Porto da OWASP, com encontros regulares sobre segurança de aplicações.
+    categoria: Segurança
+    cidade: Porto
+    site: https://owasp.org/www-chapter-porto/
+
+  - nome: ANSOL
+    descricao: Associação Nacional para o Software Livre, que promove e defende o software livre em Portugal.
+    categoria: Software livre e conhecimento aberto
+    site: https://ansol.org
+
+  - nome: Wikimedia Portugal
+    descricao: Capítulo português do movimento Wikimedia, que apoia a Wikipédia e outros projetos de conhecimento livre.
+    categoria: Software livre e conhecimento aberto
+    site: https://wikimedia.pt
+
+  - nome: GLUA
+    descricao: Grupo de utilizadores de Linux da Universidade de Aveiro, com workshops e eventos abertos.
+    categoria: Software livre e conhecimento aberto
+    cidade: Aveiro
+    site: https://glua.ua.pt
+
+  - nome: Game Dev Lisbon
+    descricao: Coletivo de criadores de jogos de Lisboa, agora parte da IGDA Portugal, com eventos e prémios para a indústria.
+    categoria: Jogos
+    cidade: Lisboa
+    site: https://gamedevlisbon.com
+
+  - nome: Portuguese Women in Tech
+    descricao: Comunidade que trabalha por uma tecnologia portuguesa mais diversa e inclusiva, com eventos e programas para a comunidade.
+    categoria: Diversidade
+    site: https://www.portuguesewomenintech.com
+
+  - nome: LCD Porto
+    descricao: Makerspace no Porto com encontros semanais sobre eletrónica, programação e fabrico digital.
+    categoria: Makers e hackerspaces
+    cidade: Porto
+    site: https://lcdporto.org
