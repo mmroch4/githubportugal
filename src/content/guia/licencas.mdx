@@ -1,0 +1,44 @@
+## Porque precisas de uma licença
+
+Por lei, quem escreve código tem os direitos de autor sobre ele. Se publicares um repositório sem licença, as outras pessoas podem lê-lo, mas **não têm autorização para o usar, alterar ou distribuir**. Ou seja, o projeto não é verdadeiramente open source.
+
+A licença é o documento que diz o que as outras pessoas podem fazer com o teu código e em que condições. Coloca-a num ficheiro chamado `LICENSE` na raiz do repositório. O GitHub deteta-a automaticamente e mostra-a na página do projeto.
+
+> Este capítulo é uma introdução prática e não substitui aconselhamento jurídico. Se o projeto pertence a uma empresa ou tem implicações legais importantes, fala com um jurista.
+
+## Os dois grandes grupos
+
+As licenças open source dividem-se, de forma simples, em dois grupos:
+
+- **Permissivas:** permitem quase tudo, incluindo usar o código em software fechado e comercial, desde que se mantenha o aviso de direitos de autor e a licença. Exemplos: MIT, Apache 2.0, BSD.
+- **Copyleft:** permitem usar e alterar o código, mas quem distribuir uma versão alterada tem de a publicar com a mesma licença. Garantem que o código e as suas derivações continuam abertos. Exemplos: GPL, LGPL, AGPL, MPL.
+
+## As licenças mais comuns
+
+- **[MIT](https://choosealicense.com/licenses/mit/):** curta e muito permissiva. Quem usa o código só tem de manter o aviso de direitos de autor. É a mais usada no GitHub e uma boa escolha por defeito para bibliotecas e projetos pessoais.
+- **[Apache 2.0](https://choosealicense.com/licenses/apache-2.0/):** permissiva como a MIT, mas inclui uma concessão explícita de patentes e exige que as alterações sejam assinaladas. Popular em projetos de empresas.
+- **[GPL v3](https://choosealicense.com/licenses/gpl-3.0/):** copyleft forte. Quem distribuir software que inclua o teu código tem de o disponibilizar sob a GPL, com o código-fonte.
+- **[AGPL v3](https://choosealicense.com/licenses/agpl-3.0/):** como a GPL, mas também se aplica a quem disponibiliza o software através da rede (por exemplo, como serviço web), mesmo sem o distribuir.
+- **[MPL 2.0](https://choosealicense.com/licenses/mpl-2.0/):** copyleft ao nível do ficheiro. As alterações aos ficheiros com MPL têm de ser abertas, mas podem ser combinadas com código fechado.
+- **[EUPL 1.2](https://choosealicense.com/licenses/eupl-1.2/):** licença copyleft criada pela Comissão Europeia, com versões oficiais em todas as línguas da UE, incluindo o português. Muito usada em projetos da administração pública europeia.
+
+Para documentação, imagens e outros conteúdos que não são código, é comum usar uma licença [Creative Commons](https://creativecommons.org/licenses/), como a CC BY 4.0.
+
+## Como escolher
+
+Algumas perguntas que ajudam:
+
+- **Queres que qualquer pessoa, incluindo empresas, possa usar o código como quiser?** Escolhe MIT ou Apache 2.0.
+- **Queres garantir que as melhorias ao teu código também ficam abertas?** Escolhe GPL v3, ou AGPL v3 se for um serviço web.
+- **O projeto faz parte de um ecossistema?** Usa a mesma licença que a maioria dos projetos à volta. Por exemplo, muitos pacotes de JavaScript usam MIT.
+- **Estás a contribuir para um projeto existente?** Não podes mudar a licença; as tuas contribuições ficam com a licença do projeto.
+
+O site [choosealicense.com](https://choosealicense.com/) compara as licenças lado a lado e ajuda a decidir.
+
+## Como adicionar a licença ao repositório
+
+1. No GitHub, abre o repositório e escolhe **Add file → Create new file**.
+2. Escreve `LICENSE` como nome do ficheiro. Aparece um botão **Choose a license template**.
+3. Escolhe a licença, preenche o ano e o teu nome e guarda.
+
+Também podes escolher a licença logo ao criar o repositório. Com a licença tratada, passa ao capítulo **[Iniciar um projeto](/guia/iniciar-um-projeto)**.
