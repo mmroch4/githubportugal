@@ -217,8 +217,26 @@ async function comandoProjeto(interacao: Interacao) {
   ]);
 }
 
+/**
+ * Diagnóstico para quem configura o bot: abre /api/discord no browser para
+ * confirmar que a chave pública está no Vercel e tem o formato certo.
+ */
+export function GET() {
+  const chave = process.env.DISCORD_PUBLIC_KEY?.trim() ?? "";
+  const formatoValido = /^[0-9a-f]{64}$/i.test(chave);
+  return Response.json({
+    chavePublicaDefinida: chave.length > 0,
+    chavePublicaComFormatoValido: formatoValido,
+    mensagem: !chave
+      ? "Falta a variável DISCORD_PUBLIC_KEY no Vercel (ambiente Production). Depois de a guardar, faz Redeploy."
+      : !formatoValido
+      ? "DISCORD_PUBLIC_KEY não parece a Public Key do Discord (64 caracteres hexadecimais, em General Information). Não confundas com o Application ID, o Client Secret ou o token do bot."
+      : "Tudo pronto: podes pôr este endereço em Interactions Endpoint URL no Discord Developer Portal.",
+  });
+}
+
 export async function POST(pedido: Request) {
-  const chavePublica = process.env.DISCORD_PUBLIC_KEY;
+  const chavePublica = process.env.DISCORD_PUBLIC_KEY?.trim();
   if (!chavePublica) {
     return new Response("O bot do Discord não está configurado.", {
       status: 503,
