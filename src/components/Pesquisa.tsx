@@ -33,7 +33,14 @@ function pontuar(e: EntradaPreparada, palavras: string[]) {
 }
 
 /** Pesquisa global do site, aberta com o botão, Ctrl+K, ⌘K ou "/". */
-export function Pesquisa({ botaoClassName }: { botaoClassName?: string }) {
+export function Pesquisa({
+  botaoClassName,
+  children,
+}: {
+  botaoClassName?: string;
+  /** Conteúdo do botão; por omissão, só o ícone da lupa. */
+  children?: React.ReactNode;
+}) {
   const [aberta, setAberta] = useState(false);
   const [termo, setTermo] = useState("");
   const [indice, setIndice] = useState<EntradaPreparada[] | null>(null);
@@ -162,7 +169,7 @@ export function Pesquisa({ botaoClassName }: { botaoClassName?: string }) {
         aria-label="Pesquisar no site (Ctrl+K)"
         title="Pesquisar no site (Ctrl+K)"
       >
-        <SearchIcon className="fill-light-gray-7" />
+        {children ?? <SearchIcon className="fill-light-gray-7" />}
       </button>
 
       {aberta && (

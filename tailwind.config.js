@@ -367,6 +367,13 @@ variaveisEscuras["--cor-black"] = canais(paletaEscura.gray[0]);
 variaveisClaras["--cor-white"] = "0 0% 100%";
 variaveisEscuras["--cor-white"] = canais(paletaEscura.gray[8]);
 
+// Cores da marca, tiradas do gradiente do logótipo (verde #006400 → vermelho
+// #ff0000). No tema escuro são mais claras, para terem contraste com o fundo.
+variaveisClaras["--marca-verde"] = "137 66% 30%";
+variaveisEscuras["--marca-verde"] = "135 58% 50%";
+variaveisClaras["--marca-vermelho"] = "357 80% 46%";
+variaveisEscuras["--marca-vermelho"] = "3 93% 63%";
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -386,6 +393,10 @@ module.exports = {
         ...cores,
       },
       dark: paletaEscura,
+      marca: {
+        verde: "hsl(var(--marca-verde) / <alpha-value>)",
+        vermelho: "hsl(var(--marca-vermelho) / <alpha-value>)",
+      },
     },
     extend: {
       gridTemplateRows: {

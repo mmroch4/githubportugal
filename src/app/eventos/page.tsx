@@ -1,9 +1,4 @@
-import {
-  ArrowLeftIcon,
-  CalendarIcon,
-  PeopleIcon,
-  PlusIcon,
-} from "@primer/octicons-react";
+import { CalendarIcon, PeopleIcon, PlusIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { dadosEvento, metadadosPagina, paginaColecao } from "@/lib/seo";
@@ -24,9 +19,6 @@ export const metadata: Metadata = metadadosPagina({
   descricao: description,
   caminho: "/eventos",
 });
-
-const buttonClassName =
-  "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
 
 const MAX_PASSADOS = 12;
 
@@ -49,16 +41,6 @@ export default async function Eventos() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          <span className="sr-only">Voltar à página principal</span>
-        </Link>
-      </nav>
-
       <header className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">

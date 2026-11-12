@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, ChevronRightIcon } from "@primer/octicons-react";
+import { ChevronRightIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { metadadosPagina, paginaColecao, urlAbsoluto } from "@/lib/seo";
@@ -14,22 +14,9 @@ export const metadata: Metadata = metadadosPagina({
   caminho: "/guia",
 });
 
-const buttonClassName =
-  "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
-
 export default function Guia() {
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          <span className="sr-only">Voltar à página principal</span>
-        </Link>
-      </nav>
-
       <header className="mb-6 sm:mb-8">
         <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
           Guia de código aberto
