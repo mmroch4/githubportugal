@@ -38,6 +38,13 @@ const PAGINAS: EntradaPesquisa[] = [
   },
   {
     tipo: "Página",
+    titulo: "Selo “Feito em Portugal”",
+    descricao: "Selo para o README dos projetos open source portugueses.",
+    url: "/selo",
+    termos: "badge readme feito em portugal shields",
+  },
+  {
+    tipo: "Página",
     titulo: "Primeira contribuição",
     descricao: "Issues para começar a contribuir em projetos portugueses.",
     url: "/primeiras-contribuicoes",

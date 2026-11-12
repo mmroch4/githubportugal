@@ -45,6 +45,7 @@ yarn build
 - `src/lib/ranking.ts` — lê o ranking e retira quem pediu para sair.
 - `src/lib/eventos.ts` e `src/lib/comunidades.ts` — leem a agenda e o diretório de comunidades.
 - `src/lib/empresas.ts` — lê o diretório de empresas e junta-lhe os dados das organizações no GitHub.
+- `src/lib/selo.ts` e `src/lib/gerar-selo.ts` — selo "Feito em Portugal" (página `/selo` e imagens em `/selo/*.svg`).
 - `src/lib/artigos.ts` e `src/lib/devto.ts` — leem os artigos da comunidade e as publicações do dev.to.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
 - `scripts/validar-eventos.mjs` e `scripts/validar-comunidades.mjs` — validam a agenda e as comunidades.
@@ -106,6 +107,16 @@ yarn validar-projetos --github   # também confirma os repositórios na API do G
 ### Estrelas e dados do GitHub
 
 A página `/projetos` pede os dados de cada repositório à API do GitHub e volta a pedi-los, no máximo, de 6 em 6 horas. Sem autenticação, a API permite 60 pedidos por hora, o que chega para correr o projeto localmente. Em produção, define a variável de ambiente `GITHUB_TOKEN` com um [token pessoal](https://github.com/settings/personal-access-tokens) sem permissões adicionais (só leitura de repositórios públicos): o site passa a usar a API GraphQL e faz um pedido por cada 50 projetos.
+
+### Selo "Feito em Portugal"
+
+Depois de o projeto entrar no diretório, podes pôr no README o selo [![Feito em Portugal](https://githubportugal.com/selo/feito-em-portugal.svg)](https://githubportugal.com/selo), que liga à entrada do projeto no GitHub Portugal. Escreve o nome do repositório na página do **[selo](https://githubportugal.com/selo)** e copia o código em Markdown ou HTML (há também uma versão maior, clara e escura, que acompanha o tema do GitHub). Por exemplo:
+
+```markdown
+[![Feito em Portugal](https://githubportugal.com/selo/feito-em-portugal.svg)](https://githubportugal.com/projetos?q=dono%2Fnome-do-repositorio)
+```
+
+Os SVG são gerados em `src/lib/gerar-selo.ts` a partir de `public/logo.svg`.
 
 ## Adicionar um mantenedor
 

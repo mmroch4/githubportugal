@@ -3,6 +3,7 @@ import {
   IssueOpenedIcon,
   PeopleIcon,
   PlusIcon,
+  VerifiedIcon,
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -76,6 +77,13 @@ export default async function Projetos() {
           >
             <PeopleIcon className="fill-light-black" />
             Mantenedores
+          </Link>
+          <Link
+            href="/selo"
+            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+          >
+            <VerifiedIcon className="fill-light-black" />
+            Selo para o README
           </Link>
           <a
             href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}

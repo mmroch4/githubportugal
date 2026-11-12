@@ -31,6 +31,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     pagina("/", "weekly", 1),
     pagina("/projetos", "daily", 0.9),
+    pagina("/selo", "monthly", 0.6),
     pagina("/primeiras-contribuicoes", "daily", 0.8),
     pagina("/mantenedores", "weekly", 0.8),
     ...logins.map((login) => pagina(caminhoMantenedor(login), "weekly", 0.5)),

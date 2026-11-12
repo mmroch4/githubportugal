@@ -4,6 +4,7 @@
 
 # 🇵🇹 GitHub Portugal
 
+[![Feito em Portugal](https://githubportugal.com/selo/feito-em-portugal.svg)](https://githubportugal.com/selo)
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/cnJdppDkUp)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EfKv6GPEgd89XgYXhiAhFk)
 
@@ -22,6 +23,8 @@ Participa nas conversas, partilha os teus projetos e vamos trabalhar juntos para
 Nos últimos anos, temos assistido a um aumento notável do envolvimento no movimento de código aberto em Portugal. Cada vez mais pessoas e organizações no país estão a adotar tecnologias de código aberto e a fazer contribuições significativas para a comunidade global.
 
 Em Portugal existem inúmeros projetos de código aberto que utilizamos no dia a dia, muitas vezes sem sabermos que foram criados ou são mantidos por programadores portugueses. Queremos dar destaque a estes projetos e às pessoas que os mantêm no **[diretório de projetos do GitHub Portugal](https://githubportugal.com/projetos)**. A lista vive no ficheiro [`data/projetos.yml`](./data/projetos.yml).
+
+Se o teu projeto está no diretório, põe no README o **[selo “Feito em Portugal”](https://githubportugal.com/selo)**, que liga à entrada do projeto no site.
 
 A lista está em constante evolução e sabemos que há muitos mais projetos e mantenedores em Portugal que merecem reconhecimento. Se conheces outros projetos ou mantenedores portugueses, adiciona-os com um pull request, seguindo as instruções do ficheiro **[CONTRIBUTING.md](https://github.com/mmroch4/githubportugal/blob/main/CONTRIBUTING.md)**.
 
