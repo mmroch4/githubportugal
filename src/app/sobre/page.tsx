@@ -1,11 +1,13 @@
 import { ArrowLeftIcon, MarkGithubIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
-import { RiDiscordFill } from "react-icons/ri";
+import { RiDiscordFill, RiWhatsappFill } from "react-icons/ri";
+import { links } from "@/config/metadata";
 import AboutContent from "./about.mdx";
 
 export const metadata: Metadata = {
   title: "Sobre",
+  alternates: { canonical: "/sobre" },
 };
 
 const buttonClassName =
@@ -18,7 +20,7 @@ export default function About() {
       <nav className="mb-2 sm:mb-3 md:mb-4">
         <Link href="/" className={buttonClassName}>
           <ArrowLeftIcon verticalAlign="middle" className={iconClassName} />
-          <span className="sr-only">Retornar à página principal</span>
+          <span className="sr-only">Voltar à página principal</span>
         </Link>
       </nav>
 
@@ -30,7 +32,7 @@ export default function About() {
         <ul className="flex items-center justify-center gap-2">
           <li>
             <a
-              href="https://discord.gg/HQJttJmbvm"
+              href={links.discord}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonClassName}
@@ -41,7 +43,20 @@ export default function About() {
           </li>
           <li>
             <a
-              href="https://github.com/GitHub-Portugal/website"
+              href={links.whatsapp}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={buttonClassName}
+            >
+              <RiWhatsappFill className={iconClassName} />
+              <span className="sr-only">
+                Juntar-se à comunidade no WhatsApp
+              </span>
+            </a>
+          </li>
+          <li>
+            <a
+              href={links.repository}
               target="_blank"
               rel="noopener noreferrer"
               className={buttonClassName}

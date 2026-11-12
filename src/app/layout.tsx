@@ -1,10 +1,11 @@
 import { NonOfficialWarning } from "@/components/NonOfficialWarning";
 import { monaSans } from "@/config/fonts";
-import { metadata as m } from "@/config/metadata";
+import { metadata as m, viewport as v } from "@/config/metadata";
 import clsx from "clsx";
 import "./globals.css";
 
 export const metadata = { ...m };
+export const viewport = { ...v };
 
 export default function RootLayout({
   children,
@@ -12,7 +13,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-PT" className="scroll-smooth">
       <body
         className={clsx(
           monaSans.className,
