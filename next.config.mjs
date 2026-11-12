@@ -8,9 +8,15 @@ const nextConfig = {
     "/eventos": ["./data/eventos.yml"],
     "/eventos/calendario.ics": ["./data/eventos.yml"],
     "/comunidades": ["./data/comunidades.yml"],
+    "/artigos": ["./src/content/artigos/*.mdx"],
   },
 };
 
-const withMDX = createMDX();
+const withMDX = createMDX({
+  options: {
+    // Tira o cabeçalho (frontmatter) dos artigos do texto; é lido em src/lib/artigos.ts.
+    remarkPlugins: ["remark-frontmatter"],
+  },
+});
 
 export default withMDX(nextConfig);

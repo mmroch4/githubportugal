@@ -1,0 +1,44 @@
+---
+titulo: Escreve para o GitHub Portugal
+descricao: A secção de artigos está aberta. O que procuramos, como propor um texto e como funciona a revisão.
+data: 2026-11-12
+etiquetas: [comunidade, contribuir]
+---
+
+O GitHub Portugal tem agora uma secção de artigos. A ideia é simples: dar um lugar a textos escritos por programadores portugueses, em português de Portugal, sobre o que fazem e o que aprendem.
+
+Não precisas de ser especialista nem de ter um blogue. Se resolveste um problema difícil, lançaste um projeto open source ou aprendeste alguma coisa que gostavas de ter sabido mais cedo, isso já dá um bom artigo.
+
+## O que procuramos
+
+- **Histórias de projetos:** como nasceu o teu projeto open source, as decisões técnicas que tomaste e o que mudarias.
+- **Tutoriais práticos:** um passo a passo sobre uma ferramenta, uma biblioteca ou uma técnica, com código que o leitor pode experimentar.
+- **Experiência de contribuir:** a tua primeira contribuição, o que aprendeste a rever código de outras pessoas, como manténs um projeto sem te esgotares.
+- **A vida de quem programa em Portugal:** comunidades, eventos, carreira, ensino e o ecossistema tech português.
+
+Evitamos textos promocionais, ofertas de emprego e conteúdo copiado de outros sítios. Se o artigo já foi publicado noutro lado, indica-o no fim do texto.
+
+## Como propor um artigo
+
+Os artigos são ficheiros [MDX](https://mdxjs.com/) (Markdown com alguns extras) guardados no [repositório do site](https://github.com/mmroch4/githubportugal/tree/main/src/content/artigos). Para propores um:
+
+1. Copia o ficheiro `_modelo.mdx` da pasta `src/content/artigos` para um ficheiro novo, por exemplo `como-publiquei-a-minha-primeira-biblioteca.mdx`. O nome do ficheiro passa a ser o endereço do artigo.
+2. Preenche o cabeçalho: `titulo`, `descricao`, `data`, o teu login do GitHub em `autor` e, se quiseres, algumas `etiquetas`.
+3. Escreve o texto por baixo do cabeçalho, em Markdown.
+4. Abre um pull request com o título `Artigo: o título do teu artigo`.
+
+Uma GitHub Action valida o cabeçalho e diz-te se falta alguma coisa. As instruções completas estão no [guia de contribuição](https://github.com/mmroch4/githubportugal/blob/main/CONTRIBUTING.md#escrever-um-artigo).
+
+Se nunca abriste um pull request, o capítulo [Fazer a tua primeira contribuição](/guia/primeira-contribuicao) do nosso guia explica tudo, do fork à revisão.
+
+## Como funciona a revisão
+
+Alguém da comunidade lê o artigo e pode sugerir alterações no próprio pull request: clareza, erros de português, exemplos de código que não funcionam. O objetivo é ajudar-te a publicar o melhor texto possível, não reescrevê-lo. Quando estiver pronto, o pull request é aceite e o artigo fica publicado no site.
+
+O artigo continua a ser teu: o teu nome aparece no topo e qualquer pessoa pode propor correções mais tarde, tal como num projeto open source.
+
+## Preferes publicar no dev.to?
+
+Também está bem. A página de [artigos](/artigos) mostra as publicações recentes do [dev.to](https://dev.to) com a etiqueta **#githubportugal**. Publica lá com essa etiqueta e o teu artigo aparece aqui sozinho, sem pull request.
+
+Tens dúvidas ou queres ideias antes de começar? Passa pelo Discord da comunidade e pergunta.
