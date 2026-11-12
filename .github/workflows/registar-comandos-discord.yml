@@ -1,0 +1,32 @@
+name: Registar comandos do Discord
+
+# Envia ao Discord a lista de comandos do bot (scripts/discord/comandos.mjs).
+# Corre quando essa lista muda na main, ou à mão em Actions > Registar comandos do Discord > Run workflow.
+# Precisa dos segredos DISCORD_APPLICATION_ID e DISCORD_BOT_TOKEN.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "scripts/discord/comandos.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  registar:
+    name: Registar comandos
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Registar comandos
+        run: node scripts/discord/registar-comandos.mjs
+        env:
+          DISCORD_APPLICATION_ID: ${{ secrets.DISCORD_APPLICATION_ID }}
+          DISCORD_BOT_TOKEN: ${{ secrets.DISCORD_BOT_TOKEN }}

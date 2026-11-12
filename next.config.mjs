@@ -8,6 +8,13 @@ const nextConfig = {
     "/eventos": ["./data/eventos.yml"],
     "/eventos/calendario.ics": ["./data/eventos.yml"],
     "/comunidades": ["./data/comunidades.yml"],
+    // Bot do Discord: /ranking, /evento e /projeto.
+    "/api/discord": [
+      "./data/ranking.json",
+      "./data/ranking-excluidos.yml",
+      "./data/eventos.yml",
+      "./data/projetos.yml",
+    ],
     "/artigos": ["./src/content/artigos/*.mdx"],
     "/llms.txt": ["./data/*.yml", "./src/content/artigos/*.mdx"],
     "/llms-full.txt": [
