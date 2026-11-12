@@ -20,11 +20,18 @@ export default function Home() {
 
       <div className="flex flex-col items-center justify-center gap-4 sm:flex-row md:gap-6">
         <Link
-          href="/sobre"
+          href="/projetos"
           className="group flex items-center justify-center gap-2 rounded bg-light-gray-9 px-6 py-3 text-sm font-bold text-white sm:text-base md:text-lg"
         >
-          Ler mais
+          Explorar projetos
           <ChevronRightIcon className="fill-white delay-75 duration-100 ease-in-out group-hover:translate-x-0.5" />
+        </Link>
+
+        <Link
+          href="/sobre"
+          className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
+        >
+          Ler mais
         </Link>
 
         <a
