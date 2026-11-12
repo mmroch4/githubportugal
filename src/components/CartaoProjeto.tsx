@@ -1,5 +1,6 @@
 import {
   ArchiveIcon,
+  IssueOpenedIcon,
   LinkExternalIcon,
   RepoForkedIcon,
   StarIcon,
@@ -13,10 +14,13 @@ export function CartaoProjeto({
   projeto: p,
   atualizadoEm,
   mantenedores = [],
+  issuesAbertas = 0,
 }: {
   projeto: Projeto;
   atualizadoEm: string;
   mantenedores?: ResumoMantenedor[];
+  /** Issues "good first issue" ou "help wanted" sem ninguém atribuído. */
+  issuesAbertas?: number;
 }) {
   return (
     <li className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4">
@@ -84,6 +88,20 @@ export function CartaoProjeto({
         )}
         {p.ultimaAtividade && (
           <span>Atualizado {tempoDesde(p.ultimaAtividade, atualizadoEm)}</span>
+        )}
+        {issuesAbertas > 0 && (
+          <Link
+            href={`/primeiras-contribuicoes?projeto=${encodeURIComponent(
+              p.repositorio.toLowerCase()
+            )}`}
+            title="Issues marcadas como good first issue ou help wanted"
+            className="flex items-center gap-1 font-medium text-light-green-7 hover:underline focus:underline"
+          >
+            <IssueOpenedIcon className="fill-light-green-6" />
+            {issuesAbertas === 1
+              ? "1 issue para começar"
+              : `${issuesAbertas} issues para começar`}
+          </Link>
         )}
         {p.site && (
           <a

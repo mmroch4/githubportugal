@@ -18,11 +18,13 @@ export function DiretorioProjetos({
   categorias,
   atualizadoEm,
   mantenedoresPorProjeto,
+  issuesPorProjeto,
 }: {
   projetos: Projeto[];
   categorias: string[];
   atualizadoEm: string;
   mantenedoresPorProjeto: Record<string, ResumoMantenedor[]>;
+  issuesPorProjeto: Record<string, number>;
 }) {
   const [pesquisa, setPesquisa] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -156,6 +158,7 @@ export function DiretorioProjetos({
               projeto={p}
               atualizadoEm={atualizadoEm}
               mantenedores={mantenedoresPorProjeto[p.repositorio.toLowerCase()]}
+              issuesAbertas={issuesPorProjeto[p.repositorio.toLowerCase()]}
             />
           ))}
         </ul>
