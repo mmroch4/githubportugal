@@ -5,6 +5,8 @@ import { scriptTema } from "@/components/Tema";
 import { monaSans } from "@/config/fonts";
 import { metadata as m, viewport as v } from "@/config/metadata";
 import { dadosEstruturadosSite } from "@/lib/seo";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import clsx from "clsx";
 import "./globals.css";
 
@@ -33,6 +35,9 @@ export default function RootLayout({
         {children}
 
         <Ferramentas />
+        {/* Estatísticas de visitas sem cookies (Vercel Web Analytics e Speed Insights). */}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

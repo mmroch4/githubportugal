@@ -15,7 +15,7 @@ concurrency:
 
 jobs:
   atualizar:
-    name: Gerar data/ranking.json
+    name: Gerar data/ranking.json e data/estatisticas.json
     runs-on: ubuntu-latest
     timeout-minutes: 120
     steps:
@@ -37,13 +37,13 @@ jobs:
 
       - name: Guardar alterações
         run: |
-          if git diff --quiet -- data/ranking.json; then
+          if git diff --quiet -- data/ranking.json data/estatisticas.json; then
             echo "O ranking não mudou."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/ranking.json
+          git add data/ranking.json data/estatisticas.json
           git commit -m "Atualizar ranking de programadores"
           git pull --rebase origin "${GITHUB_REF_NAME}"
           git push origin "HEAD:${GITHUB_REF_NAME}"

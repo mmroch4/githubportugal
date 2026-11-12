@@ -182,7 +182,7 @@ export const dadosEstruturadosSite = {
       url: `${siteUrl}/`,
       name: NOME_SITE,
       description:
-        "Diretório de projetos open source portugueses, mantenedores, primeiras contribuições, ranking, eventos, comunidades, empresas, guia de código aberto e artigos.",
+        "Diretório de projetos open source portugueses, mantenedores, primeiras contribuições, ranking, estatísticas, eventos, comunidades, empresas, guia de código aberto e artigos.",
       inLanguage: "pt-PT",
       publisher: { "@id": ID_ORGANIZACAO },
       potentialAction: {
