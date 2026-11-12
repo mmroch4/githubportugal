@@ -53,7 +53,7 @@ projetos:
     descricao: Biblioteca de validação de dados para TypeScript, igual no front-end e no back-end.
     categoria: Ferramentas de programação
 
-  - repositorio: miukimiu/react-kawaii
+  - repositorio: elizabetdev/react-kawaii
     descricao: Componentes React em SVG com ilustrações fofas ao estilo kawaii.
     categoria: Web
 

@@ -65,7 +65,7 @@ async function lerFicheiro(): Promise<FicheiroProjetos> {
   };
 }
 
-function cabecalhos(): HeadersInit {
+export function cabecalhos(): HeadersInit {
   const h: Record<string, string> = {
     Accept: "application/vnd.github+json",
     "User-Agent": "githubportugal",

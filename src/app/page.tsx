@@ -28,6 +28,13 @@ export default function Home() {
         </Link>
 
         <Link
+          href="/mantenedores"
+          className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
+        >
+          Mantenedores
+        </Link>
+
+        <Link
           href="/sobre"
           className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
         >

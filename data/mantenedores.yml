@@ -1,0 +1,45 @@
+# Mantenedores portugueses de projetos open source
+#
+# Esta lista é só de quem quer aparecer: adiciona-te a ti próprio, ou adiciona
+# outra pessoa apenas com a autorização dela. Para saíres da lista, abre um pull
+# request a remover a tua entrada ou uma issue a pedi-lo.
+#
+# O nome, a fotografia, a bio, a localização e os seguidores são lidos
+# automaticamente do perfil no GitHub, por isso não os escrevas aqui.
+#
+# Campos de cada mantenedor:
+#   github    (obrigatório) nome de utilizador no GitHub, por exemplo mmroch4
+#   projetos  (opcional)    repositórios de data/projetos.yml que a pessoa mantém
+#                           fora da sua conta pessoal (por exemplo, numa
+#                           organização). Os projetos da conta pessoal entram
+#                           automaticamente.
+#   bio       (opcional)    uma frase em português de Portugal, até 160 caracteres,
+#                           que substitui a bio do GitHub
+#
+# Instruções completas em CONTRIBUTING.md.
+
+mantenedores:
+  - github: nunomaduro
+    projetos:
+      - pestphp/pest
+      - larastan/larastan
+
+  - github: apocas
+
+  - github: Bartmr
+
+  - github: elizabetdev
+
+  - github: jfoclpf
+
+  - github: rgllm
+
+  - github: rncbc
+
+  - github: marmelo
+
+  - github: zorkpt
+
+  - github: cmota
+
+  - github: mmroch4
