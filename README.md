@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="public/logo.svg" alt="Logótipo do GitHub Portugal" width="128" height="128">
+</p>
+
 # 🇵🇹 GitHub Portugal
 
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/cnJdppDkUp)

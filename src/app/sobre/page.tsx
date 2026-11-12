@@ -4,6 +4,7 @@ import Link from "next/link";
 import { RiDiscordFill, RiWhatsappFill } from "react-icons/ri";
 import { links } from "@/config/metadata";
 import AboutContent from "./about.mdx";
+import { Logo } from "@/components/Logo";
 
 export const metadata: Metadata = {
   title: "Sobre",
@@ -25,7 +26,12 @@ export default function About() {
       </nav>
 
       <header className="mb-4 flex flex-wrap items-center justify-between gap-1 sm:mb-5 sm:gap-2 md:mb-6">
-        <h1 className="text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="flex items-center gap-3 text-3xl font-black sm:text-4xl md:text-5xl">
+          <Logo
+            alt=""
+            size={56}
+            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
+          />
           GitHub Portugal
         </h1>
 
