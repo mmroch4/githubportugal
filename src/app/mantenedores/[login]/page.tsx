@@ -1,11 +1,9 @@
 import {
-  ArrowLeftIcon,
   LinkIcon,
   LocationIcon,
   MarkGithubIcon,
   OrganizationIcon,
   PeopleIcon,
-  StarIcon,
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -47,9 +45,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const buttonClassName =
-  "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
-
 export default async function PerfilMantenedor({ params }: Props) {
   const { login } = await params;
   const m = await obterMantenedor(login);
@@ -57,86 +52,107 @@ export default async function PerfilMantenedor({ params }: Props) {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/mantenedores" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          <span className="sr-only">Voltar aos mantenedores</span>
+      <nav
+        aria-label="Migalhas"
+        className="mb-4 font-mono text-sm text-light-gray-6"
+      >
+        <Link href="/mantenedores" className="hover:text-light-black">
+          Mantenedores
         </Link>
+        <span className="mx-2 text-light-gray-4">/</span>
+        <span className="text-light-black">{m.login}</span>
       </nav>
 
-      <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:gap-6">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={m.avatar}
-          alt=""
-          width={128}
-          height={128}
-          className="h-24 w-24 shrink-0 rounded-full border border-light-gray-2 sm:h-32 sm:w-32"
+      <header className="mb-10 overflow-hidden rounded-xl border border-light-gray-2 bg-white/60">
+        {/* Capa com as cores da marca e uma grelha subtil. */}
+        <div
+          aria-hidden="true"
+          className="h-24 sm:h-32"
+          style={{
+            backgroundImage:
+              "linear-gradient(90deg, hsl(var(--marca-verde) / 0.35), transparent 50%, hsl(var(--marca-vermelho) / 0.3)), linear-gradient(hsl(var(--cor-gray-3) / 0.25) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--cor-gray-3) / 0.25) 1px, transparent 1px)",
+            backgroundSize: "100% 100%, 24px 24px, 24px 24px",
+          }}
         />
 
-        <div className="min-w-0">
-          <h1 className="break-words text-3xl font-black sm:text-4xl">
+        <div className="px-5 pb-6 sm:px-8">
+          <div className="-mt-12 mb-4 flex flex-wrap items-end justify-between gap-4 sm:-mt-16">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={m.avatar}
+              alt=""
+              width={128}
+              height={128}
+              className="h-24 w-24 shrink-0 rounded-full border-4 border-light-gray-0 bg-light-gray-0 sm:h-32 sm:w-32"
+            />
+            <div className="flex flex-wrap gap-2">
+              <a
+                href={m.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90"
+              >
+                <MarkGithubIcon className="fill-current" />
+                Perfil no GitHub
+              </a>
+              {m.site && (
+                <a
+                  href={m.site}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1"
+                >
+                  <LinkIcon className="fill-current" />
+                  Site
+                </a>
+              )}
+            </div>
+          </div>
+
+          <h1 className="break-words text-3xl font-black tracking-tight sm:text-4xl">
             {m.nome}
           </h1>
-          <p className="mb-2 text-lg text-light-gray-6">@{m.login}</p>
+          <p className="mb-3 font-mono text-light-gray-6">@{m.login}</p>
           {m.bio && (
-            <p className="mb-3 max-w-2xl text-base text-light-gray-8 sm:text-lg">
+            <p className="mb-4 max-w-2xl text-base text-light-gray-8 sm:text-lg">
               {m.bio}
             </p>
           )}
 
-          <ul className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6 sm:text-base">
+          <ul className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6">
             {m.localizacao && (
               <li className="flex items-center gap-1">
-                <LocationIcon className="fill-light-gray-6" />
+                <LocationIcon className="fill-current" />
                 {m.localizacao}
               </li>
             )}
             {m.empresa && (
               <li className="flex items-center gap-1">
-                <OrganizationIcon className="fill-light-gray-6" />
+                <OrganizationIcon className="fill-current" />
                 {m.empresa}
-              </li>
-            )}
-            {m.seguidores !== null && (
-              <li className="flex items-center gap-1">
-                <PeopleIcon className="fill-light-gray-6" />
-                {formatoNumero.format(m.seguidores)} seguidores
-              </li>
-            )}
-            {m.estrelas > 0 && (
-              <li className="flex items-center gap-1">
-                <StarIcon className="fill-light-gray-6" />
-                {formatoNumero.format(m.estrelas)} estrelas nos projetos
               </li>
             )}
           </ul>
 
-          <div className="mt-4 flex flex-wrap gap-2">
-            <a
-              href={m.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
-            >
-              <MarkGithubIcon className="fill-white" />
-              Perfil no GitHub
-            </a>
-            {m.site && (
-              <a
-                href={m.site}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
-              >
-                <LinkIcon className="fill-light-black" />
-                Site
-              </a>
-            )}
-          </div>
+          <dl className="grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-lg border border-light-gray-2 bg-light-gray-2 text-center">
+            {[
+              {
+                valor: m.projetos.length,
+                rotulo: "projetos",
+                icone: PeopleIcon,
+              },
+              // 0 estrelas quase sempre quer dizer que não há dados do GitHub.
+              { valor: m.estrelas || null, rotulo: "estrelas" },
+              { valor: m.seguidores, rotulo: "seguidores" },
+            ].map((n) => (
+              <div key={n.rotulo} className="bg-light-gray-0 px-3 py-3">
+                <dt className="text-xs text-light-gray-6">{n.rotulo}</dt>
+                <dd className="font-mono text-lg font-bold tabular-nums">
+                  {n.valor === null ? "—" : formatoNumero.format(n.valor)}
+                </dd>
+              </div>
+            ))}
+          </dl>
         </div>
       </header>
 

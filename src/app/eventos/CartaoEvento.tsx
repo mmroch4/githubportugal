@@ -55,20 +55,22 @@ export function CartaoEvento({
   return (
     <li
       className={clsx(
-        "flex gap-4 rounded-md border bg-white p-4",
-        aDecorrer ? "border-light-green-3" : "border-light-gray-2"
+        "flex gap-4 rounded-xl border bg-white/60 p-4 transition hover:bg-white",
+        aDecorrer
+          ? "border-marca-verde/60 shadow-lg shadow-marca-verde/10"
+          : "border-light-gray-2 hover:border-light-gray-3"
       )}
     >
       <div
         aria-hidden="true"
         className={clsx(
-          "flex h-16 w-14 shrink-0 flex-col items-center justify-center rounded-md border",
+          "flex h-16 w-14 shrink-0 flex-col items-center justify-center rounded-lg border font-mono",
           passado
             ? "border-light-gray-2 bg-light-gray-0 text-light-gray-6"
             : "border-light-gray-2 bg-light-gray-0"
         )}
       >
-        <span className="text-2xl font-black leading-none">
+        <span className="text-2xl font-bold leading-none">
           {formatoDiaCurto.format(inicio)}
         </span>
         <span className="text-xs font-bold uppercase text-light-gray-6">
@@ -90,9 +92,10 @@ export function CartaoEvento({
             <span
               className={clsx(
                 etiquetaClassName,
-                "border-light-green-2 bg-light-green-0 text-light-green-8"
+                "border-marca-verde/40 text-marca-verde"
               )}
             >
+              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-marca-verde" />
               A decorrer
             </span>
           )}
@@ -136,7 +139,7 @@ export function CartaoEvento({
             <span
               className={clsx(
                 etiquetaClassName,
-                "border-light-blue-2 bg-light-blue-0 text-light-blue-7"
+                "border-light-gray-2 text-marca-verde"
               )}
             >
               Gratuito
@@ -147,7 +150,7 @@ export function CartaoEvento({
               href={linkGoogleCalendar(e)}
               target="_blank"
               rel="noopener noreferrer"
-              className="ml-auto flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
+              className="ml-auto flex items-center gap-1 font-medium text-light-gray-6 hover:text-marca-verde hover:underline focus:underline"
             >
               Adicionar ao Google Calendar
               <LinkExternalIcon size={12} />

@@ -56,7 +56,7 @@ export default async function Eventos() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/comunidades"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <PeopleIcon className="fill-light-black" />
             Comunidades
@@ -64,7 +64,7 @@ export default async function Eventos() {
           <a
             href="/eventos/calendario.ics"
             title="Subscreve este calendário no Google Calendar, no Outlook ou no Calendário da Apple"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <CalendarIcon className="fill-light-black" />
             Calendário (.ics)
@@ -73,9 +73,9 @@ export default async function Eventos() {
             href={adicionarEvento}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
           >
-            <PlusIcon className="fill-white" />
+            <PlusIcon className="fill-current" />
             Adicionar evento
           </a>
         </div>
@@ -88,7 +88,7 @@ export default async function Eventos() {
             href={adicionarEvento}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-light-blue-6 hover:underline focus:underline"
+            className="font-medium text-marca-verde hover:underline focus:underline"
           >
             Adiciona o próximo
           </a>
@@ -100,11 +100,15 @@ export default async function Eventos() {
             <section key={mes} aria-labelledby={`mes-${mes}`}>
               <h2
                 id={`mes-${mes}`}
-                className="mb-3 text-lg font-bold first-letter:uppercase sm:text-xl"
+                className="mb-3 flex items-center gap-3 font-mono text-xs uppercase tracking-wider text-light-gray-5"
               >
                 {mesDe(`${mes}-01`)}
+                <span
+                  aria-hidden="true"
+                  className="h-px flex-1 bg-light-gray-2"
+                />
               </h2>
-              <ul className="flex flex-col gap-3">
+              <ul className="grid gap-3 lg:grid-cols-2">
                 {eventos.map((e) => (
                   <CartaoEvento key={e.id} evento={e} hoje={hoje} />
                 ))}
@@ -119,7 +123,7 @@ export default async function Eventos() {
           <summary className="cursor-pointer select-none font-bold text-light-gray-7">
             Eventos passados
           </summary>
-          <ul className="mt-3 flex flex-col gap-3">
+          <ul className="mt-3 grid gap-3 lg:grid-cols-2">
             {passados.slice(0, MAX_PASSADOS).map((e) => (
               <CartaoEvento key={e.id} evento={e} hoje={hoje} passado />
             ))}
