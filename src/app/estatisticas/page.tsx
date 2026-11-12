@@ -70,7 +70,8 @@ function Numero({
       <span className="mt-1 block text-sm text-light-gray-6">{rotulo}</span>
     </>
   );
-  const classe = "rounded-md border border-light-gray-2 bg-white p-4 text-left";
+  const classe =
+    "rounded-xl border border-light-gray-2 bg-white/60 p-4 text-left";
   return href ? (
     <Link href={href} className={`${classe} hover:bg-light-gray-1`}>
       {conteudo}
@@ -93,7 +94,7 @@ export default async function PaginaEstatisticas() {
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-5xl">
       <header className="mb-8">
-        <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           Estatísticas
         </h1>
         <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
@@ -313,7 +314,7 @@ export default async function PaginaEstatisticas() {
         </div>
       </section>
 
-      <section className="rounded-md border border-light-gray-2 bg-white p-4 text-sm text-light-gray-7 sm:p-5">
+      <section className="rounded-xl border border-light-gray-2 bg-white/60 p-4 text-sm text-light-gray-7 sm:p-5">
         <h2 className="mb-2 flex items-center gap-2 text-base font-bold text-light-black">
           <GraphIcon className="fill-light-black" />
           De onde vêm os números
@@ -322,7 +323,7 @@ export default async function PaginaEstatisticas() {
           Os números dos programadores vêm da mesma pesquisa do{" "}
           <Link
             href="/ranking"
-            className="font-medium text-light-blue-6 underline"
+            className="font-medium text-marca-verde underline"
           >
             ranking
           </Link>
@@ -336,7 +337,7 @@ export default async function PaginaEstatisticas() {
           Os números dos projetos vêm do{" "}
           <Link
             href="/projetos"
-            className="font-medium text-light-blue-6 underline"
+            className="font-medium text-marca-verde underline"
           >
             diretório
           </Link>{" "}
@@ -345,7 +346,7 @@ export default async function PaginaEstatisticas() {
             href={`${links.repository}/blob/main/CONTRIBUTING.md`}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-light-blue-6 underline"
+            className="font-medium text-marca-verde underline"
           >
             Acrescenta-o
           </a>

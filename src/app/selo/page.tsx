@@ -51,7 +51,7 @@ export default async function Selo() {
       </nav>
 
       <header className="mb-6">
-        <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           Selo “Feito em Portugal”
         </h1>
         <p className="text-base text-light-gray-7 sm:text-lg">
@@ -113,7 +113,7 @@ export default async function Selo() {
       <p className="mt-8">
         <Link
           href="/projetos"
-          className="flex w-fit items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+          className="flex w-fit items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
         >
           <RepoIcon className="fill-light-black" />
           Ver os projetos portugueses

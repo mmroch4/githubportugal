@@ -16,7 +16,7 @@ import type { Mantenedor } from "@/lib/mantenedores";
 type Ordenacao = "estrelas" | "seguidores" | "nome";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
+  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 const MAX_PROJETOS_NO_CARTAO = 3;
 
@@ -100,7 +100,7 @@ export function ListaMantenedores({
           {visiveis.map((m) => (
             <li
               key={m.login}
-              className="relative flex flex-col rounded-md border border-light-gray-2 bg-white p-4 hover:border-light-gray-3"
+              className="relative flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4 hover:border-light-gray-3"
             >
               <div className="mb-3 flex items-center gap-3">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

@@ -65,7 +65,7 @@ function BlocoCodigo({ titulo, codigo }: { titulo: string; codigo: string }) {
   }
 
   return (
-    <div className="rounded-md border border-light-gray-2 bg-white">
+    <div className="rounded-xl border border-light-gray-2 bg-white/60">
       <div className="flex items-center justify-between border-b border-light-gray-2 px-3 py-2">
         <span className="text-sm font-bold">{titulo}</span>
         <button
@@ -108,7 +108,7 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
 
   return (
     <div className="flex flex-col gap-6">
-      <div className="flex flex-col gap-4 rounded-md border border-light-gray-2 bg-white p-4 sm:flex-row sm:items-end">
+      <div className="flex flex-col gap-4 rounded-xl border border-light-gray-2 bg-white/60 p-4 sm:flex-row sm:items-end">
         <label htmlFor={idCampo} className="flex flex-1 flex-col gap-1.5">
           <span className="text-sm font-bold">O teu repositório</span>
           <input
@@ -119,7 +119,7 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
             placeholder="dono/nome-do-repositorio"
             autoComplete="off"
             spellCheck={false}
-            className="w-full rounded border border-light-gray-3 bg-light-gray-0 px-3 py-2 text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-light-blue-4"
+            className="w-full rounded border border-light-gray-3 bg-light-gray-0 px-3 py-2 text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde"
           />
           <datalist id={idLista}>
             {repositorios.map((r) => (
@@ -142,7 +142,7 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
                 className={clsx(
                   "cursor-pointer rounded px-3 py-1.5 text-sm font-bold",
                   estilo === valor
-                    ? "bg-light-gray-9 text-white"
+                    ? "bg-light-black text-light-gray-0"
                     : "hover:bg-light-gray-1"
                 )}
               >

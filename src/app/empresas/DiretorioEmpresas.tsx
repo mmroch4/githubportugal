@@ -16,7 +16,7 @@ import type { Empresa } from "@/lib/empresas";
 import { formatoNumero, normalizar } from "@/lib/formatar";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
+  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioEmpresas({
   empresas,
@@ -157,7 +157,7 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
   const urlGitHub = `https://github.com/${e.github}`;
 
   return (
-    <li className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4">
+    <li className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4">
       <div className="mb-2 flex items-start gap-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -212,7 +212,7 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
                   target="_blank"
                   rel="noopener noreferrer"
                   title={r.descricao ?? undefined}
-                  className="flex min-w-0 items-center gap-1.5 font-medium text-light-blue-6 hover:underline focus:underline"
+                  className="flex min-w-0 items-center gap-1.5 font-medium text-marca-verde hover:underline focus:underline"
                 >
                   <RepoIcon className="shrink-0 fill-light-gray-5" />
                   <span className="truncate">{r.nome}</span>
@@ -254,7 +254,7 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
                 href={`https://github.com/${p.repositorio}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-light-blue-6 hover:underline focus:underline"
+                className="font-medium text-marca-verde hover:underline focus:underline"
               >
                 {p.nome}
               </a>
@@ -268,9 +268,9 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
           href={urlGitHub}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
+          className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
         >
-          <MarkGithubIcon className="fill-light-blue-6" />
+          <MarkGithubIcon className="fill-marca-verde" />
           {e.github}
         </a>
         {e.repositoriosPublicos !== null && (
@@ -293,9 +293,9 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
             href={e.carreiras}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
+            className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
           >
-            <BriefcaseIcon className="fill-light-blue-6" />
+            <BriefcaseIcon className="fill-marca-verde" />
             Carreiras
           </a>
         )}
