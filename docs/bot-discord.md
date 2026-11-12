@@ -8,7 +8,7 @@ O bot do GitHub Portugal faz duas coisas no [servidor do Discord](https://discor
    - `/evento [cidade] [tipo]`: os próximos 5 eventos da [agenda](https://githubportugal.com/eventos).
    - `/projeto <pesquisa>`: procura no [diretório de projetos](https://githubportugal.com/projetos).
 
-Não há nenhum processo sempre ligado: o Discord envia cada comando para `https://githubportugal.com/api/discord` ([`src/app/api/discord/route.ts`](../src/app/api/discord/route.ts)), que corre no Vercel e responde com os dados do site.
+Não há nenhum processo sempre ligado: o Discord envia cada comando para `https://www.githubportugal.com/api/discord` ([`src/app/api/discord/route.ts`](../src/app/api/discord/route.ts)), que corre no Vercel e responde com os dados do site.
 
 ## Ficheiros
 
@@ -59,7 +59,7 @@ No GitHub (**Settings > Secrets and variables > Actions > New repository secret*
 
 ### 3. Ligar os comandos ao site
 
-1. No Developer Portal, em **General Information**, escreve em **Interactions Endpoint URL**: `https://githubportugal.com/api/discord` e carrega em **Save Changes**. O Discord testa o endereço nesse momento; se der erro, confirma que `DISCORD_PUBLIC_KEY` está no Vercel e que fizeste o redeploy.
+1. No Developer Portal, em **General Information**, escreve em **Interactions Endpoint URL**: `https://www.githubportugal.com/api/discord` (com `www`: o domínio sem `www` redireciona e o Discord não segue redirecionamentos) e carrega em **Save Changes**. O Discord testa o endereço nesse momento; se der erro, confirma que `DISCORD_PUBLIC_KEY` está no Vercel e que fizeste o redeploy.
 2. No GitHub, em **Actions > Registar comandos do Discord**, carrega em **Run workflow**. Os comandos aparecem no servidor logo a seguir (às vezes é preciso reiniciar o Discord).
 
 ### 4. Canal de anúncios
