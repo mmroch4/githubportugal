@@ -1,0 +1,122 @@
+# Diretório de projetos open source portugueses
+#
+# Para adicionar um projeto, acrescenta uma entrada à lista `projetos` e abre um
+# pull request. As estrelas, a linguagem e a data da última atividade são lidas
+# automaticamente da API do GitHub, por isso não as escrevas aqui.
+#
+# Campos de cada projeto:
+#   repositorio  (obrigatório) dono/nome do repositório no GitHub, por exemplo FogosPT/fogospt
+#   descricao    (obrigatório) uma frase em português de Portugal, até 200 caracteres
+#   categoria    (obrigatório) uma das categorias listadas abaixo
+#   site         (opcional)    link para o site do projeto, começado por https://
+#
+# Instruções completas em CONTRIBUTING.md.
+
+categorias:
+  - Ferramentas de programação
+  - Web
+  - Mobile
+  - Inteligência artificial e dados
+  - Dados abertos
+  - Serviço público
+  - Multimédia
+  - Comunidade e listas
+
+projetos:
+  - repositorio: pestphp/pest
+    descricao: Framework de testes para PHP focado na simplicidade e numa sintaxe elegante.
+    categoria: Ferramentas de programação
+    site: https://pestphp.com
+
+  - repositorio: nunomaduro/collision
+    descricao: Mostra os erros de aplicações PHP de linha de comandos de forma clara e bonita.
+    categoria: Ferramentas de programação
+
+  - repositorio: nunomaduro/phpinsights
+    descricao: Analisa a qualidade, a arquitetura e a complexidade do código PHP a partir do terminal.
+    categoria: Ferramentas de programação
+    site: https://phpinsights.com
+
+  - repositorio: nunomaduro/termwind
+    descricao: Permite estilizar o output de aplicações PHP de linha de comandos com classes ao estilo do Tailwind CSS.
+    categoria: Ferramentas de programação
+
+  - repositorio: larastan/larastan
+    descricao: Extensão do PHPStan que encontra erros em aplicações Laravel sem as executar.
+    categoria: Ferramentas de programação
+
+  - repositorio: apocas/dockerode
+    descricao: Cliente Node.js para a API do Docker, com suporte a streams e promessas.
+    categoria: Ferramentas de programação
+
+  - repositorio: Bartmr/not-me
+    descricao: Biblioteca de validação de dados para TypeScript, igual no front-end e no back-end.
+    categoria: Ferramentas de programação
+
+  - repositorio: miukimiu/react-kawaii
+    descricao: Componentes React em SVG com ilustrações fofas ao estilo kawaii.
+    categoria: Web
+
+  - repositorio: FogosPT/fogospt
+    descricao: Site que mostra em tempo real os incêndios ativos em Portugal.
+    categoria: Serviço público
+    site: https://fogos.pt
+
+  - repositorio: FogosPT/fogosmobile
+    descricao: Aplicação para Android e iOS do Fogos.pt, com alertas de incêndios perto de ti.
+    categoria: Mobile
+    site: https://fogos.pt
+
+  - repositorio: jfoclpf/form-for-parking-violation
+    descricao: Aplicação para denunciar estacionamento ilegal às autoridades portuguesas.
+    categoria: Serviço público
+
+  - repositorio: ImproveCoimbra/jantarada
+    descricao: Plataforma criada pela Improve Coimbra para ajudar restaurantes a aceitar pedidos de take-away.
+    categoria: Serviço público
+
+  - repositorio: vostpt/covid19-mobile
+    descricao: Aplicação informativa sobre a COVID-19 desenvolvida por voluntários da VOST Portugal.
+    categoria: Mobile
+
+  - repositorio: Unbabel/COMET
+    descricao: Métrica neural da Unbabel para avaliar a qualidade de tradução automática.
+    categoria: Inteligência artificial e dados
+
+  - repositorio: Unbabel/OpenKiwi
+    descricao: Framework da Unbabel para estimar a qualidade de traduções automáticas.
+    categoria: Inteligência artificial e dados
+
+  - repositorio: feedzai/timeshap
+    descricao: Explica as decisões de modelos de machine learning que trabalham com sequências e séries temporais.
+    categoria: Inteligência artificial e dados
+
+  - repositorio: dssg-pt/covid19pt-data
+    descricao: Dados da COVID-19 em Portugal, recolhidos dos relatórios da DGS e mantidos pela Data Science for Social Good Portugal.
+    categoria: Dados abertos
+
+  - repositorio: rgllm/awesome-portugal-data
+    descricao: Lista de conjuntos de dados abertos e APIs sobre Portugal.
+    categoria: Dados abertos
+
+  - repositorio: rncbc/qtractor
+    descricao: Sequenciador multipista de áudio e MIDI para Linux.
+    categoria: Multimédia
+    site: https://qtractor.sourceforge.io
+
+  - repositorio: marmelo/tech-companies-in-portugal
+    descricao: Lista de empresas de tecnologia em Portugal.
+    categoria: Comunidade e listas
+
+  - repositorio: zorkpt/comunidades-tech-portugal
+    descricao: Lista de comunidades tech portuguesas, de meetups a grupos online.
+    categoria: Comunidade e listas
+
+  - repositorio: cmota/tech-events-portugal
+    descricao: Calendário de eventos de tecnologia em Portugal.
+    categoria: Comunidade e listas
+
+  - repositorio: mmroch4/githubportugal
+    descricao: Este site! Comunidade portuguesa de programadores e de projetos open source no GitHub.
+    categoria: Comunidade e listas
+    site: https://githubportugal.com

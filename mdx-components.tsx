@@ -1,4 +1,5 @@
 import type { MDXComponents } from "mdx/types";
+import Link from "next/link";
 
 export function useMDXComponents(components: MDXComponents): MDXComponents {
   return {
@@ -7,16 +8,21 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         {children}
       </h2>
     ),
-    a: ({ children, href }) => (
-      <a
-        href={href}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-bold hover:underline focus:underline"
-      >
-        {children}
-      </a>
-    ),
+    a: ({ children, href }) =>
+      href?.startsWith("/") ? (
+        <Link href={href} className="font-bold hover:underline focus:underline">
+          {children}
+        </Link>
+      ) : (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="font-bold hover:underline focus:underline"
+        >
+          {children}
+        </a>
+      ),
     p: ({ children }) => <p className="text-base sm:text-lg">{children}</p>,
     ...components,
   };
