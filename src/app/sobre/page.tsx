@@ -60,7 +60,7 @@ export default function About() {
   return (
     <main className="m-auto max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl">
       <header className="mb-4 flex flex-wrap items-center justify-between gap-1 sm:mb-5 sm:gap-2 md:mb-6">
-        <h1 className="flex items-center gap-3 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="flex items-center gap-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           <Logo
             alt=""
             size={56}

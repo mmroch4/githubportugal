@@ -33,7 +33,7 @@ export function Cartao({
   return (
     <section
       className={clsx(
-        "rounded-md border border-light-gray-2 bg-white p-4 sm:p-5",
+        "rounded-xl border border-light-gray-2 bg-white/60 p-4 sm:p-5",
         className
       )}
     >

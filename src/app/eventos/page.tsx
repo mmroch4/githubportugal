@@ -41,9 +41,9 @@ export default async function Eventos() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <header className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <header className="mb-6 flex flex-col gap-4">
         <div>
-          <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+          <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
             Eventos
           </h1>
           <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">

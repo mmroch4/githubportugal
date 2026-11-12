@@ -18,7 +18,7 @@ export default function Guia() {
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl">
       <header className="mb-6 sm:mb-8">
-        <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           Guia de código aberto
         </h1>
         <p className="text-base text-light-gray-7 sm:text-lg">
@@ -34,7 +34,7 @@ export default function Guia() {
           <li key={c.slug}>
             <Link
               href={`/guia/${c.slug}`}
-              className="group flex items-center gap-4 rounded-md border border-light-gray-2 bg-white p-4 hover:border-light-gray-4 focus:border-light-gray-4 sm:p-5"
+              className="group flex items-center gap-4 rounded-xl border border-light-gray-2 bg-white/60 p-4 hover:border-light-gray-4 focus:border-light-gray-4 sm:p-5"
             >
               <span
                 aria-hidden

@@ -4,20 +4,22 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center px-6 py-16">
-      <h1 className="mb-2 text-center text-5xl font-black sm:mb-3 sm:text-6xl md:mb-4 md:text-7xl lg:text-8xl">
+      <h1 className="mb-4 bg-gradient-to-r from-marca-verde to-marca-vermelho bg-clip-text text-center font-mono text-7xl font-bold text-transparent sm:text-8xl">
         404
       </h1>
 
-      <p className="mb-4 max-w-sm text-center text-lg sm:mb-5 sm:max-w-md sm:text-xl md:mb-6 md:max-w-lg md:text-2xl lg:max-w-xl">
-        Oops... parece que esta página não existe 🤔
+      <p className="mb-8 rounded-lg border border-light-gray-2 bg-white/60 px-4 py-3 font-mono text-sm text-light-gray-7 sm:text-base">
+        <span className="text-marca-verde">$</span> cd esta-página
+        <br />
+        <span className="text-marca-vermelho">erro:</span> não existe
       </p>
 
       <Link
         href="/"
-        className="group flex items-center justify-center gap-2 rounded bg-light-gray-9 px-6 py-3 text-sm font-bold text-white sm:text-base md:text-lg"
+        className="group flex items-center justify-center gap-2 rounded-md bg-light-black px-6 py-3 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base md:text-lg"
       >
         Voltar à página principal
-        <ChevronRightIcon className="fill-white delay-75 duration-100 ease-in-out group-hover:translate-x-0.5" />
+        <ChevronRightIcon className="fill-current delay-75 duration-100 ease-in-out group-hover:translate-x-0.5" />
       </Link>
     </main>
   );

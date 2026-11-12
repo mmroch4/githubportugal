@@ -96,7 +96,7 @@ export function TabelaRanking({
             className={clsx(
               "rounded-full border px-3 py-1 text-sm font-bold sm:text-base",
               ambito === a.id
-                ? "border-light-gray-9 bg-light-gray-9 text-white"
+                ? "border-light-black bg-light-black text-light-gray-0"
                 : "border-light-gray-3 bg-white hover:bg-light-gray-1"
             )}
           >
@@ -142,7 +142,7 @@ export function TabelaRanking({
             : "Ainda não há ninguém nesta lista."}
         </p>
       ) : restantes.length === 0 ? null : (
-        <div className="overflow-hidden rounded-md border border-light-gray-2 bg-white">
+        <div className="overflow-hidden rounded-xl border border-light-gray-2 bg-white/60">
           <table className="w-full table-fixed text-left text-sm sm:text-base">
             <caption className="sr-only">
               Ranking de {AMBITOS.find((a) => a.id === ambito)?.nome} por{" "}
@@ -294,7 +294,7 @@ function Podio({
                   className={clsx(
                     "absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white font-mono text-xs font-bold",
                     primeiro
-                      ? "bg-gradient-to-br from-marca-verde to-marca-vermelho text-white"
+                      ? "bg-gradient-to-br from-marca-verde to-marca-vermelho text-[#fff]"
                       : "bg-light-gray-2 text-light-black"
                   )}
                 >

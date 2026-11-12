@@ -16,7 +16,7 @@ import { normalizar } from "@/lib/formatar";
 const NACIONAL = "__nacional__";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
+  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioComunidades({
   comunidades,
@@ -136,7 +136,7 @@ export function DiretorioComunidades({
 
 function CartaoComunidade({ comunidade: c }: { comunidade: Comunidade }) {
   return (
-    <li className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4">
+    <li className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4">
       <a
         href={c.site}
         target="_blank"
@@ -165,9 +165,9 @@ function CartaoComunidade({ comunidade: c }: { comunidade: Comunidade }) {
             href={`https://github.com/${c.github}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
+            className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
           >
-            <MarkGithubIcon className="fill-light-blue-6" />
+            <MarkGithubIcon className="fill-marca-verde" />
             {c.github}
           </a>
         )}

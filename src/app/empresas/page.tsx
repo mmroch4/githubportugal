@@ -24,9 +24,9 @@ export default async function Empresas() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <header className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <header className="mb-6 flex flex-col gap-4">
         <div>
-          <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+          <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
             Empresas
           </h1>
           <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
@@ -39,14 +39,14 @@ export default async function Empresas() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/projetos"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <RepoIcon className="fill-light-black" />
             Projetos
           </Link>
           <Link
             href="/comunidades"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <PeopleIcon className="fill-light-black" />
             Comunidades
@@ -55,9 +55,9 @@ export default async function Empresas() {
             href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-uma-empresa`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
           >
-            <PlusIcon className="fill-white" />
+            <PlusIcon className="fill-current" />
             Adicionar empresa
           </a>
         </div>

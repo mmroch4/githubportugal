@@ -49,9 +49,9 @@ export default async function PrimeirasContribuicoes() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <header className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <header className="mb-6 flex flex-col gap-4">
         <div>
-          <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+          <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
             Primeiras contribuições
           </h1>
           <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
@@ -65,7 +65,7 @@ export default async function PrimeirasContribuicoes() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/projetos"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <RepoIcon className="fill-light-black" />
             Projetos
@@ -74,9 +74,9 @@ export default async function PrimeirasContribuicoes() {
             href={links.discord}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
           >
-            <CommentDiscussionIcon className="fill-white" />
+            <CommentDiscussionIcon className="fill-current" />
             Pedir ajuda no Discord
           </a>
         </div>
@@ -84,7 +84,7 @@ export default async function PrimeirasContribuicoes() {
 
       <section
         aria-labelledby="como-comecar"
-        className="mb-6 rounded-md border border-light-blue-2 bg-light-blue-0 p-4 text-sm text-light-gray-8 sm:text-base"
+        className="mb-6 rounded-md border border-marca-verde/40 bg-marca-verde/5 p-4 text-sm text-light-gray-8 sm:text-base"
       >
         <h2 id="como-comecar" className="mb-2 font-bold">
           Como começar
@@ -107,7 +107,7 @@ export default async function PrimeirasContribuicoes() {
               href={links.discord}
               target="_blank"
               rel="noopener noreferrer"
-              className="font-medium text-light-blue-6 underline"
+              className="font-medium text-marca-verde underline"
             >
               Discord
             </a>
@@ -135,7 +135,7 @@ export default async function PrimeirasContribuicoes() {
           href={`${links.repository}/blob/main/CONTRIBUTING.md#primeiras-contribuições`}
           target="_blank"
           rel="noopener noreferrer"
-          className="font-medium text-light-blue-6 underline"
+          className="font-medium text-marca-verde underline"
         >
           Saber mais
         </a>

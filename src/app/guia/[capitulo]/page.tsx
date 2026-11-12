@@ -66,7 +66,7 @@ export default async function CapituloGuia({ params }: Props) {
         <p className="mb-1 font-bold text-light-gray-6">
           Capítulo {numero} de {capitulos.length}
         </p>
-        <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           <span aria-hidden>{dados.capitulo.emoji} </span>
           {dados.capitulo.titulo}
         </h1>
@@ -86,7 +86,7 @@ export default async function CapituloGuia({ params }: Props) {
         {anterior ? (
           <Link
             href={`/guia/${anterior.slug}`}
-            className="group flex items-center gap-3 rounded-md border border-light-gray-2 bg-white p-4 hover:border-light-gray-4 focus:border-light-gray-4"
+            className="group flex items-center gap-3 rounded-xl border border-light-gray-2 bg-white/60 p-4 hover:border-light-gray-4 focus:border-light-gray-4"
           >
             <ChevronLeftIcon className="shrink-0 fill-light-gray-6 duration-100 ease-in-out group-hover:-translate-x-0.5" />
             <span>
@@ -100,7 +100,7 @@ export default async function CapituloGuia({ params }: Props) {
         {seguinte ? (
           <Link
             href={`/guia/${seguinte.slug}`}
-            className="group flex items-center justify-end gap-3 rounded-md border border-light-gray-2 bg-white p-4 text-right hover:border-light-gray-4 focus:border-light-gray-4"
+            className="group flex items-center justify-end gap-3 rounded-xl border border-light-gray-2 bg-white/60 p-4 text-right hover:border-light-gray-4 focus:border-light-gray-4"
           >
             <span>
               <span className="block text-sm text-light-gray-6">Seguinte</span>
@@ -111,7 +111,7 @@ export default async function CapituloGuia({ params }: Props) {
         ) : (
           <Link
             href="/primeiras-contribuicoes"
-            className="group flex items-center justify-end gap-3 rounded-md border border-light-gray-2 bg-white p-4 text-right hover:border-light-gray-4 focus:border-light-gray-4"
+            className="group flex items-center justify-end gap-3 rounded-xl border border-light-gray-2 bg-white/60 p-4 text-right hover:border-light-gray-4 focus:border-light-gray-4"
           >
             <span>
               <span className="block text-sm text-light-gray-6">

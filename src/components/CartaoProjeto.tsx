@@ -23,7 +23,7 @@ export function CartaoProjeto({
   issuesAbertas?: number;
 }) {
   return (
-    <li className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4">
+    <li className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4 transition hover:border-light-gray-3 hover:bg-white">
       <div className="mb-2 flex items-start gap-3">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
@@ -108,7 +108,7 @@ export function CartaoProjeto({
             href={p.site}
             target="_blank"
             rel="noopener noreferrer"
-            className="ml-auto flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
+            className="ml-auto flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
           >
             Site
             <LinkExternalIcon size={12} />

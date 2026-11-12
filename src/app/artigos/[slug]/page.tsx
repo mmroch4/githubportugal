@@ -81,7 +81,7 @@ export default async function PaginaArtigo({ params }: Props) {
       </nav>
 
       <header className="mb-6 sm:mb-8">
-        <h1 className="mb-3 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           {artigo.titulo}
         </h1>
         <p className="mb-5 text-base text-light-gray-7 sm:text-lg">

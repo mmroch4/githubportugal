@@ -28,7 +28,7 @@ type Props = {
 };
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
+  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 const NOMES_TIPO: Record<TipoIssue, string> = {
   primeira: "Boa primeira issue",
@@ -232,7 +232,7 @@ function CartaoIssue({
   const [dono, nome] = i.repositorio.split("/");
 
   return (
-    <li className="flex gap-3 rounded-md border border-light-gray-2 bg-white p-4">
+    <li className="flex gap-3 rounded-xl border border-light-gray-2 bg-white/60 p-4">
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
         src={projeto?.avatar ?? `https://github.com/${dono}.png?size=80`}

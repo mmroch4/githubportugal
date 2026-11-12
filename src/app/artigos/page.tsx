@@ -26,7 +26,7 @@ export const metadata: Metadata = metadadosPagina({
 });
 
 const linkClassName =
-  "font-medium text-light-blue-6 hover:underline focus:underline";
+  "font-medium text-marca-verde hover:underline focus:underline";
 
 export default async function Artigos() {
   const [artigos, devto] = await Promise.all([
@@ -37,9 +37,9 @@ export default async function Artigos() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl">
-      <header className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+      <header className="mb-8 flex flex-col gap-4">
         <div>
-          <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+          <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
             Artigos
           </h1>
           <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
@@ -53,7 +53,7 @@ export default async function Artigos() {
           <a
             href="/artigos/feed.xml"
             title="Segue os artigos novos no teu leitor de RSS"
-            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
           >
             <RssIcon className="fill-light-black" />
             RSS
@@ -62,9 +62,9 @@ export default async function Artigos() {
             href={escrever}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
+            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
           >
-            <PencilIcon className="fill-white" />
+            <PencilIcon className="fill-current" />
             Escrever um artigo
           </a>
         </div>
@@ -97,7 +97,7 @@ export default async function Artigos() {
               <li key={a.slug}>
                 <Link
                   href={`/artigos/${a.slug}`}
-                  className="group block rounded-md border border-light-gray-2 bg-white p-4 hover:border-light-gray-4 focus:border-light-gray-4 sm:p-5"
+                  className="group block rounded-xl border border-light-gray-2 bg-white/60 p-4 hover:border-light-gray-4 focus:border-light-gray-4 sm:p-5"
                 >
                   <p className="mb-1 flex flex-wrap items-center gap-x-2 text-sm text-light-gray-6">
                     <time dateTime={a.data}>{formatarData(a.data)}</time>
@@ -168,7 +168,7 @@ export default async function Artigos() {
             {devto.artigos.map((a) => (
               <li
                 key={a.id}
-                className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4"
+                className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4"
               >
                 <div className="mb-2 flex items-center gap-2">
                   {/* eslint-disable-next-line @next/next/no-img-element */}

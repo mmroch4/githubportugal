@@ -30,7 +30,7 @@ export default async function PaginaRanking() {
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl">
       <header className="mb-6">
-        <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
+        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
           Ranking
         </h1>
         <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
@@ -50,7 +50,7 @@ export default async function PaginaRanking() {
         </p>
       )}
 
-      <section className="mt-8 rounded-md border border-light-gray-2 bg-white p-4 text-sm text-light-gray-7 sm:p-5">
+      <section className="mt-8 rounded-xl border border-light-gray-2 bg-white/60 p-4 text-sm text-light-gray-7 sm:p-5">
         <h2 className="mb-2 flex items-center gap-2 text-base font-bold text-light-black">
           <PersonIcon className="fill-light-black" />
           Como entras no ranking
@@ -74,7 +74,7 @@ export default async function PaginaRanking() {
             href={urlExclusoes}
             target="_blank"
             rel="noopener noreferrer"
-            className="font-medium text-light-blue-6 underline"
+            className="font-medium text-marca-verde underline"
           >
             Pede para sair do ranking
           </a>

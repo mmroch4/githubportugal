@@ -12,7 +12,7 @@ import type { Projeto } from "@/lib/projetos";
 type Ordenacao = "estrelas" | "atividade" | "nome";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
+  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioProjetos({
   projetos,
