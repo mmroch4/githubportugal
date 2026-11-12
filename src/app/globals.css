@@ -14,3 +14,25 @@
   --viz-1: #3987e5;
   --viz-2: #d95926;
 }
+
+/*
+ * Tema escuro ("terminal"): um halo discreto com as cores do logótipo no topo
+ * de cada página.
+ */
+:root.dark body {
+  background-image: radial-gradient(
+      ellipse 55rem 28rem at 10% -8rem,
+      hsl(var(--marca-verde) / 0.13),
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 45rem 26rem at 90% -8rem,
+      hsl(var(--marca-vermelho) / 0.09),
+      transparent 70%
+    );
+  background-repeat: no-repeat;
+}
+
+::selection {
+  background-color: hsl(var(--marca-verde) / 0.35);
+}

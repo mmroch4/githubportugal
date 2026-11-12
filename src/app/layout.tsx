@@ -1,6 +1,6 @@
-import { Ferramentas } from "@/components/Ferramentas";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
-import { NonOfficialWarning } from "@/components/NonOfficialWarning";
+import { Cabecalho } from "@/components/layout/Cabecalho";
+import { Rodape } from "@/components/layout/Rodape";
 import { scriptTema } from "@/components/Tema";
 import { monaSans } from "@/config/fonts";
 import { metadata as m, viewport as v } from "@/config/metadata";
@@ -19,22 +19,27 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-PT" className="scroll-smooth" suppressHydrationWarning>
+    <html
+      lang="pt-PT"
+      // Escuro por omissão; o script do tema troca para claro se for o caso.
+      className="dark scroll-smooth"
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: scriptTema }} />
       </head>
       <body
         className={clsx(
           monaSans.className,
-          "grid min-h-screen grid-cols-1 grid-rows-layout bg-light-gray-0 text-light-black"
+          "flex min-h-screen flex-col bg-light-gray-0 text-light-black antialiased"
         )}
       >
         <DadosEstruturados dados={dadosEstruturadosSite} />
-        <NonOfficialWarning />
+        <Cabecalho />
 
-        {children}
+        <div className="flex flex-1 flex-col pt-4 sm:pt-6">{children}</div>
 
-        <Ferramentas />
+        <Rodape />
         {/* Estatísticas de visitas sem cookies (Vercel Web Analytics e Speed Insights). */}
         <Analytics />
         <SpeedInsights />

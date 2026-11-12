@@ -7,9 +7,9 @@ export type Tema = "sistema" | "claro" | "escuro";
 
 const CHAVE = "tema";
 const SEGUINTE: Record<Tema, Tema> = {
-  sistema: "claro",
-  claro: "escuro",
-  escuro: "sistema",
+  escuro: "claro",
+  claro: "sistema",
+  sistema: "escuro",
 };
 const NOMES: Record<Tema, string> = {
   sistema: "do sistema",
@@ -18,17 +18,18 @@ const NOMES: Record<Tema, string> = {
 };
 
 /**
- * Script que corre antes da página aparecer, para aplicar o tema guardado (ou o
- * do sistema) sem um flash do tema errado.
+ * Script que corre antes da página aparecer, para aplicar o tema guardado sem
+ * um flash do tema errado. O site é escuro por omissão; "sistema" segue o tema
+ * do sistema operativo.
  */
-export const scriptTema = `(function(){try{var t=localStorage.getItem("${CHAVE}");var e=t==="escuro"||(t!=="claro"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",e)}catch(_){}})()`;
+export const scriptTema = `(function(){try{var t=localStorage.getItem("${CHAVE}");var e=t!=="claro"&&(t!=="sistema"||window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",e)}catch(_){}})()`;
 
 function lerTema(): Tema {
   try {
     const t = localStorage.getItem(CHAVE);
-    return t === "claro" || t === "escuro" ? t : "sistema";
+    return t === "claro" || t === "sistema" ? t : "escuro";
   } catch {
-    return "sistema";
+    return "escuro";
   }
 }
 
@@ -71,16 +72,16 @@ export function BotaoTema({ className }: { className?: string }) {
   }, [tema]);
 
   const mudar = () => {
-    const novo = SEGUINTE[tema ?? "sistema"];
+    const novo = SEGUINTE[tema ?? "escuro"];
     try {
-      if (novo === "sistema") localStorage.removeItem(CHAVE);
+      if (novo === "escuro") localStorage.removeItem(CHAVE);
       else localStorage.setItem(CHAVE, novo);
     } catch {}
     aplicar(novo);
     window.dispatchEvent(new Event(EVENTO));
   };
 
-  const atual = tema ?? "sistema";
+  const atual = tema ?? "escuro";
   const Icone =
     atual === "claro"
       ? SunIcon
@@ -99,7 +100,7 @@ export function BotaoTema({ className }: { className?: string }) {
       aria-label={rotulo}
       title={rotulo}
     >
-      <Icone className="fill-light-gray-7" />
+      <Icone className="fill-current" />
     </button>
   );
 }

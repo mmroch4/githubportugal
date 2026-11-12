@@ -21,7 +21,7 @@ export const metadata = {
 
 export default function Home() {
   return (
-    <main className="flex flex-col items-center justify-center px-6 py-4">
+    <main className="flex flex-1 flex-col items-center justify-center px-6 py-10">
       <Logo
         priority
         size={128}

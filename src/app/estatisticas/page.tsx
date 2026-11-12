@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, GraphIcon } from "@primer/octicons-react";
+import { GraphIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
@@ -30,9 +30,6 @@ export const metadata: Metadata = metadadosPagina({
   descricao: description,
   caminho: "/estatisticas",
 });
-
-const buttonClassName =
-  "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
 
 const numero = new Intl.NumberFormat("pt-PT");
 const compacto = new Intl.NumberFormat("pt-PT", {
@@ -95,16 +92,6 @@ export default async function PaginaEstatisticas() {
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-5xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          <span className="sr-only">Voltar à página principal</span>
-        </Link>
-      </nav>
-
       <header className="mb-8">
         <h1 className="mb-2 text-3xl font-black sm:text-4xl md:text-5xl">
           Estatísticas

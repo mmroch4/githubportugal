@@ -1,6 +1,5 @@
-import { ArrowLeftIcon, MarkGithubIcon } from "@primer/octicons-react";
+import { MarkGithubIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
-import Link from "next/link";
 import { RiDiscordFill, RiWhatsappFill } from "react-icons/ri";
 import { links } from "@/config/metadata";
 import AboutContent from "./about.mdx";
@@ -60,13 +59,6 @@ const iconClassName = "h-5 w-5 fill-light-black md:h-6 md:w-6";
 export default function About() {
   return (
     <main className="m-auto max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/" className={buttonClassName}>
-          <ArrowLeftIcon verticalAlign="middle" className={iconClassName} />
-          <span className="sr-only">Voltar à página principal</span>
-        </Link>
-      </nav>
-
       <header className="mb-4 flex flex-wrap items-center justify-between gap-1 sm:mb-5 sm:gap-2 md:mb-6">
         <h1 className="flex items-center gap-3 text-3xl font-black sm:text-4xl md:text-5xl">
           <Logo
