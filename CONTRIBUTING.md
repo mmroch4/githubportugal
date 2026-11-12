@@ -4,7 +4,7 @@ Obrigado pelo interesse em contribuir para o GitHub Portugal! Todas as contribui
 
 ## Antes de começar
 
-- Procura nas [issues](https://github.com/GitHub-Portugal/website/issues) se já existe algo sobre o mesmo tema.
+- Procura nas [issues](https://github.com/mmroch4/githubportugal/issues) se já existe algo sobre o mesmo tema.
 - Para alterações grandes, abre primeiro uma issue para discutirmos a ideia.
 - Os textos do site estão em **português de Portugal** (pt-PT). Evita formas do português do Brasil (por exemplo, "partilhar" em vez de "compartilhar", "ficheiro" em vez de "arquivo").
 
@@ -13,8 +13,8 @@ Obrigado pelo interesse em contribuir para o GitHub Portugal! Todas as contribui
 Precisas do [Node.js](https://nodejs.org/) 20.9 ou superior e do [Yarn](https://classic.yarnpkg.com/) 1.x.
 
 ```bash
-git clone https://github.com/GitHub-Portugal/website.git
-cd website
+git clone https://github.com/mmroch4/githubportugal.git
+cd githubportugal
 yarn install
 yarn dev
 ```

@@ -5,7 +5,7 @@ export const siteUrl = "https://githubportugal.com";
 export const links = {
   discord: "https://discord.com/invite/cnJdppDkUp",
   whatsapp: "https://chat.whatsapp.com/EfKv6GPEgd89XgYXhiAhFk",
-  repository: "https://github.com/GitHub-Portugal/website",
+  repository: "https://github.com/mmroch4/githubportugal",
 };
 
 const description =
