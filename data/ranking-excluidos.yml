@@ -1,0 +1,12 @@
+# Pessoas que não querem aparecer no ranking de programadores em Portugal.
+#
+# O ranking é gerado automaticamente a partir de perfis públicos do GitHub com
+# localização em Portugal. Se não queres aparecer, adiciona aqui o teu nome de
+# utilizador (num pull request) ou abre uma issue a pedir para sair: deixas de
+# aparecer no site assim que a alteração entrar, sem esperar pela próxima
+# atualização do ranking.
+#
+# Um nome de utilizador do GitHub por linha, por exemplo:
+#   - mmroch4
+
+excluidos: []

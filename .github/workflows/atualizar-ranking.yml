@@ -1,0 +1,49 @@
+name: Atualizar ranking
+
+on:
+  schedule:
+    # Todas as segundas-feiras às 05:17 (UTC).
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: atualizar-ranking
+  cancel-in-progress: false
+
+jobs:
+  atualizar:
+    name: Gerar data/ranking.json
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Gerar ranking
+        run: node scripts/gerar-ranking.mjs
+        env:
+          # Um token pessoal (secret RANKING_TOKEN) permite mais pedidos; sem ele,
+          # usa o token da própria Action.
+          GITHUB_TOKEN: ${{ secrets.RANKING_TOKEN || secrets.GITHUB_TOKEN }}
+
+      - name: Guardar alterações
+        run: |
+          if git diff --quiet -- data/ranking.json; then
+            echo "O ranking não mudou."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/ranking.json
+          git commit -m "Atualizar ranking de programadores"
+          git pull --rebase origin "${GITHUB_REF_NAME}"
+          git push origin "HEAD:${GITHUB_REF_NAME}"

@@ -14,6 +14,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...logins.map((login) => ({
       url: `${siteUrl}${caminhoMantenedor(login)}`,
     })),
+    { url: `${siteUrl}/ranking` },
     { url: `${siteUrl}/sobre` },
   ];
 }
