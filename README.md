@@ -32,6 +32,8 @@ Para quem quer dar os primeiros passos no código aberto, ou para mantenedores e
 
 Queres partilhar o que aprendeste? Escreve um **[artigo](https://githubportugal.com/artigos)** para o site com um pull request, ou publica no dev.to com a etiqueta `#githubportugal`.
 
+No **[Discord](https://discord.com/invite/cnJdppDkUp)**, o bot do GitHub Portugal anuncia os projetos, eventos e artigos novos e responde aos comandos `/ranking`, `/evento` e `/projeto`. Vê como funciona em [`docs/bot-discord.md`](./docs/bot-discord.md).
+
 Juntos, estamos a fortalecer o código aberto em Portugal e a contribuir para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junta-te a nós!
 
 ## ⚠️ Avisos

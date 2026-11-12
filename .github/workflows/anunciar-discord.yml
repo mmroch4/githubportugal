@@ -1,0 +1,41 @@
+name: Anunciar no Discord
+
+# Publica no Discord os projetos, eventos e artigos novos depois de chegarem à main.
+# Precisa do segredo DISCORD_WEBHOOK_URL; sem ele, não envia nada.
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/projetos.yml"
+      - "data/eventos.yml"
+      - "src/content/artigos/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: anunciar-discord
+  cancel-in-progress: false
+
+jobs:
+  anunciar:
+    name: Anunciar novidades
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: yarn
+
+      - run: yarn install --frozen-lockfile
+
+      - name: Anunciar
+        run: node scripts/discord/anunciar.mjs --antes "${{ github.event.before }}" --depois "${{ github.sha }}"
+        env:
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
