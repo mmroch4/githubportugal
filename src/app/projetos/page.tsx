@@ -1,7 +1,8 @@
-import { ArrowLeftIcon, PlusIcon } from "@primer/octicons-react";
+import { ArrowLeftIcon, PeopleIcon, PlusIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { links } from "@/config/metadata";
+import { obterMantenedoresPorProjeto } from "@/lib/mantenedores";
 import { obterDiretorio } from "@/lib/projetos";
 import { DiretorioProjetos } from "./DiretorioProjetos";
 
@@ -24,6 +25,7 @@ const buttonClassName =
 export default async function Projetos() {
   const { projetos, categorias, atualizadoEm, dadosGitHubDisponiveis } =
     await obterDiretorio();
+  const mantenedoresPorProjeto = await obterMantenedoresPorProjeto(projetos);
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
@@ -49,21 +51,31 @@ export default async function Projetos() {
           </p>
         </div>
 
-        <a
-          href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex shrink-0 items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
-        >
-          <PlusIcon className="fill-white" />
-          Adicionar projeto
-        </a>
+        <div className="flex shrink-0 flex-wrap gap-2">
+          <Link
+            href="/mantenedores"
+            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+          >
+            <PeopleIcon className="fill-light-black" />
+            Mantenedores
+          </Link>
+          <a
+            href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center justify-center gap-2 rounded bg-light-gray-9 px-4 py-2 text-sm font-bold text-white sm:text-base"
+          >
+            <PlusIcon className="fill-white" />
+            Adicionar projeto
+          </a>
+        </div>
       </header>
 
       <DiretorioProjetos
         projetos={projetos}
         categorias={categorias}
         atualizadoEm={atualizadoEm}
+        mantenedoresPorProjeto={mantenedoresPorProjeto}
       />
 
       {!dadosGitHubDisponiveis && (

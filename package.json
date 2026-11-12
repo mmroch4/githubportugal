@@ -12,7 +12,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "validar-projetos": "node scripts/validar-projetos.mjs"
+    "validar-projetos": "node scripts/validar-projetos.mjs",
+    "validar-mantenedores": "node scripts/validar-mantenedores.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

@@ -34,8 +34,10 @@ yarn build
 - `src/components/` — componentes reutilizáveis.
 - `src/config/metadata.ts` — metadados do site e links da comunidade (Discord, WhatsApp, repositório).
 - `data/projetos.yml` — lista de projetos do diretório.
+- `data/mantenedores.yml` — lista de mantenedores.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
-- `scripts/validar-projetos.mjs` — valida `data/projetos.yml` (usado pela GitHub Action).
+- `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
+- `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
 
 ## Abrir um pull request
 
@@ -92,9 +94,44 @@ yarn validar-projetos --github   # também confirma os repositórios na API do G
 
 A página `/projetos` pede os dados de cada repositório à API do GitHub e volta a pedi-los, no máximo, de 6 em 6 horas. Sem autenticação, a API permite 60 pedidos por hora, o que chega para correr o projeto localmente. Em produção, define a variável de ambiente `GITHUB_TOKEN` com um [token pessoal](https://github.com/settings/personal-access-tokens) sem permissões adicionais (só leitura de repositórios públicos): o site passa a usar a API GraphQL e faz um pedido por cada 50 projetos.
 
-## Sugerir mantenedores
+## Adicionar um mantenedor
 
-Conheces um mantenedor português de projetos open source? Abre uma issue com o nome e o perfil no GitHub. Em breve vamos ter uma página dedicada a mantenedores.
+A [página de mantenedores](https://githubportugal.com/mantenedores) é gerada a partir do ficheiro [`data/mantenedores.yml`](./data/mantenedores.yml). Cada pessoa tem um perfil próprio com a fotografia, a bio e os projetos que mantém no diretório.
+
+### Quem entra
+
+- Programadores portugueses que criam ou mantêm projetos open source no GitHub.
+- A lista é só de quem quer aparecer: **adiciona-te a ti próprio**, ou adiciona outra pessoa apenas com a autorização dela.
+- Para saíres da lista, abre um pull request a remover a tua entrada ou uma [issue](https://github.com/mmroch4/githubportugal/issues) a pedi-lo.
+
+### Como adicionar
+
+1. Se o teu projeto ainda não está no diretório, [adiciona-o primeiro](#adicionar-um-projeto) (podes fazê-lo no mesmo pull request).
+2. Abre o ficheiro [`data/mantenedores.yml`](./data/mantenedores.yml) e acrescenta uma entrada no fim da lista `mantenedores`:
+
+   ```yaml
+   - github: o-teu-utilizador
+     projetos: # opcional
+       - organizacao/projeto
+     bio: Uma frase sobre ti em português de Portugal. # opcional
+   ```
+
+3. Abre um pull request com o título `Adicionar @o-teu-utilizador aos mantenedores`.
+
+| Campo | Obrigatório | Regras |
+| --- | --- | --- |
+| `github` | Sim | O teu nome de utilizador no GitHub, sem `@`. Tem de ser uma conta pessoal, não uma organização. |
+| `projetos` | Não | Repositórios de `data/projetos.yml` que manténs fora da tua conta pessoal, por exemplo numa organização. Os projetos da tua conta pessoal (`o-teu-utilizador/...`) entram automaticamente. |
+| `bio` | Não | Uma frase em pt-PT, numa só linha, até 160 caracteres. Se não a escreveres, aparece a bio do teu perfil no GitHub. |
+
+O nome, a fotografia, a localização e os seguidores são lidos do teu perfil no GitHub e atualizados de 6 em 6 horas. Para os mudares, muda-os no GitHub.
+
+A mesma GitHub Action dos projetos valida este ficheiro. Para validares localmente:
+
+```bash
+yarn validar-mantenedores            # valida o formato
+yarn validar-mantenedores --github   # também confirma as contas na API do GitHub
+```
 
 ## Comunidade
 

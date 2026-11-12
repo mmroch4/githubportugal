@@ -1,42 +1,14 @@
 "use client";
 
-import {
-  ArchiveIcon,
-  LinkExternalIcon,
-  RepoForkedIcon,
-  SearchIcon,
-  StarIcon,
-} from "@primer/octicons-react";
+import { SearchIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
+import { CartaoProjeto } from "@/components/CartaoProjeto";
+import { normalizar } from "@/lib/formatar";
+import type { ResumoMantenedor } from "@/lib/mantenedores";
 import type { Projeto } from "@/lib/projetos";
 
 type Ordenacao = "estrelas" | "atividade" | "nome";
-
-const formatoNumero = new Intl.NumberFormat("pt-PT", {
-  notation: "compact",
-  maximumFractionDigits: 1,
-});
-
-const formatoRelativo = new Intl.RelativeTimeFormat("pt-PT", {
-  numeric: "auto",
-});
-
-/** Data relativa calculada em relação a `referencia`, para o servidor e o browser darem o mesmo texto. */
-function tempoDesde(data: string, referencia: string) {
-  const dias = Math.round(
-    (new Date(data).getTime() - new Date(referencia).getTime()) / 86_400_000
-  );
-  if (dias > -1) return "hoje";
-  if (dias > -30) return formatoRelativo.format(dias, "day");
-  if (dias > -365)
-    return formatoRelativo.format(Math.round(dias / 30), "month");
-  return formatoRelativo.format(Math.round(dias / 365), "year");
-}
-
-function normalizar(texto: string) {
-  return texto.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
-}
 
 const campoClassName =
   "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-light-blue-5 focus:outline-none focus:ring-2 focus:ring-light-blue-1 sm:text-base";
@@ -45,10 +17,12 @@ export function DiretorioProjetos({
   projetos,
   categorias,
   atualizadoEm,
+  mantenedoresPorProjeto,
 }: {
   projetos: Projeto[];
   categorias: string[];
   atualizadoEm: string;
+  mantenedoresPorProjeto: Record<string, ResumoMantenedor[]>;
 }) {
   const [pesquisa, setPesquisa] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -76,7 +50,11 @@ export function DiretorioProjetos({
       if (linguagem && p.linguagem !== linguagem) return false;
       if (!termo) return true;
       return normalizar(
-        `${p.repositorio} ${p.descricao} ${p.linguagem ?? ""} ${p.categoria}`
+        `${p.repositorio} ${p.descricao} ${p.linguagem ?? ""} ${p.categoria} ${(
+          mantenedoresPorProjeto[p.repositorio.toLowerCase()] ?? []
+        )
+          .map((m) => m.login)
+          .join(" ")}`
       ).includes(termo);
     });
 
@@ -92,7 +70,14 @@ export function DiretorioProjetos({
       }
       return (b.estrelas ?? -1) - (a.estrelas ?? -1);
     });
-  }, [projetos, pesquisa, categoria, linguagem, ordenacao]);
+  }, [
+    projetos,
+    pesquisa,
+    categoria,
+    linguagem,
+    ordenacao,
+    mantenedoresPorProjeto,
+  ]);
 
   return (
     <div>
@@ -166,97 +151,12 @@ export function DiretorioProjetos({
       ) : (
         <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
           {visiveis.map((p) => (
-            <li
+            <CartaoProjeto
               key={p.repositorio}
-              className="flex flex-col rounded-md border border-light-gray-2 bg-white p-4"
-            >
-              <div className="mb-2 flex items-start gap-3">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={p.avatar}
-                  alt=""
-                  width={40}
-                  height={40}
-                  loading="lazy"
-                  className="h-10 w-10 shrink-0 rounded-md border border-light-gray-2"
-                />
-                <div className="min-w-0 flex-1">
-                  <a
-                    href={p.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block break-words font-bold hover:underline focus:underline"
-                  >
-                    <span className="font-normal text-light-gray-6">
-                      {p.dono}/
-                    </span>
-                    {p.nome}
-                  </a>
-                  <span className="text-xs text-light-gray-6">
-                    {p.categoria}
-                  </span>
-                </div>
-                {p.arquivado && (
-                  <span className="flex shrink-0 items-center gap-1 rounded-full border border-light-yellow-2 bg-light-yellow-0 px-2 py-0.5 text-xs font-medium text-light-yellow-8">
-                    <ArchiveIcon size={12} />
-                    Arquivado
-                  </span>
-                )}
-              </div>
-
-              <p className="mb-3 flex-1 text-sm text-light-gray-8 sm:text-base">
-                {p.descricao}
-              </p>
-
-              <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6">
-                {p.linguagem && (
-                  <span className="flex items-center gap-1.5">
-                    <span
-                      aria-hidden="true"
-                      className="h-3 w-3 rounded-full border border-light-gray-2"
-                      style={{ backgroundColor: p.corLinguagem ?? undefined }}
-                    />
-                    {p.linguagem}
-                  </span>
-                )}
-                {p.estrelas !== null && (
-                  <span
-                    className="flex items-center gap-1"
-                    title={`${p.estrelas} estrelas`}
-                  >
-                    <StarIcon className="fill-light-gray-6" />
-                    {formatoNumero.format(p.estrelas)}
-                    <span className="sr-only">estrelas</span>
-                  </span>
-                )}
-                {p.forks !== null && (
-                  <span
-                    className="flex items-center gap-1"
-                    title={`${p.forks} forks`}
-                  >
-                    <RepoForkedIcon className="fill-light-gray-6" />
-                    {formatoNumero.format(p.forks)}
-                    <span className="sr-only">forks</span>
-                  </span>
-                )}
-                {p.ultimaAtividade && (
-                  <span>
-                    Atualizado {tempoDesde(p.ultimaAtividade, atualizadoEm)}
-                  </span>
-                )}
-                {p.site && (
-                  <a
-                    href={p.site}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="ml-auto flex items-center gap-1 font-medium text-light-blue-6 hover:underline focus:underline"
-                  >
-                    Site
-                    <LinkExternalIcon size={12} />
-                  </a>
-                )}
-              </div>
-            </li>
+              projeto={p}
+              atualizadoEm={atualizadoEm}
+              mantenedores={mantenedoresPorProjeto[p.repositorio.toLowerCase()]}
+            />
           ))}
         </ul>
       )}

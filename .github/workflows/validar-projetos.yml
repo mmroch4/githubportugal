@@ -1,22 +1,26 @@
-name: Validar projetos
+name: Validar dados
 
 on:
   pull_request:
     paths:
       - "data/projetos.yml"
+      - "data/mantenedores.yml"
       - "scripts/validar-projetos.mjs"
+      - "scripts/validar-mantenedores.mjs"
   push:
     branches: [main]
     paths:
       - "data/projetos.yml"
+      - "data/mantenedores.yml"
       - "scripts/validar-projetos.mjs"
+      - "scripts/validar-mantenedores.mjs"
 
 permissions:
   contents: read
 
 jobs:
   validar:
-    name: Validar data/projetos.yml
+    name: Validar projetos e mantenedores
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -28,7 +32,13 @@ jobs:
 
       - run: yarn install --frozen-lockfile
 
-      - name: Validar formato e repositórios
+      - name: Validar projetos
         run: node scripts/validar-projetos.mjs --github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validar mantenedores
+        if: ${{ !cancelled() }}
+        run: node scripts/validar-mantenedores.mjs --github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
