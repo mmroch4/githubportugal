@@ -1,7 +1,13 @@
-import { ArrowLeftIcon, PeopleIcon, PlusIcon } from "@primer/octicons-react";
+import {
+  ArrowLeftIcon,
+  IssueOpenedIcon,
+  PeopleIcon,
+  PlusIcon,
+} from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { links } from "@/config/metadata";
+import { obterPrimeirasContribuicoes } from "@/lib/issues";
 import { obterMantenedoresPorProjeto } from "@/lib/mantenedores";
 import { obterDiretorio } from "@/lib/projetos";
 import { DiretorioProjetos } from "./DiretorioProjetos";
@@ -25,7 +31,11 @@ const buttonClassName =
 export default async function Projetos() {
   const { projetos, categorias, atualizadoEm, dadosGitHubDisponiveis } =
     await obterDiretorio();
-  const mantenedoresPorProjeto = await obterMantenedoresPorProjeto(projetos);
+  const [mantenedoresPorProjeto, { porProjeto: issuesPorProjeto }] =
+    await Promise.all([
+      obterMantenedoresPorProjeto(projetos),
+      obterPrimeirasContribuicoes(projetos, atualizadoEm),
+    ]);
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
@@ -53,6 +63,13 @@ export default async function Projetos() {
 
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
+            href="/primeiras-contribuicoes"
+            className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
+          >
+            <IssueOpenedIcon className="fill-light-black" />
+            Primeiras contribuições
+          </Link>
+          <Link
             href="/mantenedores"
             className="flex items-center justify-center gap-2 rounded border border-light-gray-3 px-4 py-2 text-sm font-bold sm:text-base"
           >
@@ -76,6 +93,7 @@ export default async function Projetos() {
         categorias={categorias}
         atualizadoEm={atualizadoEm}
         mantenedoresPorProjeto={mantenedoresPorProjeto}
+        issuesPorProjeto={issuesPorProjeto}
       />
 
       {!dadosGitHubDisponiveis && (

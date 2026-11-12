@@ -9,6 +9,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return [
     { url: `${siteUrl}/` },
     { url: `${siteUrl}/projetos` },
+    { url: `${siteUrl}/primeiras-contribuicoes` },
     { url: `${siteUrl}/mantenedores` },
     ...logins.map((login) => ({
       url: `${siteUrl}${caminhoMantenedor(login)}`,

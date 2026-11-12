@@ -36,6 +36,7 @@ yarn build
 - `data/projetos.yml` — lista de projetos do diretório.
 - `data/mantenedores.yml` — lista de mantenedores.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
+- `src/lib/issues.ts` — procura nos projetos do diretório as issues para primeiras contribuições.
 - `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
 
@@ -132,6 +133,20 @@ A mesma GitHub Action dos projetos valida este ficheiro. Para validares localmen
 yarn validar-mantenedores            # valida o formato
 yarn validar-mantenedores --github   # também confirma as contas na API do GitHub
 ```
+
+## Primeiras contribuições
+
+A página [Primeiras contribuições](https://githubportugal.com/primeiras-contribuicoes) junta as issues abertas dos projetos do diretório que estão marcadas como boas para quem está a começar ou como pedidos de ajuda. Não há nenhum ficheiro para editar: a lista é lida da API do GitHub e atualizada de 6 em 6 horas.
+
+### Como pôr as issues do teu projeto na lista
+
+1. Confirma que o projeto está no [diretório](#adicionar-um-projeto) e não está arquivado.
+2. Marca as issues com uma destas etiquetas (maiúsculas e hífenes não importam):
+   - `good first issue`, `first-timers-only` ou `beginner friendly`, para tarefas simples e bem explicadas, boas para uma primeira contribuição;
+   - `help wanted`, para tarefas em que precisas de ajuda, mesmo que exijam mais experiência.
+3. Escreve na issue o que é preciso fazer e onde está o código a alterar. Uma issue bem descrita recebe muito mais ajuda.
+
+As issues que já têm alguém atribuído não aparecem, para ninguém começar a trabalhar numa tarefa já ocupada. Cada projeto mostra, no máximo, 30 issues.
 
 ## Comunidade
 
