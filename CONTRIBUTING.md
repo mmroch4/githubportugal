@@ -36,14 +36,17 @@ yarn build
 - `data/projetos.yml` — lista de projetos do diretório.
 - `data/mantenedores.yml` — lista de mantenedores.
 - `data/eventos.yml` — agenda de eventos e `data/comunidades.yml` — diretório de comunidades.
+- `src/content/artigos/` — artigos da comunidade, um ficheiro `.mdx` por artigo.
 - `data/ranking.json` — ranking gerado pela GitHub Action (não edites à mão) e `data/ranking-excluidos.yml` — quem pediu para sair do ranking.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
 - `src/lib/issues.ts` — procura nos projetos do diretório as issues para primeiras contribuições.
 - `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
 - `src/lib/ranking.ts` — lê o ranking e retira quem pediu para sair.
 - `src/lib/eventos.ts` e `src/lib/comunidades.ts` — leem a agenda e o diretório de comunidades.
+- `src/lib/artigos.ts` e `src/lib/devto.ts` — leem os artigos da comunidade e as publicações do dev.to.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
 - `scripts/validar-eventos.mjs` e `scripts/validar-comunidades.mjs` — validam a agenda e as comunidades.
+- `scripts/validar-artigos.mjs` — valida os artigos.
 - `scripts/gerar-ranking.mjs` — gera o ranking (corre todas as semanas numa GitHub Action).
 
 ## Abrir um pull request
@@ -260,6 +263,59 @@ A mesma GitHub Action dos projetos valida os dois ficheiros. Para validares loca
 yarn validar-eventos
 yarn validar-comunidades            # valida o formato
 yarn validar-comunidades --github   # também confirma as contas do GitHub
+```
+
+## Escrever um artigo
+
+A [secção de artigos](https://githubportugal.com/artigos) publica textos escritos pela comunidade. Cada artigo é um ficheiro MDX (Markdown com alguns extras) na pasta [`src/content/artigos`](./src/content/artigos). Não precisas de correr o site para propor um.
+
+### Que artigos entram
+
+- Textos originais em **português de Portugal**, que tratam o leitor por "tu".
+- Sobre programação, open source, projetos portugueses, carreira ou a comunidade tech em Portugal.
+- Tutoriais com código que funciona, histórias de projetos, experiências a contribuir ou a manter software.
+- Não entram textos promocionais, ofertas de emprego nem conteúdo copiado. Se o artigo já foi publicado noutro sítio, indica-o no fim do texto.
+
+### Como propor
+
+1. Copia o ficheiro [`src/content/artigos/_modelo.mdx`](./src/content/artigos/_modelo.mdx) para um ficheiro novo na mesma pasta, por exemplo `como-publiquei-a-minha-primeira-biblioteca.mdx`. O nome do ficheiro é o endereço do artigo (`/artigos/como-publiquei-a-minha-primeira-biblioteca`): usa só letras minúsculas sem acentos, números e hífenes.
+2. Preenche o cabeçalho entre as duas linhas `---`:
+
+   ```yaml
+   ---
+   titulo: Como publiquei a minha primeira biblioteca
+   descricao: Uma ou duas frases que resumem o artigo.
+   data: 2026-11-12
+   autor: o-teu-login-do-github
+   etiquetas: [open source, javascript]
+   ---
+   ```
+
+3. Escreve o texto por baixo, em Markdown. O título já vem do cabeçalho, por isso usa `##` e `###` para as secções.
+4. Abre um pull request com o título `Artigo: Título do artigo`. Alguém da comunidade revê o texto e pode sugerir alterações.
+
+| Campo | Obrigatório | Regras |
+| --- | --- | --- |
+| `titulo` | Sim | Entre 5 e 100 caracteres. |
+| `descricao` | Sim | Numa só linha, entre 20 e 220 caracteres. Aparece na lista de artigos e nas redes sociais. |
+| `data` | Sim | Data de publicação, no formato `AAAA-MM-DD`. |
+| `autor` | Não | O teu login do GitHub, sem `@`. Sem autor, o artigo aparece como escrito pela Equipa GitHub Portugal. |
+| `etiquetas` | Não | Até 5 palavras curtas, por exemplo `[open source, javascript]`. |
+| `atualizado` | Não | Data da última revisão importante, no formato `AAAA-MM-DD`. |
+
+Em MDX, os caracteres `<` e `{` têm significado especial. Se precisares deles no texto, escreve `\<` e `\{`, ou põe-nos entre acentos graves, como código.
+
+### Publicar no dev.to
+
+Se preferires publicar no [dev.to](https://dev.to), usa a etiqueta **#githubportugal**: a página de artigos mostra sozinha as publicações recentes com essa etiqueta (e com #portugal), atualizadas de 6 em 6 horas.
+
+### Validação automática
+
+A mesma GitHub Action dos dados valida o cabeçalho de cada artigo e se o MDX compila. Para validares localmente:
+
+```bash
+yarn validar-artigos            # valida o cabeçalho e o MDX
+yarn validar-artigos --github   # também confirma a conta do autor no GitHub
 ```
 
 ## Comunidade

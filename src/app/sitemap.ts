@@ -3,9 +3,10 @@ import { siteUrl } from "@/config/metadata";
 import { caminhoMantenedor } from "@/lib/formatar";
 import { listarLogins } from "@/lib/mantenedores";
 import { capitulos } from "@/content/guia/capitulos";
+import { lerArtigos } from "@/lib/artigos";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const logins = await listarLogins();
+  const [logins, artigos] = await Promise.all([listarLogins(), lerArtigos()]);
 
   return [
     { url: `${siteUrl}/` },
@@ -20,6 +21,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/comunidades` },
     { url: `${siteUrl}/guia` },
     ...capitulos.map((c) => ({ url: `${siteUrl}/guia/${c.slug}` })),
+    { url: `${siteUrl}/artigos` },
+    ...artigos.map((a) => ({
+      url: `${siteUrl}/artigos/${a.slug}`,
+      lastModified: a.atualizado ?? a.data,
+    })),
     { url: `${siteUrl}/sobre` },
   ];
 }

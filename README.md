@@ -27,6 +27,8 @@ A lista está em constante evolução e sabemos que há muitos mais projetos e m
 
 Para quem quer dar os primeiros passos no código aberto, ou para mantenedores experientes à procura de formas de fortalecer as suas comunidades, escrevemos um **[guia de código aberto](https://githubportugal.com/guia)** em português de Portugal, com informação sobre como fazer a primeira contribuição, escolher uma licença, iniciar um projeto, construir uma comunidade colaborativa e adotar boas práticas de manutenção.
 
+Queres partilhar o que aprendeste? Escreve um **[artigo](https://githubportugal.com/artigos)** para o site com um pull request, ou publica no dev.to com a etiqueta `#githubportugal`.
+
 Juntos, estamos a fortalecer o código aberto em Portugal e a contribuir para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junta-te a nós!
 
 ## ⚠️ Avisos

@@ -8,11 +8,13 @@ on:
       - "data/ranking-excluidos.yml"
       - "data/eventos.yml"
       - "data/comunidades.yml"
+      - "src/content/artigos/**"
       - "scripts/validar-projetos.mjs"
       - "scripts/validar-mantenedores.mjs"
       - "scripts/gerar-ranking.mjs"
       - "scripts/validar-eventos.mjs"
       - "scripts/validar-comunidades.mjs"
+      - "scripts/validar-artigos.mjs"
   push:
     branches: [main]
     paths:
@@ -21,18 +23,20 @@ on:
       - "data/ranking-excluidos.yml"
       - "data/eventos.yml"
       - "data/comunidades.yml"
+      - "src/content/artigos/**"
       - "scripts/validar-projetos.mjs"
       - "scripts/validar-mantenedores.mjs"
       - "scripts/gerar-ranking.mjs"
       - "scripts/validar-eventos.mjs"
       - "scripts/validar-comunidades.mjs"
+      - "scripts/validar-artigos.mjs"
 
 permissions:
   contents: read
 
 jobs:
   validar:
-    name: Validar projetos, mantenedores, ranking, eventos e comunidades
+    name: Validar projetos, mantenedores, ranking, eventos, comunidades e artigos
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -66,5 +70,11 @@ jobs:
       - name: Validar comunidades
         if: ${{ !cancelled() }}
         run: node scripts/validar-comunidades.mjs --github
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validar artigos
+        if: ${{ !cancelled() }}
+        run: node scripts/validar-artigos.mjs --github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
