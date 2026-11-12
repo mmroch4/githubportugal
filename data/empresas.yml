@@ -1,0 +1,147 @@
+# Diretório de empresas tech em Portugal que publicam código aberto
+#
+# Para adicionar uma empresa, acrescenta uma entrada à lista `empresas` e abre
+# um pull request. Só entram empresas com equipa de engenharia em Portugal e uma
+# organização no GitHub com pelo menos um repositório público que não seja fork.
+# O número de repositórios, as estrelas e os repositórios em destaque são lidos
+# automaticamente da API do GitHub, por isso não os escrevas aqui.
+#
+# Campos de cada empresa:
+#   nome       (obrigatório) nome da empresa
+#   github     (obrigatório) organização da empresa no GitHub, por exemplo feedzai
+#   descricao  (obrigatório) uma frase em português de Portugal, até 200 caracteres
+#   setor      (obrigatório) um dos setores listados abaixo
+#   cidades    (obrigatório) lista das cidades portuguesas onde a empresa tem escritório
+#   site       (opcional)    site da empresa, começado por https://; sem site, usa o da organização no GitHub
+#   carreiras  (opcional)    página de ofertas de emprego, começada por https://
+#
+# Instruções completas em CONTRIBUTING.md.
+
+setores:
+  - Fintech e pagamentos
+  - Inteligência artificial e dados
+  - Plataformas e ferramentas de programação
+  - Comércio eletrónico
+  - Saúde
+  - Segurança
+  - Comunicações e apoio ao cliente
+  - Recrutamento
+  - Consultoria e desenvolvimento de produto
+
+empresas:
+  - nome: Feedzai
+    github: feedzai
+    descricao: Plataforma de prevenção de fraude e branqueamento de capitais com aprendizagem automática, usada por bancos de todo o mundo.
+    setor: Fintech e pagamentos
+    cidades: [Coimbra, Lisboa, Porto]
+    site: https://www.feedzai.com
+
+  - nome: Uphold
+    github: uphold
+    descricao: Plataforma de pagamentos e câmbio de moedas tradicionais e digitais, com grande parte da engenharia em Portugal.
+    setor: Fintech e pagamentos
+    cidades: [Braga, Porto]
+    site: https://uphold.com
+
+  - nome: Unbabel
+    github: Unbabel
+    descricao: Tradução com inteligência artificial e revisão humana. Publica modelos e ferramentas de avaliação de tradução automática, como o COMET.
+    setor: Inteligência artificial e dados
+    cidades: [Lisboa]
+    site: https://unbabel.com
+
+  - nome: OutSystems
+    github: OutSystems
+    descricao: Plataforma de desenvolvimento low-code para criar aplicações web e móveis de forma rápida.
+    setor: Plataformas e ferramentas de programação
+    cidades: [Lisboa, Braga, Proença-a-Nova]
+    site: https://www.outsystems.com
+
+  - nome: Codacy
+    github: codacy
+    descricao: Análise automática da qualidade e da segurança do código, integrada nos pull requests.
+    setor: Plataformas e ferramentas de programação
+    cidades: [Lisboa]
+    site: https://www.codacy.com
+
+  - nome: Farfetch
+    github: Farfetch
+    descricao: Plataforma global de comércio eletrónico de moda de luxo. Publica bibliotecas como o KafkaFlow para .NET.
+    setor: Comércio eletrónico
+    cidades: [Porto, Lisboa, Braga, Guimarães]
+    site: https://www.farfetch.com
+
+  - nome: Sword Health
+    github: SWORDHealth
+    descricao: Fisioterapia digital com sensores de movimento e inteligência artificial, acompanhada por fisioterapeutas.
+    setor: Saúde
+    cidades: [Porto]
+    site: https://swordhealth.com
+
+  - nome: Jscrambler
+    github: jscrambler
+    descricao: Proteção de código JavaScript do lado do cliente contra engenharia reversa, adulteração e ataques à cadeia de fornecimento.
+    setor: Segurança
+    cidades: [Porto]
+    site: https://jscrambler.com
+
+  - nome: Talkdesk
+    github: Talkdesk
+    descricao: Contact center na cloud com inteligência artificial, fundado em Portugal.
+    setor: Comunicações e apoio ao cliente
+    cidades: [Lisboa, Porto, Coimbra]
+    site: https://www.talkdesk.com
+
+  - nome: Landing.jobs
+    github: landingjobs
+    descricao: Plataforma de recrutamento especializada em tecnologia, com ofertas para trabalhar em Portugal e remotamente.
+    setor: Recrutamento
+    cidades: [Lisboa]
+    site: https://landing.jobs
+
+  - nome: Mindera
+    github: Mindera
+    descricao: Empresa de engenharia de software que desenvolve produtos web e móveis para clientes internacionais.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Porto]
+    site: https://mindera.com
+
+  - nome: Subvisual
+    github: subvisual
+    descricao: Estúdio de design e desenvolvimento de produto, com trabalho em web, aplicações e blockchain.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Braga]
+    site: https://subvisual.com
+
+  - nome: Whitesmith
+    github: whitesmith
+    descricao: Estúdio de desenvolvimento de produto e autor de ferramentas open source como o RubyCritic e o Hawkpost.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Coimbra]
+    site: https://www.whitesmith.co
+
+  - nome: Imaginary Cloud
+    github: imaginary-cloud
+    descricao: Consultora de desenvolvimento de software e design, autora da biblioteca CameraManager para iOS.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Lisboa]
+    site: https://www.imaginarycloud.com
+
+  - nome: Significa
+    github: significa
+    descricao: Estúdio de design e desenvolvimento de produto digital, que publica o código do próprio site e bibliotecas React.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Porto]
+    site: https://significa.co
+
+  - nome: Runtime Revolution
+    github: runtimerevolution
+    descricao: Consultora de desenvolvimento de software focada em Ruby on Rails, React e aplicações móveis.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Lisboa]
+
+  - nome: Coletiv
+    github: coletiv
+    descricao: Estúdio de desenvolvimento de aplicações web e móveis, com bibliotecas open source em Elixir e Flutter.
+    setor: Consultoria e desenvolvimento de produto
+    cidades: [Porto]

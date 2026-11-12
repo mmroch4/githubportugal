@@ -19,6 +19,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${siteUrl}/ranking` },
     { url: `${siteUrl}/eventos` },
     { url: `${siteUrl}/comunidades` },
+    { url: `${siteUrl}/empresas` },
     { url: `${siteUrl}/guia` },
     ...capitulos.map((c) => ({ url: `${siteUrl}/guia/${c.slug}` })),
     { url: `${siteUrl}/artigos` },
