@@ -1,17 +1,18 @@
 import { ArrowLeftIcon, ChevronRightIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao, urlAbsoluto } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { capitulos } from "@/content/guia/capitulos";
 
 const description =
   "Guia de código aberto em português de Portugal: como fazer a tua primeira contribuição, escolher uma licença, iniciar um projeto, construir uma comunidade e manter um projeto open source.";
 
-export const metadata: Metadata = {
-  title: "Guia de código aberto",
-  description,
-  alternates: { canonical: "/guia" },
-  openGraph: { title: "Guia de código aberto", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Guia de código aberto",
+  descricao: description,
+  caminho: "/guia",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -83,6 +84,20 @@ export default function Guia() {
         </a>{" "}
         no repositório: abre um pull request.
       </p>
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Guia de código aberto",
+          descricao: description,
+          caminho: "/guia",
+          itens: capitulos.map((c) => ({
+            "@type": "TechArticle",
+            headline: c.titulo,
+            description: c.descricao,
+            url: urlAbsoluto(`/guia/${c.slug}`),
+            inLanguage: "pt-PT",
+          })),
+        })}
+      />
     </main>
   );
 }

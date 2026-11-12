@@ -5,6 +5,14 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
+import {
+  ID_ORGANIZACAO,
+  ID_WEBSITE,
+  metadadosPagina,
+  migalhas,
+  urlAbsoluto,
+} from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { capitulos, obterCapitulo } from "@/content/guia/capitulos";
 
@@ -22,12 +30,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!dados) return {};
   const { titulo, descricao } = dados.capitulo;
 
-  return {
-    title: `${titulo} · Guia de código aberto`,
-    description: descricao,
-    alternates: { canonical: `/guia/${capitulo}` },
-    openGraph: { title: titulo, description: descricao },
-  };
+  return metadadosPagina({
+    titulo: `${titulo} · Guia de código aberto`,
+    tituloSocial: titulo,
+    descricao,
+    caminho: `/guia/${capitulo}`,
+    tipo: "article",
+  });
 }
 
 const buttonClassName =
@@ -116,6 +125,40 @@ export default async function CapituloGuia({ params }: Props) {
           </Link>
         )}
       </nav>
+      <DadosEstruturados
+        dados={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "TechArticle",
+              "@id": `${urlAbsoluto(`/guia/${capitulo}`)}#artigo`,
+              mainEntityOfPage: urlAbsoluto(`/guia/${capitulo}`),
+              url: urlAbsoluto(`/guia/${capitulo}`),
+              headline: dados.capitulo.titulo,
+              description: dados.capitulo.descricao,
+              inLanguage: "pt-PT",
+              position: numero,
+              image: urlAbsoluto("/opengraph-image"),
+              author: { "@id": ID_ORGANIZACAO },
+              publisher: { "@id": ID_ORGANIZACAO },
+              isPartOf: [
+                {
+                  "@type": "CreativeWorkSeries",
+                  name: "Guia de código aberto",
+                  url: urlAbsoluto("/guia"),
+                },
+                { "@id": ID_WEBSITE },
+              ],
+              educationalLevel: "Iniciante",
+              about: ["Código aberto", "Open source", "GitHub"],
+            },
+            migalhas([
+              { nome: "Guia de código aberto", caminho: "/guia" },
+              { nome: dados.capitulo.titulo, caminho: `/guia/${capitulo}` },
+            ]),
+          ],
+        }}
+      />
     </main>
   );
 }

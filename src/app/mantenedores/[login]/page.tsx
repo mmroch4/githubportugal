@@ -9,6 +9,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
+import { ID_WEBSITE, metadadosPagina, migalhas, urlAbsoluto } from "@/lib/seo";
 import { notFound } from "next/navigation";
 import { CartaoProjeto } from "@/components/CartaoProjeto";
 import { caminhoMantenedor, formatoNumero } from "@/lib/formatar";
@@ -35,12 +37,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     m.bio ??
     `Projetos open source mantidos por ${m.nome} no diretório do GitHub Portugal.`;
 
-  return {
-    title,
-    description,
-    alternates: { canonical: caminhoMantenedor(m.login) },
-    openGraph: { title, description, type: "profile", images: [m.avatar] },
-  };
+  return metadadosPagina({
+    titulo: title,
+    descricao: description,
+    caminho: caminhoMantenedor(m.login),
+    tipo: "profile",
+    imagens: [m.avatar],
+    openGraph: { username: m.login },
+  });
 }
 
 const buttonClassName =
@@ -161,6 +165,52 @@ export default async function PerfilMantenedor({ params }: Props) {
           </ul>
         )}
       </section>
+      <DadosEstruturados
+        dados={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ProfilePage",
+              "@id": `${urlAbsoluto(caminhoMantenedor(m.login))}#pagina`,
+              url: urlAbsoluto(caminhoMantenedor(m.login)),
+              inLanguage: "pt-PT",
+              isPartOf: { "@id": ID_WEBSITE },
+              breadcrumb: migalhas([
+                { nome: "Mantenedores", caminho: "/mantenedores" },
+                { nome: m.nome, caminho: caminhoMantenedor(m.login) },
+              ]),
+              mainEntity: {
+                "@type": "Person",
+                name: m.nome,
+                alternateName: m.login,
+                identifier: m.login,
+                image: m.avatar,
+                url: urlAbsoluto(caminhoMantenedor(m.login)),
+                sameAs: [m.url, ...(m.site ? [m.site] : [])],
+                ...(m.bio ? { description: m.bio } : {}),
+                ...(m.localizacao ? { homeLocation: m.localizacao } : {}),
+                ...(m.empresa ? { worksFor: m.empresa } : {}),
+                ...(m.seguidores !== null
+                  ? {
+                      interactionStatistic: {
+                        "@type": "InteractionCounter",
+                        interactionType: "https://schema.org/FollowAction",
+                        userInteractionCount: m.seguidores,
+                      },
+                    }
+                  : {}),
+                owns: m.projetos.map((p) => ({
+                  "@type": "SoftwareSourceCode",
+                  name: p.nome,
+                  description: p.descricao,
+                  codeRepository: p.url,
+                  ...(p.linguagem ? { programmingLanguage: p.linguagem } : {}),
+                })),
+              },
+            },
+          ],
+        }}
+      />
     </main>
   );
 }

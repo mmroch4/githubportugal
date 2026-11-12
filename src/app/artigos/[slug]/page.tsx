@@ -6,6 +6,14 @@ import { links } from "@/config/metadata";
 import { EQUIPA, formatarData, lerArtigos, obterArtigo } from "@/lib/artigos";
 import { caminhoMantenedor } from "@/lib/formatar";
 import { listarLogins } from "@/lib/mantenedores";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
+import {
+  ID_ORGANIZACAO,
+  ID_WEBSITE,
+  metadadosPagina,
+  migalhas,
+  urlAbsoluto,
+} from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -21,25 +29,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const artigo = await obterArtigo(slug);
   if (!artigo) return {};
 
-  return {
-    title: artigo.titulo,
-    description: artigo.descricao,
-    authors: [
-      artigo.autor
-        ? { name: artigo.autor, url: `https://github.com/${artigo.autor}` }
-        : { name: EQUIPA },
-    ],
-    keywords: artigo.etiquetas,
-    alternates: { canonical: `/artigos/${slug}` },
+  return metadadosPagina({
+    titulo: artigo.titulo,
+    descricao: artigo.descricao,
+    caminho: `/artigos/${slug}`,
+    tipo: "article",
     openGraph: {
-      type: "article",
-      title: artigo.titulo,
-      description: artigo.descricao,
       publishedTime: artigo.data,
       modifiedTime: artigo.atualizado ?? undefined,
+      authors: [artigo.autor ? `https://github.com/${artigo.autor}` : EQUIPA],
       tags: artigo.etiquetas,
     },
-  };
+    extra: {
+      authors: [
+        artigo.autor
+          ? { name: artigo.autor, url: `https://github.com/${artigo.autor}` }
+          : { name: EQUIPA },
+      ],
+      keywords: artigo.etiquetas,
+    },
+  });
 }
 
 const buttonClassName =
@@ -165,6 +174,43 @@ export default async function PaginaArtigo({ params }: Props) {
           Ver todos os artigos
         </Link>
       </footer>
+      <DadosEstruturados
+        dados={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "BlogPosting",
+              "@id": `${urlAbsoluto(`/artigos/${slug}`)}#artigo`,
+              mainEntityOfPage: urlAbsoluto(`/artigos/${slug}`),
+              url: urlAbsoluto(`/artigos/${slug}`),
+              headline: artigo.titulo,
+              description: artigo.descricao,
+              datePublished: artigo.data,
+              dateModified: artigo.atualizado ?? artigo.data,
+              inLanguage: "pt-PT",
+              keywords: artigo.etiquetas.join(", "),
+              timeRequired: `PT${artigo.minutos}M`,
+              image: urlAbsoluto("/opengraph-image"),
+              author: artigo.autor
+                ? {
+                    "@type": "Person",
+                    name: artigo.autor,
+                    url: autorEhMantenedor
+                      ? urlAbsoluto(caminhoMantenedor(artigo.autor))
+                      : `https://github.com/${artigo.autor}`,
+                    sameAs: [`https://github.com/${artigo.autor}`],
+                  }
+                : { "@id": ID_ORGANIZACAO },
+              publisher: { "@id": ID_ORGANIZACAO },
+              isPartOf: { "@id": ID_WEBSITE },
+            },
+            migalhas([
+              { nome: "Artigos", caminho: "/artigos" },
+              { nome: artigo.titulo, caminho: `/artigos/${slug}` },
+            ]),
+          ],
+        }}
+      />
     </main>
   );
 }

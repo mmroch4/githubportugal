@@ -1,8 +1,10 @@
 import { Ferramentas } from "@/components/Ferramentas";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { NonOfficialWarning } from "@/components/NonOfficialWarning";
 import { scriptTema } from "@/components/Tema";
 import { monaSans } from "@/config/fonts";
 import { metadata as m, viewport as v } from "@/config/metadata";
+import { dadosEstruturadosSite } from "@/lib/seo";
 import clsx from "clsx";
 import "./globals.css";
 
@@ -25,6 +27,7 @@ export default function RootLayout({
           "grid min-h-screen grid-cols-1 grid-rows-layout bg-light-gray-0 text-light-black"
         )}
       >
+        <DadosEstruturados dados={dadosEstruturadosSite} />
         <NonOfficialWarning />
 
         {children}

@@ -1,6 +1,8 @@
 import { ArrowLeftIcon, CalendarIcon, PlusIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links } from "@/config/metadata";
 import { obterComunidades } from "@/lib/comunidades";
 import { DiretorioComunidades } from "./DiretorioComunidades";
@@ -8,12 +10,11 @@ import { DiretorioComunidades } from "./DiretorioComunidades";
 const description =
   "Comunidades de tecnologia em Portugal: meetups, grupos de utilizadores, associações e hackerspaces, por tema e por cidade.";
 
-export const metadata: Metadata = {
-  title: "Comunidades",
-  description,
-  alternates: { canonical: "/comunidades" },
-  openGraph: { title: "Comunidades tech em Portugal", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Comunidades tech em Portugal",
+  descricao: description,
+  caminho: "/comunidades",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -66,6 +67,32 @@ export default async function Comunidades() {
       </header>
 
       <DiretorioComunidades comunidades={comunidades} categorias={categorias} />
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Comunidades tech em Portugal",
+          descricao: description,
+          caminho: "/comunidades",
+          itens: comunidades.map((c) => ({
+            "@type": "Organization",
+            name: c.nome,
+            description: c.descricao,
+            url: c.site,
+            ...(c.github ? { sameAs: [`https://github.com/${c.github}`] } : {}),
+            ...(c.cidade
+              ? {
+                  location: {
+                    "@type": "Place",
+                    address: {
+                      "@type": "PostalAddress",
+                      addressLocality: c.cidade,
+                      addressCountry: "PT",
+                    },
+                  },
+                }
+              : {}),
+          })),
+        })}
+      />
     </main>
   );
 }

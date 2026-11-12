@@ -1,6 +1,8 @@
 import { ArrowLeftIcon, PersonIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { Suspense } from "react";
 import { links } from "@/config/metadata";
 import { obterRanking } from "@/lib/ranking";
@@ -9,15 +11,11 @@ import { TabelaRanking, TabelaRankingComParametros } from "./TabelaRanking";
 const description =
   "Os programadores mais ativos no GitHub em Portugal, em Lisboa, no Porto, em Braga e em Coimbra, por contribuições públicas no último ano e por seguidores.";
 
-export const metadata: Metadata = {
-  title: "Ranking",
-  description,
-  alternates: { canonical: "/ranking" },
-  openGraph: {
-    title: "Ranking de programadores em Portugal no GitHub",
-    description,
-  },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Ranking de programadores em Portugal no GitHub",
+  descricao: description,
+  caminho: "/ranking",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -104,6 +102,13 @@ export default async function PaginaRanking() {
           </p>
         )}
       </section>
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Ranking de programadores em Portugal no GitHub",
+          descricao: description,
+          caminho: "/ranking",
+        })}
+      />
     </main>
   );
 }

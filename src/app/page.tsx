@@ -2,6 +2,22 @@ import { ChevronRightIcon, MarkGithubIcon } from "@primer/octicons-react";
 import { Logo } from "@/components/Logo";
 import { links } from "@/config/metadata";
 import Link from "next/link";
+import { metadadosPagina } from "@/lib/seo";
+
+export const metadata = {
+  ...metadadosPagina({
+    titulo: "GitHub Portugal",
+    tituloSocial:
+      "GitHub Portugal: comunidade de programadores e de open source em Portugal",
+    descricao:
+      "Comunidade portuguesa de programadores e de projetos open source no GitHub: diretório de projetos, mantenedores, primeiras contribuições, ranking, eventos, comunidades, empresas e um guia de código aberto em português.",
+    caminho: "/",
+  }),
+  title: {
+    absolute:
+      "GitHub Portugal: comunidade de programadores e de open source em Portugal",
+  },
+};
 
 export default function Home() {
   return (

@@ -6,6 +6,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { dadosEvento, metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links, siteUrl } from "@/config/metadata";
 import { mesDe, obterAgenda, type Evento } from "@/lib/eventos";
 import { CartaoEvento } from "./CartaoEvento";
@@ -17,12 +19,11 @@ export const revalidate = 3600;
 const description =
   "Agenda de conferências, meetups, workshops e hackathons de tecnologia em Portugal, mantida pela comunidade.";
 
-export const metadata: Metadata = {
-  title: "Eventos",
-  description,
-  alternates: { canonical: "/eventos" },
-  openGraph: { title: "Eventos tech em Portugal", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Eventos tech em Portugal",
+  descricao: description,
+  caminho: "/eventos",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -152,6 +153,14 @@ export default async function Eventos() {
         no Google Calendar, no Outlook ou no Calendário da Apple. Os eventos
         novos aparecem sozinhos.
       </p>
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Eventos tech em Portugal",
+          descricao: description,
+          caminho: "/eventos",
+          itens: proximos.map(dadosEvento),
+        })}
+      />
     </main>
   );
 }

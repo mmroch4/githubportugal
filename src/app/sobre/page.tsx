@@ -5,10 +5,52 @@ import { RiDiscordFill, RiWhatsappFill } from "react-icons/ri";
 import { links } from "@/config/metadata";
 import AboutContent from "./about.mdx";
 import { Logo } from "@/components/Logo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
+import { perguntasFrequentes } from "@/content/perguntas-frequentes";
+import {
+  ID_ORGANIZACAO,
+  ID_WEBSITE,
+  metadadosPagina,
+  migalhas,
+  urlAbsoluto,
+} from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Sobre",
-  alternates: { canonical: "/sobre" },
+const description =
+  "O que é o GitHub Portugal, a comunidade portuguesa de programadores e de projetos open source, como participar e respostas às perguntas mais frequentes.";
+
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Sobre o GitHub Portugal",
+  descricao: description,
+  caminho: "/sobre",
+});
+
+const dadosEstruturados = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": `${urlAbsoluto("/sobre")}#pagina`,
+      url: urlAbsoluto("/sobre"),
+      name: "Sobre o GitHub Portugal",
+      description,
+      inLanguage: "pt-PT",
+      isPartOf: { "@id": ID_WEBSITE },
+      about: { "@id": ID_ORGANIZACAO },
+      mainEntity: { "@id": ID_ORGANIZACAO },
+      breadcrumb: migalhas([{ nome: "Sobre", caminho: "/sobre" }]),
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${urlAbsoluto("/sobre")}#perguntas-frequentes`,
+      url: urlAbsoluto("/sobre"),
+      inLanguage: "pt-PT",
+      mainEntity: perguntasFrequentes.map((p) => ({
+        "@type": "Question",
+        name: p.pergunta,
+        acceptedAnswer: { "@type": "Answer", text: p.resposta },
+      })),
+    },
+  ],
 };
 
 const buttonClassName =
@@ -80,6 +122,30 @@ export default function About() {
       <section className="space-y-3 sm:space-y-4">
         <AboutContent />
       </section>
+
+      <section
+        aria-labelledby="perguntas-frequentes"
+        className="mt-8 space-y-3 sm:space-y-4"
+      >
+        <h2
+          id="perguntas-frequentes"
+          className="border-b border-b-light-gray-2 py-2 text-xl font-extrabold sm:text-2xl md:text-3xl"
+        >
+          ❓ Perguntas frequentes
+        </h2>
+        <dl className="space-y-4">
+          {perguntasFrequentes.map((p) => (
+            <div key={p.pergunta}>
+              <dt className="text-lg font-extrabold sm:text-xl">
+                {p.pergunta}
+              </dt>
+              <dd className="mt-1 text-base sm:text-lg">{p.resposta}</dd>
+            </div>
+          ))}
+        </dl>
+      </section>
+
+      <DadosEstruturados dados={dadosEstruturados} />
     </main>
   );
 }

@@ -7,6 +7,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao, urlAbsoluto } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links } from "@/config/metadata";
 import { EQUIPA, formatarData, lerArtigos } from "@/lib/artigos";
 import { ETIQUETAS_DEVTO, obterArtigosDevTo } from "@/lib/devto";
@@ -17,15 +19,12 @@ export const revalidate = 21600;
 const description =
   "Artigos escritos pela comunidade GitHub Portugal e publicações de programadores portugueses no dev.to.";
 
-export const metadata: Metadata = {
-  title: "Artigos",
-  description,
-  alternates: {
-    canonical: "/artigos",
-    types: { "application/rss+xml": "/artigos/feed.xml" },
-  },
-  openGraph: { title: "Artigos da comunidade", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Artigos da comunidade",
+  descricao: description,
+  caminho: "/artigos",
+  alternates: { types: { "application/rss+xml": "/artigos/feed.xml" } },
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -248,6 +247,23 @@ export default async function Artigos() {
           </ul>
         )}
       </section>
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Artigos da comunidade",
+          descricao: description,
+          caminho: "/artigos",
+          tipo: "Blog",
+          itens: artigos.map((a) => ({
+            "@type": "BlogPosting",
+            headline: a.titulo,
+            description: a.descricao,
+            url: urlAbsoluto(`/artigos/${a.slug}`),
+            datePublished: a.data,
+            ...(a.atualizado ? { dateModified: a.atualizado } : {}),
+            inLanguage: "pt-PT",
+          })),
+        })}
+      />
     </main>
   );
 }

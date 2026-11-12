@@ -9,6 +9,11 @@ const nextConfig = {
     "/eventos/calendario.ics": ["./data/eventos.yml"],
     "/comunidades": ["./data/comunidades.yml"],
     "/artigos": ["./src/content/artigos/*.mdx"],
+    "/llms.txt": ["./data/*.yml", "./src/content/artigos/*.mdx"],
+    "/llms-full.txt": [
+      "./src/content/guia/*.mdx",
+      "./src/content/artigos/*.mdx",
+    ],
   },
 };
 
