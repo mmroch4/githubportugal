@@ -5,6 +5,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { Suspense } from "react";
 import { links } from "@/config/metadata";
 import { obterPrimeirasContribuicoes } from "@/lib/issues";
@@ -21,15 +23,11 @@ export const revalidate = 21600;
 const description =
   "Issues marcadas como “good first issue” ou “help wanted” nos projetos open source portugueses: o sítio certo para fazeres a tua primeira contribuição.";
 
-export const metadata: Metadata = {
-  title: "Primeiras contribuições",
-  description,
-  alternates: { canonical: "/primeiras-contribuicoes" },
-  openGraph: {
-    title: "Primeiras contribuições em projetos open source portugueses",
-    description,
-  },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Primeiras contribuições em projetos open source portugueses",
+  descricao: description,
+  caminho: "/primeiras-contribuicoes",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -159,6 +157,13 @@ export default async function PrimeirasContribuicoes() {
           Saber mais
         </a>
       </p>
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Primeiras contribuições em projetos open source portugueses",
+          descricao: description,
+          caminho: "/primeiras-contribuicoes",
+        })}
+      />
     </main>
   );
 }

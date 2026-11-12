@@ -6,6 +6,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links } from "@/config/metadata";
 import { obterEmpresas } from "@/lib/empresas";
 import { DiretorioEmpresas } from "./DiretorioEmpresas";
@@ -16,15 +18,11 @@ export const revalidate = 21600;
 const description =
   "Empresas de tecnologia em Portugal que publicam código aberto no GitHub, com os seus repositórios em destaque e onde trabalhar.";
 
-export const metadata: Metadata = {
-  title: "Empresas",
-  description,
-  alternates: { canonical: "/empresas" },
-  openGraph: {
-    title: "Empresas tech em Portugal com código aberto",
-    description,
-  },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Empresas tech em Portugal com código aberto",
+  descricao: description,
+  caminho: "/empresas",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -91,6 +89,30 @@ export default async function Empresas() {
           tentar mais tarde.
         </p>
       )}
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Empresas tech em Portugal com código aberto",
+          descricao: description,
+          caminho: "/empresas",
+          itens: empresas.map((e) => ({
+            "@type": "Organization",
+            name: e.nome,
+            description: e.descricao,
+            url: e.site ?? `https://github.com/${e.github}`,
+            logo: e.avatar,
+            sameAs: [`https://github.com/${e.github}`],
+            ...(e.cidades.length
+              ? {
+                  address: e.cidades.map((cidade) => ({
+                    "@type": "PostalAddress",
+                    addressLocality: cidade,
+                    addressCountry: "PT",
+                  })),
+                }
+              : {}),
+          })),
+        })}
+      />
     </main>
   );
 }

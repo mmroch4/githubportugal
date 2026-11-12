@@ -1,6 +1,9 @@
 import { ArrowLeftIcon, PlusIcon, RepoIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao, urlAbsoluto } from "@/lib/seo";
+import { caminhoMantenedor } from "@/lib/formatar";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links } from "@/config/metadata";
 import { obterMantenedores } from "@/lib/mantenedores";
 import { ListaMantenedores } from "./ListaMantenedores";
@@ -11,12 +14,11 @@ export const revalidate = 21600;
 const description =
   "Programadores portugueses que criam e mantêm projetos open source, com os projetos de cada um no diretório do GitHub Portugal.";
 
-export const metadata: Metadata = {
-  title: "Mantenedores",
-  description,
-  alternates: { canonical: "/mantenedores" },
-  openGraph: { title: "Mantenedores open source portugueses", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Mantenedores open source portugueses",
+  descricao: description,
+  caminho: "/mantenedores",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -75,6 +77,21 @@ export default async function Mantenedores() {
           tentar mais tarde.
         </p>
       )}
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Mantenedores open source portugueses",
+          descricao: description,
+          caminho: "/mantenedores",
+          itens: mantenedores.map((m) => ({
+            "@type": "Person",
+            name: m.nome,
+            alternateName: m.login,
+            url: urlAbsoluto(caminhoMantenedor(m.login)),
+            image: m.avatar,
+            sameAs: [m.url],
+          })),
+        })}
+      />
     </main>
   );
 }

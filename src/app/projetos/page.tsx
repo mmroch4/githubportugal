@@ -6,6 +6,8 @@ import {
 } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { metadadosPagina, paginaColecao } from "@/lib/seo";
+import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { links } from "@/config/metadata";
 import { obterPrimeirasContribuicoes } from "@/lib/issues";
 import { obterMantenedoresPorProjeto } from "@/lib/mantenedores";
@@ -18,12 +20,11 @@ export const revalidate = 21600;
 const description =
   "Diretório de projetos open source criados ou mantidos por programadores portugueses, com estrelas e atividade atualizadas a partir do GitHub.";
 
-export const metadata: Metadata = {
-  title: "Projetos",
-  description,
-  alternates: { canonical: "/projetos" },
-  openGraph: { title: "Projetos open source portugueses", description },
-};
+export const metadata: Metadata = metadadosPagina({
+  titulo: "Projetos open source portugueses",
+  descricao: description,
+  caminho: "/projetos",
+});
 
 const buttonClassName =
   "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
@@ -102,6 +103,23 @@ export default async function Projetos() {
           tentar mais tarde.
         </p>
       )}
+      <DadosEstruturados
+        dados={paginaColecao({
+          nome: "Projetos open source portugueses",
+          descricao: description,
+          caminho: "/projetos",
+          itens: projetos.map((p) => ({
+            "@type": "SoftwareSourceCode",
+            name: p.nome,
+            description: p.descricao,
+            codeRepository: p.url,
+            url: p.site ?? p.url,
+            keywords: p.categoria,
+            ...(p.linguagem ? { programmingLanguage: p.linguagem } : {}),
+            ...(p.ultimaAtividade ? { dateModified: p.ultimaAtividade } : {}),
+          })),
+        })}
+      />
     </main>
   );
 }
