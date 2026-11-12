@@ -33,6 +33,12 @@ const PAGINAS = [
       "Diretório de projetos open source criados ou mantidos por programadores e empresas portuguesas, com estrelas, linguagem e atividade do GitHub.",
   },
   {
+    nome: "Selo “Feito em Portugal”",
+    caminho: "/selo",
+    descricao:
+      "Selo (badge) em SVG para o README dos projetos do diretório, com o código em Markdown e HTML. Imagens em /selo/feito-em-portugal.svg, /selo/feito-em-portugal-claro.svg e /selo/feito-em-portugal-escuro.svg.",
+  },
+  {
     nome: "Primeiras contribuições",
     caminho: "/primeiras-contribuicoes",
     descricao:
