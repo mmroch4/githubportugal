@@ -5,22 +5,26 @@ on:
     paths:
       - "data/projetos.yml"
       - "data/mantenedores.yml"
+      - "data/ranking-excluidos.yml"
       - "scripts/validar-projetos.mjs"
       - "scripts/validar-mantenedores.mjs"
+      - "scripts/gerar-ranking.mjs"
   push:
     branches: [main]
     paths:
       - "data/projetos.yml"
       - "data/mantenedores.yml"
+      - "data/ranking-excluidos.yml"
       - "scripts/validar-projetos.mjs"
       - "scripts/validar-mantenedores.mjs"
+      - "scripts/gerar-ranking.mjs"
 
 permissions:
   contents: read
 
 jobs:
   validar:
-    name: Validar projetos e mantenedores
+    name: Validar projetos, mantenedores e ranking
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,3 +46,7 @@ jobs:
         run: node scripts/validar-mantenedores.mjs --github
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Validar exclusões do ranking
+        if: ${{ !cancelled() }}
+        run: node scripts/gerar-ranking.mjs --validar

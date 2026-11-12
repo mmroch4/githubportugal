@@ -35,10 +35,13 @@ yarn build
 - `src/config/metadata.ts` — metadados do site e links da comunidade (Discord, WhatsApp, repositório).
 - `data/projetos.yml` — lista de projetos do diretório.
 - `data/mantenedores.yml` — lista de mantenedores.
+- `data/ranking.json` — ranking gerado pela GitHub Action (não edites à mão) e `data/ranking-excluidos.yml` — quem pediu para sair do ranking.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
 - `src/lib/issues.ts` — procura nos projetos do diretório as issues para primeiras contribuições.
 - `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
+- `src/lib/ranking.ts` — lê o ranking e retira quem pediu para sair.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
+- `scripts/gerar-ranking.mjs` — gera o ranking (corre todas as semanas numa GitHub Action).
 
 ## Abrir um pull request
 
@@ -147,6 +150,27 @@ A página [Primeiras contribuições](https://githubportugal.com/primeiras-contr
 3. Escreve na issue o que é preciso fazer e onde está o código a alterar. Uma issue bem descrita recebe muito mais ajuda.
 
 As issues que já têm alguém atribuído não aparecem, para ninguém começar a trabalhar numa tarefa já ocupada. Cada projeto mostra, no máximo, 30 issues.
+
+## Ranking
+
+O [ranking](https://githubportugal.com/ranking) mostra as 100 pessoas com mais contribuições públicas no último ano e com mais seguidores, em Portugal e em Lisboa, no Porto, em Braga e em Coimbra. Não há nenhum ficheiro onde te inscreveres: a GitHub Action [Atualizar ranking](./.github/workflows/atualizar-ranking.yml) corre todas as segundas-feiras, pesquisa os perfis com localização em Portugal e guarda o resultado em [`data/ranking.json`](./data/ranking.json). Não edites esse ficheiro à mão.
+
+### Como entrar
+
+- Escreve a tua cidade ou `Portugal` no campo de localização do teu perfil no GitHub (por exemplo, `Braga, Portugal`).
+- A pesquisa do GitHub devolve, no máximo, as 1000 contas com mais seguidores por cada localização pesquisada. Quem tem muito poucos seguidores pode ficar de fora.
+- Contam as contribuições públicas dos últimos 12 meses: commits, pull requests, issues e revisões em repositórios públicos.
+
+### Sair do ranking
+
+Acrescenta o teu nome de utilizador à lista `excluidos` em [`data/ranking-excluidos.yml`](./data/ranking-excluidos.yml) e abre um pull request, ou abre uma [issue](https://github.com/mmroch4/githubportugal/issues) a pedir para sair. Deixas de aparecer no site assim que a alteração entrar, sem esperar pela próxima atualização.
+
+### Gerar o ranking localmente
+
+```bash
+GITHUB_TOKEN=o-teu-token yarn gerar-ranking   # gera data/ranking.json (demora alguns minutos)
+yarn gerar-ranking --validar                  # só valida data/ranking-excluidos.yml
+```
 
 ## Comunidade
 
