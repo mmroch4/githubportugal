@@ -1,4 +1,5 @@
 import { ChevronRightIcon, MarkGithubIcon } from "@primer/octicons-react";
+import { links } from "@/config/metadata";
 import Link from "next/link";
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
       </h1>
 
       <p className="mb-4 max-w-sm text-center text-lg sm:mb-5 sm:max-w-md sm:text-xl md:mb-6 md:max-w-lg md:text-2xl lg:max-w-xl">
-        Comunidade portuguesa de desenvolvimento e de projetos open-source no
+        Comunidade portuguesa de programadores e de projetos open source no
         GitHub
       </p>
 
@@ -27,7 +28,7 @@ export default function Home() {
         </Link>
 
         <a
-          href="https://github.com/GitHub-Portugal/website"
+          href={links.repository}
           target="_blank"
           rel="noopener noreferrer"
           className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"

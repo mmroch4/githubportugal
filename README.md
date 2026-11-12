@@ -3,38 +3,42 @@
 [![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white)](https://discord.com/invite/cnJdppDkUp)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-25D366?style=for-the-badge&logo=whatsapp&logoColor=white)](https://chat.whatsapp.com/EfKv6GPEgd89XgYXhiAhFk)
 
-## 👋 Bem Vindo
+## 👋 Bem-vindo
 
-Bem-vindo ao GitHub Portugal, o ponto de encontro para entusiastas da programação em solo lusitano! Estamos empolgados por você se juntar à nossa comunidade. Aqui, nossa missão é apoiar, inspirar e colaborar.
+Bem-vindo ao GitHub Portugal, o ponto de encontro de quem gosta de programar em Portugal! Estamos muito contentes por te juntares à nossa comunidade. A nossa missão é apoiar, inspirar e colaborar.
 
-Nosso espaço é dedicado a ajudar programadores de todos os níveis a aprimorar suas habilidades. Compartilhamos conhecimento, tutoriais e projetos para impulsionar seu desempenho na programação.
+Este espaço existe para ajudar programadores de todos os níveis a melhorar as suas competências. Partilhamos conhecimento, tutoriais e projetos para te ajudar a evoluir na programação.
 
-Juntos, vamos explorar novas tecnologias, resolver desafios complexos e construir um ecossistema de programação vibrante em Portugal. Fique à vontade para compartilhar suas ideias, aprender e crescer conosco.
+Juntos, vamos explorar novas tecnologias, resolver desafios complexos e construir um ecossistema de programação vibrante em Portugal. Sente-te à vontade para partilhar as tuas ideias, aprender e crescer connosco.
 
-Junte-se às discussões, compartilhe seus projetos e vamos trabalhar juntos para fortalecer nossa comunidade de desenvolvedores em Portugal. Seja bem-vindo ao GitHub Portugal, onde a inovação acontece todos os dias!
+Participa nas conversas, partilha os teus projetos e vamos trabalhar juntos para fortalecer a comunidade de programadores em Portugal. Sê bem-vindo ao GitHub Portugal!
 
-## 📝 Código Aberto
+## 📝 Código aberto
 
-Nos últimos anos, temos assistido a um notável aumento do envolvimento no Movimento de Código Aberto em Portugal. Cada vez mais pessoas e organizações no país estão a adotar tecnologias de Código Aberto e a fazer contribuições significativas para a comunidade global.
+Nos últimos anos, temos assistido a um aumento notável do envolvimento no movimento de código aberto em Portugal. Cada vez mais pessoas e organizações no país estão a adotar tecnologias de código aberto e a fazer contribuições significativas para a comunidade global.
 
-Em solo português, existem inúmeros projetos de Código Aberto que utilizamos no nosso dia a dia, muitas vezes sem sequer sabermos que foram criados ou são mantidos por talentosos desenvolvedores nacionais. Para dar destaque a estas realizações, reunimos alguns desses projetos e indivíduos no site **[GitHub Portugal](https://www.githubportugal.com/)**.
+Em Portugal existem inúmeros projetos de código aberto que utilizamos no dia a dia, muitas vezes sem sabermos que foram criados ou são mantidos por programadores portugueses. Queremos dar destaque a estes projetos e às pessoas que os mantêm aqui no **[GitHub Portugal](https://githubportugal.com/)**.
 
-No entanto, a nossa lista está em constante evolução, e sabemos que há muitos mais projetos e mantenedores talentosos em Portugal que merecem reconhecimento. Se conhece outros projetos ou mantenedores portugueses, não hesite em contribuir adicionando-os à nossa lista no ficheiro **[CONTRIBUTING.MD](https://github.com/GitHub-Portugal/website/blob/main/CONTRIBUTING.md)**.
+A lista está em constante evolução e sabemos que há muitos mais projetos e mantenedores em Portugal que merecem reconhecimento. Se conheces outros projetos ou mantenedores portugueses, contribui adicionando-os, seguindo as instruções do ficheiro **[CONTRIBUTING.md](https://github.com/GitHub-Portugal/website/blob/main/CONTRIBUTING.md)**.
 
-Para aqueles que desejam iniciar a sua jornada no mundo do Código Aberto ou mantenedores experientes em busca de maneiras de fortalecer as suas comunidades, oferecemos recursos abrangentes. Consulte o nosso Guia de Código Aberto, repleto de informações sobre como iniciar um projeto de Código Aberto, construir comunidades colaborativas, adotar melhores práticas de manutenção de projetos e muito mais.
+Para quem quer dar os primeiros passos no código aberto, ou para mantenedores experientes à procura de formas de fortalecer as suas comunidades, estamos a preparar um guia de código aberto em português de Portugal, com informação sobre como iniciar um projeto, construir uma comunidade colaborativa e adotar boas práticas de manutenção.
 
-Juntos, estamos a fortalecer o Código Aberto em Portugal e a contribuir para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junte-se a nós nesta jornada emocionante!
+Juntos, estamos a fortalecer o código aberto em Portugal e a contribuir para uma comunidade global de desenvolvimento de software mais robusta e diversificada. Junta-te a nós!
 
 ## ⚠️ Avisos
 
-GitHub Portugal é uma **comunidade portuguesa de desenvolvimento** e de **projetos open-source no [GitHub](https://github.com/)**.
+O GitHub Portugal é uma **comunidade portuguesa de programadores** e de **projetos open source no [GitHub](https://github.com/)**.
 
-O website GitHub Portugal **NÃO** é **oficial** do [GitHub](https://github.com/) e **NÃO** possui **fins lucrativos**.
+O website GitHub Portugal **NÃO** é **oficial** do [GitHub](https://github.com/) e **NÃO** tem **fins lucrativos**.
 
-O objetivo do GitHub Portugal é **promover a comunidade de desenvolvedores em Portugal**, país onde a área de TI (Tecnologia da Informação) está em constante crescimento.
+O objetivo do GitHub Portugal é **promover a comunidade de programadores em Portugal**, um país onde o setor das tecnologias de informação está em constante crescimento.
 
-O website GitHub Portugal foi inspirado no website **[GitHub Brasil](https://githubbrasil.com/)**, do [GitHub](https://github.com/).
+O website GitHub Portugal foi inspirado no website **[GitHub Brasil](https://githubbrasil.com/)**.
 
-Todas os recursos da empresa **[GitHub](https://github.com/)** utilizados neste projeto **NÃO** tem o intuito de se apropriar da marca e sim, construir uma comunidade em benefício daqueles que utilizam a plataforma [GitHub](https://github.com/).
+Os recursos da empresa **[GitHub](https://github.com/)** utilizados neste projeto **NÃO** têm o intuito de apropriação da marca, mas sim de construir uma comunidade em benefício de quem utiliza a plataforma [GitHub](https://github.com/).
 
-Todos os recursos estão **devidamente identificados e referenciados** os respectivos proprietários dos direitos.
+Todos os recursos estão **devidamente identificados** e atribuídos aos respetivos proprietários dos direitos.
+
+## 🤝 Contribuir
+
+Vê o ficheiro [CONTRIBUTING.md](./CONTRIBUTING.md) para saberes como correr o projeto localmente e como propor alterações.
