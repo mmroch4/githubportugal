@@ -1,10 +1,15 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 
 export const alt = "GitHub Portugal: comunidade portuguesa de programadores";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OpengraphImage() {
+export default async function OpengraphImage() {
+  const logo = await readFile(join(process.cwd(), "public/logo.svg"));
+  const logoSrc = `data:image/svg+xml;base64,${logo.toString("base64")}`;
+
   return new ImageResponse(
     (
       <div
@@ -20,9 +25,11 @@ export default function OpengraphImage() {
           fontFamily: "sans-serif",
         }}
       >
+        <img src={logoSrc} width={128} height={128} alt="" />
         <div
           style={{
             display: "flex",
+            marginTop: 32,
             padding: "8px 24px",
             borderRadius: 999,
             background: "#ddf4ff",
@@ -34,7 +41,7 @@ export default function OpengraphImage() {
         >
           de DEV para DEV
         </div>
-        <div style={{ display: "flex", fontSize: 120, fontWeight: 900 }}>
+        <div style={{ display: "flex", fontSize: 104, fontWeight: 900 }}>
           GitHub Portugal
         </div>
         <div

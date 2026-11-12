@@ -1,10 +1,17 @@
 import { ChevronRightIcon, MarkGithubIcon } from "@primer/octicons-react";
+import { Logo } from "@/components/Logo";
 import { links } from "@/config/metadata";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <main className="flex flex-col items-center justify-center px-6 py-4">
+      <Logo
+        priority
+        size={128}
+        className="mb-4 h-20 w-20 sm:mb-5 sm:h-24 sm:w-24 md:h-28 md:w-28"
+      />
+
       <span className="mb-3 select-none rounded-full bg-light-blue-2 px-3 py-1 font-bold  sm:mb-4">
         de DEV para DEV
       </span>
