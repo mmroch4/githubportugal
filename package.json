@@ -17,7 +17,8 @@
     "gerar-ranking": "node scripts/gerar-ranking.mjs",
     "validar-eventos": "node scripts/validar-eventos.mjs",
     "validar-comunidades": "node scripts/validar-comunidades.mjs",
-    "validar-artigos": "node scripts/validar-artigos.mjs"
+    "validar-artigos": "node scripts/validar-artigos.mjs",
+    "validar-empresas": "node scripts/validar-empresas.mjs"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",

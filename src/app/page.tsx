@@ -68,6 +68,12 @@ export default function Home() {
         >
           Comunidades
         </Link>
+        <Link
+          href="/empresas"
+          className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
+        >
+          Empresas
+        </Link>
 
         <Link
           href="/guia"

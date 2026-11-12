@@ -36,6 +36,7 @@ yarn build
 - `data/projetos.yml` — lista de projetos do diretório.
 - `data/mantenedores.yml` — lista de mantenedores.
 - `data/eventos.yml` — agenda de eventos e `data/comunidades.yml` — diretório de comunidades.
+- `data/empresas.yml` — diretório de empresas tech que publicam código aberto.
 - `src/content/artigos/` — artigos da comunidade, um ficheiro `.mdx` por artigo.
 - `data/ranking.json` — ranking gerado pela GitHub Action (não edites à mão) e `data/ranking-excluidos.yml` — quem pediu para sair do ranking.
 - `src/lib/projetos.ts` — lê a lista de projetos e junta-lhe os dados da API do GitHub.
@@ -43,9 +44,11 @@ yarn build
 - `src/lib/mantenedores.ts` — lê a lista de mantenedores, junta-lhe os perfis do GitHub e liga cada pessoa aos seus projetos.
 - `src/lib/ranking.ts` — lê o ranking e retira quem pediu para sair.
 - `src/lib/eventos.ts` e `src/lib/comunidades.ts` — leem a agenda e o diretório de comunidades.
+- `src/lib/empresas.ts` — lê o diretório de empresas e junta-lhe os dados das organizações no GitHub.
 - `src/lib/artigos.ts` e `src/lib/devto.ts` — leem os artigos da comunidade e as publicações do dev.to.
 - `scripts/validar-projetos.mjs` e `scripts/validar-mantenedores.mjs` — validam os ficheiros de dados (usados pela GitHub Action).
 - `scripts/validar-eventos.mjs` e `scripts/validar-comunidades.mjs` — validam a agenda e as comunidades.
+- `scripts/validar-empresas.mjs` — valida o diretório de empresas.
 - `scripts/validar-artigos.mjs` — valida os artigos.
 - `scripts/gerar-ranking.mjs` — gera o ranking (corre todas as semanas numa GitHub Action).
 
@@ -263,6 +266,51 @@ A mesma GitHub Action dos projetos valida os dois ficheiros. Para validares loca
 yarn validar-eventos
 yarn validar-comunidades            # valida o formato
 yarn validar-comunidades --github   # também confirma as contas do GitHub
+```
+
+## Adicionar uma empresa
+
+O [diretório de empresas](https://githubportugal.com/empresas) é gerado a partir do ficheiro [`data/empresas.yml`](./data/empresas.yml). O número de repositórios e os repositórios em destaque são lidos automaticamente da API do GitHub.
+
+### Que empresas entram
+
+- Empresas de tecnologia com equipa de engenharia em Portugal, seja a sede ou um escritório.
+- Com uma organização no GitHub e pelo menos um repositório público próprio (que não seja fork). A ideia é mostrar quem partilha código, não ser uma lista de todas as empresas do país.
+- Podes adicionar a empresa onde trabalhas. Não é preciso autorização formal, mas usa só informação pública.
+
+### Como adicionar
+
+1. Abre o ficheiro [`data/empresas.yml`](./data/empresas.yml) e acrescenta uma entrada à lista `empresas`:
+
+   ```yaml
+   - nome: Nome da Empresa
+     github: organizacao-no-github
+     descricao: Uma frase em português de Portugal sobre o que a empresa faz.
+     setor: Fintech e pagamentos
+     cidades: [Lisboa, Porto]
+     site: https://exemplo.pt # opcional
+     carreiras: https://exemplo.pt/carreiras # opcional
+   ```
+
+2. Abre um pull request com o título `Adicionar empresa Nome da Empresa`.
+
+| Campo | Obrigatório | Regras |
+| --- | --- | --- |
+| `nome` | Sim | Nome da empresa. Não pode estar repetido. |
+| `github` | Sim | Organização da empresa no GitHub, sem `@`. Tem de ser uma organização, não uma conta pessoal. |
+| `descricao` | Sim | Uma frase em pt-PT, numa só linha, entre 10 e 200 caracteres. |
+| `setor` | Sim | Um dos setores listados no topo do ficheiro. Se nenhum encaixa, propõe um novo no pull request. |
+| `cidades` | Sim | Lista das cidades portuguesas onde a empresa tem escritório. |
+| `site` | Não | Site da empresa, começado por `https://`. Sem site, usa o que está na organização do GitHub. |
+| `carreiras` | Não | Página de ofertas de emprego, começada por `https://`. |
+
+### Validação automática
+
+A GitHub Action "Validar dados" confirma o formato, que a organização existe e que tem código aberto. Para validares localmente:
+
+```bash
+yarn validar-empresas            # valida o formato
+yarn validar-empresas --github   # também confirma as organizações no GitHub
 ```
 
 ## Escrever um artigo
