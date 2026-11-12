@@ -28,6 +28,7 @@ type DadosGitHub = {
   linguagem: string | null;
   corLinguagem: string | null;
   ultimaAtividade: string | null;
+  criadoEm: string | null;
   arquivado: boolean;
   site: string | null;
 };
@@ -46,6 +47,8 @@ export type Projeto = {
   linguagem: string | null;
   corLinguagem: string | null;
   ultimaAtividade: string | null;
+  /** Data de criação do repositório no GitHub. */
+  criadoEm: string | null;
   arquivado: boolean;
 };
 
@@ -95,7 +98,7 @@ async function obterViaGraphQL(
         return `r${j}: repository(owner: ${JSON.stringify(
           dono
         )}, name: ${JSON.stringify(nome)}) {
-          nameWithOwner url homepageUrl stargazerCount forkCount isArchived pushedAt
+          nameWithOwner url homepageUrl stargazerCount forkCount isArchived pushedAt createdAt
           owner { avatarUrl }
           primaryLanguage { name color }
         }`;
@@ -129,6 +132,7 @@ async function obterViaGraphQL(
         linguagem: r.primaryLanguage?.name ?? null,
         corLinguagem: r.primaryLanguage?.color ?? null,
         ultimaAtividade: r.pushedAt,
+        criadoEm: r.createdAt,
         arquivado: r.isArchived,
         site: r.homepageUrl || null,
       });
@@ -146,6 +150,7 @@ type GraphQLRepo = {
   forkCount: number;
   isArchived: boolean;
   pushedAt: string | null;
+  createdAt: string;
   owner: { avatarUrl: string };
   primaryLanguage: { name: string; color: string | null } | null;
 };
@@ -198,6 +203,7 @@ async function obterViaREST(
           linguagem: r.language ?? null,
           corLinguagem: CORES_LINGUAGENS[r.language] ?? null,
           ultimaAtividade: r.pushed_at ?? null,
+          criadoEm: r.created_at ?? null,
           arquivado: Boolean(r.archived),
           site: r.homepage || null,
         });
@@ -252,6 +258,7 @@ export async function obterDiretorio(): Promise<Diretorio> {
       linguagem: gh?.linguagem ?? null,
       corLinguagem: gh?.corLinguagem ?? null,
       ultimaAtividade: gh?.ultimaAtividade ?? null,
+      criadoEm: gh?.criadoEm ?? null,
       arquivado: gh?.arquivado ?? false,
     };
   });

@@ -40,6 +40,16 @@ export const perguntasFrequentes: PerguntaFrequente[] = [
       "Os eventos, as comunidades e as empresas vêm dos ficheiros data/eventos.yml, data/comunidades.yml e data/empresas.yml. Acrescenta uma entrada no ficheiro certo e abre um pull request; uma validação automática confirma que os dados estão completos.",
   },
   {
+    pergunta: "Quantos programadores há no GitHub em Portugal?",
+    resposta:
+      "A página Estatísticas mostra, todas as semanas, quantos perfis do GitHub indicam uma localização em Portugal, em que cidades estão, que linguagens usam mais e quantas contribuições públicas fizeram nos últimos 12 meses. Só são guardados totais, nunca dados de uma pessoa em concreto.",
+  },
+  {
+    pergunta: "O site recolhe dados de quem o visita?",
+    resposta:
+      "Só estatísticas anónimas de visitas e de desempenho (Vercel Web Analytics e Speed Insights), sem cookies e sem identificar quem visita. Servem para saber que páginas são mais úteis e se o site carrega depressa.",
+  },
+  {
     pergunta: "Como me junto à comunidade?",
     resposta:
       "Entra no servidor de Discord ou no grupo de WhatsApp do GitHub Portugal (os links estão no topo desta página) e acompanha o repositório no GitHub, onde todo o site é desenvolvido em código aberto.",

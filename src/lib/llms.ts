@@ -9,6 +9,7 @@ import { obterComunidades } from "@/lib/comunidades";
 import { formatarDatas, hojeEmPortugal, lerEventos } from "@/lib/eventos";
 import { caminhoMantenedor } from "@/lib/formatar";
 import { listarLogins } from "@/lib/mantenedores";
+import { lerProgramadores } from "@/lib/estatisticas";
 import { obterDiretorio } from "@/lib/projetos";
 
 /*
@@ -55,6 +56,12 @@ const PAGINAS = [
     caminho: "/ranking",
     descricao:
       "Os programadores mais ativos no GitHub em Portugal, Lisboa, Porto, Braga e Coimbra, por contribuições públicas nos últimos 12 meses e por seguidores. Atualizado todas as semanas.",
+  },
+  {
+    nome: "Estatísticas do open source em Portugal",
+    caminho: "/estatisticas",
+    descricao:
+      "Quantas pessoas programam no GitHub em Portugal, por cidade, linguagem principal e contribuições, com histórico semanal, e os números dos projetos open source portugueses. Dados em JSON em data/estatisticas.json no repositório.",
   },
   {
     nome: "Eventos tech em Portugal",
@@ -218,8 +225,39 @@ export async function gerarLlmsTxt() {
   return `${seccoes.join("\n\n")}\n`;
 }
 
+/** Resumo das estatísticas dos programadores, em texto, para a versão completa. */
+async function resumoEstatisticas() {
+  const p = await lerProgramadores();
+  if (!p) return null;
+  const n = new Intl.NumberFormat("pt-PT");
+  const lista = (barras: { rotulo: string; valor: number }[]) =>
+    barras.map((b) => `${b.rotulo} (${n.format(b.valor)})`).join(", ");
+  return [
+    `Dados de ${p.geradoEm.slice(
+      0,
+      10
+    )}, a partir dos perfis públicos do GitHub com localização em Portugal (fonte: ${url(
+      "/estatisticas"
+    )}).`,
+    "",
+    `- Perfis analisados: ${n.format(
+      p.pessoas
+    )}; com contribuições públicas nos últimos 12 meses: ${n.format(
+      p.ativas
+    )}.`,
+    `- Contribuições públicas nos últimos 12 meses: ${n.format(
+      p.contribuicoes
+    )}.`,
+    `- Pessoas por cidade: ${lista(p.cidades)}.`,
+    `- Linguagem principal: ${lista(p.linguagens)}.`,
+  ].join("\n");
+}
+
 export async function gerarLlmsFullTxt() {
-  const artigos = await lerArtigos();
+  const [artigos, estatisticas] = await Promise.all([
+    lerArtigos(),
+    resumoEstatisticas(),
+  ]);
   const [guia, textosArtigos] = await Promise.all([
     Promise.all(
       capitulos.map((c) => lerMarkdown(path.join(PASTA_GUIA, `${c.slug}.mdx`)))
@@ -237,6 +275,9 @@ export async function gerarLlmsFullTxt() {
     perguntasFrequentes
       .map((p) => `### ${p.pergunta}\n\n${p.resposta}`)
       .join("\n\n"),
+    ...(estatisticas
+      ? ["## Programadores no GitHub em Portugal", estatisticas]
+      : []),
     "## Guia de código aberto",
     capitulos
       .map(

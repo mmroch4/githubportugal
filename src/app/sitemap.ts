@@ -36,6 +36,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     pagina("/mantenedores", "weekly", 0.8),
     ...logins.map((login) => pagina(caminhoMantenedor(login), "weekly", 0.5)),
     pagina("/ranking", "weekly", 0.8),
+    pagina("/estatisticas", "weekly", 0.8),
     pagina("/eventos", "daily", 0.8),
     pagina("/comunidades", "monthly", 0.7),
     pagina("/empresas", "weekly", 0.7),

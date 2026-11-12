@@ -66,6 +66,13 @@ const PAGINAS: EntradaPesquisa[] = [
   },
   {
     tipo: "Página",
+    titulo: "Estatísticas",
+    descricao: "Números do open source e de quem programa em Portugal.",
+    url: "/estatisticas",
+    termos: "numeros dados graficos linguagens cidades crescimento",
+  },
+  {
+    tipo: "Página",
     titulo: "Eventos",
     descricao: "Agenda de conferências, meetups e workshops tech em Portugal.",
     url: "/eventos",

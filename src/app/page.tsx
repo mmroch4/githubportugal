@@ -72,6 +72,13 @@ export default function Home() {
         </Link>
 
         <Link
+          href="/estatisticas"
+          className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
+        >
+          Estatísticas
+        </Link>
+
+        <Link
           href="/eventos"
           className="flex items-center justify-center gap-2 rounded border border-light-gray-3 bg-transparent px-6 py-3 text-sm font-bold sm:text-base md:text-lg"
         >

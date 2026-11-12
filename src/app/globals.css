@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/*
+ * Cores dos gráficos (/estatisticas). Validadas para daltonismo e contraste
+ * contra a superfície dos cartões em cada tema; o tema escuro tem tons próprios.
+ */
+:root {
+  --viz-1: #2a78d6;
+  --viz-2: #eb6834;
+}
+:root.dark {
+  --viz-1: #3987e5;
+  --viz-2: #d95926;
+}

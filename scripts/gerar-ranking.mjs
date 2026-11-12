@@ -14,6 +14,9 @@
 //   3. Para cada candidato, lê as contribuições públicas do último ano.
 //   4. Guarda as 100 primeiras pessoas de cada lista (país e cada cidade, por
 //      contribuições e por seguidores).
+//   5. Guarda em data/estatisticas.json os totais de todas as pessoas analisadas
+//      (por cidade, por linguagem e por escalão de contribuições), mais uma
+//      entrada por semana no histórico, para a página /estatisticas.
 //
 // Corre todas as semanas numa GitHub Action (.github/workflows/atualizar-ranking.yml).
 
@@ -24,6 +27,7 @@ import { parse } from "yaml";
 
 const raiz = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const FICHEIRO_RANKING = path.join(raiz, "data/ranking.json");
+const FICHEIRO_ESTATISTICAS = path.join(raiz, "data/estatisticas.json");
 const FICHEIRO_EXCLUIDOS_RELATIVO = "data/ranking-excluidos.yml";
 const FICHEIRO_EXCLUIDOS = path.join(raiz, FICHEIRO_EXCLUIDOS_RELATIVO);
 
@@ -33,6 +37,12 @@ const POR_PAGINA = 100;
 const LOTE_CONTRIBUICOES = 8;
 const PEDIDOS_EM_PARALELO = 4;
 const TEMPO_MAXIMO_PEDIDO = 30_000;
+// Repositórios próprios (com mais estrelas) usados para a linguagem principal.
+const REPOSITORIOS_LINGUAGEM = 5;
+// Semanas guardadas no histórico de data/estatisticas.json (cerca de 5 anos).
+const MAXIMO_HISTORICO = 260;
+// Escalões de contribuições públicas no último ano (limite inferior de cada um).
+const ESCALOES_CONTRIBUICOES = [0, 1, 100, 500, 1000, 3000];
 
 // Cidades do ranking. `pesquisas` são os termos usados na pesquisa do GitHub e
 // `padrao` reconhece a cidade no texto da localização (sem acentos, minúsculas).
@@ -255,6 +265,13 @@ function camposDetalhes(lote) {
       (login, j) => `u${j}: user(login: ${JSON.stringify(login)}) {
         login name avatarUrl(size: 96) location
         followers { totalCount }
+        repositories(
+          first: ${REPOSITORIOS_LINGUAGEM}
+          ownerAffiliations: OWNER
+          isFork: false
+          privacy: PUBLIC
+          orderBy: { field: STARGAZERS, direction: DESC }
+        ) { nodes { primaryLanguage { name } } }
         contributionsCollection {
           contributionCalendar { totalContributions }
           restrictedContributionsCount
@@ -298,8 +315,24 @@ async function lerLote(lote, resultado) {
         c.contributionCalendar.totalContributions -
           c.restrictedContributionsCount
       ),
+      linguagem: linguagemPrincipal(u.repositories?.nodes ?? []),
     });
   });
+}
+
+/** A linguagem mais frequente entre os repositórios próprios com mais estrelas. */
+function linguagemPrincipal(repositorios) {
+  const contagem = new Map();
+  for (const r of repositorios) {
+    const nome = r?.primaryLanguage?.name;
+    if (nome) contagem.set(nome, (contagem.get(nome) ?? 0) + 1);
+  }
+  let melhor = null;
+  for (const [nome, n] of contagem) {
+    // Em caso de empate, ganha a do repositório com mais estrelas (vem primeiro).
+    if (!melhor || n > contagem.get(melhor)) melhor = nome;
+  }
+  return melhor;
 }
 
 /** Perfil e contribuições públicas do último ano de cada login, com alguns pedidos em paralelo. */
@@ -402,9 +435,11 @@ async function gerar() {
   const ranking = {
     geradoEm: new Date().toISOString(),
     totalAnalisado: pessoas.length,
-    pessoas: [...incluidos.values()].sort((a, b) =>
-      a.login.localeCompare(b.login)
-    ),
+    pessoas: [...incluidos.values()]
+      // A linguagem só entra nas estatísticas agregadas.
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      .map(({ linguagem, ...p }) => p)
+      .sort((a, b) => a.login.localeCompare(b.login)),
     listas,
   };
 
@@ -412,6 +447,90 @@ async function gerar() {
   console.log(
     `Ranking guardado: ${pessoas.length} pessoas analisadas, ${incluidos.size} nas listas.`
   );
+
+  const estatisticas = calcularEstatisticas(
+    pessoas,
+    ranking.geradoEm,
+    await lerHistorico()
+  );
+  await writeFile(
+    FICHEIRO_ESTATISTICAS,
+    `${JSON.stringify(estatisticas, null, 1)}\n`
+  );
+  console.log(
+    `Estatísticas guardadas (${estatisticas.historico.length} semanas de histórico).`
+  );
+}
+
+// ---------------------------------------------------------------------------
+// Estatísticas agregadas (data/estatisticas.json)
+// ---------------------------------------------------------------------------
+
+async function lerHistorico() {
+  try {
+    const dados = JSON.parse(await readFile(FICHEIRO_ESTATISTICAS, "utf8"));
+    return Array.isArray(dados?.historico) ? dados.historico : [];
+  } catch {
+    return [];
+  }
+}
+
+function contar(itens, chave) {
+  const contagem = {};
+  for (const item of itens) {
+    const valor = chave(item);
+    if (valor) contagem[valor] = (contagem[valor] ?? 0) + 1;
+  }
+  return Object.fromEntries(
+    Object.entries(contagem).sort((a, b) => b[1] - a[1])
+  );
+}
+
+/**
+ * Totais de todas as pessoas analisadas (não só das que entram no ranking).
+ * Só guarda contagens, nunca dados de uma pessoa em concreto.
+ */
+export function calcularEstatisticas(
+  pessoas,
+  geradoEm,
+  historicoAnterior = []
+) {
+  const soma = (metrica) => pessoas.reduce((t, p) => t + p[metrica], 0);
+  const ativas = pessoas.filter((p) => p.contribuicoes > 0).length;
+  const contribuicoes = soma("contribuicoes");
+
+  const escaloes = ESCALOES_CONTRIBUICOES.map((minimo, i) => {
+    const maximo = ESCALOES_CONTRIBUICOES[i + 1];
+    return {
+      minimo,
+      maximo: maximo === undefined ? null : maximo - 1,
+      pessoas: pessoas.filter(
+        (p) =>
+          p.contribuicoes >= minimo &&
+          (maximo === undefined || p.contribuicoes < maximo)
+      ).length,
+    };
+  });
+
+  const data = geradoEm.slice(0, 10);
+  const historico = [
+    ...historicoAnterior.filter((h) => h.data !== data),
+    { data, pessoas: pessoas.length, ativas, contribuicoes },
+  ]
+    .sort((a, b) => a.data.localeCompare(b.data))
+    .slice(-MAXIMO_HISTORICO);
+
+  return {
+    geradoEm,
+    pessoas: pessoas.length,
+    ativas,
+    contribuicoes,
+    seguidores: soma("seguidores"),
+    cidades: contar(pessoas, (p) => p.cidade),
+    linguagens: contar(pessoas, (p) => p.linguagem),
+    escaloesContribuicoes: escaloes,
+    historico,
+  };
 }
 
 async function validar() {
