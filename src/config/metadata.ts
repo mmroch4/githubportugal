@@ -33,6 +33,13 @@ export const metadata: Metadata = {
     "GitHub Portugal",
   ],
   category: "Tecnologia",
+  alternates: {
+    types: {
+      "application/rss+xml": [
+        { url: "/artigos/feed.xml", title: "Artigos | GitHub Portugal" },
+      ],
+    },
+  },
   openGraph: {
     type: "website",
     locale: "pt_PT",

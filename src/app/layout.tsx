@@ -1,4 +1,6 @@
+import { Ferramentas } from "@/components/Ferramentas";
 import { NonOfficialWarning } from "@/components/NonOfficialWarning";
+import { scriptTema } from "@/components/Tema";
 import { monaSans } from "@/config/fonts";
 import { metadata as m, viewport as v } from "@/config/metadata";
 import clsx from "clsx";
@@ -13,7 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-PT" className="scroll-smooth">
+    <html lang="pt-PT" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: scriptTema }} />
+      </head>
       <body
         className={clsx(
           monaSans.className,
@@ -23,6 +28,8 @@ export default function RootLayout({
         <NonOfficialWarning />
 
         {children}
+
+        <Ferramentas />
       </body>
     </html>
   );

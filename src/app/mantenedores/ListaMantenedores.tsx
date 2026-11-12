@@ -9,6 +9,7 @@ import {
 import clsx from "clsx";
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { useFiltrosNoUrl } from "@/lib/filtros-url";
 import { caminhoMantenedor, formatoNumero, normalizar } from "@/lib/formatar";
 import type { Mantenedor } from "@/lib/mantenedores";
 
@@ -25,6 +26,7 @@ export function ListaMantenedores({
   mantenedores: Mantenedor[];
 }) {
   const [pesquisa, setPesquisa] = useState("");
+  useFiltrosNoUrl({ q: [pesquisa, setPesquisa] });
   const [ordenacao, setOrdenacao] = useState<Ordenacao>("estrelas");
 
   const visiveis = useMemo(() => {

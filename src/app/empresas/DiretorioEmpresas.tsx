@@ -11,6 +11,7 @@ import {
 } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
+import { useFiltrosNoUrl } from "@/lib/filtros-url";
 import type { Empresa } from "@/lib/empresas";
 import { formatoNumero, normalizar } from "@/lib/formatar";
 
@@ -25,6 +26,7 @@ export function DiretorioEmpresas({
   setores: string[];
 }) {
   const [pesquisa, setPesquisa] = useState("");
+  useFiltrosNoUrl({ q: [pesquisa, setPesquisa] });
   const [setor, setSetor] = useState("");
   const [cidade, setCidade] = useState("");
   const [soComCarreiras, setSoComCarreiras] = useState(false);

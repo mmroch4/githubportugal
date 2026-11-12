@@ -46,7 +46,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
       </blockquote>
     ),
     pre: ({ children }) => (
-      <pre className="overflow-x-auto rounded-md bg-light-gray-9 p-4 text-sm text-light-gray-0 sm:text-base">
+      <pre className="overflow-x-auto rounded-md bg-light-gray-9 p-4 text-sm text-light-gray-0 dark:border dark:border-light-gray-2 dark:bg-dark-black dark:text-dark-gray-1 sm:text-base">
         {children}
       </pre>
     ),
