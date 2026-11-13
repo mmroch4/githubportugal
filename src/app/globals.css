@@ -36,3 +36,23 @@
 ::selection {
   background-color: hsl(var(--marca-verde) / 0.35);
 }
+
+/*
+ * Botões partilhados (design v2). O principal usa o verde da marca: é a cor de
+ * ação do site. O secundário é só contorno.
+ */
+@layer components {
+  .botao {
+    @apply inline-flex min-h-[44px] items-center justify-center gap-2 rounded-lg px-4 text-sm font-semibold transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde focus-visible:ring-offset-2 focus-visible:ring-offset-light-gray-0 sm:text-base;
+  }
+  .botao-primario {
+    @apply botao bg-marca-verde text-marca-verde-texto hover:bg-marca-verde/90;
+  }
+  .botao-secundario {
+    @apply botao border border-light-gray-3 text-light-black hover:bg-light-gray-1;
+  }
+  /* Etiqueta de secção em mono, por exemplo "// explorar". */
+  .etiqueta {
+    @apply font-mono text-[13px] font-medium text-marca-verde;
+  }
+}

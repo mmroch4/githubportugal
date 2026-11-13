@@ -373,6 +373,10 @@ variaveisClaras["--marca-verde"] = "137 66% 30%";
 variaveisEscuras["--marca-verde"] = "135 58% 50%";
 variaveisClaras["--marca-vermelho"] = "357 80% 46%";
 variaveisEscuras["--marca-vermelho"] = "3 93% 63%";
+// Texto sobre o verde da marca (botões principais): branco no tema claro,
+// quase preto no escuro, onde o verde é mais claro.
+variaveisClaras["--marca-verde-texto"] = "0 0% 100%";
+variaveisEscuras["--marca-verde-texto"] = "142 65% 5%";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -396,9 +400,19 @@ module.exports = {
       marca: {
         verde: "hsl(var(--marca-verde) / <alpha-value>)",
         vermelho: "hsl(var(--marca-vermelho) / <alpha-value>)",
+        "verde-texto": "hsl(var(--marca-verde-texto) / <alpha-value>)",
       },
     },
     extend: {
+      fontFamily: {
+        mono: [
+          "var(--fonte-mono)",
+          "ui-monospace",
+          "SFMono-Regular",
+          "Menlo",
+          "monospace",
+        ],
+      },
       gridTemplateRows: {
         layout: "max-content 1fr",
       },

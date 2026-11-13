@@ -16,7 +16,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="group flex items-center justify-center gap-2 rounded-md bg-light-black px-6 py-3 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base md:text-lg"
+        className="group botao-primario"
       >
         Voltar à página principal
         <ChevronRightIcon className="fill-current delay-75 duration-100 ease-in-out group-hover:translate-x-0.5" />

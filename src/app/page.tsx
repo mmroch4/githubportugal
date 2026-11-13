@@ -136,14 +136,14 @@ export default async function Home() {
           <div className="flex flex-wrap items-center gap-3">
             <Link
               href="/projetos"
-              className="group flex items-center gap-2 rounded-md bg-light-black px-5 py-3 font-bold text-light-gray-0 hover:opacity-90"
+              className="group botao-primario"
             >
               Explorar projetos
               <ArrowRightIcon className="fill-current transition group-hover:translate-x-0.5" />
             </Link>
             <Link
               href="/primeiras-contribuicoes"
-              className="flex items-center gap-2 rounded-md border border-light-gray-3 px-5 py-3 font-bold hover:bg-light-gray-1"
+              className="botao-secundario"
             >
               Fazer a primeira contribuição
             </Link>
@@ -443,13 +443,13 @@ export default async function Home() {
               href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 rounded-md bg-light-black px-5 py-3 font-bold text-light-gray-0 hover:opacity-90"
+              className="botao-primario"
             >
               Adicionar projeto
             </a>
             <Link
               href="/selo"
-              className="flex items-center gap-2 rounded-md border border-light-gray-3 px-5 py-3 font-bold hover:bg-light-gray-1"
+              className="botao-secundario"
             >
               <VerifiedIcon className="fill-current" />
               Obter o selo

@@ -113,7 +113,7 @@ export default async function Selo() {
       <p className="mt-8">
         <Link
           href="/projetos"
-          className="flex w-fit items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+          className="botao-secundario w-fit"
         >
           <RepoIcon className="fill-light-black" />
           Ver os projetos portugueses
