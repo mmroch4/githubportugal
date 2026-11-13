@@ -1,9 +1,3 @@
-import {
-  CalendarIcon,
-  GlobeIcon,
-  LinkExternalIcon,
-  LocationIcon,
-} from "@primer/octicons-react";
 import clsx from "clsx";
 import { formatarDatas, type Evento } from "@/lib/eventos";
 
@@ -16,30 +10,13 @@ const formatoMesCurto = new Intl.DateTimeFormat("pt-PT", {
   timeZone: "UTC",
 });
 
-function diaSeguinte(d: string) {
-  const data = new Date(`${d}T00:00:00Z`);
-  data.setUTCDate(data.getUTCDate() + 1);
-  return data.toISOString().slice(0, 10);
+function local(e: Evento) {
+  if (e.formato === "online") return "online";
+  if (e.formato === "híbrido") return `${e.cidade} + online`;
+  return e.cidade;
 }
 
-/** Link para criar o evento no Google Calendar, como evento de dia inteiro. */
-function linkGoogleCalendar(e: Evento) {
-  const params = new URLSearchParams({
-    action: "TEMPLATE",
-    text: e.nome,
-    dates: `${e.inicio.replace(/-/g, "")}/${diaSeguinte(e.fim).replace(
-      /-/g,
-      ""
-    )}`,
-    details: `${e.descricao}\n\n${e.site}`,
-    location: e.formato === "online" ? "Online" : `${e.cidade}, Portugal`,
-  });
-  return `https://calendar.google.com/calendar/render?${params}`;
-}
-
-const etiquetaClassName =
-  "flex items-center gap-1 rounded-full border px-2 py-0.5 text-xs font-medium";
-
+/** Uma linha da agenda: data, nome e cidade. */
 export function CartaoEvento({
   evento: e,
   hoje,
@@ -53,111 +30,53 @@ export function CartaoEvento({
   const inicio = new Date(`${e.inicio}T00:00:00Z`);
 
   return (
-    <li
-      className={clsx(
-        "flex gap-4 rounded-xl border bg-white/60 p-4 transition hover:bg-white",
-        aDecorrer
-          ? "border-marca-verde/60 shadow-lg shadow-marca-verde/10"
-          : "border-light-gray-2 hover:border-light-gray-3"
-      )}
-    >
-      <div
-        aria-hidden="true"
+    <li className="min-w-0">
+      <a
+        href={e.site}
+        target="_blank"
+        rel="noopener noreferrer"
+        title={e.descricao}
         className={clsx(
-          "flex h-16 w-14 shrink-0 flex-col items-center justify-center rounded-lg border font-mono",
-          passado
-            ? "border-light-gray-2 bg-light-gray-0 text-light-gray-6"
-            : "border-light-gray-2 bg-light-gray-0"
+          "flex items-center gap-4 rounded-xl border bg-white/60 p-3 pr-4 transition hover:bg-white",
+          aDecorrer ? "border-marca-verde/60" : "border-light-gray-2"
         )}
       >
-        <span className="text-2xl font-bold leading-none">
-          {formatoDiaCurto.format(inicio)}
-        </span>
-        <span className="text-xs font-bold uppercase text-light-gray-6">
-          {formatoMesCurto.format(inicio).replace(".", "")}
-        </span>
-      </div>
-
-      <div className="min-w-0 flex-1">
-        <div className="mb-1 flex flex-wrap items-center gap-2">
-          <a
-            href={e.site}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="break-words font-bold hover:underline focus:underline sm:text-lg"
-          >
-            {e.nome}
-          </a>
-          {aDecorrer && (
-            <span
-              className={clsx(
-                etiquetaClassName,
-                "border-marca-verde/40 text-marca-verde"
-              )}
-            >
-              <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-marca-verde" />
-              A decorrer
-            </span>
+        <span
+          aria-hidden="true"
+          className={clsx(
+            "flex h-14 w-14 shrink-0 flex-col items-center justify-center rounded-lg border border-light-gray-2 bg-light-gray-0 font-mono",
+            passado && "text-light-gray-6"
           )}
-        </div>
-
-        <p className="mb-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-7">
-          <span className="flex items-center gap-1">
-            <CalendarIcon className="fill-light-gray-6" />
-            {formatarDatas(e.inicio, e.fim)}
+        >
+          <span className="text-xl font-bold leading-none">
+            {formatoDiaCurto.format(inicio)}
           </span>
-          <span className="flex items-center gap-1">
-            {e.formato === "online" ? (
-              <GlobeIcon className="fill-light-gray-6" />
-            ) : (
-              <LocationIcon className="fill-light-gray-6" />
-            )}
-            {e.formato === "online"
-              ? "Online"
-              : e.formato === "híbrido"
-              ? `${e.cidade} e online`
-              : e.cidade}
+          <span className="text-[11px] uppercase text-light-gray-6">
+            {formatoMesCurto.format(inicio).replace(".", "")}
           </span>
-        </p>
+        </span>
 
-        {!passado && (
-          <p className="mb-3 text-sm text-light-gray-8 sm:text-base">
-            {e.descricao}
-          </p>
-        )}
-
-        <div className="flex flex-wrap items-center gap-2 text-sm">
-          <span
-            className={clsx(
-              etiquetaClassName,
-              "border-light-gray-2 text-light-gray-7"
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className="flex min-w-0 items-center gap-2">
+            <span className="truncate font-semibold">{e.nome}</span>
+            {aDecorrer && (
+              <span className="flex shrink-0 items-center gap-1 font-mono text-xs text-marca-verde">
+                <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-marca-verde" />
+                agora
+              </span>
             )}
-          >
+          </span>
+          <span className="font-mono text-xs text-light-gray-6">
+            <span className="sr-only">{formatarDatas(e.inicio, e.fim)} · </span>
             {e.tipo}
+            {e.gratuito && <span className="text-marca-verde"> · grátis</span>}
           </span>
-          {e.gratuito && (
-            <span
-              className={clsx(
-                etiquetaClassName,
-                "border-light-gray-2 text-marca-verde"
-              )}
-            >
-              Gratuito
-            </span>
-          )}
-          {!passado && (
-            <a
-              href={linkGoogleCalendar(e)}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="ml-auto flex items-center gap-1 font-medium text-light-gray-6 hover:text-marca-verde hover:underline focus:underline"
-            >
-              Adicionar ao Google Calendar
-              <LinkExternalIcon size={12} />
-            </a>
-          )}
-        </div>
-      </div>
+        </span>
+
+        <span className="hidden shrink-0 font-mono text-sm text-light-gray-6 sm:block">
+          {local(e)}
+        </span>
+      </a>
     </li>
   );
 }

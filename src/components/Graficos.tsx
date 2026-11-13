@@ -37,7 +37,7 @@ export function Cartao({
         className
       )}
     >
-      <h3 className="text-base font-bold sm:text-lg">{titulo}</h3>
+      <h3 className="font-semibold">{titulo}</h3>
       {descricao && (
         <p className="mt-1 text-sm text-light-gray-6">{descricao}</p>
       )}
@@ -138,7 +138,7 @@ export function BarrasHorizontais({
               </span>
               <span className="block min-w-0">
                 <span
-                  className="block h-3.5 rounded-r bg-[color:var(--viz-1)]"
+                  className="block h-3.5 rounded-r bg-marca-verde/80"
                   style={{ width: `max(2px, ${largura}%)` }}
                 />
               </span>
@@ -224,7 +224,7 @@ export function Colunas({
                     : ""}
                 </span>
                 <span
-                  className="w-full max-w-[3rem] rounded-t bg-[color:var(--viz-1)]"
+                  className="w-full max-w-[3rem] rounded-t bg-marca-verde/80"
                   style={{
                     height: `calc(${(d.valor / maximo) * 100}% - 1.25rem)`,
                     minHeight: d.valor > 0 ? 2 : 0,
