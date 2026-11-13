@@ -12,18 +12,16 @@ import type { Projeto } from "@/lib/projetos";
 type Ordenacao = "estrelas" | "atividade" | "nome";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
+  "min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioProjetos({
   projetos,
   categorias,
-  atualizadoEm,
   mantenedoresPorProjeto,
   issuesPorProjeto,
 }: {
   projetos: Projeto[];
   categorias: string[];
-  atualizadoEm: string;
   mantenedoresPorProjeto: Record<string, ResumoMantenedor[]>;
   issuesPorProjeto: Record<string, number>;
 }) {
@@ -92,35 +90,29 @@ export function DiretorioProjetos({
     mantenedoresPorProjeto,
   ]);
 
+  const contagemCategoria = (c: string) =>
+    projetos.filter((p) => p.categoria === c).length;
+  const chip = (ativo: boolean) =>
+    clsx(
+      "inline-flex min-h-[36px] items-center gap-2 rounded-full border px-3.5 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde",
+      ativo
+        ? "border-marca-verde bg-marca-verde/10"
+        : "border-light-gray-3 hover:bg-light-gray-1"
+    );
+
   return (
     <div>
-      <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_1fr_1fr]">
         <label className="relative sm:col-span-2 lg:col-span-1">
-          <span className="sr-only">Pesquisar projetos</span>
+          <span className="sr-only">Procurar projetos</span>
           <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 fill-light-gray-5" />
           <input
             type="search"
             value={pesquisa}
             onChange={(e) => setPesquisa(e.target.value)}
-            placeholder="Pesquisar projetos"
+            placeholder="Procurar"
             className={clsx(campoClassName, "pl-9")}
           />
-        </label>
-
-        <label>
-          <span className="sr-only">Filtrar por categoria</span>
-          <select
-            value={categoria}
-            onChange={(e) => setCategoria(e.target.value)}
-            className={campoClassName}
-          >
-            <option value="">Todas as categorias</option>
-            {categoriasUsadas.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
         </label>
 
         <label>
@@ -153,21 +145,50 @@ export function DiretorioProjetos({
         </label>
       </div>
 
-      <p className="mb-4 text-sm text-light-gray-6" aria-live="polite">
+      <div
+        role="group"
+        aria-label="Categoria"
+        className="mb-6 flex flex-wrap gap-2"
+      >
+        <button
+          type="button"
+          aria-pressed={categoria === ""}
+          onClick={() => setCategoria("")}
+          className={chip(categoria === "")}
+        >
+          Todos
+          <span className="font-mono text-light-gray-6">{projetos.length}</span>
+        </button>
+        {categoriasUsadas.map((c) => (
+          <button
+            key={c}
+            type="button"
+            aria-pressed={categoria === c}
+            onClick={() => setCategoria(categoria === c ? "" : c)}
+            className={chip(categoria === c)}
+          >
+            {c}
+            <span className="font-mono text-light-gray-6">
+              {contagemCategoria(c)}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <p className="sr-only" aria-live="polite">
         {visiveis.length === 1 ? "1 projeto" : `${visiveis.length} projetos`}
       </p>
 
       {visiveis.length === 0 ? (
-        <p className="rounded border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
+        <p className="rounded-xl border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
           Nenhum projeto corresponde à pesquisa.
         </p>
       ) : (
-        <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {visiveis.map((p) => (
             <CartaoProjeto
               key={p.repositorio}
               projeto={p}
-              atualizadoEm={atualizadoEm}
               mantenedores={mantenedoresPorProjeto[p.repositorio.toLowerCase()]}
               issuesAbertas={issuesPorProjeto[p.repositorio.toLowerCase()]}
             />

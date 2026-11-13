@@ -1,15 +1,11 @@
 "use client";
 
-import {
-  CommentIcon,
-  IssueOpenedIcon,
-  SearchIcon,
-} from "@primer/octicons-react";
+import { IssueOpenedIcon, SearchIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
-import { normalizar, tempoDesde } from "@/lib/formatar";
-import type { Etiqueta, Issue, TipoIssue } from "@/lib/issues";
+import { normalizar } from "@/lib/formatar";
+import type { Issue, TipoIssue } from "@/lib/issues";
 
 export type ResumoProjeto = {
   repositorio: string;
@@ -24,15 +20,16 @@ type Ordenacao = "atualizadas" | "recentes" | "comentarios";
 type Props = {
   issues: Issue[];
   projetos: Record<string, ResumoProjeto>;
-  atualizadoEm: string;
+  /** Já não é mostrado; fica para compatibilidade. */
+  atualizadoEm?: string;
 };
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
+  "min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 const NOMES_TIPO: Record<TipoIssue, string> = {
-  primeira: "Boa primeira issue",
-  ajuda: "Pedem ajuda",
+  primeira: "good first issue",
+  ajuda: "help wanted",
 };
 
 /** Lê `?projeto=dono/nome` e `?tipo=` do endereço, para as ligações dos cartões de projeto. */
@@ -53,7 +50,6 @@ export function ListaIssuesComParametros(props: Props) {
 export function ListaIssues({
   issues,
   projetos,
-  atualizadoEm,
   projetoInicial = "",
   tipoInicial = "",
 }: Props & { projetoInicial?: string; tipoInicial?: TipoIssue | "" }) {
@@ -63,7 +59,6 @@ export function ListaIssues({
   const [linguagem, setLinguagem] = useState("");
   const [ordenacao, setOrdenacao] = useState<Ordenacao>("atualizadas");
 
-  const projetoDe = (i: Issue) => projetos[i.repositorio.toLowerCase()];
 
   const projetosComIssues = useMemo(
     () =>
@@ -122,32 +117,32 @@ export function ListaIssues({
     );
   }
 
+  const chip = (ativo: boolean) =>
+    clsx(
+      "inline-flex min-h-[36px] items-center gap-2 rounded-full border px-3.5 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde",
+      ativo
+        ? "border-marca-verde bg-marca-verde/10"
+        : "border-light-gray-3 hover:bg-light-gray-1"
+    );
+  const tipos: { id: TipoIssue | ""; nome: string }[] = [
+    { id: "", nome: "Todas" },
+    { id: "primeira", nome: NOMES_TIPO.primeira },
+    { id: "ajuda", nome: NOMES_TIPO.ajuda },
+  ];
+
   return (
     <div>
-      <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
-        <label className="relative sm:col-span-2 lg:col-span-4">
-          <span className="sr-only">Pesquisar issues</span>
+      <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-[minmax(0,2fr)_1fr_1fr_1fr]">
+        <label className="relative sm:col-span-2 lg:col-span-1">
+          <span className="sr-only">Procurar issues</span>
           <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 fill-light-gray-5" />
           <input
             type="search"
             value={pesquisa}
             onChange={(e) => setPesquisa(e.target.value)}
-            placeholder="Pesquisar issues"
+            placeholder="Procurar"
             className={clsx(campoClassName, "pl-9")}
           />
-        </label>
-
-        <label>
-          <span className="sr-only">Filtrar por tipo</span>
-          <select
-            value={tipo}
-            onChange={(e) => setTipo(e.target.value as TipoIssue | "")}
-            className={campoClassName}
-          >
-            <option value="">Todos os tipos</option>
-            <option value="primeira">Boas primeiras issues</option>
-            <option value="ajuda">Pedem ajuda</option>
-          </select>
         </label>
 
         <label>
@@ -196,23 +191,37 @@ export function ListaIssues({
         </label>
       </div>
 
-      <p className="mb-4 text-sm text-light-gray-6" aria-live="polite">
+      <div role="group" aria-label="Tipo" className="mb-6 flex flex-wrap gap-2">
+        {tipos.map((t) => (
+          <button
+            key={t.id || "todas"}
+            type="button"
+            aria-pressed={tipo === t.id}
+            onClick={() => setTipo(t.id)}
+            className={chip(tipo === t.id)}
+          >
+            {t.nome}
+            <span className="font-mono text-light-gray-6">
+              {t.id
+                ? issues.filter((i) => i.tipo === t.id).length
+                : issues.length}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <p className="sr-only" aria-live="polite">
         {visiveis.length === 1 ? "1 issue" : `${visiveis.length} issues`}
       </p>
 
       {visiveis.length === 0 ? (
-        <p className="rounded border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
+        <p className="rounded-xl border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
           Nenhuma issue corresponde à pesquisa.
         </p>
       ) : (
-        <ul className="flex flex-col gap-3">
+        <ul className="divide-y divide-light-gray-2 overflow-hidden rounded-xl border border-light-gray-2 bg-white/60">
           {visiveis.map((i) => (
-            <CartaoIssue
-              key={i.url}
-              issue={i}
-              projeto={projetoDe(i)}
-              atualizadoEm={atualizadoEm}
-            />
+            <LinhaIssue key={i.url} issue={i} />
           ))}
         </ul>
       )}
@@ -220,114 +229,26 @@ export function ListaIssues({
   );
 }
 
-function CartaoIssue({
-  issue: i,
-  projeto,
-  atualizadoEm,
-}: {
-  issue: Issue;
-  projeto: ResumoProjeto | undefined;
-  atualizadoEm: string;
-}) {
-  const [dono, nome] = i.repositorio.split("/");
-
+function LinhaIssue({ issue: i }: { issue: Issue }) {
   return (
-    <li className="flex gap-3 rounded-xl border border-light-gray-2 bg-white/60 p-4">
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img
-        src={projeto?.avatar ?? `https://github.com/${dono}.png?size=80`}
-        alt=""
-        width={40}
-        height={40}
-        loading="lazy"
-        className="h-10 w-10 shrink-0 rounded-md border border-light-gray-2"
-      />
-
-      <div className="min-w-0 flex-1">
-        <div className="mb-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-light-gray-6">
-          <a
-            href={projeto?.url ?? `https://github.com/${i.repositorio}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="break-words hover:underline focus:underline"
-          >
-            {dono}/<span className="font-bold text-light-gray-8">{nome}</span>
-          </a>
-          {projeto?.linguagem && (
-            <span className="flex items-center gap-1.5">
-              <span
-                aria-hidden="true"
-                className="h-3 w-3 rounded-full border border-light-gray-2"
-                style={{ backgroundColor: projeto.corLinguagem ?? undefined }}
-              />
-              {projeto.linguagem}
-            </span>
-          )}
-          <span
-            className={clsx(
-              "rounded-full border px-2 py-0.5 text-xs font-medium",
-              i.tipo === "primeira"
-                ? "border-light-green-2 bg-light-green-0 text-light-green-8"
-                : "border-light-purple-2 bg-light-purple-0 text-light-purple-8"
-            )}
-          >
-            {NOMES_TIPO[i.tipo]}
+    <li>
+      <a
+        href={i.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex items-center gap-4 px-4 py-4 hover:bg-white sm:px-5"
+      >
+        <IssueOpenedIcon className="shrink-0 fill-marca-verde" />
+        <span className="flex min-w-0 flex-1 flex-col gap-1">
+          <span className="break-words font-semibold">{i.titulo}</span>
+          <span className="truncate font-mono text-xs text-light-gray-6">
+            {i.repositorio}#{i.numero}
           </span>
-        </div>
-
-        <a
-          href={i.url}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="group mb-2 flex items-start gap-2 font-bold hover:underline focus:underline sm:text-lg"
-        >
-          <IssueOpenedIcon className="mt-1 shrink-0 fill-light-green-6" />
-          <span className="break-words">
-            {i.titulo}{" "}
-            <span className="font-normal text-light-gray-5">#{i.numero}</span>
-          </span>
-        </a>
-
-        <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm text-light-gray-6">
-          {i.etiquetas.length > 0 && (
-            <ul className="flex flex-wrap gap-1">
-              {i.etiquetas.map((e) => (
-                <li key={e.nome}>
-                  <ChipEtiqueta etiqueta={e} />
-                </li>
-              ))}
-            </ul>
-          )}
-          <span
-            className="flex items-center gap-1"
-            title={`${i.comentarios} comentários`}
-          >
-            <CommentIcon className="fill-light-gray-6" />
-            {i.comentarios}
-            <span className="sr-only">comentários</span>
-          </span>
-          <span>Aberta {tempoDesde(i.criadaEm, atualizadoEm)}</span>
-        </div>
-      </div>
+        </span>
+        <span className="hidden shrink-0 rounded-full bg-marca-verde/10 px-2.5 py-0.5 font-mono text-xs text-marca-verde sm:inline">
+          {NOMES_TIPO[i.tipo]}
+        </span>
+      </a>
     </li>
-  );
-}
-
-/** Etiqueta com a cor definida no GitHub e texto legível por cima. */
-function ChipEtiqueta({ etiqueta }: { etiqueta: Etiqueta }) {
-  const cor = /^[0-9a-f]{6}$/i.test(etiqueta.cor) ? etiqueta.cor : "d0d7de";
-  const [r, g, b] = [0, 2, 4].map((k) => parseInt(cor.slice(k, k + 2), 16));
-  const clara = (r * 299 + g * 587 + b * 114) / 1000 > 150;
-
-  return (
-    <span
-      className="inline-block rounded-full px-2 py-0.5 text-xs font-medium"
-      style={{
-        backgroundColor: `#${cor}`,
-        color: clara ? "#1f2328" : "#ffffff",
-      }}
-    >
-      {etiqueta.nome}
-    </span>
   );
 }
