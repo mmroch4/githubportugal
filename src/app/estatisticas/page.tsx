@@ -1,6 +1,6 @@
-import { GraphIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
+import { CabecalhoPagina } from "@/components/CabecalhoPagina";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
 import {
   BarrasHorizontais,
@@ -31,7 +31,7 @@ export const metadata: Metadata = metadadosPagina({
   caminho: "/estatisticas",
 });
 
-const numero = new Intl.NumberFormat("pt-PT");
+const numero = new Intl.NumberFormat("pt-PT", { useGrouping: "always" });
 const compacto = new Intl.NumberFormat("pt-PT", {
   notation: "compact",
   maximumFractionDigits: 1,
@@ -62,12 +62,14 @@ function Numero({
   const conteudo = (
     <>
       <span
-        className="block text-2xl font-black tabular-nums sm:text-3xl"
+        className="block font-mono text-2xl font-bold tabular-nums sm:text-3xl"
         title={completo}
       >
         {valor}
       </span>
-      <span className="mt-1 block text-sm text-light-gray-6">{rotulo}</span>
+      <span className="mt-1 block font-mono text-xs text-light-gray-6">
+        {rotulo}
+      </span>
     </>
   );
   const classe =
@@ -92,23 +94,19 @@ export default async function PaginaEstatisticas() {
   const datas = prog?.historico.map((h) => h.data) ?? [];
 
   return (
-    <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-5xl">
-      <header className="mb-8">
-        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
-          Estatísticas
-        </h1>
-        <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
-          Os números de quem programa no GitHub em Portugal e dos projetos open
-          source portugueses, atualizados todas as semanas.
-        </p>
-      </header>
+    <main className="mx-auto w-full max-w-6xl px-4 pb-16 pt-6 sm:px-6">
+      <CabecalhoPagina
+        etiqueta={
+          prog
+            ? `atualizado a ${formatoData.format(new Date(prog.geradoEm))}`
+            : "atualizado todas as semanas"
+        }
+        titulo="Estatísticas"
+      />
 
       <section aria-labelledby="titulo-programadores" className="mb-12">
-        <h2
-          id="titulo-programadores"
-          className="mb-4 text-xl font-bold sm:text-2xl"
-        >
-          Programadores em Portugal
+        <h2 id="titulo-programadores" className="etiqueta mb-4">
+          {"// programadores em portugal"}
         </h2>
 
         {prog ? (
@@ -116,31 +114,30 @@ export default async function PaginaEstatisticas() {
             <div className="mb-4 grid grid-cols-2 gap-3 md:grid-cols-4">
               <Numero
                 valor={numero.format(prog.pessoas)}
-                rotulo="perfis com localização em Portugal"
+                rotulo="pessoas"
                 href="/ranking"
               />
               <Numero
                 valor={percentagem.format(prog.ativas / prog.pessoas)}
-                rotulo="contribuíram no último ano"
+                rotulo="ativas no último ano"
                 completo={`${numero.format(prog.ativas)} pessoas`}
               />
               <Numero
                 valor={compacto.format(prog.contribuicoes)}
-                rotulo="contribuições públicas no último ano"
+                rotulo="contribuições"
                 completo={numero.format(prog.contribuicoes)}
               />
               <Numero
                 valor={numero.format(
                   Math.round(prog.contribuicoes / Math.max(1, prog.ativas))
                 )}
-                rotulo="contribuições por pessoa ativa"
+                rotulo="por pessoa ativa"
               />
             </div>
 
             <div className="grid gap-4 md:grid-cols-2">
               <Cartao
                 titulo="Onde vivem"
-                descricao="Pessoas por cidade indicada no perfil do GitHub."
               >
                 <BarrasHorizontais
                   titulo="Pessoas por cidade"
@@ -151,7 +148,6 @@ export default async function PaginaEstatisticas() {
 
               <Cartao
                 titulo="Linguagens mais usadas"
-                descricao="Linguagem principal dos repositórios próprios com mais estrelas de cada pessoa."
               >
                 <BarrasHorizontais
                   titulo="Pessoas por linguagem principal"
@@ -162,7 +158,6 @@ export default async function PaginaEstatisticas() {
 
               <Cartao
                 titulo="Quanto contribuem"
-                descricao="Pessoas por número de contribuições públicas (commits, pull requests, issues e revisões) nos últimos 12 meses."
               >
                 <Colunas
                   titulo="Pessoas por escalão de contribuições"
@@ -176,10 +171,8 @@ export default async function PaginaEstatisticas() {
                 titulo="Crescimento"
                 descricao={
                   datas.length > 1
-                    ? "Perfis analisados e pessoas com contribuições, semana a semana."
-                    : `O histórico começou a ${formatoData.format(
-                        new Date(prog.geradoEm)
-                      )}: a linha cresce com cada atualização semanal.`
+                    ? undefined
+                    : "A linha cresce todas as semanas."
                 }
               >
                 <Linhas
@@ -210,19 +203,19 @@ export default async function PaginaEstatisticas() {
       </section>
 
       <section aria-labelledby="titulo-projetos" className="mb-12">
-        <h2 id="titulo-projetos" className="mb-4 text-xl font-bold sm:text-2xl">
-          Projetos e comunidade
+        <h2 id="titulo-projetos" className="etiqueta mb-4">
+          {"// projetos e comunidade"}
         </h2>
 
         <div className="mb-4 grid grid-cols-2 gap-3 md:grid-cols-3 lg:grid-cols-6">
           <Numero
             valor={numero.format(comunidade.projetos)}
-            rotulo="projetos no diretório"
+            rotulo="projetos"
             href="/projetos"
           />
           <Numero
             valor={compacto.format(comunidade.estrelas)}
-            rotulo="estrelas nesses projetos"
+            rotulo="estrelas"
             completo={numero.format(comunidade.estrelas)}
           />
           <Numero
@@ -232,17 +225,17 @@ export default async function PaginaEstatisticas() {
           />
           <Numero
             valor={numero.format(comunidade.empresas)}
-            rotulo="empresas com código aberto"
+            rotulo="empresas"
             href="/empresas"
           />
           <Numero
             valor={numero.format(comunidade.comunidades)}
-            rotulo="comunidades tech"
+            rotulo="comunidades"
             href="/comunidades"
           />
           <Numero
             valor={numero.format(comunidade.eventosProximos)}
-            rotulo="eventos agendados"
+            rotulo="eventos"
             href="/eventos"
           />
         </div>
@@ -251,7 +244,6 @@ export default async function PaginaEstatisticas() {
           {projetos.maisEstrelas.length > 0 && (
             <Cartao
               titulo="Projetos com mais estrelas"
-              descricao="Os dez projetos do diretório com mais estrelas no GitHub."
               className="md:col-span-2"
             >
               <BarrasHorizontais
@@ -266,7 +258,6 @@ export default async function PaginaEstatisticas() {
           {projetos.linguagens.length > 0 && (
             <Cartao
               titulo="Linguagens dos projetos"
-              descricao="Linguagem principal de cada projeto ativo do diretório."
             >
               <BarrasHorizontais
                 titulo="Projetos por linguagem"
@@ -278,7 +269,6 @@ export default async function PaginaEstatisticas() {
 
           <Cartao
             titulo="Categorias dos projetos"
-            descricao="Projetos do diretório por categoria."
           >
             <BarrasHorizontais
               titulo="Projetos por categoria"
@@ -290,7 +280,6 @@ export default async function PaginaEstatisticas() {
           {projetos.porAno.length > 1 && (
             <Cartao
               titulo="Quando nasceram"
-              descricao="Projetos do diretório pelo ano em que o repositório foi criado."
             >
               <Colunas
                 titulo="Projetos por ano de criação"
@@ -303,7 +292,6 @@ export default async function PaginaEstatisticas() {
 
           <Cartao
             titulo="Comunidades por cidade"
-            descricao="Onde se reúnem as comunidades tech do diretório."
           >
             <BarrasHorizontais
               titulo="Comunidades por cidade"
@@ -314,51 +302,24 @@ export default async function PaginaEstatisticas() {
         </div>
       </section>
 
-      <section className="rounded-xl border border-light-gray-2 bg-white/60 p-4 text-sm text-light-gray-7 sm:p-5">
-        <h2 className="mb-2 flex items-center gap-2 text-base font-bold text-light-black">
-          <GraphIcon className="fill-light-black" />
-          De onde vêm os números
-        </h2>
-        <p className="mb-2">
-          Os números dos programadores vêm da mesma pesquisa do{" "}
-          <Link
-            href="/ranking"
-            className="font-medium text-marca-verde underline"
-          >
-            ranking
-          </Link>
-          : todas as semanas, uma GitHub Action lê os perfis públicos com
-          localização em Portugal. Só guardamos totais, nunca dados de uma
-          pessoa em concreto. Como a pesquisa do GitHub devolve no máximo 1000
-          contas por pesquisa, os números ficam abaixo do total real, sobretudo
-          nas cidades maiores.
-        </p>
-        <p>
-          Os números dos projetos vêm do{" "}
-          <Link
-            href="/projetos"
-            className="font-medium text-marca-verde underline"
-          >
-            diretório
-          </Link>{" "}
-          e da API do GitHub. Falta algum projeto?{" "}
-          <a
-            href={`${links.repository}/blob/main/CONTRIBUTING.md`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="font-medium text-marca-verde underline"
-          >
-            Acrescenta-o
-          </a>
-          .
-        </p>
-        {prog && (
-          <p className="mt-3 text-light-gray-6">
-            Programadores atualizados a{" "}
-            {formatoData.format(new Date(prog.geradoEm))}.
-          </p>
-        )}
-      </section>
+      <p className="font-mono text-xs leading-relaxed text-light-gray-6">
+        {"// "}fonte: perfis públicos do GitHub com localização em Portugal (só
+        totais, nunca dados pessoais) e o{" "}
+        <Link href="/projetos" className="text-marca-verde hover:underline">
+          diretório de projetos
+        </Link>
+        . A pesquisa do GitHub limita os resultados, por isso os números ficam
+        abaixo do real.{" "}
+        <a
+          href={`${links.repository.replace(
+            "github.com",
+            "raw.githubusercontent.com"
+          )}/main/data/estatisticas.json`}
+          className="text-marca-verde hover:underline"
+        >
+          dados em JSON
+        </a>
+      </p>
 
       <DadosEstruturados
         dados={{

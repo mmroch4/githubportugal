@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  GlobeIcon,
-  LinkExternalIcon,
-  LocationIcon,
-  MarkGithubIcon,
-  SearchIcon,
-} from "@primer/octicons-react";
+import { SearchIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useMemo, useState } from "react";
 import { useFiltrosNoUrl } from "@/lib/filtros-url";
@@ -16,7 +10,7 @@ import { normalizar } from "@/lib/formatar";
 const NACIONAL = "__nacional__";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
+  "min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioComunidades({
   comunidades,
@@ -51,6 +45,18 @@ export function DiretorioComunidades({
     });
   }, [comunidades, pesquisa, categoria, cidade]);
 
+  const contagemCidade = (c: string) =>
+    comunidades.filter((x) => (c === NACIONAL ? !x.cidade : x.cidade === c))
+      .length;
+
+  const chip = (ativo: boolean) =>
+    clsx(
+      "inline-flex min-h-[36px] items-center gap-2 rounded-full border px-3.5 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde",
+      ativo
+        ? "border-marca-verde bg-marca-verde/10"
+        : "border-light-gray-3 hover:bg-light-gray-1"
+    );
+
   const grupos = categorias
     .map((cat) => [cat, visiveis.filter((c) => c.categoria === cat)] as const)
     .filter(([, lista]) => lista.length > 0);
@@ -58,7 +64,7 @@ export function DiretorioComunidades({
   return (
     <div>
       <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <label className="relative">
+        <label className="relative sm:col-span-2">
           <span className="sr-only">Pesquisar comunidades</span>
           <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 fill-light-gray-5" />
           <input
@@ -88,25 +94,41 @@ export function DiretorioComunidades({
           </select>
         </label>
 
-        <label>
-          <span className="sr-only">Filtrar por cidade</span>
-          <select
-            value={cidade}
-            onChange={(e) => setCidade(e.target.value)}
-            className={campoClassName}
-          >
-            <option value="">Todas as cidades</option>
-            <option value={NACIONAL}>Nacionais e online</option>
-            {cidades.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
-        </label>
       </div>
 
-      <p className="mb-4 text-sm text-light-gray-6" aria-live="polite">
+      <div
+        role="group"
+        aria-label="Filtrar por cidade"
+        className="mb-6 flex flex-wrap gap-2"
+      >
+        <button
+          type="button"
+          aria-pressed={cidade === ""}
+          onClick={() => setCidade("")}
+          className={chip(cidade === "")}
+        >
+          Todas
+          <span className="font-mono text-light-gray-6">
+            {comunidades.length}
+          </span>
+        </button>
+        {[...cidades, NACIONAL].map((c) => (
+          <button
+            key={c}
+            type="button"
+            aria-pressed={cidade === c}
+            onClick={() => setCidade(cidade === c ? "" : c)}
+            className={chip(cidade === c)}
+          >
+            {c === NACIONAL ? "Online" : c}
+            <span className="font-mono text-light-gray-6">
+              {contagemCidade(c)}
+            </span>
+          </button>
+        ))}
+      </div>
+
+      <p className="sr-only" aria-live="polite">
         {visiveis.length === 1
           ? "1 comunidade"
           : `${visiveis.length} comunidades`}
@@ -120,8 +142,10 @@ export function DiretorioComunidades({
         <div className="flex flex-col gap-8">
           {grupos.map(([cat, lista]) => (
             <section key={cat}>
-              <h2 className="mb-3 text-lg font-bold sm:text-xl">{cat}</h2>
-              <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+              <h2 className="mb-3 font-mono text-sm text-marca-verde">
+                {`// ${cat.toLowerCase()}`}
+              </h2>
+              <ul className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 {lista.map((c) => (
                   <CartaoComunidade key={c.nome} comunidade={c} />
                 ))}
@@ -136,42 +160,20 @@ export function DiretorioComunidades({
 
 function CartaoComunidade({ comunidade: c }: { comunidade: Comunidade }) {
   return (
-    <li className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4">
+    <li className="min-w-0">
       <a
         href={c.site}
         target="_blank"
         rel="noopener noreferrer"
-        className="mb-1 flex items-center gap-1.5 break-words font-bold hover:underline focus:underline"
+        title={c.descricao}
+        className="flex h-full flex-col gap-2 rounded-xl border border-light-gray-2 bg-white/60 p-4 transition hover:bg-white"
       >
-        {c.nome}
-        <LinkExternalIcon size={12} className="shrink-0 fill-light-gray-5" />
-      </a>
-
-      <p className="mb-3 flex-1 text-sm text-light-gray-8 sm:text-base">
-        {c.descricao}
-      </p>
-
-      <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6">
-        <span className="flex items-center gap-1">
-          {c.cidade ? (
-            <LocationIcon className="fill-light-gray-6" />
-          ) : (
-            <GlobeIcon className="fill-light-gray-6" />
-          )}
-          {c.cidade ?? "Nacional e online"}
+        <span className="truncate font-semibold">{c.nome}</span>
+        <span className="font-mono text-xs text-light-gray-6">
+          {c.cidade ?? "online"}
+          {c.github && <span className="text-marca-verde"> · @{c.github}</span>}
         </span>
-        {c.github && (
-          <a
-            href={`https://github.com/${c.github}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
-          >
-            <MarkGithubIcon className="fill-marca-verde" />
-            {c.github}
-          </a>
-        )}
-      </div>
+      </a>
     </li>
   );
 }

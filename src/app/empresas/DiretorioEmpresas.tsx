@@ -2,9 +2,6 @@
 
 import {
   BriefcaseIcon,
-  LinkExternalIcon,
-  LocationIcon,
-  MarkGithubIcon,
   RepoIcon,
   SearchIcon,
   StarIcon,
@@ -16,7 +13,7 @@ import type { Empresa } from "@/lib/empresas";
 import { formatoNumero, normalizar } from "@/lib/formatar";
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
+  "min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 export function DiretorioEmpresas({
   empresas,
@@ -60,41 +57,27 @@ export function DiretorioEmpresas({
     });
   }, [empresas, pesquisa, setor, cidade, soComCarreiras]);
 
-  const grupos = setores
-    .map((s) => [s, visiveis.filter((e) => e.setor === s)] as const)
-    .filter(([, lista]) => lista.length > 0);
+  const chip = (ativo: boolean) =>
+    clsx(
+      "inline-flex min-h-[36px] items-center gap-2 rounded-full border px-3.5 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde",
+      ativo
+        ? "border-marca-verde bg-marca-verde/10"
+        : "border-light-gray-3 hover:bg-light-gray-1"
+    );
 
   return (
     <div>
       <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
-        <label className="relative">
-          <span className="sr-only">Pesquisar empresas</span>
+        <label className="relative sm:col-span-2">
+          <span className="sr-only">Procurar empresas</span>
           <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 fill-light-gray-5" />
           <input
             type="search"
             value={pesquisa}
             onChange={(e) => setPesquisa(e.target.value)}
-            placeholder="Pesquisar empresas"
+            placeholder="Empresa, repositório ou linguagem"
             className={clsx(campoClassName, "pl-9")}
           />
-        </label>
-
-        <label>
-          <span className="sr-only">Filtrar por setor</span>
-          <select
-            value={setor}
-            onChange={(e) => setSetor(e.target.value)}
-            className={campoClassName}
-          >
-            <option value="">Todos os setores</option>
-            {setores
-              .filter((s) => empresas.some((e) => e.setor === s))
-              .map((s) => (
-                <option key={s} value={s}>
-                  {s}
-                </option>
-              ))}
-          </select>
         </label>
 
         <label>
@@ -114,178 +97,128 @@ export function DiretorioEmpresas({
         </label>
       </div>
 
-      <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
-        <p className="text-sm text-light-gray-6" aria-live="polite">
-          {visiveis.length === 1 ? "1 empresa" : `${visiveis.length} empresas`}
-        </p>
+      <div
+        role="group"
+        aria-label="Filtrar por setor"
+        className="mb-6 flex flex-wrap gap-2"
+      >
+        <button
+          type="button"
+          aria-pressed={setor === ""}
+          onClick={() => setSetor("")}
+          className={chip(setor === "")}
+        >
+          Todas
+          <span className="font-mono text-light-gray-6">{empresas.length}</span>
+        </button>
+        {setores
+          .filter((x) => empresas.some((e) => e.setor === x))
+          .map((x) => (
+            <button
+              key={x}
+              type="button"
+              aria-pressed={setor === x}
+              onClick={() => setSetor(setor === x ? "" : x)}
+              className={chip(setor === x)}
+            >
+              {x}
+              <span className="font-mono text-light-gray-6">
+                {empresas.filter((e) => e.setor === x).length}
+              </span>
+            </button>
+          ))}
         {algumaComCarreiras && (
-          <label className="flex items-center gap-2 text-sm text-light-gray-8">
-            <input
-              type="checkbox"
-              checked={soComCarreiras}
-              onChange={(e) => setSoComCarreiras(e.target.checked)}
-              className="h-4 w-4"
-            />
-            Só empresas com página de carreiras
-          </label>
+          <button
+            type="button"
+            aria-pressed={soComCarreiras}
+            onClick={() => setSoComCarreiras(!soComCarreiras)}
+            className={chip(soComCarreiras)}
+          >
+            <BriefcaseIcon className="fill-current" />
+            Com carreiras
+          </button>
         )}
       </div>
 
-      {grupos.length === 0 ? (
+      <p className="sr-only" aria-live="polite">
+        {visiveis.length === 1 ? "1 empresa" : `${visiveis.length} empresas`}
+      </p>
+
+      {visiveis.length === 0 ? (
         <p className="rounded border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
           Nenhuma empresa corresponde à pesquisa.
         </p>
       ) : (
-        <div className="flex flex-col gap-8">
-          {grupos.map(([s, lista]) => (
-            <section key={s}>
-              <h2 className="mb-3 text-lg font-bold sm:text-xl">{s}</h2>
-              <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
-                {lista.map((e) => (
-                  <CartaoEmpresa key={e.github} empresa={e} />
-                ))}
-              </ul>
-            </section>
+        <ul className="grid grid-cols-1 gap-2">
+          {visiveis.map((e) => (
+            <LinhaEmpresa key={e.github} empresa={e} />
           ))}
-        </div>
+        </ul>
       )}
     </div>
   );
 }
 
-function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
-  const urlGitHub = `https://github.com/${e.github}`;
+function LinhaEmpresa({ empresa: e }: { empresa: Empresa }) {
+  const destaque = e.destaques[0];
 
   return (
-    <li className="flex flex-col rounded-xl border border-light-gray-2 bg-white/60 p-4">
-      <div className="mb-2 flex items-start gap-3">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={e.avatar}
-          alt=""
-          width={40}
-          height={40}
-          loading="lazy"
-          className="h-10 w-10 shrink-0 rounded-md border border-light-gray-2"
-        />
-        <div className="min-w-0 flex-1">
-          {e.site ? (
-            <a
-              href={e.site}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1.5 break-words font-bold hover:underline focus:underline"
-            >
-              {e.nome}
-              <LinkExternalIcon
-                size={12}
-                className="shrink-0 fill-light-gray-5"
-              />
-            </a>
-          ) : (
-            <span className="block break-words font-bold">{e.nome}</span>
-          )}
-          <span className="flex items-center gap-1 text-xs text-light-gray-6">
-            <LocationIcon size={12} className="fill-light-gray-6" />
-            {e.cidades.join(", ")}
+    <li className="flex min-w-0 items-center gap-4 rounded-xl border border-light-gray-2 bg-white/60 p-3 pr-4">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={e.avatar}
+        alt=""
+        width={44}
+        height={44}
+        loading="lazy"
+        className="h-11 w-11 shrink-0 rounded-lg border border-light-gray-2"
+      />
+      <div className="flex min-w-0 flex-1 flex-col gap-1">
+        <span className="flex min-w-0 items-center gap-2">
+          <a
+            href={e.site ?? `https://github.com/${e.github}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={e.descricao}
+            className="truncate font-semibold hover:underline focus:underline"
+          >
+            {e.nome}
+          </a>
+          <span className="hidden shrink-0 rounded-full border border-light-gray-3 px-2 font-mono text-[11px] text-light-gray-6 sm:inline">
+            {e.setor}
           </span>
-        </div>
-      </div>
-
-      <p className="mb-3 text-sm text-light-gray-8 sm:text-base">
-        {e.descricao}
-      </p>
-
-      {e.destaques.length > 0 && (
-        <div className="mb-3">
-          <h3 className="mb-1 text-xs font-bold uppercase tracking-wide text-light-gray-6">
-            Em destaque no GitHub
-          </h3>
-          <ul className="flex flex-col gap-1">
-            {e.destaques.map((r) => (
-              <li
-                key={r.nome}
-                className="flex items-center justify-between gap-2 text-sm"
-              >
-                <a
-                  href={r.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={r.descricao ?? undefined}
-                  className="flex min-w-0 items-center gap-1.5 font-medium text-marca-verde hover:underline focus:underline"
-                >
-                  <RepoIcon className="shrink-0 fill-light-gray-5" />
-                  <span className="truncate">{r.nome}</span>
-                </a>
-                <span className="flex shrink-0 items-center gap-3 text-light-gray-6">
-                  {r.linguagem && (
-                    <span className="hidden items-center gap-1 sm:flex">
-                      <span
-                        aria-hidden
-                        className="h-2.5 w-2.5 rounded-full"
-                        style={{
-                          backgroundColor: r.corLinguagem ?? "#8c959f",
-                        }}
-                      />
-                      {r.linguagem}
-                    </span>
-                  )}
-                  <span
-                    className="flex items-center gap-1"
-                    title={`${r.estrelas} estrelas`}
-                  >
-                    <StarIcon size={14} className="fill-light-gray-6" />
-                    {formatoNumero.format(r.estrelas)}
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {e.projetosNoDiretorio.length > 0 && (
-        <p className="mb-3 text-sm text-light-gray-7">
-          No diretório de projetos:{" "}
-          {e.projetosNoDiretorio.map((p, i) => (
-            <span key={p.repositorio}>
-              {i > 0 && ", "}
+        </span>
+        <span className="truncate font-mono text-xs text-light-gray-6">
+          {e.cidades.join(" · ")}
+          {destaque && (
+            <>
+              {" · "}
               <a
-                href={`https://github.com/${p.repositorio}`}
+                href={destaque.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-medium text-marca-verde hover:underline focus:underline"
+                title={destaque.descricao ?? undefined}
+                className="text-marca-verde hover:underline"
               >
-                {p.nome}
-              </a>
-            </span>
-          ))}
-        </p>
-      )}
-
-      <div className="mt-auto flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6">
-        <a
-          href={urlGitHub}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
-        >
-          <MarkGithubIcon className="fill-marca-verde" />
-          {e.github}
-        </a>
+                {destaque.nome}
+              </a>{" "}
+              <StarIcon size={12} className="fill-light-gray-6" />{" "}
+              {formatoNumero.format(destaque.estrelas)}
+            </>
+          )}
+        </span>
+      </div>
+      <div className="flex shrink-0 items-center gap-3 font-mono text-sm">
         {e.repositoriosPublicos !== null && (
           <a
             href={`https://github.com/orgs/${e.github}/repositories?type=source`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 hover:underline focus:underline"
+            title="Repositórios públicos"
+            className="hidden items-center gap-1 text-light-gray-6 hover:text-marca-verde sm:flex"
           >
-            <RepoIcon className="fill-light-gray-6" />
-            {e.repositoriosPublicos === 1
-              ? "1 repositório público"
-              : `${formatoNumero.format(
-                  e.repositoriosPublicos
-                )} repositórios públicos`}
+            <RepoIcon className="fill-current" />
+            {formatoNumero.format(e.repositoriosPublicos)}
           </a>
         )}
         {e.carreiras && (
@@ -293,10 +226,11 @@ function CartaoEmpresa({ empresa: e }: { empresa: Empresa }) {
             href={e.carreiras}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1 font-medium text-marca-verde hover:underline focus:underline"
+            title="Carreiras"
+            className="flex items-center gap-1 text-marca-verde hover:underline"
           >
-            <BriefcaseIcon className="fill-marca-verde" />
-            Carreiras
+            <BriefcaseIcon className="fill-current" />
+            <span className="hidden sm:inline">vagas</span>
           </a>
         )}
       </div>
