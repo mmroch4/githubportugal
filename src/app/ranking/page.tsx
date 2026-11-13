@@ -4,7 +4,9 @@ import { metadadosPagina, paginaColecao } from "@/lib/seo";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { Suspense } from "react";
 import { links } from "@/config/metadata";
+import { lerProgramadores } from "@/lib/estatisticas";
 import { obterRanking } from "@/lib/ranking";
+import { AMBITOS, type Ambito } from "@/lib/ranking-tipos";
 import { TabelaRanking, TabelaRankingComParametros } from "./TabelaRanking";
 
 const description =
@@ -24,25 +26,35 @@ const formatoData = new Intl.DateTimeFormat("pt-PT", {
 });
 
 export default async function PaginaRanking() {
-  const ranking = await obterRanking();
+  const [ranking, programadores] = await Promise.all([
+    obterRanking(),
+    lerProgramadores(),
+  ]);
+  // Quantas pessoas há em cada zona (o ranking só guarda as primeiras 100).
+  const contagens: Partial<Record<Ambito, number>> = {};
+  if (programadores) {
+    contagens.pais = programadores.pessoas;
+    for (const a of AMBITOS) {
+      const cidade = programadores.cidades.find((c) => c.rotulo === a.nome);
+      if (cidade) contagens[a.id] = cidade.valor;
+    }
+  }
   const urlExclusoes = `${links.repository}/blob/main/CONTRIBUTING.md#sair-do-ranking`;
 
   return (
     <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl">
-      <header className="mb-6">
-        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
+      <header className="mb-8 flex flex-col gap-3">
+        <p className="etiqueta">{"// últimos 12 meses"}</p>
+        <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
           Ranking
         </h1>
-        <p className="max-w-2xl text-base text-light-gray-7 sm:text-lg">
-          Quem mais contribui para projetos públicos no GitHub em Portugal. As
-          contribuições contam commits, pull requests, issues e revisões em
-          repositórios públicos nos últimos 12 meses.
-        </p>
       </header>
 
       {ranking.geradoEm ? (
-        <Suspense fallback={<TabelaRanking ranking={ranking} />}>
-          <TabelaRankingComParametros ranking={ranking} />
+        <Suspense
+          fallback={<TabelaRanking ranking={ranking} contagens={contagens} />}
+        >
+          <TabelaRankingComParametros ranking={ranking} contagens={contagens} />
         </Suspense>
       ) : (
         <p className="rounded border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
@@ -50,43 +62,31 @@ export default async function PaginaRanking() {
         </p>
       )}
 
-      <section className="mt-8 rounded-xl border border-light-gray-2 bg-white/60 p-4 text-sm text-light-gray-7 sm:p-5">
-        <h2 className="mb-2 flex items-center gap-2 text-base font-bold text-light-black">
-          <PersonIcon className="fill-light-black" />
+      <section className="mt-8 flex flex-col gap-2 rounded-xl border border-light-gray-2 bg-white/60 p-4 text-sm text-light-gray-7 sm:p-5">
+        <h2 className="flex items-center gap-2 text-base font-bold text-light-black">
+          <PersonIcon className="fill-marca-verde" />
           Como entras no ranking
         </h2>
-        <p className="mb-2">
-          Uma GitHub Action pesquisa todas as semanas os perfis públicos com
-          localização em Portugal e lê as contribuições públicas de cada um.
-          Para apareceres, escreve no teu perfil do GitHub a tua cidade ou
-          “Portugal” no campo da localização. A pesquisa do GitHub devolve, no
-          máximo, as 1000 contas com mais seguidores por localização, por isso
-          quem tem muito poucos seguidores pode ficar de fora.
-        </p>
-        <p className="mb-2">
-          Para contares também as contribuições em repositórios privados, ativa
-          “Private contributions” nas definições do teu perfil: aparecem no
-          GitHub, mas não entram neste ranking.
+        <p>
+          Põe a tua cidade ou “Portugal” na localização do teu perfil do GitHub.
+          Contam commits, pull requests, issues e revisões públicos.
         </p>
         <p>
-          Não queres aparecer?{" "}
           <a
             href={urlExclusoes}
             target="_blank"
             rel="noopener noreferrer"
             className="font-medium text-marca-verde underline"
           >
-            Pede para sair do ranking
+            Sair do ranking
           </a>
-          .
+          {ranking.geradoEm && (
+            <span className="text-light-gray-6">
+              {" "}
+              · atualizado a {formatoData.format(new Date(ranking.geradoEm))}
+            </span>
+          )}
         </p>
-        {ranking.geradoEm && (
-          <p className="mt-3 text-light-gray-6">
-            Atualizado a {formatoData.format(new Date(ranking.geradoEm))}, a
-            partir de {ranking.totalAnalisado.toLocaleString("pt-PT")} perfis
-            analisados.
-          </p>
-        )}
       </section>
       <DadosEstruturados
         dados={paginaColecao({

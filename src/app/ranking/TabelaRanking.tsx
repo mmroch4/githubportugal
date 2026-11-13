@@ -1,6 +1,6 @@
 "use client";
 
-import { LocationIcon, SearchIcon } from "@primer/octicons-react";
+import { SearchIcon } from "@primer/octicons-react";
 import clsx from "clsx";
 import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
@@ -12,10 +12,14 @@ import {
   type Ranking,
 } from "@/lib/ranking-tipos";
 
-type Props = { ranking: Ranking };
+type Props = {
+  ranking: Ranking;
+  /** Número de pessoas em cada zona, para os filtros. */
+  contagens?: Partial<Record<Ambito, number>>;
+};
 
 const campoClassName =
-  "w-full rounded border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
+  "min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-white px-3 py-2 text-sm focus:border-marca-verde focus:outline-none focus:ring-2 focus:ring-marca-verde/30 sm:text-base";
 
 const NOMES_METRICA: Record<Metrica, string> = {
   contribuicoes: "Contribuições públicas",
@@ -27,7 +31,9 @@ const NOMES_CURTOS: Record<Metrica, string> = {
   seguidores: "Seguid.",
 };
 
-const formatoInteiro = new Intl.NumberFormat("pt-PT");
+const formatoInteiro = new Intl.NumberFormat("pt-PT", {
+  useGrouping: "always",
+});
 
 function eAmbito(valor: string): valor is Ambito {
   return AMBITOS.some((a) => a.id === valor);
@@ -50,6 +56,7 @@ export function TabelaRankingComParametros(props: Props) {
 
 export function TabelaRanking({
   ranking,
+  contagens = {},
   ambitoInicial = "pais",
   metricaInicial = "contribuicoes",
 }: Props & { ambitoInicial?: Ambito; metricaInicial?: Metrica }) {
@@ -70,6 +77,10 @@ export function TabelaRanking({
         ).includes(termo);
       });
   }, [ranking, ambito, metrica, pesquisa]);
+
+  // As barras comparam cada pessoa com o 1.º lugar da lista.
+  const lider = ranking.listas[ambito][metrica][0];
+  const maximo = Math.max(1, lider ? ranking.pessoas[lider][metrica] : 1);
 
   // O pódio só aparece na lista completa (sem pesquisa) e com pelo menos 3 pessoas.
   const podio =
@@ -94,26 +105,36 @@ export function TabelaRanking({
             aria-selected={ambito === a.id}
             onClick={() => setAmbito(a.id)}
             className={clsx(
-              "rounded-full border px-3 py-1 text-sm font-bold sm:text-base",
+              "inline-flex min-h-[38px] items-center gap-2 rounded-full border px-4 text-sm font-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde",
               ambito === a.id
-                ? "border-light-black bg-light-black text-light-gray-0"
-                : "border-light-gray-3 bg-white hover:bg-light-gray-1"
+                ? "border-marca-verde bg-marca-verde/10"
+                : "border-light-gray-3 hover:bg-light-gray-1"
             )}
           >
             {a.nome}
+            {contagens[a.id] !== undefined && (
+              <span
+                className={clsx(
+                  "font-mono tabular-nums",
+                  ambito === a.id ? "text-marca-verde" : "text-light-gray-6"
+                )}
+              >
+                {formatoInteiro.format(contagens[a.id]!)}
+              </span>
+            )}
           </button>
         ))}
       </div>
 
       <div className="mb-4 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <label className="relative sm:col-span-2">
-          <span className="sr-only">Pesquisar no ranking</span>
+          <span className="sr-only">Procurar no ranking</span>
           <SearchIcon className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 fill-light-gray-5" />
           <input
             type="search"
             value={pesquisa}
             onChange={(e) => setPesquisa(e.target.value)}
-            placeholder="Procurar por nome ou utilizador"
+            placeholder="Onde estou eu? Nome ou @utilizador"
             className={clsx(campoClassName, "pl-9")}
           />
         </label>
@@ -132,7 +153,7 @@ export function TabelaRanking({
       </div>
 
       {podio.length > 0 && (
-        <Podio podio={podio} metrica={metrica} outraMetrica={outraMetrica} />
+        <Podio podio={podio} metrica={metrica} maximo={maximo} />
       )}
 
       {linhas.length === 0 ? (
@@ -148,15 +169,21 @@ export function TabelaRanking({
               Ranking de {AMBITOS.find((a) => a.id === ambito)?.nome} por{" "}
               {NOMES_METRICA[metrica].toLowerCase()}
             </caption>
-            <thead className="border-b border-light-gray-2 bg-light-gray-0 text-xs uppercase text-light-gray-6">
+            <thead className="border-b border-light-gray-2 font-mono text-xs lowercase text-light-gray-6">
               <tr>
-                <th scope="col" className="w-12 px-2 py-2 text-right sm:px-3">
+                <th
+                  scope="col"
+                  className="w-12 px-2 py-3 text-right font-normal sm:px-3"
+                >
                   #
                 </th>
-                <th scope="col" className="w-full px-3 py-2">
+                <th scope="col" className="w-full px-3 py-3 font-normal">
                   Pessoa
                 </th>
-                <th scope="col" className="w-24 px-3 py-2 text-right sm:w-56">
+                <th
+                  scope="col"
+                  className="w-28 px-3 py-3 text-right font-normal sm:w-64"
+                >
                   <span className="sm:hidden" aria-hidden>
                     {NOMES_CURTOS[metrica]}
                   </span>
@@ -166,7 +193,7 @@ export function TabelaRanking({
                 </th>
                 <th
                   scope="col"
-                  className="hidden w-32 px-3 py-2 text-right sm:table-cell"
+                  className="hidden w-32 px-3 py-3 text-right font-normal sm:table-cell"
                 >
                   {NOMES_METRICA[outraMetrica]}
                 </th>
@@ -197,27 +224,32 @@ export function TabelaRanking({
                           href={`https://github.com/${pessoa.login}`}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="block truncate font-bold hover:underline focus:underline"
+                          className="block truncate font-semibold hover:underline focus:underline"
                         >
                           {pessoa.nome ?? pessoa.login}
                         </a>
-                        <span className="flex flex-wrap items-center gap-x-2 text-xs text-light-gray-6 sm:text-sm">
-                          <span className="truncate">@{pessoa.login}</span>
-                          {pessoa.localizacao && (
-                            <span className="hidden items-center gap-1 truncate md:flex">
-                              <LocationIcon className="fill-light-gray-6" />
-                              {pessoa.localizacao}
-                            </span>
-                          )}
-                        </span>
                       </div>
                     </div>
                   </td>
-                  <td
-                    className="px-3 py-2 text-right font-mono font-bold tabular-nums"
-                    title={formatoInteiro.format(pessoa[metrica])}
-                  >
-                    {formatoInteiro.format(pessoa[metrica])}
+                  <td className="px-3 py-2">
+                    <div className="flex items-center justify-end gap-3">
+                      <span className="shrink-0 text-right font-mono font-semibold tabular-nums sm:w-[4.5rem]">
+                        {formatoInteiro.format(pessoa[metrica])}
+                      </span>
+                      <span
+                        aria-hidden="true"
+                        className="hidden h-1.5 flex-1 overflow-hidden rounded-full bg-light-gray-1 sm:block"
+                      >
+                        <span
+                          className="block h-full rounded-full bg-marca-verde/70"
+                          style={{
+                            width: `${Math.round(
+                              (pessoa[metrica] / maximo) * 100
+                            )}%`,
+                          }}
+                        />
+                      </span>
+                    </div>
                   </td>
                   <td
                     className="hidden px-3 py-2 text-right font-mono tabular-nums text-light-gray-6 sm:table-cell"
@@ -237,84 +269,70 @@ export function TabelaRanking({
 
 type Linha = { posicao: number; pessoa: Ranking["pessoas"][string] };
 
-/** Os três primeiros, em cartões: 2.º, 1.º e 3.º lado a lado em ecrãs largos. */
+/** Os três primeiros, em cartões compactos lado a lado. */
 function Podio({
   podio,
   metrica,
-  outraMetrica,
+  maximo,
 }: {
   podio: Linha[];
   metrica: Metrica;
-  outraMetrica: Metrica;
+  maximo: number;
 }) {
-  // Na grelha larga, o 1.º fica ao centro; no HTML mantém-se a ordem 1, 2, 3.
-  const ordemVisual = ["sm:order-2", "sm:order-1", "sm:order-3"];
   return (
-    <ol
-      aria-label="Pódio"
-      className="mb-4 grid gap-3 sm:grid-cols-3 sm:items-end"
-    >
-      {podio.map(({ posicao, pessoa }, i) => {
+    <ol aria-label="Pódio" className="mb-4 grid gap-3 sm:grid-cols-3">
+      {podio.map(({ posicao, pessoa }) => {
         const primeiro = posicao === 1;
         return (
-          <li
-            key={pessoa.login}
-            className={clsx(
-              "rounded-xl p-px",
-              ordemVisual[i],
-              primeiro
-                ? "bg-gradient-to-b from-marca-verde to-marca-vermelho shadow-lg shadow-marca-verde/10"
-                : "bg-light-gray-2"
-            )}
-          >
+          <li key={pessoa.login} className="min-w-0">
             <a
               href={`https://github.com/${pessoa.login}`}
               target="_blank"
               rel="noopener noreferrer"
               className={clsx(
-                "flex items-center gap-4 rounded-[11px] bg-white p-4 hover:bg-light-gray-1 sm:flex-col sm:text-center",
-                primeiro ? "sm:pb-8 sm:pt-6" : "sm:pb-5"
+                "flex h-full flex-col gap-4 rounded-xl border bg-white/60 p-5 hover:bg-white",
+                primeiro ? "border-marca-verde/60" : "border-light-gray-2"
               )}
             >
-              <span className="relative shrink-0">
+              <span className="flex items-center gap-3">
+                <span
+                  className={clsx(
+                    "font-mono text-3xl font-bold",
+                    primeiro ? "text-marca-verde" : "text-light-gray-7"
+                  )}
+                >
+                  {String(posicao).padStart(2, "0")}
+                </span>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={pessoa.avatar}
                   alt=""
-                  width={80}
-                  height={80}
-                  className={clsx(
-                    "rounded-full border border-light-gray-2",
-                    primeiro
-                      ? "h-16 w-16 sm:h-20 sm:w-20"
-                      : "h-14 w-14 sm:h-16 sm:w-16"
-                  )}
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 shrink-0 rounded-full border border-light-gray-2"
                 />
-                <span
-                  className={clsx(
-                    "absolute -bottom-1 -right-1 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white font-mono text-xs font-bold",
-                    primeiro
-                      ? "bg-gradient-to-br from-marca-verde to-marca-vermelho text-[#fff]"
-                      : "bg-light-gray-2 text-light-black"
-                  )}
-                >
-                  {posicao}
-                </span>
-              </span>
-              <span className="min-w-0 flex-1 sm:w-full">
-                <span className="block truncate font-bold">
+                <span className="min-w-0 truncate font-bold">
                   {pessoa.nome ?? pessoa.login}
                 </span>
-                <span className="block truncate text-sm text-light-gray-6">
-                  @{pessoa.login}
-                </span>
-                <span className="mt-2 block text-xl font-black tabular-nums sm:text-2xl">
+              </span>
+              <span className="mt-auto flex flex-col gap-2">
+                <span className="font-mono text-2xl font-bold tabular-nums">
                   {formatoInteiro.format(pessoa[metrica])}
+                  <span className="sr-only">
+                    {" "}
+                    {NOMES_METRICA[metrica].toLowerCase()}
+                  </span>
                 </span>
-                <span className="block text-xs text-light-gray-6">
-                  {NOMES_METRICA[metrica].toLowerCase()} ·{" "}
-                  {formatoNumero.format(pessoa[outraMetrica])}{" "}
-                  {NOMES_METRICA[outraMetrica].toLowerCase()}
+                <span
+                  aria-hidden="true"
+                  className="h-1.5 overflow-hidden rounded-full bg-light-gray-1"
+                >
+                  <span
+                    className="block h-full rounded-full bg-marca-verde"
+                    style={{
+                      width: `${Math.round((pessoa[metrica] / maximo) * 100)}%`,
+                    }}
+                  />
                 </span>
               </span>
             </a>
