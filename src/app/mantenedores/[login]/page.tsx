@@ -1,10 +1,4 @@
-import {
-  LinkIcon,
-  LocationIcon,
-  MarkGithubIcon,
-  OrganizationIcon,
-  PeopleIcon,
-} from "@primer/octicons-react";
+import { LinkExternalIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
@@ -13,6 +7,7 @@ import { notFound } from "next/navigation";
 import { CartaoProjeto } from "@/components/CartaoProjeto";
 import { caminhoMantenedor, formatoNumero } from "@/lib/formatar";
 import { listarLogins, obterMantenedor } from "@/lib/mantenedores";
+import { obterRanking } from "@/lib/ranking";
 
 export const revalidate = 21600;
 // Só existem páginas para quem está em data/mantenedores.yml.
@@ -47,136 +42,133 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export default async function PerfilMantenedor({ params }: Props) {
   const { login } = await params;
-  const m = await obterMantenedor(login);
+  const [m, ranking] = await Promise.all([
+    obterMantenedor(login),
+    obterRanking(),
+  ]);
   if (!m) notFound();
 
-  return (
-    <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
-      <nav
-        aria-label="Migalhas"
-        className="mb-4 font-mono text-sm text-light-gray-6"
-      >
-        <Link href="/mantenedores" className="hover:text-light-black">
-          Mantenedores
-        </Link>
-        <span className="mx-2 text-light-gray-4">/</span>
-        <span className="text-light-black">{m.login}</span>
-      </nav>
+  const chave = Object.keys(ranking.pessoas).find(
+    (l) => l.toLowerCase() === m.login.toLowerCase()
+  );
+  const noRanking = chave ? ranking.pessoas[chave] : undefined;
+  const posicao = chave
+    ? ranking.listas.pais.contribuicoes.indexOf(chave) + 1
+    : 0;
+  const inteiro = new Intl.NumberFormat("pt-PT", { useGrouping: "always" });
 
-      <header className="mb-10 overflow-hidden rounded-xl border border-light-gray-2 bg-white/60">
-        {/* Capa com as cores da marca e uma grelha subtil. */}
+  const numeros = [
+    posicao > 0 && { valor: `#${posicao}`, rotulo: "no ranking" },
+    noRanking && {
+      valor: inteiro.format(noRanking.contribuicoes),
+      rotulo: "contribuições",
+    },
+    m.seguidores !== null && {
+      valor: inteiro.format(m.seguidores),
+      rotulo: "seguidores",
+    },
+    m.estrelas > 0 && {
+      valor: formatoNumero.format(m.estrelas),
+      rotulo: "estrelas nos projetos",
+    },
+  ].filter((n): n is { valor: string; rotulo: string } => Boolean(n));
+
+  return (
+    <main className="mx-auto w-full max-w-5xl px-4 pb-16 pt-6 sm:px-6">
+      <Link
+        href="/mantenedores"
+        className="mb-6 inline-block font-mono text-sm text-marca-verde hover:underline"
+      >
+        ← pessoas
+      </Link>
+
+      <header className="mb-6 overflow-hidden rounded-2xl border border-light-gray-2 bg-white/60">
+        {/* Capa com as cores do logótipo. */}
         <div
           aria-hidden="true"
-          className="h-24 sm:h-32"
+          className="h-28 sm:h-36"
           style={{
             backgroundImage:
-              "linear-gradient(90deg, hsl(var(--marca-verde) / 0.35), transparent 50%, hsl(var(--marca-vermelho) / 0.3)), linear-gradient(hsl(var(--cor-gray-3) / 0.25) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--cor-gray-3) / 0.25) 1px, transparent 1px)",
-            backgroundSize: "100% 100%, 24px 24px, 24px 24px",
+              "linear-gradient(110deg, hsl(var(--marca-verde) / 0.45), transparent 55%, hsl(var(--marca-vermelho) / 0.35))",
           }}
         />
-
-        <div className="px-5 pb-6 sm:px-8">
-          <div className="-mt-12 mb-4 flex flex-wrap items-end justify-between gap-4 sm:-mt-16">
+        <div className="flex flex-wrap items-end justify-between gap-4 px-5 pb-6 sm:px-7">
+          <div className="-mt-12 flex min-w-0 items-end gap-4 sm:-mt-14">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src={m.avatar}
               alt=""
-              width={128}
-              height={128}
-              className="h-24 w-24 shrink-0 rounded-full border-4 border-light-gray-0 bg-light-gray-0 sm:h-32 sm:w-32"
+              width={112}
+              height={112}
+              className="h-24 w-24 shrink-0 rounded-full border-4 border-white bg-white sm:h-28 sm:w-28"
             />
-            <div className="flex flex-wrap gap-2">
-              <a
-                href={m.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="botao-primario"
-              >
-                <MarkGithubIcon className="fill-current" />
-                Perfil no GitHub
-              </a>
-              {m.site && (
-                <a
-                  href={m.site}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="botao-secundario"
-                >
-                  <LinkIcon className="fill-current" />
-                  Site
-                </a>
-              )}
+            <div className="min-w-0 pb-1">
+              <h1 className="break-words text-2xl font-black tracking-tight sm:text-3xl">
+                {m.nome}
+              </h1>
+              <p className="truncate font-mono text-sm text-light-gray-6">
+                @{m.login}
+                {m.localizacao && ` · ${m.localizacao}`}
+              </p>
             </div>
           </div>
-
-          <h1 className="break-words text-3xl font-black tracking-tight sm:text-4xl">
-            {m.nome}
-          </h1>
-          <p className="mb-3 font-mono text-light-gray-6">@{m.login}</p>
-          {m.bio && (
-            <p className="mb-4 max-w-2xl text-base text-light-gray-8 sm:text-lg">
-              {m.bio}
-            </p>
-          )}
-
-          <ul className="mb-5 flex flex-wrap items-center gap-x-4 gap-y-1 text-sm text-light-gray-6">
-            {m.localizacao && (
-              <li className="flex items-center gap-1">
-                <LocationIcon className="fill-current" />
-                {m.localizacao}
-              </li>
+          <div className="flex flex-wrap gap-2">
+            {m.site && (
+              <a
+                href={m.site}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="botao-secundario"
+              >
+                Site
+              </a>
             )}
-            {m.empresa && (
-              <li className="flex items-center gap-1">
-                <OrganizationIcon className="fill-current" />
-                {m.empresa}
-              </li>
-            )}
-          </ul>
-
-          <dl className="grid max-w-lg grid-cols-3 gap-px overflow-hidden rounded-lg border border-light-gray-2 bg-light-gray-2 text-center">
-            {[
-              {
-                valor: m.projetos.length,
-                rotulo: "projetos",
-                icone: PeopleIcon,
-              },
-              // 0 estrelas quase sempre quer dizer que não há dados do GitHub.
-              { valor: m.estrelas || null, rotulo: "estrelas" },
-              { valor: m.seguidores, rotulo: "seguidores" },
-            ].map((n) => (
-              <div key={n.rotulo} className="bg-light-gray-0 px-3 py-3">
-                <dt className="text-xs text-light-gray-6">{n.rotulo}</dt>
-                <dd className="font-mono text-lg font-bold tabular-nums">
-                  {n.valor === null ? "—" : formatoNumero.format(n.valor)}
-                </dd>
-              </div>
-            ))}
-          </dl>
+            <a
+              href={m.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="botao-secundario"
+            >
+              Ver no GitHub
+              <LinkExternalIcon className="fill-current" />
+            </a>
+          </div>
         </div>
       </header>
 
-      <section>
-        <h2 className="mb-4 text-xl font-bold sm:text-2xl">
-          Projetos no diretório
+      {numeros.length > 0 && (
+        <dl className="mb-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          {numeros.map((n) => (
+            <div
+              key={n.rotulo}
+              className="flex flex-col-reverse gap-1 rounded-xl border border-light-gray-2 p-5"
+            >
+              <dt className="text-sm text-light-gray-6">{n.rotulo}</dt>
+              <dd className="font-mono text-2xl font-bold tabular-nums">
+                {n.valor}
+              </dd>
+            </div>
+          ))}
+        </dl>
+      )}
+
+      <section aria-labelledby="projetos">
+        <h2 id="projetos" className="etiqueta mb-4">
+          {"// projetos"}
         </h2>
 
         {m.projetos.length === 0 ? (
-          <p className="rounded border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
-            Ainda não há projetos desta pessoa no{" "}
+          <p className="rounded-xl border border-dashed border-light-gray-3 p-8 text-center text-light-gray-6">
+            Ainda sem projetos no{" "}
             <Link href="/projetos" className="font-medium underline">
               diretório
             </Link>
             .
           </p>
         ) : (
-          <ul className="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <ul className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {m.projetos.map((p) => (
-              <CartaoProjeto
-                key={p.repositorio}
-                projeto={p}
-                atualizadoEm={m.atualizadoEm}
-              />
+              <CartaoProjeto key={p.repositorio} projeto={p} />
             ))}
           </ul>
         )}
