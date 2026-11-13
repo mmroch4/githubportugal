@@ -67,11 +67,13 @@ function BlocoCodigo({ titulo, codigo }: { titulo: string; codigo: string }) {
   return (
     <div className="rounded-xl border border-light-gray-2 bg-white/60">
       <div className="flex items-center justify-between border-b border-light-gray-2 px-3 py-2">
-        <span className="text-sm font-bold">{titulo}</span>
+        <span className="font-mono text-xs lowercase text-light-gray-6">
+          {titulo}
+        </span>
         <button
           type="button"
           onClick={copiar}
-          className="flex items-center gap-1.5 rounded border border-light-gray-3 px-2 py-1 text-xs font-bold hover:bg-light-gray-1 focus:bg-light-gray-1"
+          className="flex min-h-[32px] items-center gap-1.5 rounded-lg border border-light-gray-3 px-3 text-xs font-semibold hover:bg-light-gray-1 focus:bg-light-gray-1"
         >
           {copiado ? (
             <CheckIcon size={14} className="fill-light-green-6" />
@@ -81,7 +83,7 @@ function BlocoCodigo({ titulo, codigo }: { titulo: string; codigo: string }) {
           {copiado ? "Copiado" : "Copiar"}
         </button>
       </div>
-      <pre className="whitespace-pre-wrap break-all p-3 text-xs leading-relaxed text-light-gray-8 sm:text-sm">
+      <pre className="whitespace-pre-wrap break-all p-4 font-mono text-xs leading-relaxed text-light-gray-8 sm:text-[13px]">
         <code>{codigo}</code>
       </pre>
     </div>
@@ -110,7 +112,7 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-4 rounded-xl border border-light-gray-2 bg-white/60 p-4 sm:flex-row sm:items-end">
         <label htmlFor={idCampo} className="flex flex-1 flex-col gap-1.5">
-          <span className="text-sm font-bold">O teu repositório</span>
+          <span className="font-mono text-xs text-light-gray-6">repositório</span>
           <input
             id={idCampo}
             list={idLista}
@@ -119,7 +121,7 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
             placeholder="dono/nome-do-repositorio"
             autoComplete="off"
             spellCheck={false}
-            className="w-full rounded border border-light-gray-3 bg-light-gray-0 px-3 py-2 text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde"
+            className="min-h-[44px] w-full rounded-lg border border-light-gray-3 bg-light-gray-0 px-3 py-2 font-mono text-base focus:outline-none focus-visible:ring-2 focus-visible:ring-marca-verde"
           />
           <datalist id={idLista}>
             {repositorios.map((r) => (
@@ -129,8 +131,8 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
         </label>
 
         <fieldset className="flex flex-col gap-1.5">
-          <legend className="mb-1.5 text-sm font-bold">Estilo</legend>
-          <div className="flex rounded border border-light-gray-3 p-0.5">
+          <legend className="mb-1.5 font-mono text-xs text-light-gray-6">estilo</legend>
+          <div className="flex rounded-lg border border-light-gray-3 p-1">
             {(
               [
                 ["plano", "Pequeno"],
@@ -140,9 +142,9 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
               <label
                 key={valor}
                 className={clsx(
-                  "cursor-pointer rounded px-3 py-1.5 text-sm font-bold",
+                  "cursor-pointer rounded-md px-3 py-1.5 text-sm font-semibold",
                   estilo === valor
-                    ? "bg-light-black text-light-gray-0"
+                    ? "bg-marca-verde/15 text-marca-verde"
                     : "hover:bg-light-gray-1"
                 )}
               >
@@ -165,16 +167,14 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
         <p className="flex items-start gap-2 rounded-md border border-light-yellow-2 bg-light-yellow-0 p-3 text-sm text-light-yellow-8">
           <AlertIcon className="mt-0.5 shrink-0 fill-light-yellow-8" />
           <span>
-            O repositório <strong>{normalizado}</strong> ainda não está no
-            diretório, por isso o selo vai abrir uma pesquisa sem resultados.
-            Adiciona-o primeiro em{" "}
+            <strong>{normalizado}</strong> ainda não está no diretório.{" "}
             <a
               href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-bold underline"
             >
-              data/projetos.yml
+              Adiciona-o primeiro
             </a>
             .
           </span>
@@ -182,8 +182,8 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
       )}
 
       <section aria-labelledby="pre-visualizacao">
-        <h2 id="pre-visualizacao" className="mb-3 text-xl font-bold">
-          Pré-visualização
+        <h2 id="pre-visualizacao" className="etiqueta mb-3">
+          {"// pré-visualização"}
         </h2>
         <div className="flex flex-wrap gap-3">
           {estilo === "plano" ? (
@@ -198,17 +198,11 @@ export function GeradorSelo({ repositorios }: { repositorios: string[] }) {
             </>
           )}
         </div>
-        {estilo === "cartao" && (
-          <p className="mt-3 text-sm text-light-gray-6">
-            O código em HTML mostra a versão escura a quem usa o GitHub no tema
-            escuro, e a clara a todas as outras pessoas.
-          </p>
-        )}
       </section>
 
       <section aria-labelledby="codigo" className="flex flex-col gap-3">
-        <h2 id="codigo" className="text-xl font-bold">
-          Código para o README
+        <h2 id="codigo" className="etiqueta">
+          {"// código para o README"}
         </h2>
         {estilo === "plano" ? (
           <>

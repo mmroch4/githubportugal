@@ -1,4 +1,4 @@
-import { ArrowLeftIcon, MarkGithubIcon } from "@primer/octicons-react";
+import { MarkGithubIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -51,9 +51,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const buttonClassName =
-  "flex w-fit items-center justify-center gap-2 rounded p-2 font-bold hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
-
 export default async function PaginaArtigo({ params }: Props) {
   const { slug } = await params;
   const artigo = await obterArtigo(slug);
@@ -69,19 +66,16 @@ export default async function PaginaArtigo({ params }: Props) {
   const editar = `${links.repository}/blob/main/src/content/artigos/${slug}.mdx`;
 
   return (
-    <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/artigos" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          Artigos
-        </Link>
-      </nav>
+    <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 sm:px-6">
+      <Link
+        href="/artigos"
+        className="mb-6 inline-block font-mono text-sm text-light-gray-6 hover:text-marca-verde"
+      >
+        ← artigos
+      </Link>
 
       <header className="mb-6 sm:mb-8">
-        <h1 className="mb-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
+        <h1 className="mb-3 text-4xl font-black tracking-tight sm:text-5xl">
           {artigo.titulo}
         </h1>
         <p className="mb-5 text-base text-light-gray-7 sm:text-lg">
@@ -123,10 +117,10 @@ export default async function PaginaArtigo({ params }: Props) {
                 EQUIPA
               )}
             </p>
-            <p className="text-light-gray-6">
+            <p className="font-mono text-xs text-light-gray-6">
               <time dateTime={artigo.data}>{formatarData(artigo.data)}</time>
               {" · "}
-              {artigo.minutos} min de leitura
+              {artigo.minutos} min
               {artigo.atualizado && (
                 <>
                   {" · atualizado a "}
