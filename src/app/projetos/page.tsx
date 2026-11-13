@@ -52,21 +52,21 @@ export default async function Projetos() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/primeiras-contribuicoes"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <IssueOpenedIcon className="fill-light-black" />
             Primeiras contribuições
           </Link>
           <Link
             href="/mantenedores"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <PeopleIcon className="fill-light-black" />
             Mantenedores
           </Link>
           <Link
             href="/selo"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <VerifiedIcon className="fill-light-black" />
             Selo para o README
@@ -75,7 +75,7 @@ export default async function Projetos() {
             href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-um-projeto`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
+            className="botao-primario"
           >
             <PlusIcon className="fill-current" />
             Adicionar projeto

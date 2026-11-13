@@ -2,7 +2,7 @@ import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { Cabecalho } from "@/components/layout/Cabecalho";
 import { Rodape } from "@/components/layout/Rodape";
 import { scriptTema } from "@/components/Tema";
-import { monaSans } from "@/config/fonts";
+import { jetBrainsMono, monaSans } from "@/config/fonts";
 import { metadata as m, viewport as v } from "@/config/metadata";
 import { dadosEstruturadosSite } from "@/lib/seo";
 import { Analytics } from "@vercel/analytics/next";
@@ -22,7 +22,7 @@ export default function RootLayout({
     <html
       lang="pt-PT"
       // Escuro por omissão; o script do tema troca para claro se for o caso.
-      className="dark scroll-smooth"
+      className={clsx("dark scroll-smooth", jetBrainsMono.variable)}
       suppressHydrationWarning
     >
       <head>

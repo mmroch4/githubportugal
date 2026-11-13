@@ -90,7 +90,7 @@ export default async function PerfilMantenedor({ params }: Props) {
                 href={m.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90"
+                className="botao-primario"
               >
                 <MarkGithubIcon className="fill-current" />
                 Perfil no GitHub
@@ -100,7 +100,7 @@ export default async function PerfilMantenedor({ params }: Props) {
                   href={m.site}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1"
+                  className="botao-secundario"
                 >
                   <LinkIcon className="fill-current" />
                   Site

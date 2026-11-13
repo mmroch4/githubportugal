@@ -39,14 +39,14 @@ export default async function Empresas() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/projetos"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <RepoIcon className="fill-light-black" />
             Projetos
           </Link>
           <Link
             href="/comunidades"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <PeopleIcon className="fill-light-black" />
             Comunidades
@@ -55,7 +55,7 @@ export default async function Empresas() {
             href={`${links.repository}/blob/main/CONTRIBUTING.md#adicionar-uma-empresa`}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
+            className="botao-primario"
           >
             <PlusIcon className="fill-current" />
             Adicionar empresa

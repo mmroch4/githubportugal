@@ -53,7 +53,7 @@ export default async function Artigos() {
           <a
             href="/artigos/feed.xml"
             title="Segue os artigos novos no teu leitor de RSS"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <RssIcon className="fill-light-black" />
             RSS
@@ -62,7 +62,7 @@ export default async function Artigos() {
             href={escrever}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
+            className="botao-primario"
           >
             <PencilIcon className="fill-current" />
             Escrever um artigo

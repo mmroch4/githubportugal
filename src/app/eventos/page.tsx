@@ -56,7 +56,7 @@ export default async function Eventos() {
         <div className="flex shrink-0 flex-wrap gap-2">
           <Link
             href="/comunidades"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <PeopleIcon className="fill-light-black" />
             Comunidades
@@ -64,7 +64,7 @@ export default async function Eventos() {
           <a
             href="/eventos/calendario.ics"
             title="Subscreve este calendário no Google Calendar, no Outlook ou no Calendário da Apple"
-            className="flex items-center justify-center gap-2 rounded-md border border-light-gray-3 px-4 py-2 text-sm font-bold hover:bg-light-gray-1 sm:text-base"
+            className="botao-secundario"
           >
             <CalendarIcon className="fill-light-black" />
             Calendário (.ics)
@@ -73,7 +73,7 @@ export default async function Eventos() {
             href={adicionarEvento}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-md bg-light-black px-4 py-2 text-sm font-bold text-light-gray-0 hover:opacity-90 sm:text-base"
+            className="botao-primario"
           >
             <PlusIcon className="fill-current" />
             Adicionar evento
