@@ -2,8 +2,7 @@ import { MarkGithubIcon } from "@primer/octicons-react";
 import { Metadata } from "next";
 import { RiDiscordFill, RiWhatsappFill } from "react-icons/ri";
 import { links } from "@/config/metadata";
-import AboutContent from "./about.mdx";
-import { Logo } from "@/components/Logo";
+import { CabecalhoPagina } from "@/components/CabecalhoPagina";
 import { DadosEstruturados } from "@/components/DadosEstruturados";
 import { perguntasFrequentes } from "@/content/perguntas-frequentes";
 import {
@@ -52,90 +51,83 @@ const dadosEstruturados = {
   ],
 };
 
-const buttonClassName =
-  "flex w-fit items-center justify-center rounded p-2 hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
-const iconClassName = "h-5 w-5 fill-light-black md:h-6 md:w-6";
+const ligacoes = [
+  { nome: "Discord", href: links.discord, Icone: RiDiscordFill },
+  { nome: "WhatsApp", href: links.whatsapp, Icone: RiWhatsappFill },
+  { nome: "Código no GitHub", href: links.repository, Icone: MarkGithubIcon },
+];
 
 export default function About() {
   return (
-    <main className="m-auto max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl xl:max-w-4xl 2xl:max-w-5xl">
-      <header className="mb-4 flex flex-wrap items-center justify-between gap-1 sm:mb-5 sm:gap-2 md:mb-6">
-        <h1 className="flex items-center gap-3 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
-          <Logo
-            alt=""
-            size={56}
-            className="h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14"
-          />
-          GitHub Portugal
-        </h1>
+    <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 sm:px-6">
+      <CabecalhoPagina
+        etiqueta="sobre"
+        titulo="A comunidade portuguesa de open source."
+      />
+      <p className="-mt-4 mb-8 text-lg text-light-gray-7">
+        Independente e sem fins lucrativos.
+      </p>
 
-        <ul className="flex items-center justify-center gap-2">
-          <li>
+      <ul className="mb-12 grid grid-cols-1 gap-3 sm:grid-cols-3">
+        {ligacoes.map(({ nome, href, Icone }) => (
+          <li key={nome}>
             <a
-              href={links.discord}
+              href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className={buttonClassName}
+              className="flex min-h-[56px] items-center gap-3 rounded-xl border border-light-gray-2 bg-white/60 px-4 font-semibold transition hover:bg-white"
             >
-              <RiDiscordFill className={iconClassName} />
-              <span className="sr-only">Juntar-se à comunidade no Discord</span>
-            </a>
-          </li>
-          <li>
-            <a
-              href={links.whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonClassName}
-            >
-              <RiWhatsappFill className={iconClassName} />
-              <span className="sr-only">
-                Juntar-se à comunidade no WhatsApp
+              <Icone className="h-5 w-5 fill-current" />
+              {nome}
+              <span aria-hidden className="ml-auto text-light-gray-6">
+                ↗
               </span>
             </a>
           </li>
-          <li>
-            <a
-              href={links.repository}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={buttonClassName}
-            >
-              <MarkGithubIcon
-                verticalAlign="middle"
-                className={iconClassName}
-              />
-              <span className="sr-only">Abrir repositório no GitHub</span>
-            </a>
-          </li>
-        </ul>
-      </header>
+        ))}
+      </ul>
 
-      <section className="space-y-3 sm:space-y-4">
-        <AboutContent />
-      </section>
-
-      <section
-        aria-labelledby="perguntas-frequentes"
-        className="mt-8 space-y-3 sm:space-y-4"
-      >
-        <h2
-          id="perguntas-frequentes"
-          className="border-b border-b-light-gray-2 py-2 text-xl font-extrabold sm:text-2xl md:text-3xl"
-        >
-          ❓ Perguntas frequentes
+      <section aria-labelledby="perguntas-frequentes">
+        <h2 id="perguntas-frequentes" className="etiqueta mb-4">
+          {"// perguntas frequentes"}
         </h2>
-        <dl className="space-y-4">
-          {perguntasFrequentes.map((p) => (
-            <div key={p.pergunta}>
-              <dt className="text-lg font-extrabold sm:text-xl">
+        <div className="flex flex-col gap-2">
+          {perguntasFrequentes.map((p, i) => (
+            <details
+              key={p.pergunta}
+              open={i === 0}
+              className="group rounded-xl border border-light-gray-2 bg-white/60"
+            >
+              <summary className="flex min-h-[56px] cursor-pointer list-none items-center justify-between gap-4 px-4 font-semibold [&::-webkit-details-marker]:hidden">
                 {p.pergunta}
-              </dt>
-              <dd className="mt-1 text-base sm:text-lg">{p.resposta}</dd>
-            </div>
+                <span
+                  aria-hidden
+                  className="font-mono text-marca-verde group-open:rotate-45"
+                >
+                  +
+                </span>
+              </summary>
+              <p className="px-4 pb-4 leading-relaxed text-light-gray-7">
+                {p.resposta}
+              </p>
+            </details>
           ))}
-        </dl>
+        </div>
       </section>
+
+      <p className="mt-12 font-mono text-xs leading-relaxed text-light-gray-6">
+        {"// "}sem ligação ao GitHub, Inc.: a marca e os recursos do GitHub
+        pertencem aos seus donos. Inspirado no{" "}
+        <a
+          href="https://githubbrasil.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-marca-verde hover:underline"
+        >
+          GitHub Brasil
+        </a>
+        .
+      </p>
 
       <DadosEstruturados dados={dadosEstruturados} />
     </main>

@@ -1,5 +1,4 @@
 import {
-  ArrowLeftIcon,
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "@primer/octicons-react";
@@ -39,9 +38,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-const buttonClassName =
-  "flex w-fit items-center justify-center gap-2 rounded p-2 font-bold hover:bg-light-gray-1 focus:bg-light-gray-1 active:bg-light-gray-2 md:p-3";
-
 export default async function CapituloGuia({ params }: Props) {
   const { capitulo } = await params;
   const dados = obterCapitulo(capitulo);
@@ -51,28 +47,21 @@ export default async function CapituloGuia({ params }: Props) {
   const { numero, anterior, seguinte } = dados;
 
   return (
-    <main className="m-auto w-full max-w-lg p-4 pb-8 sm:max-w-xl sm:px-6 md:max-w-2xl lg:max-w-3xl">
-      <nav className="mb-2 sm:mb-3 md:mb-4">
-        <Link href="/guia" className={buttonClassName}>
-          <ArrowLeftIcon
-            verticalAlign="middle"
-            className="h-5 w-5 fill-light-black md:h-6 md:w-6"
-          />
-          Guia de código aberto
-        </Link>
-      </nav>
+    <main className="mx-auto w-full max-w-3xl px-4 pb-16 pt-6 sm:px-6">
+      <Link
+        href="/guia"
+        className="mb-6 inline-block font-mono text-sm text-light-gray-6 hover:text-marca-verde"
+      >
+        ← guia
+      </Link>
 
-      <header className="mb-6 sm:mb-8">
-        <p className="mb-1 font-bold text-light-gray-6">
-          Capítulo {numero} de {capitulos.length}
+      <header className="mb-8 flex flex-col gap-3">
+        <p className="etiqueta">
+          {`// capítulo ${numero} de ${capitulos.length}`}
         </p>
-        <h1 className="mb-2 text-3xl font-black tracking-tight sm:text-4xl md:text-5xl">
-          <span aria-hidden>{dados.capitulo.emoji} </span>
+        <h1 className="text-4xl font-black tracking-tight sm:text-5xl">
           {dados.capitulo.titulo}
         </h1>
-        <p className="text-base text-light-gray-7 sm:text-lg">
-          {dados.capitulo.descricao}
-        </p>
       </header>
 
       <article className="space-y-3 sm:space-y-4">
