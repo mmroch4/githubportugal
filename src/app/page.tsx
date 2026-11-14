@@ -180,7 +180,9 @@ export default async function Home() {
       <section className="grid items-center gap-10 py-10 sm:py-16 lg:grid-cols-[1.15fr_1fr] lg:py-20">
         <div>
           <h1 className="mb-5 text-4xl font-black leading-[1.02] tracking-tight sm:text-5xl lg:text-6xl">
-            O open source portugu
+            O open source{" "}
+            {/* As cores da bandeira: verde e vermelho. */}
+            <span className="text-marca-verde">portugu</span>
             <span className="text-marca-vermelho">ês</span>, num só sítio.
           </h1>
           <p className="mb-8 max-w-xl text-lg text-light-gray-7">
