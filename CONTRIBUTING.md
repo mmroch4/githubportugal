@@ -116,7 +116,7 @@ Depois de o projeto entrar no diretório, podes pôr no README o selo [![Feito e
 [![Feito em Portugal](https://githubportugal.com/selo/feito-em-portugal.svg)](https://githubportugal.com/projetos?q=dono%2Fnome-do-repositorio)
 ```
 
-Os SVG são gerados em `src/lib/gerar-selo.ts` a partir de `public/logo.svg`.
+Os SVG são gerados em `src/lib/gerar-selo.ts` a partir do desenho do logótipo em `src/lib/logotipo.ts`.
 
 ## Adicionar um mantenedor
 

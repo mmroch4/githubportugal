@@ -1,5 +1,4 @@
-import { readFile } from "node:fs/promises";
-import path from "node:path";
+import { CORES_LOGOTIPO, desenhoLogotipo, LOGOTIPO_VIEWBOX } from "@/lib/logotipo";
 import {
   FICHEIROS_SELO,
   TAMANHOS_SELO,
@@ -9,7 +8,7 @@ import {
 
 /*
  * SVG do selo "Feito em Portugal" (rota /selo/<ficheiro>.svg), gerados a
- * partir do logótipo em public/logo.svg, para que o selo e o logótipo nunca
+ * partir do desenho em src/lib/logotipo.ts, para que o selo e o logótipo nunca
  * fiquem diferentes.
  *
  * Os SVG são vistos como imagens (no GitHub passam pelo proxy de imagens), por
@@ -17,46 +16,20 @@ import {
  * largura do texto com `textLength`, para o selo ter sempre o mesmo tamanho.
  */
 
-/** Cores do logótipo (verde e vermelho da bandeira). */
+/** Verde da bandeira, para a metade direita do selo plano. */
 const VERDE = "#006400";
-const VERMELHO = "#ff0000";
 
 const LETRA_PLANO = "Verdana,Geneva,DejaVu Sans,sans-serif";
 const LETRA_CARTAO =
   "-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif";
 
-let caminhoLogo: Promise<string> | undefined;
-
-/** O atributo `d` do Octocat em public/logo.svg. */
-function lerCaminhoLogo() {
-  caminhoLogo ??= readFile(
-    path.join(process.cwd(), "public", "logo.svg"),
-    "utf8"
-  ).then((svg) => {
-    const d = svg.match(/<path[^>]*\sd="([^"]+)"/)?.[1];
-    if (!d) throw new Error("Não encontrei o desenho em public/logo.svg");
-    return d;
-  });
-  return caminhoLogo;
-}
-
-/** O logótipo (círculo branco com o Octocat em degradê) num quadrado. */
-function logo(d: string, x: number, y: number, tamanho: number) {
-  return `<svg x="${x}" y="${y}" width="${tamanho}" height="${tamanho}" viewBox="0 0 836 836">
-    <defs>
-      <linearGradient id="gp-logo" x1="0" y1="0" x2="836" y2="0" gradientUnits="userSpaceOnUse">
-        <stop offset="0" stop-color="${VERDE}"/>
-        <stop offset="1" stop-color="${VERMELHO}"/>
-      </linearGradient>
-      <clipPath id="gp-logo-circulo"><circle cx="418" cy="418" r="418"/></clipPath>
-    </defs>
-    <circle cx="418" cy="418" r="418" fill="#fff"/>
-    <path clip-path="url(#gp-logo-circulo)" fill="url(#gp-logo)" fill-rule="evenodd" d="${d}"/>
-  </svg>`;
+/** O logótipo num quadrado, com as quinas na cor indicada. */
+function logo(x: number, y: number, tamanho: number, corQuinas: string) {
+  return `<svg x="${x}" y="${y}" width="${tamanho}" height="${tamanho}" viewBox="${LOGOTIPO_VIEWBOX}">${desenhoLogotipo(corQuinas)}</svg>`;
 }
 
 /** Selo pequeno, no estilo dos selos do shields.io: serve em fundo claro e escuro. */
-function seloPlano(d: string) {
+function seloPlano() {
   const { largura, altura } = TAMANHOS_SELO.plano;
   const esquerda = 77;
   const direita = largura - esquerda;
@@ -82,7 +55,7 @@ function seloPlano(d: string) {
     <rect x="${esquerda}" width="${direita}" height="${altura}" fill="url(#gp-bandeira)"/>
     <rect width="${largura}" height="${altura}" fill="url(#gp-brilho)"/>
   </g>
-  ${logo(d, 5, 3, 14)}
+  ${logo(3, 1, 18, CORES_LOGOTIPO.quinasEscuro)}
   <g fill="#fff" font-family="${LETRA_PLANO}" font-size="11">
     ${texto(23, 48, "Feito em")}
     ${texto(esquerda + 6, 46, "Portugal")}
@@ -107,7 +80,7 @@ const TEMAS_CARTAO = {
 };
 
 /** Selo maior, com o nome do site, numa versão para cada tema do GitHub. */
-function seloCartao(d: string, tema: "claro" | "escuro") {
+function seloCartao(tema: "claro" | "escuro") {
   const { largura, altura } = TAMANHOS_SELO[tema];
   const cores = TEMAS_CARTAO[tema];
 
@@ -116,7 +89,7 @@ function seloCartao(d: string, tema: "claro" | "escuro") {
   <rect x=".5" y=".5" width="${largura - 1}" height="${
     altura - 1
   }" rx="6" fill="${cores.fundo}" stroke="${cores.borda}"/>
-  ${logo(d, 8, 7, 26)}
+  ${logo(6, 5, 30, tema === "claro" ? CORES_LOGOTIPO.quinasClaro : CORES_LOGOTIPO.quinasEscuro)}
   <g font-family="${LETRA_CARTAO}">
     <text x="43" y="19" font-size="14" font-weight="700" fill="${
       cores.texto
@@ -131,8 +104,7 @@ function seloCartao(d: string, tema: "claro" | "escuro") {
 
 /** O SVG de uma variante do selo. */
 export async function gerarSelo(variante: VarianteSelo) {
-  const d = await lerCaminhoLogo();
-  return variante === "plano" ? seloPlano(d) : seloCartao(d, variante);
+  return variante === "plano" ? seloPlano() : seloCartao(variante);
 }
 
 /** A variante correspondente a um nome de ficheiro, ou undefined. */
