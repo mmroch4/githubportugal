@@ -1,40 +1,40 @@
 {
- "geradoEm": "2026-11-12T21:29:18.835Z",
- "pessoas": 5112,
- "ativas": 3376,
- "contribuicoes": 1158836,
- "seguidores": 397793,
+ "geradoEm": "2026-11-16T14:04:03.389Z",
+ "pessoas": 5111,
+ "ativas": 3367,
+ "contribuicoes": 1170855,
+ "seguidores": 398155,
  "cidades": {
   "lisboa": 2003,
   "braga": 996,
   "coimbra": 989,
-  "porto": 632,
+  "porto": 631,
   "outra": 492
  },
  "linguagens": {
-  "JavaScript": 759,
-  "Python": 706,
+  "JavaScript": 767,
+  "Python": 707,
   "TypeScript": 466,
-  "Java": 394,
+  "Java": 391,
   "C": 322,
-  "HTML": 307,
-  "Jupyter Notebook": 188,
-  "C#": 170,
+  "HTML": 308,
+  "Jupyter Notebook": 184,
+  "C#": 172,
   "C++": 152,
   "PHP": 133,
   "Go": 104,
   "Ruby": 100,
-  "Shell": 97,
-  "CSS": 90,
-  "Kotlin": 78,
+  "Shell": 94,
+  "CSS": 87,
+  "Kotlin": 77,
   "Rust": 56,
   "Swift": 52,
-  "TeX": 32,
-  "Dart": 31,
-  "Lua": 24,
+  "TeX": 33,
+  "Dart": 30,
+  "Lua": 23,
   "R": 23,
-  "Vue": 22,
-  "Elixir": 20,
+  "Elixir": 21,
+  "Vue": 21,
   "Haskell": 17,
   "MATLAB": 15,
   "PowerShell": 14,
@@ -55,20 +55,20 @@
   "Astro": 5,
   "CoffeeScript": 5,
   "OCaml": 4,
+  "TSQL": 4,
   "Clojure": 4,
   "GDScript": 4,
   "Assembly": 4,
   "Zig": 3,
-  "Groovy": 3,
   "Julia": 3,
-  "TSQL": 3,
   "PLpgSQL": 3,
   "Vim Script": 3,
-  "D": 2,
   "Max": 2,
+  "D": 2,
   "Common Lisp": 2,
   "RobotFramework": 2,
   "Gleam": 2,
+  "Groovy": 2,
   "Batchfile": 2,
   "Vala": 2,
   "ABAP": 2,
@@ -98,6 +98,7 @@
   "QML": 1,
   "MDX": 1,
   "WebAssembly": 1,
+  "Stata": 1,
   "Elm": 1,
   "XSLT": 1,
   "Dafny": 1,
@@ -122,27 +123,27 @@
   {
    "minimo": 0,
    "maximo": 0,
-   "pessoas": 1736
+   "pessoas": 1744
   },
   {
    "minimo": 1,
    "maximo": 99,
-   "pessoas": 2198
+   "pessoas": 2187
   },
   {
    "minimo": 100,
    "maximo": 499,
-   "pessoas": 779
+   "pessoas": 778
   },
   {
    "minimo": 500,
    "maximo": 999,
-   "pessoas": 184
+   "pessoas": 183
   },
   {
    "minimo": 1000,
    "maximo": 2999,
-   "pessoas": 158
+   "pessoas": 162
   },
   {
    "minimo": 3000,
@@ -156,6 +157,12 @@
    "pessoas": 5112,
    "ativas": 3376,
    "contribuicoes": 1158836
+  },
+  {
+   "data": "2026-11-16",
+   "pessoas": 5111,
+   "ativas": 3367,
+   "contribuicoes": 1170855
   }
  ]
 }

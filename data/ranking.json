@@ -1,13 +1,13 @@
 {
- "geradoEm": "2026-11-12T21:29:18.835Z",
- "totalAnalisado": 5112,
+ "geradoEm": "2026-11-16T14:04:03.389Z",
+ "totalAnalisado": 5111,
  "pessoas": [
   {
    "login": "0Darkn",
    "nome": "José Raposo ",
    "avatar": "https://avatars.githubusercontent.com/u/164822269?s=96&u=a9a006ab3ce37d758a94b2266c11da7c73f8b7f9&v=4",
    "localizacao": "Lisbon to Mars",
-   "seguidores": 4564,
+   "seguidores": 4566,
    "contribuicoes": 281,
    "cidade": "lisboa"
   },
@@ -25,8 +25,8 @@
    "nome": "André Baptista",
    "avatar": "https://avatars.githubusercontent.com/u/4028874?s=96&u=78cc00732d12f3b78149033d6bd01d7f76f1756d&v=4",
    "localizacao": "Portugal",
-   "seguidores": 642,
-   "contribuicoes": 43,
+   "seguidores": 643,
+   "contribuicoes": 44,
    "cidade": "outra"
   },
   {
@@ -34,7 +34,7 @@
    "nome": "Ferit",
    "avatar": "https://avatars.githubusercontent.com/u/3106907?s=96&u=156a7a0d0df01dfde11e7f49d7f9477bcb4a82b7&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 140,
+   "seguidores": 141,
    "contribuicoes": 2676,
    "cidade": "lisboa"
   },
@@ -53,7 +53,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/184832711?s=96&u=68ec29a7d0afdca82ad2eec456c12e9415be1043&v=4",
    "localizacao": "Braga/Alcobaça",
    "seguidores": 15,
-   "contribuicoes": 304,
+   "contribuicoes": 275,
    "cidade": "braga"
   },
   {
@@ -71,7 +71,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/105572537?s=96&u=72d5792bd6378fae767a0324e2e9d20e404ac43d&v=4",
    "localizacao": "Lisboa",
    "seguidores": 540,
-   "contribuicoes": 4,
+   "contribuicoes": 10,
    "cidade": "lisboa"
   },
   {
@@ -80,7 +80,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/88838373?s=96&u=a3346582d303020236c8c8e01a70c4507928c057&v=4",
    "localizacao": "Braga",
    "seguidores": 50,
-   "contribuicoes": 150,
+   "contribuicoes": 148,
    "cidade": "braga"
   },
   {
@@ -134,7 +134,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/147250246?s=96&u=2372e393cb795a2ea07e28d647b3678c993524f5&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 22,
-   "contribuicoes": 1121,
+   "contribuicoes": 1109,
    "cidade": "braga"
   },
   {
@@ -161,7 +161,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1655859?s=96&u=91af90243a5351e95ffce6a0ff5a86bbb91927e5&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 227,
-   "contribuicoes": 1126,
+   "contribuicoes": 1121,
    "cidade": "lisboa"
   },
   {
@@ -176,10 +176,10 @@
   {
    "login": "acidiney",
    "nome": "Acidiney Dias",
-   "avatar": "https://avatars.githubusercontent.com/u/24493328?s=96&u=25dff1e8743808632666c6bf430dfd81ad1ef6d1&v=4",
+   "avatar": "https://avatars.githubusercontent.com/u/24493328?s=96&u=62a01d3c941f69cdf0b9f081f64773a033712574&v=4",
    "localizacao": "Aveiro, Portugal",
-   "seguidores": 130,
-   "contribuicoes": 5059,
+   "seguidores": 131,
+   "contribuicoes": 5920,
    "cidade": "outra"
   },
   {
@@ -187,8 +187,8 @@
    "nome": "Adam Johnson",
    "avatar": "https://avatars.githubusercontent.com/u/857609?s=96&v=4",
    "localizacao": "London / Lisbon",
-   "seguidores": 3986,
-   "contribuicoes": 3595,
+   "seguidores": 3985,
+   "contribuicoes": 3577,
    "cidade": "lisboa"
   },
   {
@@ -205,8 +205,8 @@
    "nome": "Adolfo Usier ",
    "avatar": "https://avatars.githubusercontent.com/u/35583002?s=96&u=44c8cf1daeb1b2399439f5c3fe5f174d42c9ad0f&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 131,
-   "contribuicoes": 11726,
+   "seguidores": 132,
+   "contribuicoes": 12169,
    "cidade": "coimbra"
   },
   {
@@ -214,7 +214,7 @@
    "nome": "Adorilson Bezerra",
    "avatar": "https://avatars.githubusercontent.com/u/169837?s=96&v=4",
    "localizacao": "Coimbra",
-   "seguidores": 209,
+   "seguidores": 208,
    "contribuicoes": 293,
    "cidade": "coimbra"
   },
@@ -224,7 +224,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/145707571?s=96&u=aa4b8b992b46ebd962e1c0200566dc1548068acc&v=4",
    "localizacao": "Braga",
    "seguidores": 64,
-   "contribuicoes": 175,
+   "contribuicoes": 173,
    "cidade": "braga"
   },
   {
@@ -232,8 +232,8 @@
    "nome": "Afonso Coutinho",
    "avatar": "https://avatars.githubusercontent.com/u/116525378?s=96&u=a3e6202aed40a8eb54505bb2865f02a96167e093&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 249,
-   "contribuicoes": 972,
+   "seguidores": 250,
+   "contribuicoes": 973,
    "cidade": "lisboa"
   },
   {
@@ -251,7 +251,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/71138696?s=96&u=c0664c7a5122dcce21be2a692e0cefe46adfaa98&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 26,
-   "contribuicoes": 1447,
+   "contribuicoes": 1460,
    "cidade": "lisboa"
   },
   {
@@ -269,7 +269,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4395895?s=96&u=38a3a30df49f7e0af44736fc596842d09dfabccb&v=4",
    "localizacao": "Portugal",
    "seguidores": 74,
-   "contribuicoes": 3483,
+   "contribuicoes": 3581,
    "cidade": "outra"
   },
   {
@@ -278,7 +278,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/132278847?s=96&u=734c27b767aaaf327a68906ce39d96f0b53efbd6&v=4",
    "localizacao": "Coimbra",
    "seguidores": 1,
-   "contribuicoes": 206,
+   "contribuicoes": 207,
    "cidade": "coimbra"
   },
   {
@@ -287,7 +287,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/107698197?s=96&u=494fb3497687cb1930c6dca488a915ee65d2ac81&v=4",
    "localizacao": "Porto - Portugal",
    "seguidores": 46,
-   "contribuicoes": 432,
+   "contribuicoes": 431,
    "cidade": "porto"
   },
   {
@@ -295,8 +295,8 @@
    "nome": "Alcides Fonseca",
    "avatar": "https://avatars.githubusercontent.com/u/7089?s=96&u=54ad9150d2af1191e74e27b9b3a6fce6b7ec1a67&v=4",
    "localizacao": "Lisboa, Portugal",
-   "seguidores": 358,
-   "contribuicoes": 1739,
+   "seguidores": 360,
+   "contribuicoes": 1759,
    "cidade": "lisboa"
   },
   {
@@ -305,7 +305,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/38806121?s=96&u=05446d587fca577d19ea91499b0ae9ce4d66c3ae&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 483,
-   "contribuicoes": 144,
+   "contribuicoes": 137,
    "cidade": "lisboa"
   },
   {
@@ -322,8 +322,8 @@
    "nome": "Alexandro Castro",
    "avatar": "https://avatars.githubusercontent.com/u/10711649?s=96&u=753be56b80f5a8d1f84ebff3db3999e829ceffe4&v=4",
    "localizacao": "Portugal",
-   "seguidores": 181,
-   "contribuicoes": 2295,
+   "seguidores": 182,
+   "contribuicoes": 2364,
    "cidade": "outra"
   },
   {
@@ -340,8 +340,8 @@
    "nome": "Allan Pereira Abrahão",
    "avatar": "https://avatars.githubusercontent.com/u/68200962?s=96&u=98552790fd6085d0ac95d80c8da5836a7018af13&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 265,
-   "contribuicoes": 307,
+   "seguidores": 266,
+   "contribuicoes": 310,
    "cidade": "lisboa"
   },
   {
@@ -350,7 +350,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/42935195?s=96&u=9eb623ab5e7231b58f2bd3ee68b4dd2dc18a3fc6&v=4",
    "localizacao": "Portugal",
    "seguidores": 83,
-   "contribuicoes": 3538,
+   "contribuicoes": 3532,
    "cidade": "outra"
   },
   {
@@ -377,7 +377,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/118547?s=96&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 101,
-   "contribuicoes": 719,
+   "contribuicoes": 725,
    "cidade": "braga"
   },
   {
@@ -413,7 +413,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/22928302?s=96&u=7543d1dedd00571d20d4a61f7ebfc872e2f3555d&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 27,
-   "contribuicoes": 1041,
+   "contribuicoes": 1109,
    "cidade": "lisboa"
   },
   {
@@ -422,7 +422,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5792097?s=96&u=4b5cf9b70eb1633a91849488fef988110c305bec&v=4",
    "localizacao": "Lisbon",
    "seguidores": 174,
-   "contribuicoes": 2027,
+   "contribuicoes": 2001,
    "cidade": "lisboa"
   },
   {
@@ -431,7 +431,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/410131?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 53,
-   "contribuicoes": 1081,
+   "contribuicoes": 1134,
    "cidade": "lisboa"
   },
   {
@@ -449,7 +449,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/24394220?s=96&u=03ce1d5334ea2bc2062c91adabb79335141ec85f&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 7,
-   "contribuicoes": 345,
+   "contribuicoes": 310,
    "cidade": "coimbra"
   },
   {
@@ -457,7 +457,7 @@
    "nome": "André Neves",
    "avatar": "https://avatars.githubusercontent.com/u/3869532?s=96&u=943d52e7715e9a9563824e16db060732cd31e32c&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 58,
+   "seguidores": 59,
    "contribuicoes": 8,
    "cidade": "braga"
   },
@@ -467,7 +467,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/147782?s=96&u=a0f6a10bed5d9fd2b39b82c806fcef164b0168ab&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 63,
-   "contribuicoes": 2398,
+   "contribuicoes": 2393,
    "cidade": "porto"
   },
   {
@@ -476,7 +476,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/23224577?s=96&u=740c4b15c7abfdbcb9f31dd1345a3775dbe6ce7b&v=4",
    "localizacao": "Porto",
    "seguidores": 40,
-   "contribuicoes": 271,
+   "contribuicoes": 276,
    "cidade": "porto"
   },
   {
@@ -489,12 +489,21 @@
    "cidade": "outra"
   },
   {
+   "login": "AndreNogueira",
+   "nome": "André Nogueira",
+   "avatar": "https://avatars.githubusercontent.com/u/2513664?s=96&v=4",
+   "localizacao": "Braga, Portugal",
+   "seguidores": 5,
+   "contribuicoes": 201,
+   "cidade": "braga"
+  },
+  {
    "login": "andresilva",
    "nome": "André Silva",
    "avatar": "https://avatars.githubusercontent.com/u/123550?s=96&u=ea5672a6956ddf8b7a138064fb1011be6e2a934d&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 374,
-   "contribuicoes": 1304,
+   "contribuicoes": 1299,
    "cidade": "porto"
   },
   {
@@ -503,7 +512,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2734841?s=96&u=0701f94ecbb1c964d27820d7f78aa90e96633995&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 716,
-   "contribuicoes": 43,
+   "contribuicoes": 47,
    "cidade": "lisboa"
   },
   {
@@ -512,7 +521,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/84690257?s=96&u=d92ce45414be1d43421dfa2f7f23a58d704f042d&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 79,
-   "contribuicoes": 87,
+   "contribuicoes": 77,
    "cidade": "coimbra"
   },
   {
@@ -529,7 +538,7 @@
    "nome": "António Pedro",
    "avatar": "https://avatars.githubusercontent.com/u/42675180?s=96&u=42285f90292573b1b05fd4d15fd08a7892dcd31c&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 203,
+   "seguidores": 204,
    "contribuicoes": 109,
    "cidade": "porto"
   },
@@ -538,8 +547,8 @@
    "nome": "Antonio Brandao",
    "avatar": "https://avatars.githubusercontent.com/u/464121?s=96&u=4447ee48270365b26dd48664ca81c2dafd53d5c1&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 74,
-   "contribuicoes": 86,
+   "seguidores": 73,
+   "contribuicoes": 90,
    "cidade": "braga"
   },
   {
@@ -566,7 +575,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/44723227?s=96&u=77c3a6766ed7cf93ff376ded6480d034bcce1ce0&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 6,
-   "contribuicoes": 221,
+   "contribuicoes": 217,
    "cidade": "braga"
   },
   {
@@ -575,7 +584,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5618493?s=96&u=ec6620714c5ecde3a26e249ed706136c2d4dd47b&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 111,
-   "contribuicoes": 371,
+   "contribuicoes": 365,
    "cidade": "porto"
   },
   {
@@ -584,7 +593,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/35626?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 320,
-   "contribuicoes": 146,
+   "contribuicoes": 151,
    "cidade": "porto"
   },
   {
@@ -602,7 +611,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/423417?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 123,
-   "contribuicoes": 5420,
+   "contribuicoes": 5218,
    "cidade": "lisboa"
   },
   {
@@ -629,7 +638,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/122133590?s=96&u=96612dfd6f2c9c536453caaef7202d2a40c2497b&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 49,
-   "contribuicoes": 1045,
+   "contribuicoes": 1035,
    "cidade": "porto"
   },
   {
@@ -638,7 +647,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/183098609?s=96&u=871f11a1d11ec8256c326f7f18823283342ef94b&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 50,
-   "contribuicoes": 7033,
+   "contribuicoes": 6854,
    "cidade": "braga"
   },
   {
@@ -647,7 +656,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/121353318?s=96&u=65ed0cd207fe6ff4f06b7b99da4d30ce040a8d18&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 113,
-   "contribuicoes": 153,
+   "contribuicoes": 141,
    "cidade": "porto"
   },
   {
@@ -665,7 +674,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1048589?s=96&u=96823c5ec0d7d331a0513bd051a85fbe45acd607&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 68,
-   "contribuicoes": 1452,
+   "contribuicoes": 1450,
    "cidade": "lisboa"
   },
   {
@@ -691,7 +700,7 @@
    "nome": "Leonardo Bastos ",
    "avatar": "https://avatars.githubusercontent.com/u/74212269?s=96&u=4252359c8d8df0d89fa71b5240d8df4a16c8143b&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 411,
+   "seguidores": 416,
    "contribuicoes": 194,
    "cidade": "porto"
   },
@@ -701,7 +710,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2139254?s=96&u=9732be45d5c1c69f706d1207eeccf363c639f320&v=4",
    "localizacao": "Coimbra",
    "seguidores": 24,
-   "contribuicoes": 8,
+   "contribuicoes": 6,
    "cidade": "coimbra"
   },
   {
@@ -710,7 +719,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/61701401?s=96&u=302e45ddc7e5c7a2f8f363b25344075d4df3fd8f&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 138,
-   "contribuicoes": 1901,
+   "contribuicoes": 1907,
    "cidade": "porto"
   },
   {
@@ -718,8 +727,8 @@
    "nome": "Benevanio",
    "avatar": "https://avatars.githubusercontent.com/u/78994881?s=96&u=2dddbaddd3fde0f19ac795170674759ee7954850&v=4",
    "localizacao": "Porto Da Folha-SE",
-   "seguidores": 131,
-   "contribuicoes": 818,
+   "seguidores": 132,
+   "contribuicoes": 822,
    "cidade": "porto"
   },
   {
@@ -736,7 +745,7 @@
    "nome": "Bernardo Trindade de Abreu",
    "avatar": "https://avatars.githubusercontent.com/u/13338262?s=96&u=26cb1b348a0f4ce32ed4f7eae70fc614c9d46dcd&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 46,
+   "seguidores": 47,
    "contribuicoes": 588,
    "cidade": "porto"
   },
@@ -754,8 +763,8 @@
    "nome": "Bruno Martins",
    "avatar": "https://avatars.githubusercontent.com/u/1696148?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 427,
-   "contribuicoes": 2013,
+   "seguidores": 428,
+   "contribuicoes": 2066,
    "cidade": "lisboa"
   },
   {
@@ -782,7 +791,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2600471?s=96&u=41f242110719685e324a81048b5f0a1339364f14&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 61,
-   "contribuicoes": 1318,
+   "contribuicoes": 1331,
    "cidade": "lisboa"
   },
   {
@@ -791,7 +800,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/20261421?s=96&u=e14a7bc9f0ba82492fa91ff041c4bd1ea7a62925&v=4",
    "localizacao": "Portugal - Braga",
    "seguidores": 134,
-   "contribuicoes": 804,
+   "contribuicoes": 794,
    "cidade": "braga"
   },
   {
@@ -800,7 +809,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/19879?s=96&u=c91bc2e1c1b457d4ad7adc1a50dbd939f90c38f3&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 66,
-   "contribuicoes": 45,
+   "contribuicoes": 44,
    "cidade": "coimbra"
   },
   {
@@ -827,7 +836,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/165497?s=96&u=93ed22c26e46fb293b5ecdf9c35a9412d0e4ace7&v=4",
    "localizacao": "Aljezur, Algarve, Portugal",
    "seguidores": 1044,
-   "contribuicoes": 530,
+   "contribuicoes": 522,
    "cidade": "outra"
   },
   {
@@ -845,7 +854,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/543344?s=96&u=69618a26b1544638fee1b4a40565055cfd2e9928&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 85,
-   "contribuicoes": 2540,
+   "contribuicoes": 2534,
    "cidade": "lisboa"
   },
   {
@@ -854,7 +863,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/35770396?s=96&u=784e0a177387638c09e20104494c1f2041c50991&v=4",
    "localizacao": "Braga",
    "seguidores": 4,
-   "contribuicoes": 1603,
+   "contribuicoes": 2228,
    "cidade": "braga"
   },
   {
@@ -863,7 +872,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2318030?s=96&u=123eafcbc5eb3bcf00fa21336df9d55f74c2e859&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 84,
-   "contribuicoes": 491,
+   "contribuicoes": 513,
    "cidade": "coimbra"
   },
   {
@@ -872,7 +881,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1239616?s=96&u=6a9bfea14526fc6c7e36997db2cf8a875c426250&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 228,
-   "contribuicoes": 149,
+   "contribuicoes": 156,
    "cidade": "porto"
   },
   {
@@ -898,8 +907,8 @@
    "nome": "Bruno Georgevich Ferreira",
    "avatar": "https://avatars.githubusercontent.com/u/5984159?s=96&u=b4c1d3f9820c390d094dca810207a7960cb5b9c4&v=4",
    "localizacao": "Porto - Portugal",
-   "seguidores": 118,
-   "contribuicoes": 136,
+   "seguidores": 117,
+   "contribuicoes": 114,
    "cidade": "porto"
   },
   {
@@ -908,7 +917,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/60748944?s=96&u=4d0ba3854a0d411b0ff64e57e9f2b2353422d6db&v=4",
    "localizacao": "Porto",
    "seguidores": 46,
-   "contribuicoes": 325,
+   "contribuicoes": 300,
    "cidade": "porto"
   },
   {
@@ -916,8 +925,8 @@
    "nome": "Bruno Mikoski",
    "avatar": "https://avatars.githubusercontent.com/u/600419?s=96&u=e7f1e57f78c31e7610285bf85a505f2d7c87e459&v=4",
    "localizacao": "Lisbon - Portugal",
-   "seguidores": 317,
-   "contribuicoes": 232,
+   "seguidores": 318,
+   "contribuicoes": 228,
    "cidade": "lisboa"
   },
   {
@@ -926,7 +935,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/191394?s=96&u=513b8cea36f8159d3bab43082c03734bf51b5d7e&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 145,
-   "contribuicoes": 1506,
+   "contribuicoes": 1525,
    "cidade": "porto"
   },
   {
@@ -935,7 +944,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/782316?s=96&u=121e9eaf8cd956457192037bb3f4dac145aa2021&v=4",
    "localizacao": "Lisbon",
    "seguidores": 217,
-   "contribuicoes": 1260,
+   "contribuicoes": 1263,
    "cidade": "lisboa"
   },
   {
@@ -943,7 +952,7 @@
    "nome": "Dani",
    "avatar": "https://avatars.githubusercontent.com/u/54408098?s=96&u=f0ba993075b7f9096569b71e8c4cd531a64e0d0d&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 97,
+   "seguidores": 98,
    "contribuicoes": 295,
    "cidade": "porto"
   },
@@ -962,7 +971,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/114008325?s=96&u=754769e7d155e86e84fb6480eff259d0aa486b21&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 7,
-   "contribuicoes": 199,
+   "contribuicoes": 191,
    "cidade": "braga"
   },
   {
@@ -970,17 +979,8 @@
    "nome": "Caneco",
    "avatar": "https://avatars.githubusercontent.com/u/502041?s=96&u=85d2f64106667b6fc8d36a6848765016922c1372&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 929,
+   "seguidores": 928,
    "contribuicoes": 1,
-   "cidade": "lisboa"
-  },
-  {
-   "login": "carjorvaz",
-   "nome": "Carlos Vaz",
-   "avatar": "https://avatars.githubusercontent.com/u/21079473?s=96&u=87cc7aaca9671e872e476b57679866435c718eee&v=4",
-   "localizacao": "Lisbon, Portugal",
-   "seguidores": 29,
-   "contribuicoes": 1070,
    "cidade": "lisboa"
   },
   {
@@ -989,7 +989,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1500881?s=96&u=6b4f80028aea4589bc3632739a40191bbcf58d22&v=4",
    "localizacao": "Lisbon",
    "seguidores": 202,
-   "contribuicoes": 4875,
+   "contribuicoes": 4906,
    "cidade": "lisboa"
   },
   {
@@ -1007,7 +1007,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/78096813?s=96&u=98a8c4457f3b6e727065a704685206f0cd8b0193&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 5,
-   "contribuicoes": 463,
+   "contribuicoes": 451,
    "cidade": "coimbra"
   },
   {
@@ -1016,7 +1016,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/208259590?s=96&v=4",
    "localizacao": "Coimbra",
    "seguidores": 0,
-   "contribuicoes": 200,
+   "contribuicoes": 176,
    "cidade": "coimbra"
   },
   {
@@ -1025,7 +1025,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/184090556?s=96&u=cd26f58f86c7f175d017f01225f953a481c58f8d&v=4",
    "localizacao": "Braga",
    "seguidores": 23,
-   "contribuicoes": 318,
+   "contribuicoes": 301,
    "cidade": "braga"
   },
   {
@@ -1033,7 +1033,7 @@
    "nome": "Míriam Casal - Recruiter",
    "avatar": "https://avatars.githubusercontent.com/u/90770784?s=96&u=f0342329c92b9d76b3668639039a78116b8dcf16&v=4",
    "localizacao": "A Coruña - Porto - Amsterdam",
-   "seguidores": 116,
+   "seguidores": 115,
    "contribuicoes": 1,
    "cidade": "porto"
   },
@@ -1052,7 +1052,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/7913981?s=96&u=108fb91f19a491e84042b92b84aab974fc1135fc&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 30,
-   "contribuicoes": 33,
+   "contribuicoes": 35,
    "cidade": "coimbra"
   },
   {
@@ -1061,7 +1061,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1908492?s=96&u=89ff81abbd50a0a937b4f872dcb8573a580d7c9e&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 131,
-   "contribuicoes": 146,
+   "contribuicoes": 144,
    "cidade": "porto"
   },
   {
@@ -1078,8 +1078,8 @@
    "nome": "Celso Martinho",
    "avatar": "https://avatars.githubusercontent.com/u/14289?s=96&u=ec0c389ce8f17f37549f44997962f3584f3b5975&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 317,
-   "contribuicoes": 177,
+   "seguidores": 322,
+   "contribuicoes": 165,
    "cidade": "lisboa"
   },
   {
@@ -1096,7 +1096,7 @@
    "nome": "César Augusto Nogueira",
    "avatar": "https://avatars.githubusercontent.com/u/754924?s=96&u=c844af5aff79725e67ae3ac66ec0653ab77bfdfe&v=4",
    "localizacao": "Vila Real, Portugal",
-   "seguidores": 235,
+   "seguidores": 236,
    "contribuicoes": 2050,
    "cidade": "outra"
   },
@@ -1106,7 +1106,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/20277959?s=96&u=4575d3e79611879ef8ba5fe067ce362a2498cae7&v=4",
    "localizacao": "Lisbon",
    "seguidores": 75,
-   "contribuicoes": 1142,
+   "contribuicoes": 1090,
    "cidade": "lisboa"
   },
   {
@@ -1160,7 +1160,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/135345875?s=96&u=095cc8292f540a7e6debd94b9c0bc5631d9dd1a8&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 43,
-   "contribuicoes": 407,
+   "contribuicoes": 323,
    "cidade": "porto"
   },
   {
@@ -1178,7 +1178,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/23704769?s=96&u=21e928698454bf73cc4411e14226b3847d39703a&v=4",
    "localizacao": "Lisbon",
    "seguidores": 257,
-   "contribuicoes": 672,
+   "contribuicoes": 655,
    "cidade": "lisboa"
   },
   {
@@ -1196,7 +1196,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/914007?s=96&v=4",
    "localizacao": "San Francisco and Lisbon",
    "seguidores": 90,
-   "contribuicoes": 1666,
+   "contribuicoes": 1657,
    "cidade": "lisboa"
   },
   {
@@ -1204,8 +1204,8 @@
    "nome": "João Correia",
    "avatar": "https://avatars.githubusercontent.com/u/16155781?s=96&u=6132bd1ee5046b3d906550e923a14e317d2cab69&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 498,
-   "contribuicoes": 36344,
+   "seguidores": 499,
+   "contribuicoes": 35906,
    "cidade": "porto"
   },
   {
@@ -1213,8 +1213,8 @@
    "nome": "Manoela Ilic",
    "avatar": "https://avatars.githubusercontent.com/u/1044196?s=96&v=4",
    "localizacao": "Portimão, Portugal",
-   "seguidores": 7164,
-   "contribuicoes": 158,
+   "seguidores": 7162,
+   "contribuicoes": 157,
    "cidade": "outra"
   },
   {
@@ -1231,7 +1231,7 @@
    "nome": "Fernando Cruz",
    "avatar": "https://avatars.githubusercontent.com/u/65718224?s=96&u=61b690d3e4dbb2a6bee0e399626d9af2f3b053f7&v=4",
    "localizacao": "Braga",
-   "seguidores": 48,
+   "seguidores": 47,
    "contribuicoes": 0,
    "cidade": "braga"
   },
@@ -1241,7 +1241,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/43869056?s=96&u=ede865bafe832bf39134294541aad662381fe526&v=4",
    "localizacao": "Braga - Portugal",
    "seguidores": 122,
-   "contribuicoes": 400,
+   "contribuicoes": 388,
    "cidade": "braga"
   },
   {
@@ -1249,7 +1249,7 @@
    "nome": "José Moreira",
    "avatar": "https://avatars.githubusercontent.com/u/3604053?s=96&u=d1fe198629ce2efb587438237749f22ee93bbafe&v=4",
    "localizacao": "Póvoa de Varzim, Porto, Portugal",
-   "seguidores": 8339,
+   "seguidores": 8343,
    "contribuicoes": 1,
    "cidade": "porto"
   },
@@ -1258,7 +1258,7 @@
    "nome": "James Cutajar",
    "avatar": "https://avatars.githubusercontent.com/u/3923203?s=96&u=da182dbe89e68d9de46a7acc15b1ef09dfb6bd12&v=4",
    "localizacao": "Porto",
-   "seguidores": 247,
+   "seguidores": 248,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -1268,7 +1268,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/153724638?s=96&u=7a6ded669a6071701ebe572ba11a42bb832ba954&v=4",
    "localizacao": "Braga",
    "seguidores": 7,
-   "contribuicoes": 291,
+   "contribuicoes": 287,
    "cidade": "braga"
   },
   {
@@ -1276,8 +1276,8 @@
    "nome": "Tiago Barros",
    "avatar": "https://avatars.githubusercontent.com/u/6841439?s=96&u=5c2144be6d2f13e758ae220032fc87f3b7774e99&v=4",
    "localizacao": "Coimbra",
-   "seguidores": 15,
-   "contribuicoes": 154,
+   "seguidores": 16,
+   "contribuicoes": 144,
    "cidade": "coimbra"
   },
   {
@@ -1295,7 +1295,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/147398154?s=96&u=2798259a854363e15bbf455004512ed3f91b62ff&v=4",
    "localizacao": "Braga",
    "seguidores": 6,
-   "contribuicoes": 277,
+   "contribuicoes": 273,
    "cidade": "braga"
   },
   {
@@ -1303,8 +1303,8 @@
    "nome": "Daniel Azevedo",
    "avatar": "https://avatars.githubusercontent.com/u/49279228?s=96&u=015df4109764371eb1cc4f95f4bdce5b05632cce&v=4",
    "localizacao": "Oporto, Portugal",
-   "seguidores": 32,
-   "contribuicoes": 741,
+   "seguidores": 33,
+   "contribuicoes": 745,
    "cidade": "porto"
   },
   {
@@ -1313,7 +1313,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/36623265?s=96&u=fc6c1ee17b743979506e994fbd26c7c41aa328ba&v=4",
    "localizacao": "Lisbon",
    "seguidores": 598,
-   "contribuicoes": 15078,
+   "contribuicoes": 15158,
    "cidade": "lisboa"
   },
   {
@@ -1322,7 +1322,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/129836273?s=96&u=b81543eb67b0b6805e04180d124e9427d04b32c7&v=4",
    "localizacao": "Porto",
    "seguidores": 74,
-   "contribuicoes": 401,
+   "contribuicoes": 400,
    "cidade": "porto"
   },
   {
@@ -1367,7 +1367,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3706415?s=96&u=f317f4b5cc3a9ab003f3e2ad6a2a2f1956a70fb3&v=4",
    "localizacao": "Portugal",
    "seguidores": 106,
-   "contribuicoes": 2241,
+   "contribuicoes": 2261,
    "cidade": "outra"
   },
   {
@@ -1385,7 +1385,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/19411211?s=96&u=f17537019e31b2e86451bd26fe8fcd08ebdabcea&v=4",
    "localizacao": "Braga",
    "seguidores": 20,
-   "contribuicoes": 221,
+   "contribuicoes": 215,
    "cidade": "braga"
   },
   {
@@ -1393,8 +1393,8 @@
    "nome": "Daniel Williams",
    "avatar": "https://avatars.githubusercontent.com/u/3481514?s=96&u=b22dc110e9927774102339b803b9f371f1aa67d9&v=4",
    "localizacao": "Porto",
-   "seguidores": 294,
-   "contribuicoes": 3439,
+   "seguidores": 292,
+   "contribuicoes": 4714,
    "cidade": "porto"
   },
   {
@@ -1402,8 +1402,8 @@
    "nome": "Dario Griffo",
    "avatar": "https://avatars.githubusercontent.com/u/3247183?s=96&u=eca56656f87bfa1f46bca8ce4dd7aa1333edbfe0&v=4",
    "localizacao": "Porto",
-   "seguidores": 123,
-   "contribuicoes": 1977,
+   "seguidores": 125,
+   "contribuicoes": 1994,
    "cidade": "porto"
   },
   {
@@ -1430,7 +1430,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/70149057?s=96&u=5935246e111966d7ee801673612dd26aff557780&v=4",
    "localizacao": "Coimbra",
    "seguidores": 37,
-   "contribuicoes": 141,
+   "contribuicoes": 150,
    "cidade": "coimbra"
   },
   {
@@ -1439,7 +1439,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2940022?s=96&u=21aaccd5d71b6ada7b2b146aa14ce483a498b54c&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 25,
-   "contribuicoes": 295,
+   "contribuicoes": 275,
    "cidade": "braga"
   },
   {
@@ -1448,7 +1448,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/152318399?s=96&u=8b0109a974264776013104a29d40fa9800f523df&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 11,
-   "contribuicoes": 563,
+   "contribuicoes": 533,
    "cidade": "braga"
   },
   {
@@ -1457,7 +1457,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/121517954?s=96&u=414ad2276e62d0f9583d1edea61f0a195e035c60&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 7,
-   "contribuicoes": 227,
+   "contribuicoes": 211,
    "cidade": "coimbra"
   },
   {
@@ -1475,7 +1475,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/718166?s=96&u=af94622e075b7253520b53a9c2bd0684925ac1b4&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 72,
-   "contribuicoes": 1117,
+   "contribuicoes": 1116,
    "cidade": "porto"
   },
   {
@@ -1493,7 +1493,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/8696354?s=96&u=fdf9eca41d6e31a6d705ed7c26261d917532888b&v=4",
    "localizacao": "Lisbon",
    "seguidores": 47,
-   "contribuicoes": 2034,
+   "contribuicoes": 2037,
    "cidade": "lisboa"
   },
   {
@@ -1502,7 +1502,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1104511?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 52,
-   "contribuicoes": 301,
+   "contribuicoes": 297,
    "cidade": "porto"
   },
   {
@@ -1510,8 +1510,8 @@
    "nome": "Daniel Ximenes",
    "avatar": "https://avatars.githubusercontent.com/u/93453046?s=96&u=fdc091dd58ea66237e1255ab87442e17fb1bc320&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 64,
-   "contribuicoes": 1993,
+   "seguidores": 63,
+   "contribuicoes": 1926,
    "cidade": "porto"
   },
   {
@@ -1520,7 +1520,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/72114542?s=96&u=181ac2f931b1e21bdaaa0e708f9e7afbd64722c0&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 4,
-   "contribuicoes": 747,
+   "contribuicoes": 1665,
    "cidade": "braga"
   },
   {
@@ -1546,8 +1546,8 @@
    "nome": "Dick Hardt",
    "avatar": "https://avatars.githubusercontent.com/u/688982?s=96&u=77cf3fd5c865acf37070e05a3ad1e8156165320b&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 135,
-   "contribuicoes": 1074,
+   "seguidores": 136,
+   "contribuicoes": 1073,
    "cidade": "lisboa"
   },
   {
@@ -1557,6 +1557,15 @@
    "localizacao": "Braga, Portugal",
    "seguidores": 49,
    "contribuicoes": 0,
+   "cidade": "braga"
+  },
+  {
+   "login": "Digazz19",
+   "nome": "Diogo Abreu",
+   "avatar": "https://avatars.githubusercontent.com/u/129545476?s=96&u=b70fb4100ce042dacb83a1d35d6691f70aec572f&v=4",
+   "localizacao": "Braga, Portugal",
+   "seguidores": 8,
+   "contribuicoes": 221,
    "cidade": "braga"
   },
   {
@@ -1601,7 +1610,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/221182033?s=96&u=c83c0f0cd0e37a63d6a661cb793de8cd9d313fe3&v=4",
    "localizacao": "Lisbon",
    "seguidores": 59,
-   "contribuicoes": 2394,
+   "contribuicoes": 2347,
    "cidade": "lisboa"
   },
   {
@@ -1609,8 +1618,8 @@
    "nome": "Diogo Carrola",
    "avatar": "https://avatars.githubusercontent.com/u/94233657?s=96&u=b03099d22bae0bfb647936041c485676916cdaf3&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 1032,
-   "contribuicoes": 188,
+   "seguidores": 1035,
+   "contribuicoes": 177,
    "cidade": "porto"
   },
   {
@@ -1619,7 +1628,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/132235172?s=96&u=70569eea403a41fab291314fb6079a0721947b48&v=4",
    "localizacao": "Braga",
    "seguidores": 16,
-   "contribuicoes": 436,
+   "contribuicoes": 426,
    "cidade": "braga"
   },
   {
@@ -1637,7 +1646,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/118282799?s=96&u=fadc8f85f84e9888eda6320cabca4af53fc61aea&v=4",
    "localizacao": "Braga/Porto",
    "seguidores": 11,
-   "contribuicoes": 730,
+   "contribuicoes": 728,
    "cidade": "porto"
   },
   {
@@ -1646,7 +1655,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/36792034?s=96&u=7efb1aa63ed6a0799fb43163efd4184346d7c071&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 14,
-   "contribuicoes": 327,
+   "contribuicoes": 329,
    "cidade": "coimbra"
   },
   {
@@ -1654,8 +1663,8 @@
    "nome": "Diogo Ribeiro",
    "avatar": "https://avatars.githubusercontent.com/u/15965640?s=96&u=505c8fcda3950f918b15306ba933e4058b447426&v=4",
    "localizacao": "Portugal ",
-   "seguidores": 644,
-   "contribuicoes": 32821,
+   "seguidores": 649,
+   "contribuicoes": 32845,
    "cidade": "outra"
   },
   {
@@ -1664,7 +1673,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/7467891?s=96&u=6058ebed2172723836267378e8c112ecb30883ff&v=4",
    "localizacao": "Lisbon, Portugal | Living in Stockholm, Sweden",
    "seguidores": 319,
-   "contribuicoes": 2015,
+   "contribuicoes": 2000,
    "cidade": "lisboa"
   },
   {
@@ -1700,7 +1709,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/110714056?s=96&u=b2a1abf94a3a51ac202ae367ddc265e33221cb80&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 16,
-   "contribuicoes": 215,
+   "contribuicoes": 212,
    "cidade": "braga"
   },
   {
@@ -1717,8 +1726,8 @@
    "nome": "Pasukhin Dmitry",
    "avatar": "https://avatars.githubusercontent.com/u/44947322?s=96&u=c15b3f23b1872f912e47c67c3165aff84a1237b1&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 65,
-   "contribuicoes": 1020,
+   "seguidores": 66,
+   "contribuicoes": 981,
    "cidade": "porto"
   },
   {
@@ -1727,7 +1736,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4025227?s=96&u=baab56022cb77c91dd55a2d523568f2614a35605&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 1439,
-   "contribuicoes": 216,
+   "contribuicoes": 195,
    "cidade": "lisboa"
   },
   {
@@ -1735,8 +1744,8 @@
    "nome": "Daniel Reis",
    "avatar": "https://avatars.githubusercontent.com/u/1246629?s=96&u=c555238737b7c778fc8db890744d34a45b442ba3&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 381,
-   "contribuicoes": 1186,
+   "seguidores": 382,
+   "contribuicoes": 1240,
    "cidade": "lisboa"
   },
   {
@@ -1745,7 +1754,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/126091251?s=96&u=dcceeb1769da8a20c6507daf34ed4ad79ae2a061&v=4",
    "localizacao": "Porto",
    "seguidores": 138,
-   "contribuicoes": 815,
+   "contribuicoes": 826,
    "cidade": "porto"
   },
   {
@@ -1772,7 +1781,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/114100784?s=96&u=bba40de9aff9383cefda38e2e39a5e4562402ce9&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 15,
-   "contribuicoes": 247,
+   "contribuicoes": 233,
    "cidade": "braga"
   },
   {
@@ -1780,7 +1789,7 @@
    "nome": "Edgar Dias",
    "avatar": "https://avatars.githubusercontent.com/u/24766085?s=96&u=e0ba2b2129f2f833dad96f1dbae971a58dfd630e&v=4",
    "localizacao": "Portugal",
-   "seguidores": 560,
+   "seguidores": 559,
    "contribuicoes": 7,
    "cidade": "outra"
   },
@@ -1789,7 +1798,7 @@
    "nome": "Eduardo Rocha ",
    "avatar": "https://avatars.githubusercontent.com/u/73354143?s=96&u=ad678ece2843dd429664883f37d597ec501c5866&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 6,
+   "seguidores": 5,
    "contribuicoes": 224,
    "cidade": "braga"
   },
@@ -1808,7 +1817,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1170767?s=96&u=00040d625496f2c19fd3c9e7b8a43bf8752ba1ab&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 47,
-   "contribuicoes": 2187,
+   "contribuicoes": 2320,
    "cidade": "lisboa"
   },
   {
@@ -1817,7 +1826,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/71183931?s=96&u=d2e33fbd500e50ae61c2307bce0bb2543cd6759d&v=4",
    "localizacao": "Lisboa",
    "seguidores": 17,
-   "contribuicoes": 3294,
+   "contribuicoes": 3213,
    "cidade": "lisboa"
   },
   {
@@ -1825,8 +1834,8 @@
    "nome": "Elisa Kalil",
    "avatar": "https://avatars.githubusercontent.com/u/60624768?s=96&u=c88dd29a15ade47fe10084bf57aa96880aa4772f&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 452,
-   "contribuicoes": 22,
+   "seguidores": 451,
+   "contribuicoes": 29,
    "cidade": "lisboa"
   },
   {
@@ -1835,7 +1844,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2750668?s=96&u=a10c1936533c219bdc25f5cefb4fe79ee8e5f90b&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 1023,
-   "contribuicoes": 304,
+   "contribuicoes": 299,
    "cidade": "lisboa"
   },
   {
@@ -1844,7 +1853,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/11192126?s=96&u=47b311f8f58239a493bb4e2e525ce4e51fe48c87&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 50,
-   "contribuicoes": 1199,
+   "contribuicoes": 1202,
    "cidade": "lisboa"
   },
   {
@@ -1862,7 +1871,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/168974048?s=96&u=cc4da994fcd7eed5d4db1f84b71bf207f16db14a&v=4",
    "localizacao": "Portugal-Lisboa",
    "seguidores": 35,
-   "contribuicoes": 2160,
+   "contribuicoes": 2165,
    "cidade": "lisboa"
   },
   {
@@ -1870,8 +1879,8 @@
    "nome": "Emile",
    "avatar": "https://avatars.githubusercontent.com/u/303135?s=96&u=ae1767b09243fba9312f59fc8ab2cd5a02efb41d&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 188,
-   "contribuicoes": 18,
+   "seguidores": 187,
+   "contribuicoes": 17,
    "cidade": "lisboa"
   },
   {
@@ -1879,7 +1888,7 @@
    "nome": "Emil Wallner",
    "avatar": "https://avatars.githubusercontent.com/u/12543699?s=96&u=7c01c0fd416759246cfc11aab0e926ca7df1f42f&v=4",
    "localizacao": "Porto",
-   "seguidores": 1938,
+   "seguidores": 1939,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -1888,8 +1897,8 @@
    "nome": "Emmanuel Gomes",
    "avatar": "https://avatars.githubusercontent.com/u/28756072?s=96&u=05a56b55b1c3ea038038e2e83223efd8bb23a9eb&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 66,
-   "contribuicoes": 755,
+   "seguidores": 67,
+   "contribuicoes": 737,
    "cidade": "porto"
   },
   {
@@ -1906,8 +1915,8 @@
    "nome": "LUCAS SOARES",
    "avatar": "https://avatars.githubusercontent.com/u/32417736?s=96&u=7a57997c6fe7f2d2b81b4ce0d6751ec8b0d4ef84&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 270,
-   "contribuicoes": 715,
+   "seguidores": 273,
+   "contribuicoes": 706,
    "cidade": "lisboa"
   },
   {
@@ -1916,7 +1925,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/16161449?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 200,
-   "contribuicoes": 1821,
+   "contribuicoes": 1764,
    "cidade": "lisboa"
   },
   {
@@ -1952,7 +1961,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/121685596?s=96&u=9f4741d4dda8d6674a0bcce4d0e94842c12f2046&v=4",
    "localizacao": "Coimbra",
    "seguidores": 3,
-   "contribuicoes": 285,
+   "contribuicoes": 276,
    "cidade": "coimbra"
   },
   {
@@ -1970,8 +1979,17 @@
    "avatar": "https://avatars.githubusercontent.com/u/132665477?s=96&u=cee85f5d31ebb249ac82a4f8a3911f3fa6279446&v=4",
    "localizacao": "Amares, Braga",
    "seguidores": 6,
-   "contribuicoes": 201,
+   "contribuicoes": 198,
    "cidade": "braga"
+  },
+  {
+   "login": "fabiogiolito",
+   "nome": "Fabio Giolito",
+   "avatar": "https://avatars.githubusercontent.com/u/81450?s=96&v=4",
+   "localizacao": "Rio, Brazil → Lisbon, Portugal",
+   "seguidores": 44,
+   "contribuicoes": 1045,
+   "cidade": "lisboa"
   },
   {
    "login": "FabioPinheiro",
@@ -1979,7 +1997,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4622245?s=96&u=6c80a95d63b3ded7182672aaed78196eadab81b6&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 33,
-   "contribuicoes": 2115,
+   "contribuicoes": 2024,
    "cidade": "lisboa"
   },
   {
@@ -1988,7 +2006,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1611595?s=96&u=67c4ac26cfe18320d353bb5a68d2e9662d5df818&v=4",
    "localizacao": "Lisbon",
    "seguidores": 198,
-   "contribuicoes": 175,
+   "contribuicoes": 177,
    "cidade": "lisboa"
   },
   {
@@ -1996,8 +2014,8 @@
    "nome": "Fernando Correia",
    "avatar": "https://avatars.githubusercontent.com/u/10081850?s=96&u=c2467edb75930801f88841d5bd8625e4cc013de1&v=4",
    "localizacao": "Portugal",
-   "seguidores": 280,
-   "contribuicoes": 12360,
+   "seguidores": 279,
+   "contribuicoes": 12782,
    "cidade": "outra"
   },
   {
@@ -2015,7 +2033,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/25267726?s=96&u=64011e31cf850e3a202802d169d429223b3afaf5&v=4",
    "localizacao": "Lisbon",
    "seguidores": 610,
-   "contribuicoes": 778,
+   "contribuicoes": 830,
    "cidade": "lisboa"
   },
   {
@@ -2023,8 +2041,8 @@
    "nome": "Fabricio Aguiar",
    "avatar": "https://avatars.githubusercontent.com/u/17153022?s=96&u=a3aefefd2f169f5138b21963bacd6415280d082f&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 94,
-   "contribuicoes": 370,
+   "seguidores": 95,
+   "contribuicoes": 357,
    "cidade": "porto"
   },
   {
@@ -2050,8 +2068,8 @@
    "nome": "Felipe Hillebrand",
    "avatar": "https://avatars.githubusercontent.com/u/230234948?s=96&u=9080fca09480cdb749b77ef0ceff120ebdeb14d3&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 68,
-   "contribuicoes": 493,
+   "seguidores": 82,
+   "contribuicoes": 494,
    "cidade": "porto"
   },
   {
@@ -2060,7 +2078,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/56228311?s=96&u=4771eed53ad917c7cd0f1e6f8a1d63ffb145acbb&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 4,
-   "contribuicoes": 200,
+   "contribuicoes": 201,
    "cidade": "braga"
   },
   {
@@ -2068,7 +2086,7 @@
    "nome": "Felipe Kellermann",
    "avatar": "https://avatars.githubusercontent.com/u/141078?s=96&v=4",
    "localizacao": "Porto",
-   "seguidores": 126,
+   "seguidores": 125,
    "contribuicoes": 55,
    "cidade": "porto"
   },
@@ -2078,17 +2096,8 @@
    "avatar": "https://avatars.githubusercontent.com/u/62520717?s=96&u=7d9c9bacaa6cfe1d10fa6404576bba84c6249e63&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 18,
-   "contribuicoes": 703,
+   "contribuicoes": 721,
    "cidade": "coimbra"
-  },
-  {
-   "login": "Fernando-A-Rocha",
-   "nome": "Fernando Rocha",
-   "avatar": "https://avatars.githubusercontent.com/u/34967844?s=96&u=cc5f968374f386355f1536c5c94a49a44dd5bcce&v=4",
-   "localizacao": "Porto, Portugal",
-   "seguidores": 101,
-   "contribuicoes": 265,
-   "cidade": "porto"
   },
   {
    "login": "FernandoMiguel",
@@ -2096,7 +2105,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/168366?s=96&u=7f41fdefe1e6e8cfcef8b520464f98672f5b02df&v=4",
    "localizacao": "London, UK / Porto, Portugal",
    "seguidores": 94,
-   "contribuicoes": 777,
+   "contribuicoes": 797,
    "cidade": "porto"
   },
   {
@@ -2104,8 +2113,8 @@
    "nome": "Filipe Laíns",
    "avatar": "https://avatars.githubusercontent.com/u/11718923?s=96&u=c20851d8f7dcd9373557fb7b1a64774214d58fa1&v=4",
    "localizacao": "Portugal",
-   "seguidores": 488,
-   "contribuicoes": 197,
+   "seguidores": 489,
+   "contribuicoes": 188,
    "cidade": "outra"
   },
   {
@@ -2140,8 +2149,8 @@
    "nome": "Filipe Cabaço",
    "avatar": "https://avatars.githubusercontent.com/u/1697301?s=96&u=89c1d70163ea56981515b72827edad3195f30be4&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 194,
-   "contribuicoes": 2213,
+   "seguidores": 195,
+   "contribuicoes": 2266,
    "cidade": "lisboa"
   },
   {
@@ -2158,8 +2167,8 @@
    "nome": "Filipe Marques",
    "avatar": "https://avatars.githubusercontent.com/u/33165733?s=96&u=10b11af2e400dc3eef59e2b0c15e46a9ccc99127&v=4",
    "localizacao": "Lisbon, Portugal ",
-   "seguidores": 28,
-   "contribuicoes": 1099,
+   "seguidores": 29,
+   "contribuicoes": 1088,
    "cidade": "lisboa"
   },
   {
@@ -2222,7 +2231,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/61006057?s=96&u=f9e02eb4e4dfb2fe2b4499b1cb96c010be1cb68b&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 122,
-   "contribuicoes": 1031,
+   "contribuicoes": 1044,
    "cidade": "lisboa"
   },
   {
@@ -2230,8 +2239,8 @@
    "nome": "Francisco Maria Calisto",
    "avatar": "https://avatars.githubusercontent.com/u/1298239?s=96&u=c169a3b13f69c3c8df0adfb45bab0f56bd701fa3&v=4",
    "localizacao": "Portugal",
-   "seguidores": 688,
-   "contribuicoes": 328,
+   "seguidores": 687,
+   "contribuicoes": 316,
    "cidade": "outra"
   },
   {
@@ -2248,7 +2257,7 @@
    "nome": "Francisco Amado",
    "avatar": "https://avatars.githubusercontent.com/u/6344795?s=96&u=4a5fbf76565eeca41278f0ca3605846cf19c32d8&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 143,
+   "seguidores": 144,
    "contribuicoes": 2,
    "cidade": "porto"
   },
@@ -2258,7 +2267,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/30115559?s=96&u=e0e0452f0991edcf147dec05ffdad23d8579630c&v=4",
    "localizacao": "Braga",
    "seguidores": 17,
-   "contribuicoes": 625,
+   "contribuicoes": 613,
    "cidade": "braga"
   },
   {
@@ -2266,7 +2275,7 @@
    "nome": "Francisco Franco",
    "avatar": "https://avatars.githubusercontent.com/u/792248?s=96&u=03b2bd978df9ae613b87a19e7a79892d76b128a1&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 1018,
+   "seguidores": 1019,
    "contribuicoes": 0,
    "cidade": "lisboa"
   },
@@ -2285,7 +2294,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4325027?s=96&u=a4fabc01deb9fdc44eda52c1de82ab258843f66e&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 172,
-   "contribuicoes": 672,
+   "contribuicoes": 653,
    "cidade": "porto"
   },
   {
@@ -2294,7 +2303,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5417662?s=96&u=4035d989032aeb68ed82b7da3934ef1289164b33&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 185,
-   "contribuicoes": 118,
+   "contribuicoes": 119,
    "cidade": "lisboa"
   },
   {
@@ -2321,7 +2330,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6418302?s=96&u=cdbb29ed1ceeac4bf9bb55b57edd102c402da5cb&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 47,
-   "contribuicoes": 255,
+   "contribuicoes": 259,
    "cidade": "porto"
   },
   {
@@ -2330,7 +2339,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/7349502?s=96&u=f9715dfad69515c11d8061f5eda459ff01e61054&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 74,
-   "contribuicoes": 1331,
+   "contribuicoes": 1306,
    "cidade": "lisboa"
   },
   {
@@ -2338,8 +2347,8 @@
    "nome": "Gabriel Massadas",
    "avatar": "https://avatars.githubusercontent.com/u/5445926?s=96&u=958b06b3c175014c4bce445bdeaf9326ae385778&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 209,
-   "contribuicoes": 1364,
+   "seguidores": 210,
+   "contribuicoes": 1367,
    "cidade": "lisboa"
   },
   {
@@ -2348,7 +2357,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/19472113?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 74,
-   "contribuicoes": 1467,
+   "contribuicoes": 1514,
    "cidade": "lisboa"
   },
   {
@@ -2356,7 +2365,7 @@
    "nome": "Gabriela Cunha",
    "avatar": "https://avatars.githubusercontent.com/u/73352341?s=96&u=d7c486b73e87bc484941cd7a2e38643e4869dd29&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 49,
+   "seguidores": 48,
    "contribuicoes": 0,
    "cidade": "braga"
   },
@@ -2375,7 +2384,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/48297244?s=96&u=551ca59530044d9f08bdd9c10db9f3df562541b7&v=4",
    "localizacao": "Vila Nova de Gaia / Porto - Portugal",
    "seguidores": 67,
-   "contribuicoes": 323,
+   "contribuicoes": 314,
    "cidade": "porto"
   },
   {
@@ -2383,7 +2392,7 @@
    "nome": "Gabriel Conceição",
    "avatar": "https://avatars.githubusercontent.com/u/5131269?s=96&u=2e6ab2a09cf8c84bb6be5c614f9ddfb43d27b766&v=4",
    "localizacao": "Porto",
-   "seguidores": 2026,
+   "seguidores": 2025,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -2393,7 +2402,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/934580?s=96&u=a2ee7458574f409b400edb3bcd90fd2ade834ef5&v=4",
    "localizacao": "Braga",
    "seguidores": 129,
-   "contribuicoes": 167,
+   "contribuicoes": 163,
    "cidade": "braga"
   },
   {
@@ -2401,8 +2410,8 @@
    "nome": "fG!",
    "avatar": "https://avatars.githubusercontent.com/u/859134?s=96&u=2f7962ffc0815071a999ccfab100adc4d7a20c2d&v=4",
    "localizacao": "Portugal",
-   "seguidores": 1715,
-   "contribuicoes": 11,
+   "seguidores": 1716,
+   "contribuicoes": 13,
    "cidade": "outra"
   },
   {
@@ -2411,7 +2420,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2984831?s=96&u=b62074a35c6b4025c3ce21b847fd0646f151f963&v=4",
    "localizacao": "Coimbra, PT",
    "seguidores": 38,
-   "contribuicoes": 7,
+   "contribuicoes": 9,
    "cidade": "coimbra"
   },
   {
@@ -2420,7 +2429,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/55887077?s=96&u=cdcbb774f593b4fcaf8151765f52094037a8f574&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 82,
-   "contribuicoes": 1763,
+   "contribuicoes": 1771,
    "cidade": "lisboa"
   },
   {
@@ -2438,7 +2447,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/50376686?s=96&u=a2e2abb1c069d29b52ff12550fccda011bff6ffc&v=4",
    "localizacao": "Lisboa",
    "seguidores": 43,
-   "contribuicoes": 2091,
+   "contribuicoes": 2119,
    "cidade": "lisboa"
   },
   {
@@ -2447,7 +2456,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/40496?s=96&u=7306b263550a878aa032ff02946b89bfbfe67fc3&v=4",
    "localizacao": "Lisbon",
    "seguidores": 224,
-   "contribuicoes": 43,
+   "contribuicoes": 30,
    "cidade": "lisboa"
   },
   {
@@ -2473,7 +2482,7 @@
    "nome": "Gonçalo Silva",
    "avatar": "https://avatars.githubusercontent.com/u/102931?s=96&u=5953d0caf2d7932df7e18c2cfac917a0bfe3bf79&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 200,
+   "seguidores": 199,
    "contribuicoes": 2049,
    "cidade": "porto"
   },
@@ -2510,7 +2519,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/12343794?s=96&u=0a4e61fff7e2ff66d81eb989e8d06fe66ae84e03&v=4",
    "localizacao": "Braga - Portugal",
    "seguidores": 103,
-   "contribuicoes": 106,
+   "contribuicoes": 105,
    "cidade": "braga"
   },
   {
@@ -2519,7 +2528,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/11543544?s=96&u=7836939d4dc3a0283e68f2f652534cf52b64dc4d&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 38,
-   "contribuicoes": 229,
+   "contribuicoes": 256,
    "cidade": "braga"
   },
   {
@@ -2545,7 +2554,7 @@
    "nome": "Guilherme Pessoa",
    "avatar": "https://avatars.githubusercontent.com/u/77997696?s=96&u=95af66e090bcf1aa43684692fcd05b73935fee86&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 1397,
+   "seguidores": 1408,
    "contribuicoes": 272,
    "cidade": "lisboa"
   },
@@ -2555,7 +2564,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1310179?s=96&u=a5a9fb40af0fd8283d11ec6a27d7ca655375cd39&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 6,
-   "contribuicoes": 1176,
+   "contribuicoes": 1186,
    "cidade": "lisboa"
   },
   {
@@ -2572,8 +2581,8 @@
    "nome": "Gustavo Valverde",
    "avatar": "https://avatars.githubusercontent.com/u/16890942?s=96&u=9efbbaa1e0a50665da626be934084e484a2a9ddf&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 281,
-   "contribuicoes": 4519,
+   "seguidores": 283,
+   "contribuicoes": 4938,
    "cidade": "lisboa"
   },
   {
@@ -2591,7 +2600,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/116376171?s=96&u=5bb8c93ec203510fb8b597336b52381fd8987702&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 57,
-   "contribuicoes": 33,
+   "contribuicoes": 30,
    "cidade": "braga"
   },
   {
@@ -2600,7 +2609,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/64481411?s=96&u=70d22dc4f087a1ce98fc4f930e99284411663e07&v=4",
    "localizacao": "Portugal - Porto",
    "seguidores": 62,
-   "contribuicoes": 299,
+   "contribuicoes": 289,
    "cidade": "porto"
   },
   {
@@ -2609,7 +2618,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/85371550?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 99,
-   "contribuicoes": 1178,
+   "contribuicoes": 1140,
    "cidade": "porto"
   },
   {
@@ -2626,8 +2635,8 @@
    "nome": "Henrique von Weidebach",
    "avatar": "https://avatars.githubusercontent.com/u/21084682?s=96&u=06df87a168fb8a6cc499cff9b2dee7f281d06a18&v=4",
    "localizacao": "Braga - Portugal",
-   "seguidores": 5,
-   "contribuicoes": 174,
+   "seguidores": 6,
+   "contribuicoes": 175,
    "cidade": "braga"
   },
   {
@@ -2645,7 +2654,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/15621959?s=96&u=6afcea74410b2332ddc21044b10bb77582f45b59&v=4",
    "localizacao": "Lisbon",
    "seguidores": 40,
-   "contribuicoes": 4758,
+   "contribuicoes": 4732,
    "cidade": "lisboa"
   },
   {
@@ -2663,7 +2672,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1252710?s=96&u=2a9e5c263ee6de1fff278fbe7cfa72870bb7ee76&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 9,
-   "contribuicoes": 287,
+   "contribuicoes": 284,
    "cidade": "braga"
   },
   {
@@ -2676,12 +2685,21 @@
    "cidade": "lisboa"
   },
   {
+   "login": "httpirsh",
+   "nome": "Íris Sousa",
+   "avatar": "https://avatars.githubusercontent.com/u/129116840?s=96&u=4876373c305e8e2f535ae437db96b51404fb0149&v=4",
+   "localizacao": "Coimbra, Portugal",
+   "seguidores": 9,
+   "contribuicoes": 162,
+   "cidade": "coimbra"
+  },
+  {
    "login": "Hugo0",
    "nome": "Hugo Montenegro",
    "avatar": "https://avatars.githubusercontent.com/u/12943235?s=96&u=2ad0ecf53323416d34d764bda6474ab1ce4dc9b1&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 71,
-   "contribuicoes": 5216,
+   "seguidores": 73,
+   "contribuicoes": 5145,
    "cidade": "lisboa"
   },
   {
@@ -2690,7 +2708,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/314190?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 244,
-   "contribuicoes": 2313,
+   "contribuicoes": 2338,
    "cidade": "porto"
   },
   {
@@ -2708,7 +2726,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/155672644?s=96&u=1c24321ac502ea95f449ba0980a738ee0b18f8ec&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 15,
-   "contribuicoes": 435,
+   "contribuicoes": 434,
    "cidade": "braga"
   },
   {
@@ -2725,8 +2743,8 @@
    "nome": "Ilya Dorman",
    "avatar": "https://avatars.githubusercontent.com/u/703551?s=96&u=74d96ff1ea982d726c1c4af7c463885aafe79bd6&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 43,
-   "contribuicoes": 1333,
+   "seguidores": 44,
+   "contribuicoes": 1339,
    "cidade": "lisboa"
   },
   {
@@ -2743,8 +2761,8 @@
    "nome": "Francisco Cabrita",
    "avatar": "https://avatars.githubusercontent.com/u/16199?s=96&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 169,
-   "contribuicoes": 9,
+   "seguidores": 170,
+   "contribuicoes": 33,
    "cidade": "porto"
   },
   {
@@ -2753,7 +2771,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/59748373?s=96&u=00aef41cc9efcb40e055cb2a92d3e091358a626d&v=4",
    "localizacao": "Sertã <-> Coimbra",
    "seguidores": 29,
-   "contribuicoes": 187,
+   "contribuicoes": 185,
    "cidade": "coimbra"
   },
   {
@@ -2761,8 +2779,8 @@
    "nome": "riaan de beer🦀",
    "avatar": "https://avatars.githubusercontent.com/u/255699974?s=96&u=62efa68a3e41f433b1d612e38024c173d9041cbe&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 288,
-   "contribuicoes": 11551,
+   "seguidores": 290,
+   "contribuicoes": 11949,
    "cidade": "porto"
   },
   {
@@ -2780,7 +2798,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/89457639?s=96&u=28825fcb90d82fbb3365b12379c6daaed1d28c3a&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 47,
-   "contribuicoes": 374,
+   "contribuicoes": 373,
    "cidade": "porto"
   },
   {
@@ -2789,7 +2807,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/23007041?s=96&u=7f3a0c3eb44856fe421132efb9be93d578070fdf&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 71,
-   "contribuicoes": 1403,
+   "contribuicoes": 1477,
    "cidade": "porto"
   },
   {
@@ -2806,7 +2824,7 @@
    "nome": "Iury Krieger",
    "avatar": "https://avatars.githubusercontent.com/u/14093516?s=96&u=9eadb1e7fe3f431c79306d80308ff47e0c1c8a4d&v=4",
    "localizacao": "Porto, PT",
-   "seguidores": 63,
+   "seguidores": 64,
    "contribuicoes": 491,
    "cidade": "porto"
   },
@@ -2816,7 +2834,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/18286430?s=96&u=b84c4a0b38efc2da1e7b81a880961bfb69b0dfae&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 2,
-   "contribuicoes": 821,
+   "contribuicoes": 828,
    "cidade": "coimbra"
   },
   {
@@ -2825,7 +2843,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/108223142?s=96&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 10,
-   "contribuicoes": 505,
+   "contribuicoes": 507,
    "cidade": "braga"
   },
   {
@@ -2834,7 +2852,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/161877114?s=96&u=6ba42e9eab870ac4719dab37fa9c2371801b8639&v=4",
    "localizacao": "Porto",
    "seguidores": 46,
-   "contribuicoes": 449,
+   "contribuicoes": 444,
    "cidade": "porto"
   },
   {
@@ -2852,7 +2870,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/32335502?s=96&u=b27e6a3707dc4f90a7fda3264b57edc46f12d74b&v=4",
    "localizacao": "Coimbra",
    "seguidores": 34,
-   "contribuicoes": 5073,
+   "contribuicoes": 5158,
    "cidade": "coimbra"
   },
   {
@@ -2860,8 +2878,8 @@
    "nome": "João Cardoso",
    "avatar": "https://avatars.githubusercontent.com/u/442637?s=96&u=7c2a87507b50070c071b25bd811b7cdf3d7cb6e4&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 112,
-   "contribuicoes": 429,
+   "seguidores": 113,
+   "contribuicoes": 421,
    "cidade": "coimbra"
   },
   {
@@ -2879,7 +2897,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/33701864?s=96&u=91f0c9f0ee2c4df114f5eed98fe31d8ef6a69fbc&v=4",
    "localizacao": "Portugal",
    "seguidores": 344,
-   "contribuicoes": 33659,
+   "contribuicoes": 34117,
    "cidade": "outra"
   },
   {
@@ -2887,8 +2905,8 @@
    "nome": "Johan Bergström",
    "avatar": "https://avatars.githubusercontent.com/u/176984?s=96&u=20efa9d6657e50f0ca68ea9a57774b2a0eb07398&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 260,
-   "contribuicoes": 605,
+   "seguidores": 261,
+   "contribuicoes": 592,
    "cidade": "lisboa"
   },
   {
@@ -2897,7 +2915,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/26873?s=96&u=19e1014238a192f9113fe01b44d652e33a98b22b&v=4",
    "localizacao": "Portugal",
    "seguidores": 77,
-   "contribuicoes": 2673,
+   "contribuicoes": 2667,
    "cidade": "outra"
   },
   {
@@ -2906,7 +2924,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/58153014?s=96&u=bedd404a44841347469850ad675ee12b9a3fc240&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 63,
-   "contribuicoes": 95,
+   "contribuicoes": 94,
    "cidade": "braga"
   },
   {
@@ -2923,7 +2941,7 @@
    "nome": "João Correia",
    "avatar": "https://avatars.githubusercontent.com/u/25712793?s=96&u=bb096f5a6b650d0b9913756691629aeac5475b99&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 35,
+   "seguidores": 38,
    "contribuicoes": 592,
    "cidade": "braga"
   },
@@ -2933,7 +2951,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1187242?s=96&u=5aec4129201d2516653cec6f031e23a36cac8bc1&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 63,
-   "contribuicoes": 206,
+   "contribuicoes": 200,
    "cidade": "braga"
   },
   {
@@ -2942,7 +2960,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/51718942?s=96&u=cf5b8ab82d489cd3803e39e7e0d582882cd4c60b&v=4",
    "localizacao": "Coimbra",
    "seguidores": 24,
-   "contribuicoes": 17,
+   "contribuicoes": 12,
    "cidade": "coimbra"
   },
   {
@@ -2960,7 +2978,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/32941964?s=96&u=c2377ae9d93595d6e4a8604e1211937616c29161&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 80,
-   "contribuicoes": 39,
+   "contribuicoes": 38,
    "cidade": "braga"
   },
   {
@@ -2969,7 +2987,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/76965647?s=96&u=4834f49439857ee13c39fe124e3610caf355e00e&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 3,
-   "contribuicoes": 631,
+   "contribuicoes": 659,
    "cidade": "coimbra"
   },
   {
@@ -2978,7 +2996,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/9119466?s=96&v=4",
    "localizacao": "Guimarães, Braga",
    "seguidores": 60,
-   "contribuicoes": 686,
+   "contribuicoes": 545,
    "cidade": "braga"
   },
   {
@@ -2986,8 +3004,8 @@
    "nome": "João Galego",
    "avatar": "https://avatars.githubusercontent.com/u/7282984?s=96&u=5d33f810bdf92c2dd089e8a238fd4a80955975d3&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 124,
-   "contribuicoes": 2250,
+   "seguidores": 125,
+   "contribuicoes": 2350,
    "cidade": "lisboa"
   },
   {
@@ -3004,7 +3022,7 @@
    "nome": "Jhonatas Matos",
    "avatar": "https://avatars.githubusercontent.com/u/16242029?s=96&u=23cc505cc2cee538e4751941d77059f4df4d60e2&v=4",
    "localizacao": "Porto - PT",
-   "seguidores": 176,
+   "seguidores": 175,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -3041,7 +3059,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/25441?s=96&u=44b7cde85f2066de6b5cd9d213cc1ce44b697188&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 149,
-   "contribuicoes": 3315,
+   "contribuicoes": 3250,
    "cidade": "porto"
   },
   {
@@ -3050,7 +3068,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/20134207?s=96&u=31de39608590484fdbbc8df7db5c2d4569dd1737&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 28,
-   "contribuicoes": 791,
+   "contribuicoes": 779,
    "cidade": "coimbra"
   },
   {
@@ -3086,7 +3104,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/10943992?s=96&u=a5cc74cb234e1d5c51743a8eb636804bab558771&v=4",
    "localizacao": "Lisbon, PT",
    "seguidores": 60,
-   "contribuicoes": 5248,
+   "contribuicoes": 5109,
    "cidade": "lisboa"
   },
   {
@@ -3095,7 +3113,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5724365?s=96&u=0f567482ae6563fbb5483ea559830fe7876652f0&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 89,
-   "contribuicoes": 669,
+   "contribuicoes": 664,
    "cidade": "porto"
   },
   {
@@ -3104,7 +3122,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6319988?s=96&v=4",
    "localizacao": "Portugal - Lisbon",
    "seguidores": 299,
-   "contribuicoes": 201,
+   "contribuicoes": 194,
    "cidade": "lisboa"
   },
   {
@@ -3113,7 +3131,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/7389336?s=96&u=8ccaa827ac4e5d2cc85510071526040f70e42979&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 17,
-   "contribuicoes": 2017,
+   "contribuicoes": 2024,
    "cidade": "lisboa"
   },
   {
@@ -3139,7 +3157,7 @@
    "nome": "João Afonso Silva",
    "avatar": "https://avatars.githubusercontent.com/u/8681051?s=96&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 7,
+   "seguidores": 6,
    "contribuicoes": 431,
    "cidade": "coimbra"
   },
@@ -3149,7 +3167,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/609782?s=96&u=940e66d4c94ad5b6cae5880ad52d7d0bbe91c129&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 67,
-   "contribuicoes": 277,
+   "contribuicoes": 281,
    "cidade": "porto"
   },
   {
@@ -3185,7 +3203,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/53819675?s=96&u=3f4b69208717b1493726de9eb6c5ba87eb37046a&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 16,
-   "contribuicoes": 153,
+   "contribuicoes": 154,
    "cidade": "coimbra"
   },
   {
@@ -3203,7 +3221,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/381718?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 395,
-   "contribuicoes": 132,
+   "contribuicoes": 131,
    "cidade": "lisboa"
   },
   {
@@ -3211,7 +3229,7 @@
    "nome": "João Dias",
    "avatar": "https://avatars.githubusercontent.com/u/4864031?s=96&u=c0a463e4d2acd480c5880e8ed5c113ca9a2ddd4d&v=4",
    "localizacao": "Portugal",
-   "seguidores": 762,
+   "seguidores": 763,
    "contribuicoes": 28,
    "cidade": "outra"
   },
@@ -3239,7 +3257,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/154543736?s=96&u=f3529394a52aa042dbaf9498693c710dc111bf56&v=4",
    "localizacao": "Braga",
    "seguidores": 12,
-   "contribuicoes": 338,
+   "contribuicoes": 307,
    "cidade": "braga"
   },
   {
@@ -3256,7 +3274,7 @@
    "nome": "João Pereira",
    "avatar": "https://avatars.githubusercontent.com/u/2126300?s=96&u=25cf8db491366c17b9b4661f01d38db57c2e7279&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 125,
+   "seguidores": 126,
    "contribuicoes": 1,
    "cidade": "porto"
   },
@@ -3284,7 +3302,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/659718?s=96&u=75693f15c82d9dc93ba9bb7d1c6b45b1a753d27f&v=4",
    "localizacao": "Lisbon",
    "seguidores": 47,
-   "contribuicoes": 1925,
+   "contribuicoes": 1935,
    "cidade": "lisboa"
   },
   {
@@ -3293,7 +3311,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/76254467?s=96&u=075015ca902ac80678fed82d7a874f2d61fa810b&v=4",
    "localizacao": "Coimbra,Portugal",
    "seguidores": 10,
-   "contribuicoes": 178,
+   "contribuicoes": 175,
    "cidade": "coimbra"
   },
   {
@@ -3311,7 +3329,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/200215511?s=96&u=c8dfae968ef94c0b055acf6937e55081753de814&v=4",
    "localizacao": "Coimbra",
    "seguidores": 2,
-   "contribuicoes": 464,
+   "contribuicoes": 474,
    "cidade": "coimbra"
   },
   {
@@ -3319,8 +3337,8 @@
    "nome": "João Távora",
    "avatar": "https://avatars.githubusercontent.com/u/387011?s=96&v=4",
    "localizacao": "Portugal",
-   "seguidores": 770,
-   "contribuicoes": 702,
+   "seguidores": 771,
+   "contribuicoes": 703,
    "cidade": "outra"
   },
   {
@@ -3338,7 +3356,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/8648976?s=96&u=dd94d6cbea82c284b86c974118331cb4532b29b5&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 38,
-   "contribuicoes": 1162,
+   "contribuicoes": 1146,
    "cidade": "lisboa"
   },
   {
@@ -3346,8 +3364,8 @@
    "nome": "Joaquim Carvalho",
    "avatar": "https://avatars.githubusercontent.com/u/13982569?s=96&u=a9b8ce0bb794074c89b7d2f08bab125efc25d46d&v=4",
    "localizacao": "Macao, China and Coimbra, Portugal",
-   "seguidores": 5,
-   "contribuicoes": 932,
+   "seguidores": 7,
+   "contribuicoes": 954,
    "cidade": "coimbra"
   },
   {
@@ -3373,7 +3391,7 @@
    "nome": "Jonas Schmedtmann",
    "avatar": "https://avatars.githubusercontent.com/u/18718850?s=96&u=50cbca280870e8794e7fdf2ecc8d5b2ba913ceaa&v=4",
    "localizacao": "Faro, Portugal",
-   "seguidores": 29097,
+   "seguidores": 29100,
    "contribuicoes": 0,
    "cidade": "outra"
   },
@@ -3382,8 +3400,8 @@
    "nome": "Ruskin",
    "avatar": "https://avatars.githubusercontent.com/u/6400000?s=96&u=94decd4d35463d03baea982d640e3e017ee00638&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 108,
-   "contribuicoes": 1437,
+   "seguidores": 114,
+   "contribuicoes": 1447,
    "cidade": "lisboa"
   },
   {
@@ -3401,7 +3419,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/281446?s=96&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 81,
-   "contribuicoes": 91,
+   "contribuicoes": 85,
    "cidade": "braga"
   },
   {
@@ -3418,7 +3436,7 @@
    "nome": "Jorge Leitao",
    "avatar": "https://avatars.githubusercontent.com/u/2772607?s=96&u=6ba4aa5ded7b492043ba76f3f900e3b4cc102b57&v=4",
    "localizacao": "Lisboa, Portugal",
-   "seguidores": 654,
+   "seguidores": 655,
    "contribuicoes": 352,
    "cidade": "lisboa"
   },
@@ -3429,6 +3447,15 @@
    "localizacao": "Coimbra, Portugal",
    "seguidores": 23,
    "contribuicoes": 9,
+   "cidade": "coimbra"
+  },
+  {
+   "login": "jorgesousa",
+   "nome": "Jorge Sousa",
+   "avatar": "https://avatars.githubusercontent.com/u/411500?s=96&u=0e76bc5c89dd821194a3523837cd704e374bd2ed&v=4",
+   "localizacao": "Coimbra",
+   "seguidores": 7,
+   "contribuicoes": 198,
    "cidade": "coimbra"
   },
   {
@@ -3454,8 +3481,8 @@
    "nome": "José Martins",
    "avatar": "https://avatars.githubusercontent.com/u/5178376?s=96&u=3ab2ab9cb82ce9f5f54316a9f96e315ff9d60e54&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 95,
-   "contribuicoes": 370,
+   "seguidores": 96,
+   "contribuicoes": 364,
    "cidade": "braga"
   },
   {
@@ -3472,7 +3499,7 @@
    "nome": "José Varela",
    "avatar": "https://avatars.githubusercontent.com/u/14039341?s=96&u=d1eafe5579d4801931351467f72f30b9e5bbaf27&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 63,
+   "seguidores": 64,
    "contribuicoes": 6,
    "cidade": "braga"
   },
@@ -3481,8 +3508,8 @@
    "nome": "ターニャ",
    "avatar": "https://avatars.githubusercontent.com/u/41003724?s=96&u=756e609a696165b17cfe3421e3e9adb159a259f3&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 149,
-   "contribuicoes": 1879,
+   "seguidores": 148,
+   "contribuicoes": 1833,
    "cidade": "lisboa"
   },
   {
@@ -3491,7 +3518,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4947008?s=96&v=4",
    "localizacao": "Braga",
    "seguidores": 64,
-   "contribuicoes": 78,
+   "contribuicoes": 76,
    "cidade": "braga"
   },
   {
@@ -3499,8 +3526,8 @@
    "nome": "Jose RF Junior",
    "avatar": "https://avatars.githubusercontent.com/u/488409?s=96&u=607810b614dc1d4d6b52ab8c3777629f6c4fd03e&v=4",
    "localizacao": "Portugal",
-   "seguidores": 301,
-   "contribuicoes": 4327,
+   "seguidores": 302,
+   "contribuicoes": 4331,
    "cidade": "outra"
   },
   {
@@ -3509,7 +3536,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/169985376?s=96&u=aa5e7ee4fae679bbf732fc0724c464a06eadf18c&v=4",
    "localizacao": "Lisbon-Portugal",
    "seguidores": 35,
-   "contribuicoes": 1666,
+   "contribuicoes": 1675,
    "cidade": "lisboa"
   },
   {
@@ -3518,7 +3545,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/38820667?s=96&u=1fc25feefbc66df300522a402ec36abe2a7b92ee&v=4",
    "localizacao": "Portugal",
    "seguidores": 503,
-   "contribuicoes": 913,
+   "contribuicoes": 891,
    "cidade": "outra"
   },
   {
@@ -3529,6 +3556,15 @@
    "seguidores": 733,
    "contribuicoes": 181,
    "cidade": "outra"
+  },
+  {
+   "login": "jpboliv",
+   "nome": "João Oliveira",
+   "avatar": "https://avatars.githubusercontent.com/u/9970066?s=96&u=2c68993777192456e0648eabc4148989ff0f777b&v=4",
+   "localizacao": "Coimbra, Portugal",
+   "seguidores": 15,
+   "contribuicoes": 172,
+   "cidade": "coimbra"
   },
   {
    "login": "jpcercal",
@@ -3545,7 +3581,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3944845?s=96&u=3b5f7f1b969fd09626930603c9cffa3dd39f6019&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 272,
-   "contribuicoes": 405,
+   "contribuicoes": 412,
    "cidade": "porto"
   },
   {
@@ -3553,7 +3589,7 @@
    "nome": "João Barbosa",
    "avatar": "https://avatars.githubusercontent.com/u/255686?s=96&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 41,
+   "seguidores": 40,
    "contribuicoes": 8,
    "cidade": "coimbra"
   },
@@ -3563,7 +3599,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/21346716?s=96&u=0a791ae6352764f1b0c11938a9b9ff2b1e3f419f&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 75,
-   "contribuicoes": 2531,
+   "contribuicoes": 2766,
    "cidade": "porto"
   },
   {
@@ -3572,7 +3608,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/829478?s=96&u=99dc6bd1031ae5bc014808e3d4a8bf908b9f5729&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 55,
-   "contribuicoes": 797,
+   "contribuicoes": 1017,
    "cidade": "braga"
   },
   {
@@ -3581,7 +3617,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/69313019?s=96&u=ea7a49be15e53e8c3ff9cd736589f93962296f96&v=4",
    "localizacao": " Coimbra, Portugal ",
    "seguidores": 7,
-   "contribuicoes": 1772,
+   "contribuicoes": 1698,
    "cidade": "coimbra"
   },
   {
@@ -3590,7 +3626,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/94169007?s=96&u=89a0e3942bcddbfaf04e40be5ef057e3d222f920&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 102,
-   "contribuicoes": 55,
+   "contribuicoes": 34,
    "cidade": "braga"
   },
   {
@@ -3608,7 +3644,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/94986369?s=96&u=ad736173fa1fcc095dcc05fe53da33c097866deb&v=4",
    "localizacao": "Porto,Portugal",
    "seguidores": 70,
-   "contribuicoes": 523,
+   "contribuicoes": 516,
    "cidade": "porto"
   },
   {
@@ -3616,7 +3652,7 @@
    "nome": "jvpts11",
    "avatar": "https://avatars.githubusercontent.com/u/97225656?s=96&u=36c3e1cb9900a6bb139665fd3a080db0c20bc35d&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 9,
+   "seguidores": 8,
    "contribuicoes": 4755,
    "cidade": "braga"
   },
@@ -3625,7 +3661,7 @@
    "nome": "Kaio Silveira",
    "avatar": "https://avatars.githubusercontent.com/u/20289884?s=96&u=4ace3e8cf1a5e64e4a72176f7aabd278f9a1fc88&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 280,
+   "seguidores": 278,
    "contribuicoes": 92,
    "cidade": "lisboa"
   },
@@ -3635,7 +3671,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/45371975?s=96&u=ffed45c022db78c4d16de32690fa43c9acc60d4e&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 163,
-   "contribuicoes": 85,
+   "contribuicoes": 82,
    "cidade": "porto"
   },
   {
@@ -3662,7 +3698,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/231748?s=96&u=b2ceee7c41dc231399bff37e23757a801ac92f05&v=4",
    "localizacao": "Lisbon",
    "seguidores": 322,
-   "contribuicoes": 1107,
+   "contribuicoes": 1105,
    "cidade": "lisboa"
   },
   {
@@ -3671,7 +3707,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/40745490?s=96&u=bb0b8de896fb4810bc20efdfba0ee4d8706f799c&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 39,
-   "contribuicoes": 597,
+   "contribuicoes": 596,
    "cidade": "porto"
   },
   {
@@ -3680,7 +3716,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/93687043?s=96&u=f8f737cd0a13aab9c096650b8be0c73125882241&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 49,
-   "contribuicoes": 1158,
+   "contribuicoes": 1159,
    "cidade": "lisboa"
   },
   {
@@ -3698,7 +3734,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/44136083?s=96&u=55481a825dcbe4cf8b49e2398dd9a0ee5d4b7978&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 31,
-   "contribuicoes": 347,
+   "contribuicoes": 341,
    "cidade": "coimbra"
   },
   {
@@ -3716,7 +3752,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/90316?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 344,
-   "contribuicoes": 57,
+   "contribuicoes": 42,
    "cidade": "lisboa"
   },
   {
@@ -3725,7 +3761,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/45215699?s=96&u=951563fa5ad464c7e0e25fbad134e15c55a7191d&v=4",
    "localizacao": "Braga (Portugal)",
    "seguidores": 18,
-   "contribuicoes": 284,
+   "contribuicoes": 278,
    "cidade": "braga"
   },
   {
@@ -3743,7 +3779,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3187659?s=96&u=d915e973e50894028f3c76f6cdfef8322d38ed04&v=4",
    "localizacao": "Coimbra, PT",
    "seguidores": 20,
-   "contribuicoes": 150,
+   "contribuicoes": 152,
    "cidade": "coimbra"
   },
   {
@@ -3769,7 +3805,7 @@
    "nome": "Leonardo La Rocque",
    "avatar": "https://avatars.githubusercontent.com/u/144123533?s=96&u=41c446975660f25c365c0680bf093d81c2238111&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 67,
+   "seguidores": 68,
    "contribuicoes": 390,
    "cidade": "porto"
   },
@@ -3788,7 +3824,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/11493705?s=96&u=aefbca25bdd96571051c1409cd77326378620ab9&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 68,
-   "contribuicoes": 273,
+   "contribuicoes": 268,
    "cidade": "porto"
   },
   {
@@ -3805,8 +3841,8 @@
    "nome": "Leandro Damascena",
    "avatar": "https://avatars.githubusercontent.com/u/4295173?s=96&u=2127d033110788ac049a457d36f6275ac9bee9ab&v=4",
    "localizacao": "Portugal",
-   "seguidores": 168,
-   "contribuicoes": 3145,
+   "seguidores": 170,
+   "contribuicoes": 3121,
    "cidade": "outra"
   },
   {
@@ -3815,7 +3851,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/198607608?s=96&u=749a65e3d50adea2e6b46d236786a2fec4f0f0af&v=4",
    "localizacao": "Coimbra",
    "seguidores": 6,
-   "contribuicoes": 136,
+   "contribuicoes": 116,
    "cidade": "coimbra"
   },
   {
@@ -3824,7 +3860,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6307347?s=96&u=6c4e05768bd90eca8f9b78dc3bdd6f831fb86214&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 73,
-   "contribuicoes": 12,
+   "contribuicoes": 13,
    "cidade": "braga"
   },
   {
@@ -3832,8 +3868,8 @@
    "nome": "Levi Figueira",
    "avatar": "https://avatars.githubusercontent.com/u/1605?s=96&u=809eb219ef106ab8953479537ae41d545fe8ac85&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 82,
-   "contribuicoes": 1687,
+   "seguidores": 84,
+   "contribuicoes": 1690,
    "cidade": "porto"
   },
   {
@@ -3842,7 +3878,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/969146?s=96&u=14a70a47282a004e3d34614186f403f455de0b2e&v=4",
    "localizacao": "Portugal - Coimbra",
    "seguidores": 46,
-   "contribuicoes": 333,
+   "contribuicoes": 317,
    "cidade": "coimbra"
   },
   {
@@ -3851,7 +3887,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/16153737?s=96&u=42e240d9936b2a5cad03e0bf1e7240e2e99beb13&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 1,
-   "contribuicoes": 900,
+   "contribuicoes": 893,
    "cidade": "coimbra"
   },
   {
@@ -3895,8 +3931,8 @@
    "nome": "Louise de Sadeleer",
    "avatar": "https://avatars.githubusercontent.com/u/54376811?s=96&u=8e6d76adc36920163828c8bdf89c446b7a315bd1&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 249,
-   "contribuicoes": 98,
+   "seguidores": 252,
+   "contribuicoes": 100,
    "cidade": "lisboa"
   },
   {
@@ -3914,7 +3950,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/86796669?s=96&u=c7d086447efc537abf5ada357e247e9872d5c172&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 15,
-   "contribuicoes": 279,
+   "contribuicoes": 268,
    "cidade": "coimbra"
   },
   {
@@ -3950,7 +3986,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/44677774?s=96&u=6353c76ddc9dabd8f289c5f6efc993624362ca89&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 54,
-   "contribuicoes": 1036,
+   "contribuicoes": 1062,
    "cidade": "lisboa"
   },
   {
@@ -3959,7 +3995,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/77353979?s=96&u=1f8fbbcb112d4a6897dfc8afd669c6023f361982&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 184,
-   "contribuicoes": 10,
+   "contribuicoes": 9,
    "cidade": "porto"
   },
   {
@@ -3967,7 +4003,7 @@
    "nome": "Luís Rei",
    "avatar": "https://avatars.githubusercontent.com/u/17532454?s=96&u=de0b9369cb734f4d2474c892574a5f974b3b112d&v=4",
    "localizacao": "Coimbra",
-   "seguidores": 36,
+   "seguidores": 37,
    "contribuicoes": 0,
    "cidade": "coimbra"
   },
@@ -3977,7 +4013,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/631728?s=96&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 30,
-   "contribuicoes": 208,
+   "contribuicoes": 207,
    "cidade": "braga"
   },
   {
@@ -3986,7 +4022,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/127343009?s=96&u=3500f94f6640d40797f2bc150a562491a61a0a31&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 14,
-   "contribuicoes": 412,
+   "contribuicoes": 407,
    "cidade": "braga"
   },
   {
@@ -3995,7 +4031,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/166255885?s=96&u=2a942af15924f21ba085e73cb0f63d1f8b48a016&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 11,
-   "contribuicoes": 450,
+   "contribuicoes": 437,
    "cidade": "braga"
   },
   {
@@ -4003,8 +4039,8 @@
    "nome": "Luisa Lima",
    "avatar": "https://avatars.githubusercontent.com/u/1752808?s=96&u=4c645f75687e3e2c80502a631c4e7970ac2b55c8&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 114,
-   "contribuicoes": 756,
+   "seguidores": 115,
+   "contribuicoes": 771,
    "cidade": "porto"
   },
   {
@@ -4013,7 +4049,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/93707203?s=96&u=21c100afd22ea45be061fad73f228ec67a8c7aee&v=4",
    "localizacao": "Coimbra",
    "seguidores": 9,
-   "contribuicoes": 381,
+   "contribuicoes": 387,
    "cidade": "coimbra"
   },
   {
@@ -4022,7 +4058,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/41518136?s=96&u=123147ee4f1bf6a72f5c0147339f586bdb3e6257&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 1,
-   "contribuicoes": 747,
+   "contribuicoes": 449,
    "cidade": "coimbra"
   },
   {
@@ -4031,7 +4067,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/107959860?s=96&u=9c65b35ed1911fce13029b0a2ac4ecb6413fdb94&v=4",
    "localizacao": "Braga",
    "seguidores": 4,
-   "contribuicoes": 581,
+   "contribuicoes": 578,
    "cidade": "braga"
   },
   {
@@ -4049,7 +4085,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/20297133?s=96&u=8dbf87a222aaeb96768024d9cdf0609f50257f6b&v=4",
    "localizacao": "Coimbra",
    "seguidores": 4,
-   "contribuicoes": 175,
+   "contribuicoes": 241,
    "cidade": "coimbra"
   },
   {
@@ -4058,7 +4094,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2896675?s=96&u=0b75ca5def5ee1c2e1d495bf717f0c7780fe0ed7&v=4",
    "localizacao": "Porto/Portugal",
    "seguidores": 44,
-   "contribuicoes": 268,
+   "contribuicoes": 269,
    "cidade": "porto"
   },
   {
@@ -4067,7 +4103,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/73436445?s=96&u=66c2161fabd7ce6cdd38ab64702af1412632d4bb&v=4",
    "localizacao": "Portugal",
    "seguidores": 172,
-   "contribuicoes": 2408,
+   "contribuicoes": 2460,
    "cidade": "outra"
   },
   {
@@ -4076,7 +4112,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/93404037?s=96&u=b81c0585d2ba80cc293b27a9433eb21d7cbbf817&v=4",
    "localizacao": "Parque Coimbra/Móstoles/Madrid/España",
    "seguidores": 16,
-   "contribuicoes": 1883,
+   "contribuicoes": 1359,
    "cidade": "coimbra"
   },
   {
@@ -4084,8 +4120,8 @@
    "nome": "Miguel Piedrafita",
    "avatar": "https://avatars.githubusercontent.com/u/23558090?s=96&u=8033dca78038cf5ea97779318407f3408d181430&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 3509,
-   "contribuicoes": 566,
+   "seguidores": 3508,
+   "contribuicoes": 555,
    "cidade": "lisboa"
   },
   {
@@ -4094,7 +4130,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/9501115?s=96&u=3c44d2e5369c730d5fb8e765aa22a67a443c716e&v=4",
    "localizacao": "Ourém / Portugal",
    "seguidores": 719,
-   "contribuicoes": 2371,
+   "contribuicoes": 2380,
    "cidade": "outra"
   },
   {
@@ -4107,12 +4143,21 @@
    "cidade": "porto"
   },
   {
+   "login": "Mackgame4",
+   "nome": "Fab. Magalhaes",
+   "avatar": "https://avatars.githubusercontent.com/u/42896437?s=96&u=c1e420305163535f732d3806bf9e72cf25f3054f&v=4",
+   "localizacao": "Braga, Portugal",
+   "seguidores": 26,
+   "contribuicoes": 177,
+   "cidade": "braga"
+  },
+  {
    "login": "mAd-5864",
    "nome": "Pedro Amorim",
    "avatar": "https://avatars.githubusercontent.com/u/47073067?s=96&v=4",
    "localizacao": "Coimbra - Porto",
    "seguidores": 15,
-   "contribuicoes": 304,
+   "contribuicoes": 292,
    "cidade": "porto"
   },
   {
@@ -4121,7 +4166,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/866755?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 31,
-   "contribuicoes": 3052,
+   "contribuicoes": 3090,
    "cidade": "lisboa"
   },
   {
@@ -4193,7 +4238,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/16294901?s=96&u=c52f16b6424d2a492928dd849b12fda4706b71e3&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 43,
-   "contribuicoes": 700,
+   "contribuicoes": 654,
    "cidade": "porto"
   },
   {
@@ -4238,7 +4283,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/67120870?s=96&u=8efed04e9150cb09d958271b20b4faa8ebb4918b&v=4",
    "localizacao": "Porto, Portugual.",
    "seguidores": 108,
-   "contribuicoes": 72,
+   "contribuicoes": 69,
    "cidade": "porto"
   },
   {
@@ -4273,8 +4318,8 @@
    "nome": "Alex Kladov",
    "avatar": "https://avatars.githubusercontent.com/u/1711539?s=96&u=92ad5cf2b0d76b663257d75d2d2ad7ca56ecdc84&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 7260,
-   "contribuicoes": 905,
+   "seguidores": 7265,
+   "contribuicoes": 860,
    "cidade": "lisboa"
   },
   {
@@ -4282,8 +4327,8 @@
    "nome": "Matt Delac",
    "avatar": "https://avatars.githubusercontent.com/u/234575?s=96&u=29860584de4305b26c76e024c68770199167dce9&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 2958,
-   "contribuicoes": 144,
+   "seguidores": 2959,
+   "contribuicoes": 138,
    "cidade": "lisboa"
   },
   {
@@ -4309,7 +4354,7 @@
    "nome": "Gkoran Stoilkovits",
    "avatar": "https://avatars.githubusercontent.com/u/13717208?s=96&v=4",
    "localizacao": "Porto Heli, GREECE",
-   "seguidores": 383,
+   "seguidores": 384,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -4337,7 +4382,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/55558312?s=96&u=472d078f1750392c26f6ad14de60afda9355c407&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 69,
-   "contribuicoes": 4,
+   "contribuicoes": 12,
    "cidade": "braga"
   },
   {
@@ -4345,8 +4390,8 @@
    "nome": "Miguel Cabral Pinto",
    "avatar": "https://avatars.githubusercontent.com/u/109546254?s=96&u=2bd02933af5adbebcc867279099cf8329d62b7a1&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 26,
-   "contribuicoes": 213,
+   "seguidores": 25,
+   "contribuicoes": 207,
    "cidade": "coimbra"
   },
   {
@@ -4355,7 +4400,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/121453818?s=96&u=7fb11510ea54f108c02f1fe020f36849a088be36&v=4",
    "localizacao": "Portugal, Coimbra",
    "seguidores": 3,
-   "contribuicoes": 200,
+   "contribuicoes": 184,
    "cidade": "coimbra"
   },
   {
@@ -4363,7 +4408,7 @@
    "nome": "mide-fre",
    "avatar": "https://avatars.githubusercontent.com/u/70178046?s=96&u=aa9febb16de9b11c079fa8832351d4f93ffdb045&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 66,
+   "seguidores": 68,
    "contribuicoes": 280,
    "cidade": "porto"
   },
@@ -4373,16 +4418,16 @@
    "avatar": "https://avatars.githubusercontent.com/u/10220064?s=96&u=3a6043310acf6f42f3a98e211edbd969963e2345&v=4",
    "localizacao": "Oporto, Portugal",
    "seguidores": 51,
-   "contribuicoes": 1013,
+   "contribuicoes": 1050,
    "cidade": "porto"
   },
   {
    "login": "MesutUluag",
    "nome": "Mesut Uluag",
-   "avatar": "https://avatars.githubusercontent.com/u/40231678?s=96&u=9ad5f0086d66126791994cdd66532f6a9692e157&v=4",
+   "avatar": "https://avatars.githubusercontent.com/u/40231678?s=96&u=c2923d434e713599f650e1134f6941fb82138a20&v=4",
    "localizacao": "Coimbra/Portugal",
    "seguidores": 4,
-   "contribuicoes": 288,
+   "contribuicoes": 306,
    "cidade": "coimbra"
   },
   {
@@ -4400,7 +4445,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/233812?s=96&u=e9811098a0855095d2d5b2f2c05a902b42093844&v=4",
    "localizacao": "Coimbra",
    "seguidores": 6,
-   "contribuicoes": 276,
+   "contribuicoes": 140,
    "cidade": "coimbra"
   },
   {
@@ -4418,7 +4463,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/133495772?s=96&u=1f8c366768ce55cae3963f488335ef1c539e23da&v=4",
    "localizacao": "Coimbra",
    "seguidores": 3,
-   "contribuicoes": 358,
+   "contribuicoes": 360,
    "cidade": "coimbra"
   },
   {
@@ -4454,7 +4499,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/73142905?s=96&u=5b6f4e4cc252c6899a82fed2d80bf2fe08ab57d8&v=4",
    "localizacao": "Fafe, Braga, Portugal",
    "seguidores": 8,
-   "contribuicoes": 1007,
+   "contribuicoes": 1002,
    "cidade": "braga"
   },
   {
@@ -4463,7 +4508,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/122038209?s=96&u=70b4da810c9d7e5164ca6015128feb2d1925c6c7&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 6,
-   "contribuicoes": 409,
+   "contribuicoes": 410,
    "cidade": "braga"
   },
   {
@@ -4472,7 +4517,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3854939?s=96&u=9de9f0698bf6bf032bc2e45fbc8bd0d637cc92fc&v=4",
    "localizacao": "Braga",
    "seguidores": 59,
-   "contribuicoes": 104,
+   "contribuicoes": 103,
    "cidade": "braga"
   },
   {
@@ -4490,7 +4535,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/18242988?s=96&u=02e1b8440e40d632021eff7a76184aa5f817bb7d&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 12,
-   "contribuicoes": 201,
+   "contribuicoes": 200,
    "cidade": "braga"
   },
   {
@@ -4517,7 +4562,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4440734?s=96&u=c1092d0ae0414fb903b607e15bb1a648f269c7fb&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 103,
-   "contribuicoes": 570,
+   "contribuicoes": 558,
    "cidade": "porto"
   },
   {
@@ -4525,8 +4570,8 @@
    "nome": "Marco Miguelote",
    "avatar": "https://avatars.githubusercontent.com/u/154000666?s=96&u=aa84d808be22fda71e4a70e2b9e58de17d098367&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 54,
-   "contribuicoes": 282,
+   "seguidores": 53,
+   "contribuicoes": 284,
    "cidade": "porto"
   },
   {
@@ -4535,7 +4580,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/23720527?s=96&u=124fdf7ecb1ac24215a40e106251273e07706a73&v=4",
    "localizacao": "Coimbra",
    "seguidores": 79,
-   "contribuicoes": 1,
+   "contribuicoes": 0,
    "cidade": "coimbra"
   },
   {
@@ -4544,7 +4589,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/45471030?s=96&u=85a3524990ad34baf0942ccbb64cc172db3cf554&v=4",
    "localizacao": "Braga",
    "seguidores": 61,
-   "contribuicoes": 396,
+   "contribuicoes": 377,
    "cidade": "braga"
   },
   {
@@ -4552,8 +4597,8 @@
    "nome": "nelson jr mota",
    "avatar": "https://avatars.githubusercontent.com/u/118323821?s=96&u=2ab0c944c5a69421959aae21bcc5e6804ee65f0b&v=4",
    "localizacao": "Portugal,Lisbon",
-   "seguidores": 9451,
-   "contribuicoes": 5644,
+   "seguidores": 9470,
+   "contribuicoes": 5605,
    "cidade": "lisboa"
   },
   {
@@ -4571,7 +4616,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/182520319?s=96&u=6acac6c4571baccc98dc60a9bade101c590678ba&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 11,
-   "contribuicoes": 325,
+   "contribuicoes": 356,
    "cidade": "braga"
   },
   {
@@ -4580,7 +4625,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/31572262?s=96&u=0dc24ba35c9a901687ce920b29a14bcc25e31db2&v=4",
    "localizacao": "Guimarães, Braga - Portugal",
    "seguidores": 6,
-   "contribuicoes": 403,
+   "contribuicoes": 400,
    "cidade": "braga"
   },
   {
@@ -4589,7 +4634,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/25549745?s=96&u=c8eecf8b7dc7d5bb0dd150bdadd61886635c16cf&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 70,
-   "contribuicoes": 294,
+   "contribuicoes": 461,
    "cidade": "porto"
   },
   {
@@ -4597,8 +4642,8 @@
    "nome": "Max",
    "avatar": "https://avatars.githubusercontent.com/u/14476356?s=96&u=70e8c4a181f24e6635dbdda883071b577884512b&v=4",
    "localizacao": "Portugal",
-   "seguidores": 509,
-   "contribuicoes": 509,
+   "seguidores": 511,
+   "contribuicoes": 515,
    "cidade": "outra"
   },
   {
@@ -4615,8 +4660,8 @@
    "nome": "Miguel Palhas",
    "avatar": "https://avatars.githubusercontent.com/u/283819?s=96&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 238,
-   "contribuicoes": 1391,
+   "seguidores": 239,
+   "contribuicoes": 1341,
    "cidade": "braga"
   },
   {
@@ -4634,7 +4679,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/838839?s=96&u=f8c888f7984d9698ac4a7146fea4041aa1a0a1fe&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 81,
-   "contribuicoes": 4481,
+   "contribuicoes": 4505,
    "cidade": "lisboa"
   },
   {
@@ -4643,7 +4688,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5637550?s=96&u=e8759543570a70d1998c1e9b68e7d27a73509f21&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 199,
-   "contribuicoes": 777,
+   "contribuicoes": 768,
    "cidade": "lisboa"
   },
   {
@@ -4652,7 +4697,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4016200?s=96&u=a5a1a652108d88b672ca43480cf9477253e63113&v=4",
    "localizacao": "oporto",
    "seguidores": 11,
-   "contribuicoes": 436,
+   "contribuicoes": 428,
    "cidade": "porto"
   },
   {
@@ -4660,8 +4705,8 @@
    "nome": "Nelson",
    "avatar": "https://avatars.githubusercontent.com/u/194400?s=96&u=405fb897c18f414ea8c4f4f2613fbef605855f02&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 3428,
-   "contribuicoes": 3525,
+   "seguidores": 3430,
+   "contribuicoes": 3571,
    "cidade": "braga"
   },
   {
@@ -4670,7 +4715,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/910242?s=96&u=fc4f95c521aa03a7e69bd47e1755c6131b4ef3ba&v=4",
    "localizacao": "Portugal",
    "seguidores": 64,
-   "contribuicoes": 3684,
+   "contribuicoes": 3728,
    "cidade": "outra"
   },
   {
@@ -4678,8 +4723,8 @@
    "nome": "Nico Flaig",
    "avatar": "https://avatars.githubusercontent.com/u/38436224?s=96&u=5862a2c2438b5c9c48be6e908b07203d1b6d045d&v=4",
    "localizacao": "Portugal",
-   "seguidores": 132,
-   "contribuicoes": 3252,
+   "seguidores": 134,
+   "contribuicoes": 3248,
    "cidade": "outra"
   },
   {
@@ -4697,7 +4742,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/39348559?s=96&u=730be8f1ef21a79daf7da855ab6e071e104fcf90&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 67,
-   "contribuicoes": 2346,
+   "contribuicoes": 2325,
    "cidade": "lisboa"
   },
   {
@@ -4705,8 +4750,8 @@
    "nome": "Nicolas Takashi",
    "avatar": "https://avatars.githubusercontent.com/u/8205546?s=96&u=2b4a3d822be2c1ce59a52bdc69bb128ec1eb0fff&v=4",
    "localizacao": "Braga - Portugal",
-   "seguidores": 217,
-   "contribuicoes": 1404,
+   "seguidores": 219,
+   "contribuicoes": 1415,
    "cidade": "braga"
   },
   {
@@ -4715,7 +4760,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/32066?s=96&v=4",
    "localizacao": "Portugal, Lisboa",
    "seguidores": 441,
-   "contribuicoes": 2554,
+   "contribuicoes": 2564,
    "cidade": "lisboa"
   },
   {
@@ -4724,7 +4769,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5814780?s=96&u=e8c67080fd57ceb962cad6f8797e40dd85ecbf31&v=4",
    "localizacao": "Coimbra",
    "seguidores": 25,
-   "contribuicoes": 385,
+   "contribuicoes": 381,
    "cidade": "coimbra"
   },
   {
@@ -4733,7 +4778,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/46088089?s=96&u=2747c41b8a4224643f9b43075c5b7e76afa103dc&v=4",
    "localizacao": "Lisboa-Portugal",
    "seguidores": 26,
-   "contribuicoes": 2809,
+   "contribuicoes": 2808,
    "cidade": "lisboa"
   },
   {
@@ -4750,8 +4795,8 @@
    "nome": "Nuno C.",
    "avatar": "https://avatars.githubusercontent.com/u/3803196?s=96&u=55e9b2cfab1bd82d7150728998b3867147739c26&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 210,
-   "contribuicoes": 3651,
+   "seguidores": 211,
+   "contribuicoes": 3649,
    "cidade": "lisboa"
   },
   {
@@ -4777,8 +4822,8 @@
    "nome": "nunomaduro",
    "avatar": "https://avatars.githubusercontent.com/u/5457236?s=96&u=a9b18ba8f2235155d82b44c554b6be4c20dce091&v=4",
    "localizacao": "Portugal",
-   "seguidores": 9513,
-   "contribuicoes": 3338,
+   "seguidores": 9516,
+   "contribuicoes": 3348,
    "cidade": "outra"
   },
   {
@@ -4809,21 +4854,12 @@
    "cidade": "coimbra"
   },
   {
-   "login": "OL-sergio",
-   "nome": "Sérgio Oliveira",
-   "avatar": "https://avatars.githubusercontent.com/u/61662970?s=96&v=4",
-   "localizacao": "Portugal, Braga, Guimarães",
-   "seguidores": 8,
-   "contribuicoes": 172,
-   "cidade": "braga"
-  },
-  {
    "login": "oleksandry24",
    "nome": "Oleksandr Yarotskyi",
    "avatar": "https://avatars.githubusercontent.com/u/116321967?s=96&u=864d4cceb8ca76adda68c9c020289d92ee922b5d&v=4",
    "localizacao": "Coimbra",
    "seguidores": 7,
-   "contribuicoes": 227,
+   "contribuicoes": 228,
    "cidade": "coimbra"
   },
   {
@@ -4832,7 +4868,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/15081095?s=96&u=bd38317159287da1b6917fbd809bf74e3ad13ec7&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 27,
-   "contribuicoes": 1156,
+   "contribuicoes": 1157,
    "cidade": "lisboa"
   },
   {
@@ -4841,7 +4877,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6345052?s=96&u=2f1cb6d45a877ccbf617997103b2f84d2568b6c8&v=4",
    "localizacao": "Lisboa",
    "seguidores": 94,
-   "contribuicoes": 3862,
+   "contribuicoes": 3784,
    "cidade": "lisboa"
   },
   {
@@ -4858,8 +4894,8 @@
    "nome": "Diogo Sousa",
    "avatar": "https://avatars.githubusercontent.com/u/4107683?s=96&v=4",
    "localizacao": "Lisboa",
-   "seguidores": 211,
-   "contribuicoes": 245,
+   "seguidores": 212,
+   "contribuicoes": 230,
    "cidade": "lisboa"
   },
   {
@@ -4867,8 +4903,8 @@
    "nome": "Otávio Santana",
    "avatar": "https://avatars.githubusercontent.com/u/863011?s=96&u=f9b3a5b52966cdd014b400415c179dfbf7ebc7e7&v=4",
    "localizacao": "Portugal",
-   "seguidores": 1324,
-   "contribuicoes": 9674,
+   "seguidores": 1325,
+   "contribuicoes": 9563,
    "cidade": "outra"
   },
   {
@@ -4876,8 +4912,8 @@
    "nome": "Pablo Queiroz",
    "avatar": "https://avatars.githubusercontent.com/u/242173694?s=96&u=dc3398c3bd74ff98ff43365ac7369b86fc716d8b&v=4",
    "localizacao": "Porto - Portugal",
-   "seguidores": 44,
-   "contribuicoes": 481,
+   "seguidores": 43,
+   "contribuicoes": 479,
    "cidade": "porto"
   },
   {
@@ -4895,7 +4931,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/803954?s=96&u=1a22dfc8c4525a14735920bc529dec514771e20b&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 77,
-   "contribuicoes": 523,
+   "contribuicoes": 511,
    "cidade": "coimbra"
   },
   {
@@ -4913,7 +4949,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3094044?s=96&u=97025951eb2edcaf8932afa0c5061957fa382542&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 213,
-   "contribuicoes": 19116,
+   "contribuicoes": 21946,
    "cidade": "lisboa"
   },
   {
@@ -4921,8 +4957,8 @@
    "nome": "Martim Moreira",
    "avatar": "https://avatars.githubusercontent.com/u/98058202?s=96&u=747ad38cfa178b644c04185d7e6273b23ad6c481&v=4",
    "localizacao": "Braga",
-   "seguidores": 4,
-   "contribuicoes": 364,
+   "seguidores": 3,
+   "contribuicoes": 351,
    "cidade": "braga"
   },
   {
@@ -4940,7 +4976,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/44772900?s=96&u=53cecdd499769ee19e6a40916c87d9802dbe18e9&v=4",
    "localizacao": "Oporto, Portugal",
    "seguidores": 53,
-   "contribuicoes": 1951,
+   "contribuicoes": 1870,
    "cidade": "porto"
   },
   {
@@ -4967,7 +5003,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/116603584?s=96&u=1fe6bfddfb9a9931ae4e83676ba82e8935140c3b&v=4",
    "localizacao": "Coimbra",
    "seguidores": 6,
-   "contribuicoes": 260,
+   "contribuicoes": 258,
    "cidade": "coimbra"
   },
   {
@@ -4985,7 +5021,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/109802203?s=96&u=b75a40109cb108434394b6bda0e4f648797eb40a&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 100,
-   "contribuicoes": 112,
+   "contribuicoes": 111,
    "cidade": "braga"
   },
   {
@@ -4994,7 +5030,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/118676706?s=96&u=c5bc26540a60c02cf2560186bb0ad471309acb62&v=4",
    "localizacao": "Lisbon",
    "seguidores": 57,
-   "contribuicoes": 2021,
+   "contribuicoes": 2106,
    "cidade": "lisboa"
   },
   {
@@ -5030,7 +5066,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/237442?s=96&u=be3be0716f4f0a8f506b5bb928b2db2515827864&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 23,
-   "contribuicoes": 665,
+   "contribuicoes": 679,
    "cidade": "braga"
   },
   {
@@ -5039,7 +5075,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/13814744?s=96&u=97e7c8ac3f3f25c6c9a58af7d9c9cdf464833105&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 49,
-   "contribuicoes": 854,
+   "contribuicoes": 865,
    "cidade": "porto"
   },
   {
@@ -5065,7 +5101,7 @@
    "nome": "Pedro Machado Santa",
    "avatar": "https://avatars.githubusercontent.com/u/2737?s=96&u=45c5d19767eec3a3e5d2283b9b025ba164ebb3ce&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 98,
+   "seguidores": 100,
    "contribuicoes": 5,
    "cidade": "coimbra"
   },
@@ -5075,7 +5111,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/10136079?s=96&u=75eae9ce8d884c821a7eb81bf26d47c455da72dc&v=4",
    "localizacao": "Portugal",
    "seguidores": 1030,
-   "contribuicoes": 230,
+   "contribuicoes": 205,
    "cidade": "outra"
   },
   {
@@ -5093,7 +5129,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/106095810?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 60,
-   "contribuicoes": 3607,
+   "contribuicoes": 3659,
    "cidade": "porto"
   },
   {
@@ -5111,7 +5147,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/47910?s=96&u=15f01b65841f1aaeaaf2df82c0496660f5ac14a0&v=4",
    "localizacao": "Portugal",
    "seguidores": 1061,
-   "contribuicoes": 1173,
+   "contribuicoes": 1147,
    "cidade": "outra"
   },
   {
@@ -5119,7 +5155,7 @@
    "nome": "Pedro Henrique Pessoa",
    "avatar": "https://avatars.githubusercontent.com/u/3849946?s=96&u=a452cee2716a67db038fa08b487b714f0dd929d7&v=4",
    "localizacao": "Brazil and Portugal",
-   "seguidores": 584,
+   "seguidores": 585,
    "contribuicoes": 35,
    "cidade": "outra"
   },
@@ -5129,7 +5165,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/70387940?s=96&u=afd7cac58954f2c840ddfb17ba584b850bf2c789&v=4",
    "localizacao": "Coimbra",
    "seguidores": 3,
-   "contribuicoes": 372,
+   "contribuicoes": 370,
    "cidade": "coimbra"
   },
   {
@@ -5146,8 +5182,8 @@
    "nome": "Yoichi Hirai",
    "avatar": "https://avatars.githubusercontent.com/u/44281?s=96&u=19789513178700ad73a6cf535a40fbbfdc1ad615&v=4",
    "localizacao": "Portugal",
-   "seguidores": 819,
-   "contribuicoes": 83511,
+   "seguidores": 821,
+   "contribuicoes": 84867,
    "cidade": "outra"
   },
   {
@@ -5155,7 +5191,7 @@
    "nome": "Pires",
    "avatar": "https://avatars.githubusercontent.com/u/1752631?s=96&u=98f10ff4a1f1b70d96185f33e8349b3105527659&v=4",
    "localizacao": "Portugal",
-   "seguidores": 741,
+   "seguidores": 740,
    "contribuicoes": 251,
    "cidade": "outra"
   },
@@ -5173,8 +5209,8 @@
    "nome": "Paulo Koch",
    "avatar": "https://avatars.githubusercontent.com/u/9627?s=96&u=88f9fe57dcad7362d5db33575a3d4932746ada5e&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 126,
-   "contribuicoes": 523,
+   "seguidores": 127,
+   "contribuicoes": 517,
    "cidade": "porto"
   },
   {
@@ -5183,7 +5219,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/294478?s=96&v=4",
    "localizacao": "Portugal",
    "seguidores": 122,
-   "contribuicoes": 2202,
+   "contribuicoes": 2199,
    "cidade": "outra"
   },
   {
@@ -5200,8 +5236,8 @@
    "nome": "Alberto Ponces",
    "avatar": "https://avatars.githubusercontent.com/u/4687488?s=96&u=3cff1eb355ba66db565fc259fa079969bcea43eb&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 533,
-   "contribuicoes": 141,
+   "seguidores": 535,
+   "contribuicoes": 145,
    "cidade": "porto"
   },
   {
@@ -5263,7 +5299,7 @@
    "nome": "Diogo Rebelo",
    "avatar": "https://avatars.githubusercontent.com/u/61949643?s=96&u=852c96fe59d23e5467198606066b913dc8a8626a&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 85,
+   "seguidores": 84,
    "contribuicoes": 1,
    "cidade": "braga"
   },
@@ -5291,7 +5327,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5796305?s=96&u=5cc3e8b723bc4ca332e45cf344d1898da0ad956f&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 367,
-   "contribuicoes": 1290,
+   "contribuicoes": 1308,
    "cidade": "coimbra"
   },
   {
@@ -5299,8 +5335,8 @@
    "nome": "Rafael Diniz",
    "avatar": "https://avatars.githubusercontent.com/u/69954?s=96&u=1fdd6d1057c48126fd55a0213e6bc2651fcf1cf3&v=4",
    "localizacao": "Lisboa",
-   "seguidores": 88,
-   "contribuicoes": 2702,
+   "seguidores": 89,
+   "contribuicoes": 2768,
    "cidade": "lisboa"
   },
   {
@@ -5354,17 +5390,8 @@
    "avatar": "https://avatars.githubusercontent.com/u/44037130?s=96&u=d70d65351bc771d30625a0d491e06e9bcfabad1e&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 19,
-   "contribuicoes": 236,
+   "contribuicoes": 235,
    "cidade": "braga"
-  },
-  {
-   "login": "Ramyad20",
-   "nome": "Ramyad Raadi",
-   "avatar": "https://avatars.githubusercontent.com/u/56471076?s=96&u=54235b43827f7a2ed5c40473576c085916b41f63&v=4",
-   "localizacao": "Coimbra",
-   "seguidores": 10,
-   "contribuicoes": 114,
-   "cidade": "coimbra"
   },
   {
    "login": "rapzo",
@@ -5390,7 +5417,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/121637489?s=96&u=29985bd560dbe6eebe931b5739a585ede1a761c7&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 3,
-   "contribuicoes": 154,
+   "contribuicoes": 153,
    "cidade": "coimbra"
   },
   {
@@ -5399,7 +5426,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/95978402?s=96&u=f23cfadf2a0de6998fe94dcb686cc466bcf7abc3&v=4",
    "localizacao": "Portugal, Braga",
    "seguidores": 12,
-   "contribuicoes": 270,
+   "contribuicoes": 277,
    "cidade": "braga"
   },
   {
@@ -5407,8 +5434,8 @@
    "nome": "Rui Carmo",
    "avatar": "https://avatars.githubusercontent.com/u/392683?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 716,
-   "contribuicoes": 25939,
+   "seguidores": 718,
+   "contribuicoes": 26141,
    "cidade": "lisboa"
   },
   {
@@ -5417,7 +5444,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6058141?s=96&u=7dd3c6849a5a2066593816e705e024ab00b81fd6&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 33,
-   "contribuicoes": 270,
+   "contribuicoes": 269,
    "cidade": "coimbra"
   },
   {
@@ -5453,7 +5480,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/11340267?s=96&u=0167761fb419d3e147ae88e464b7f60c61c67e2d&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 45,
-   "contribuicoes": 388,
+   "contribuicoes": 387,
    "cidade": "braga"
   },
   {
@@ -5462,7 +5489,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6718144?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 918,
-   "contribuicoes": 24,
+   "contribuicoes": 26,
    "cidade": "porto"
   },
   {
@@ -5471,7 +5498,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/5116633?s=96&u=931885f175f23b64f228c4e04207d60e9ee38839&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 32,
-   "contribuicoes": 26,
+   "contribuicoes": 25,
    "cidade": "coimbra"
   },
   {
@@ -5479,7 +5506,7 @@
    "nome": "Renato Santos",
    "avatar": "https://avatars.githubusercontent.com/u/25869973?s=96&u=a073fb9edeee3eed020611a741066f985b3ce4cb&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 28,
+   "seguidores": 29,
    "contribuicoes": 0,
    "cidade": "coimbra"
   },
@@ -5488,7 +5515,7 @@
    "nome": "Rodrigo Costa",
    "avatar": "https://avatars.githubusercontent.com/u/57047212?s=96&u=68a64ac6caecf6c3e793745ad908a291118a634e&v=4",
    "localizacao": "Barcelos - Braga ",
-   "seguidores": 93,
+   "seguidores": 94,
    "contribuicoes": 176,
    "cidade": "braga"
   },
@@ -5507,7 +5534,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/96476?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 93,
-   "contribuicoes": 495,
+   "contribuicoes": 477,
    "cidade": "porto"
   },
   {
@@ -5515,8 +5542,8 @@
    "nome": "Rui Lopes",
    "avatar": "https://avatars.githubusercontent.com/u/43356?s=96&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 309,
-   "contribuicoes": 4435,
+   "seguidores": 310,
+   "contribuicoes": 4515,
    "cidade": "lisboa"
   },
   {
@@ -5525,7 +5552,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/32687881?s=96&u=63e6dbc59e6ceb71d3e31dc2fedebb00960134ae&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 44,
-   "contribuicoes": 287,
+   "contribuicoes": 293,
    "cidade": "braga"
   },
   {
@@ -5534,7 +5561,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/182244040?s=96&u=3a30e6a3953b243e5679a193ed6125255711b38b&v=4",
    "localizacao": "Lisboa",
    "seguidores": 54,
-   "contribuicoes": 1348,
+   "contribuicoes": 1364,
    "cidade": "lisboa"
   },
   {
@@ -5543,7 +5570,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/4249828?s=96&u=a87e87a8afc689458846a47815a64110e6bdef61&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 12,
-   "contribuicoes": 129,
+   "contribuicoes": 127,
    "cidade": "coimbra"
   },
   {
@@ -5552,7 +5579,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1737575?s=96&u=7b188041d60a555d9e815ad3d74f08e32280e4c5&v=4",
    "localizacao": "Lisbon Portugal",
    "seguidores": 34,
-   "contribuicoes": 8020,
+   "contribuicoes": 8127,
    "cidade": "lisboa"
   },
   {
@@ -5563,6 +5590,15 @@
    "seguidores": 78,
    "contribuicoes": 0,
    "cidade": "braga"
+  },
+  {
+   "login": "rickmff",
+   "nome": "Henrique Faria",
+   "avatar": "https://avatars.githubusercontent.com/u/46444941?s=96&u=e3911b0e1ecefcb056200b0fe957e2214e51dcd9&v=4",
+   "localizacao": "Porto",
+   "seguidores": 73,
+   "contribuicoes": 376,
+   "cidade": "porto"
   },
   {
    "login": "risantos",
@@ -5615,7 +5651,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/159433?s=96&u=1a6332ca98f24f5a2ba9ff8921592f907367518a&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 145,
-   "contribuicoes": 100,
+   "contribuicoes": 97,
    "cidade": "coimbra"
   },
   {
@@ -5624,7 +5660,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2514072?s=96&u=f6e98092e1e0ee42b1fe274a6c9c4f505b9ddffa&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 66,
-   "contribuicoes": 75,
+   "contribuicoes": 44,
    "cidade": "coimbra"
   },
   {
@@ -5642,7 +5678,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/458654?s=96&u=efa3b748f27fa3f3ac6bc6b0d16cc9221b44670b&v=4",
    "localizacao": "Viana do Castelo, Portugal",
    "seguidores": 4708,
-   "contribuicoes": 751,
+   "contribuicoes": 711,
    "cidade": "outra"
   },
   {
@@ -5651,7 +5687,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/23458442?s=96&u=04fa5966782b411ec9a69d415001d13f90766e27&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 116,
-   "contribuicoes": 2461,
+   "contribuicoes": 2471,
    "cidade": "lisboa"
   },
   {
@@ -5660,7 +5696,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/77681625?s=96&u=e69e77c91bbc0f86cae024dc6c080ba4700b68ca&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 40,
-   "contribuicoes": 9666,
+   "contribuicoes": 9628,
    "cidade": "porto"
   },
   {
@@ -5669,7 +5705,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/145488582?s=96&u=4335daef20935bb974dc27f7a859adfa56805502&v=4",
    "localizacao": "Braga",
    "seguidores": 9,
-   "contribuicoes": 856,
+   "contribuicoes": 837,
    "cidade": "braga"
   },
   {
@@ -5687,7 +5723,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/16602151?s=96&u=d46601d07b1e8a891ac36e64567e074276cbd53e&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 7,
-   "contribuicoes": 446,
+   "contribuicoes": 481,
    "cidade": "braga"
   },
   {
@@ -5695,8 +5731,8 @@
    "nome": "Rogério Vicente",
    "avatar": "https://avatars.githubusercontent.com/u/38240?s=96&u=16ed753c5edc3ce274d2b586a49114960c3f5966&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 302,
-   "contribuicoes": 294,
+   "seguidores": 303,
+   "contribuicoes": 288,
    "cidade": "lisboa"
   },
   {
@@ -5705,7 +5741,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/557395?s=96&u=94c29469f25519de133823c440665f91902d7b53&v=4",
    "localizacao": "Loulé, Faro, Portugal",
    "seguidores": 186,
-   "contribuicoes": 2094,
+   "contribuicoes": 2107,
    "cidade": "outra"
   },
   {
@@ -5714,7 +5750,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/22591718?s=96&u=d57777f5648ad2019454d34be7a6089e3d67dd9d&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 24,
-   "contribuicoes": 1493,
+   "contribuicoes": 1512,
    "cidade": "coimbra"
   },
   {
@@ -5741,7 +5777,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/132614772?s=96&u=33713f2a50f54ef1d4016fd128f1c87f878d9271&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 14,
-   "contribuicoes": 203,
+   "contribuicoes": 183,
    "cidade": "braga"
   },
   {
@@ -5750,7 +5786,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/902384?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 228,
-   "contribuicoes": 596,
+   "contribuicoes": 586,
    "cidade": "lisboa"
   },
   {
@@ -5758,8 +5794,8 @@
    "nome": "Ruben",
    "avatar": "https://avatars.githubusercontent.com/u/8454267?s=96&u=41a1b550182d5e3d82ea1e62550bb063579e81d6&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 1287,
-   "contribuicoes": 6325,
+   "seguidores": 1288,
+   "contribuicoes": 6783,
    "cidade": "lisboa"
   },
   {
@@ -5768,7 +5804,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/8901722?s=96&u=2269fb564f1ff6ba22a4ec40a2220aa66642fe71&v=4",
    "localizacao": "Lisbon",
    "seguidores": 59,
-   "contribuicoes": 2919,
+   "contribuicoes": 2918,
    "cidade": "lisboa"
   },
   {
@@ -5776,18 +5812,9 @@
    "nome": "Ruben Teixeira",
    "avatar": "https://avatars.githubusercontent.com/u/102286541?s=96&u=6569b8f093bb49365016aa0bc92b3111e2d9f01d&v=4",
    "localizacao": "Barreiro, Portugal",
-   "seguidores": 701,
+   "seguidores": 703,
    "contribuicoes": 0,
    "cidade": "outra"
-  },
-  {
-   "login": "RuiDias22",
-   "nome": "Rui Dias",
-   "avatar": "https://avatars.githubusercontent.com/u/165310160?s=96&u=3a68ddc4553065c9ee4493e4d41ca69bb017b412&v=4",
-   "localizacao": "Coimbra",
-   "seguidores": 1,
-   "contribuicoes": 114,
-   "cidade": "coimbra"
   },
   {
    "login": "ruifreitas",
@@ -5830,8 +5857,8 @@
    "nome": "Rui Romano",
    "avatar": "https://avatars.githubusercontent.com/u/10808715?s=96&u=b3a7da862a9410c2d3a816e6ec89bfd83a08f3a2&v=4",
    "localizacao": "Portugal",
-   "seguidores": 527,
-   "contribuicoes": 500,
+   "seguidores": 529,
+   "contribuicoes": 488,
    "cidade": "outra"
   },
   {
@@ -5840,7 +5867,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/6280520?s=96&u=bfba7e79a90675c93d82ebb5fb8fbb501500fa4c&v=4",
    "localizacao": "Portugal",
    "seguidores": 992,
-   "contribuicoes": 112,
+   "contribuicoes": 111,
    "cidade": "outra"
   },
   {
@@ -5849,7 +5876,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/300048?s=96&v=4",
    "localizacao": "Portugal, Lisboa",
    "seguidores": 156,
-   "contribuicoes": 3987,
+   "contribuicoes": 4073,
    "cidade": "lisboa"
   },
   {
@@ -5903,7 +5930,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/83420872?s=96&u=2f454678290394d8c06075f3108fe39e90f0e500&v=4",
    "localizacao": "Portugal",
    "seguidores": 107,
-   "contribuicoes": 3242,
+   "contribuicoes": 3250,
    "cidade": "outra"
   },
   {
@@ -5911,8 +5938,8 @@
    "nome": "Sara Freitas",
    "avatar": "https://avatars.githubusercontent.com/u/105666041?s=96&u=63e4deec96e0aa9e8bd87167f6dd5bf17993993d&v=4",
    "localizacao": "Porto",
-   "seguidores": 346,
-   "contribuicoes": 697,
+   "seguidores": 396,
+   "contribuicoes": 692,
    "cidade": "porto"
   },
   {
@@ -5921,7 +5948,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1017236?s=96&u=f8a51fb4ac5a5e807bf9a17a2375aad87efa979b&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 507,
-   "contribuicoes": 68,
+   "contribuicoes": 70,
    "cidade": "porto"
   },
   {
@@ -5939,7 +5966,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/106415?s=96&u=521527920dfe2edbd6d9a8e44ef07c7692e976d4&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 114,
-   "contribuicoes": 924,
+   "contribuicoes": 925,
    "cidade": "coimbra"
   },
   {
@@ -5957,7 +5984,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/539588?s=96&u=d141fc1273702bbba95e59672cf26bb9e8f6ff71&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 158,
-   "contribuicoes": 2832,
+   "contribuicoes": 2918,
    "cidade": "lisboa"
   },
   {
@@ -5966,7 +5993,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/651601?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 59,
-   "contribuicoes": 3363,
+   "contribuicoes": 3301,
    "cidade": "lisboa"
   },
   {
@@ -5975,7 +6002,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/812538?s=96&u=f0d0781b9e5d1913369ac17b4f2de0c092b1dcff&v=4",
    "localizacao": "Lisboa, Portugal",
    "seguidores": 1458,
-   "contribuicoes": 20,
+   "contribuicoes": 19,
    "cidade": "lisboa"
   },
   {
@@ -5993,7 +6020,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/309108?s=96&u=f5f9a151f4cfd6031930eedef4a80a4bbd647cf0&v=4",
    "localizacao": "Lisbon",
    "seguidores": 501,
-   "contribuicoes": 1877,
+   "contribuicoes": 1873,
    "cidade": "lisboa"
   },
   {
@@ -6001,8 +6028,8 @@
    "nome": "Tiago",
    "avatar": "https://avatars.githubusercontent.com/u/20475266?s=96&u=28768f353e0b1d21237e3d280d5802fdd6995e52&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 1211,
-   "contribuicoes": 64,
+   "seguidores": 1213,
+   "contribuicoes": 59,
    "cidade": "lisboa"
   },
   {
@@ -6010,8 +6037,8 @@
    "nome": "Simão Barbosa",
    "avatar": "https://avatars.githubusercontent.com/u/117586175?s=96&u=5642d75a492218007b5fbe0938ffb3a85681ed7a&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 50,
-   "contribuicoes": 1003,
+   "seguidores": 51,
+   "contribuicoes": 1001,
    "cidade": "porto"
   },
   {
@@ -6029,7 +6056,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/73351841?s=96&u=022d338337fb16ac29c9e87869b41d7cd467b5d3&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 19,
-   "contribuicoes": 205,
+   "contribuicoes": 194,
    "cidade": "braga"
   },
   {
@@ -6037,7 +6064,7 @@
    "nome": "SimCoder",
    "avatar": "https://avatars.githubusercontent.com/u/30011307?s=96&u=72cc8b1c50acd84ad2105642162665fd6ebe2553&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 1833,
+   "seguidores": 1834,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -6046,7 +6073,7 @@
    "nome": "Stephane Maarek",
    "avatar": "https://avatars.githubusercontent.com/u/20851561?s=96&u=2c5ae84e95c34769586df4850e0868cf717e42ef&v=4",
    "localizacao": "Lisbon + moving around the world",
-   "seguidores": 10879,
+   "seguidores": 10888,
    "contribuicoes": 1,
    "cidade": "lisboa"
   },
@@ -6055,8 +6082,8 @@
    "nome": "Hugo Marta",
    "avatar": "https://avatars.githubusercontent.com/u/150078628?s=96&u=2a1fc34a9602bf0ec091d455290901a048fe4f57&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 72,
-   "contribuicoes": 398,
+   "seguidores": 71,
+   "contribuicoes": 368,
    "cidade": "porto"
   },
   {
@@ -6083,25 +6110,16 @@
    "avatar": "https://avatars.githubusercontent.com/u/124452172?s=96&v=4",
    "localizacao": "Coimbra",
    "seguidores": 6,
-   "contribuicoes": 155,
+   "contribuicoes": 144,
    "cidade": "coimbra"
-  },
-  {
-   "login": "skitsanos",
-   "nome": "Skitsanos",
-   "avatar": "https://avatars.githubusercontent.com/u/1391820?s=96&u=e4352d75e776a10d17a9a02783487aabc5eded71&v=4",
-   "localizacao": "Lisbon",
-   "seguidores": 53,
-   "contribuicoes": 1030,
-   "cidade": "lisboa"
   },
   {
    "login": "snipe",
    "nome": "snipe",
    "avatar": "https://avatars.githubusercontent.com/u/197404?s=96&u=3a3faa7eb52d0ccb5d757cab2633677328bbffb2&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 2008,
-   "contribuicoes": 5307,
+   "seguidores": 2010,
+   "contribuicoes": 5322,
    "cidade": "lisboa"
   },
   {
@@ -6109,7 +6127,7 @@
    "nome": "Tiago Machado",
    "avatar": "https://avatars.githubusercontent.com/u/13867481?s=96&u=5ca97fde72458fe170f7b76e524b2f6a46d8c2f7&v=4",
    "localizacao": "Porto",
-   "seguidores": 119,
+   "seguidores": 120,
    "contribuicoes": 1,
    "cidade": "porto"
   },
@@ -6128,7 +6146,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/52830?s=96&u=58041a9d8c81957a70944028e05083791c1886a7&v=4",
    "localizacao": "Lisbon, PT",
    "seguidores": 191,
-   "contribuicoes": 21,
+   "contribuicoes": 19,
    "cidade": "lisboa"
   },
   {
@@ -6145,8 +6163,8 @@
    "nome": "Sandro Rodrigues",
    "avatar": "https://avatars.githubusercontent.com/u/815871?s=96&u=db810b9562ec93279711ff419458d93201a5d6de&v=4",
    "localizacao": "Braga - Portugal",
-   "seguidores": 59,
-   "contribuicoes": 3507,
+   "seguidores": 60,
+   "contribuicoes": 3491,
    "cidade": "braga"
   },
   {
@@ -6154,7 +6172,7 @@
    "nome": "David Steckler",
    "avatar": "https://avatars.githubusercontent.com/u/28759965?s=96&u=dfcf7edbe3c760714af7047707995046edcaf1f6&v=4",
    "localizacao": "Barcelos, Braga ",
-   "seguidores": 128,
+   "seguidores": 129,
    "contribuicoes": 105,
    "cidade": "braga"
   },
@@ -6164,17 +6182,8 @@
    "avatar": "https://avatars.githubusercontent.com/u/853468?s=96&u=a3dd33c33d876e5054cf3d6794b3d8c6584c9bc0&v=4",
    "localizacao": "Portugal",
    "seguidores": 497,
-   "contribuicoes": 923,
+   "contribuicoes": 880,
    "cidade": "outra"
-  },
-  {
-   "login": "StkaaPa",
-   "nome": "Samuel gonçalves",
-   "avatar": "https://avatars.githubusercontent.com/u/76127743?s=96&u=0ec65e33daf737ada9385ff5b24a87af636bbf1a&v=4",
-   "localizacao": "Braga, Portugal",
-   "seguidores": 5,
-   "contribuicoes": 169,
-   "cidade": "braga"
   },
   {
    "login": "Superar",
@@ -6182,7 +6191,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/25110651?s=96&u=b9f16a28b7a14443b11bcbc6bf23121486832be2&v=4",
    "localizacao": "Coimbra - Portugal",
    "seguidores": 20,
-   "contribuicoes": 201,
+   "contribuicoes": 193,
    "cidade": "coimbra"
   },
   {
@@ -6190,7 +6199,7 @@
    "nome": null,
    "avatar": "https://avatars.githubusercontent.com/u/47645560?s=96&u=168295bc8a0323134b057599668c550980a16c1b&v=4",
    "localizacao": "Lisboa, from Italy",
-   "seguidores": 454,
+   "seguidores": 455,
    "contribuicoes": 53,
    "cidade": "lisboa"
   },
@@ -6209,7 +6218,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/12083186?s=96&u=3f056cd1b5d10c9457bb57223efe072fe594c01d&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 92,
-   "contribuicoes": 1080,
+   "contribuicoes": 1060,
    "cidade": "lisboa"
   },
   {
@@ -6217,7 +6226,7 @@
    "nome": "Andrii Trybynenko",
    "avatar": "https://avatars.githubusercontent.com/u/956869?s=96&u=f0a167e3d30ef63104e6a16d5064cc08112a7bed&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 184,
+   "seguidores": 188,
    "contribuicoes": 42,
    "cidade": "lisboa"
   },
@@ -6227,7 +6236,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/265510?s=96&u=b59411861e210f3d93c7ea8b22dedff42c94def3&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 94,
-   "contribuicoes": 2525,
+   "contribuicoes": 2492,
    "cidade": "porto"
   },
   {
@@ -6245,7 +6254,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/148392047?s=96&u=b83518cacee8a697295dcb622fe14e343f52594d&v=4",
    "localizacao": "Braga",
    "seguidores": 17,
-   "contribuicoes": 214,
+   "contribuicoes": 208,
    "cidade": "braga"
   },
   {
@@ -6254,7 +6263,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/779949?s=96&u=0532a27c993a949645a2cdf345737a53e27a1ad0&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 80,
-   "contribuicoes": 1094,
+   "contribuicoes": 1092,
    "cidade": "lisboa"
   },
   {
@@ -6272,7 +6281,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/39107166?s=96&u=d7a7e9cadb9e2426317b9ab5056f7abba5481465&v=4",
    "localizacao": "Lisbon",
    "seguidores": 42,
-   "contribuicoes": 1302,
+   "contribuicoes": 1286,
    "cidade": "lisboa"
   },
   {
@@ -6280,8 +6289,8 @@
    "nome": "Misha Kolesnik",
    "avatar": "https://avatars.githubusercontent.com/u/22403766?s=96&u=d72822b5c4d208509445eeeac39307b2983c93aa&v=4",
    "localizacao": "Cascais, Portugal",
-   "seguidores": 76,
-   "contribuicoes": 3620,
+   "seguidores": 75,
+   "contribuicoes": 3606,
    "cidade": "outra"
   },
   {
@@ -6299,7 +6308,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/172534297?s=96&u=d27b14f5009e8d56b1d87ea837ee12e09107ce9a&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 7,
-   "contribuicoes": 254,
+   "contribuicoes": 273,
    "cidade": "coimbra"
   },
   {
@@ -6317,7 +6326,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/26071571?s=96&u=6052de3c39089bfbf6f90dd007b64a6b5ce536ed&v=4",
    "localizacao": "Portugal",
    "seguidores": 533,
-   "contribuicoes": 137,
+   "contribuicoes": 135,
    "cidade": "outra"
   },
   {
@@ -6325,8 +6334,8 @@
    "nome": "Thomas Marchand",
    "avatar": "https://avatars.githubusercontent.com/u/41830259?s=96&u=f56e5ff505f810fbb9e818cc43527579be7ed616&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 630,
-   "contribuicoes": 24541,
+   "seguidores": 632,
+   "contribuicoes": 25274,
    "cidade": "lisboa"
   },
   {
@@ -6344,7 +6353,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/31625914?s=96&u=8766ec885a4108f68e9b53bcf7e0c8bfc67e59f7&v=4",
    "localizacao": "Lisbon",
    "seguidores": 47,
-   "contribuicoes": 1472,
+   "contribuicoes": 1479,
    "cidade": "lisboa"
   },
   {
@@ -6353,7 +6362,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/34523577?s=96&u=427121d58636cbbe8c3ff8e9f10cead415288b5e&v=4",
    "localizacao": "Coimbra",
    "seguidores": 11,
-   "contribuicoes": 295,
+   "contribuicoes": 313,
    "cidade": "coimbra"
   },
   {
@@ -6361,8 +6370,8 @@
    "nome": "João Torre Pereira",
    "avatar": "https://avatars.githubusercontent.com/u/53405284?s=96&u=097f86f12a3ac9aa2ecdce2dfa03c9c3dfc8ff8b&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 132,
-   "contribuicoes": 43,
+   "seguidores": 131,
+   "contribuicoes": 58,
    "cidade": "porto"
   },
   {
@@ -6371,7 +6380,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/102710499?s=96&u=f19cf811812beb08241231da159741d17bc16e14&v=4",
    "localizacao": "Porto",
    "seguidores": 63,
-   "contribuicoes": 578,
+   "contribuicoes": 580,
    "cidade": "porto"
   },
   {
@@ -6380,7 +6389,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/57486325?s=96&u=440b8965f410a2c900b1bea43754a4a88632c12e&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 34,
-   "contribuicoes": 2,
+   "contribuicoes": 0,
    "cidade": "coimbra"
   },
   {
@@ -6389,7 +6398,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/916501?s=96&u=1d12d3c0218d9d5950246d142dfd33c3e09e3f9a&v=4",
    "localizacao": "Lisbon, PT",
    "seguidores": 80,
-   "contribuicoes": 20118,
+   "contribuicoes": 20110,
    "cidade": "lisboa"
   },
   {
@@ -6398,7 +6407,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/26878038?s=96&u=3a6c8f7dd5bd36d1e20301a97dbdc63418dd0ac4&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 79,
-   "contribuicoes": 749,
+   "contribuicoes": 760,
    "cidade": "porto"
   },
   {
@@ -6416,7 +6425,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/36158766?s=96&u=a978a67c9591833f1c5b87e77ba879ef6a91e352&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 47,
-   "contribuicoes": 893,
+   "contribuicoes": 896,
    "cidade": "braga"
   },
   {
@@ -6424,7 +6433,7 @@
    "nome": "Thiffany",
    "avatar": "https://avatars.githubusercontent.com/u/68111951?s=96&u=2e502784cbe3440250aec7ef3610b7f64a75b2a3&v=4",
    "localizacao": "Coimbra, Portugal",
-   "seguidores": 29,
+   "seguidores": 28,
    "contribuicoes": 107,
    "cidade": "coimbra"
   },
@@ -6443,7 +6452,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/114108170?s=96&u=71d144974a0b9ca466ae75a1f8e74febf4199c3f&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 10,
-   "contribuicoes": 734,
+   "contribuicoes": 806,
    "cidade": "coimbra"
   },
   {
@@ -6452,7 +6461,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/132584404?s=96&u=357acbb12f1bd9a6d5edbceda7f895630ccda9d2&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 1,
-   "contribuicoes": 203,
+   "contribuicoes": 191,
    "cidade": "coimbra"
   },
   {
@@ -6461,7 +6470,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1064832?s=96&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 49,
-   "contribuicoes": 6,
+   "contribuicoes": 7,
    "cidade": "coimbra"
   },
   {
@@ -6470,7 +6479,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1177726?s=96&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 45,
-   "contribuicoes": 267,
+   "contribuicoes": 265,
    "cidade": "porto"
   },
   {
@@ -6479,7 +6488,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/89934376?s=96&v=4",
    "localizacao": "Coimbra",
    "seguidores": 7,
-   "contribuicoes": 295,
+   "contribuicoes": 293,
    "cidade": "coimbra"
   },
   {
@@ -6487,7 +6496,7 @@
    "nome": "Mário Carneiro",
    "avatar": "https://avatars.githubusercontent.com/u/278460?s=96&u=090b4fb3355f2970f33ecacf52a9e85898d56201&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 65,
+   "seguidores": 64,
    "contribuicoes": 264,
    "cidade": "porto"
   },
@@ -6497,7 +6506,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/178003?s=96&u=7de7d52900af83c43539409c46e147411d59042a&v=4",
    "localizacao": "Portugal",
    "seguidores": 313,
-   "contribuicoes": 3916,
+   "contribuicoes": 3891,
    "cidade": "outra"
   },
   {
@@ -6506,7 +6515,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/93825634?s=96&u=614ee7d186ae80304108881b15bda1a7343f9736&v=4",
    "localizacao": "Porto, Portugal",
    "seguidores": 54,
-   "contribuicoes": 344,
+   "contribuicoes": 330,
    "cidade": "porto"
   },
   {
@@ -6519,12 +6528,21 @@
    "cidade": "coimbra"
   },
   {
+   "login": "topemalheiro",
+   "nome": "António Pedro Malheiro (TóPê)",
+   "avatar": "https://avatars.githubusercontent.com/u/74301735?s=96&u=c79387bc040336e51dc54a2bef85d8ef5bee6dfd&v=4",
+   "localizacao": "Lisbon",
+   "seguidores": 91,
+   "contribuicoes": 1057,
+   "cidade": "lisboa"
+  },
+  {
    "login": "TPereira324",
    "nome": "Taha-Wur Pereira",
    "avatar": "https://avatars.githubusercontent.com/u/182907049?s=96&v=4",
    "localizacao": "LIsboa",
    "seguidores": 5,
-   "contribuicoes": 1169,
+   "contribuicoes": 1140,
    "cidade": "lisboa"
   },
   {
@@ -6542,7 +6560,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/602268?s=96&u=1e9f89aee265de05df6c55eede19c41576eacd69&v=4",
    "localizacao": "Portugal",
    "seguidores": 127,
-   "contribuicoes": 12924,
+   "contribuicoes": 13205,
    "cidade": "outra"
   },
   {
@@ -6560,7 +6578,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/47666341?s=96&u=b3ca63df6bccbb8f59ef67b527d9d9ffd87faa9c&v=4",
    "localizacao": "Portugal, Porto",
    "seguidores": 84,
-   "contribuicoes": 1001,
+   "contribuicoes": 1011,
    "cidade": "porto"
   },
   {
@@ -6569,7 +6587,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/122435?s=96&u=795da99cebb92b1421fcdcd1ee4aa9cbec76b0dd&v=4",
    "localizacao": "Lisbon, PT",
    "seguidores": 40,
-   "contribuicoes": 7242,
+   "contribuicoes": 7493,
    "cidade": "lisboa"
   },
   {
@@ -6596,7 +6614,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/15613644?s=96&v=4",
    "localizacao": "Lisbon",
    "seguidores": 44,
-   "contribuicoes": 1268,
+   "contribuicoes": 1250,
    "cidade": "lisboa"
   },
   {
@@ -6632,7 +6650,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3934971?s=96&u=0db596fa08cd0bf6f952a37eb9745b46f1546d00&v=4",
    "localizacao": "Lisbon, Portugal",
    "seguidores": 35,
-   "contribuicoes": 2999,
+   "contribuicoes": 2986,
    "cidade": "lisboa"
   },
   {
@@ -6640,8 +6658,8 @@
    "nome": "Vasco Asturiano",
    "avatar": "https://avatars.githubusercontent.com/u/6784226?s=96&u=36b61db7588e94f64ae8b11a7ba8091149b9eff0&v=4",
    "localizacao": "Lisbon, Portugal",
-   "seguidores": 2340,
-   "contribuicoes": 368,
+   "seguidores": 2341,
+   "contribuicoes": 406,
    "cidade": "lisboa"
   },
   {
@@ -6650,7 +6668,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1794735?s=96&u=455858fd4c7d7a470e2a871a2add479c7f0401c0&v=4",
    "localizacao": "Portugal",
    "seguidores": 870,
-   "contribuicoes": 46,
+   "contribuicoes": 48,
    "cidade": "outra"
   },
   {
@@ -6668,7 +6686,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/329694?s=96&u=c8f484de4d1864f495fdc9500a4a16412a38071c&v=4",
    "localizacao": "Portugal",
    "seguidores": 164,
-   "contribuicoes": 2400,
+   "contribuicoes": 2406,
    "cidade": "outra"
   },
   {
@@ -6677,7 +6695,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/60986377?s=96&u=2ea52623f334683ba09924a2bc2b746965213cc6&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 67,
-   "contribuicoes": 143,
+   "contribuicoes": 136,
    "cidade": "braga"
   },
   {
@@ -6695,7 +6713,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/145031278?s=96&u=3f9fb9eea234fc1e1e7b50d2ff811cb6bb655d96&v=4",
    "localizacao": "Porto (Portugal)",
    "seguidores": 55,
-   "contribuicoes": 457,
+   "contribuicoes": 450,
    "cidade": "porto"
   },
   {
@@ -6704,7 +6722,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/39340243?s=96&u=6b5012e788cb6e7e3986857408bf4772c2210c5e&v=4",
    "localizacao": "Porto • Portugal",
    "seguidores": 118,
-   "contribuicoes": 284,
+   "contribuicoes": 272,
    "cidade": "porto"
   },
   {
@@ -6713,7 +6731,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/50591320?s=96&u=076d061c168f921de89ee488c4ba7592037614d7&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 118,
-   "contribuicoes": 465,
+   "contribuicoes": 444,
    "cidade": "braga"
   },
   {
@@ -6721,8 +6739,8 @@
    "nome": "Waldir Pimenta",
    "avatar": "https://avatars.githubusercontent.com/u/478237?s=96&u=81dc1cac8ca49186ccf50e8e8058b18d751227f8&v=4",
    "localizacao": "Braga, Portugal",
-   "seguidores": 484,
-   "contribuicoes": 486,
+   "seguidores": 483,
+   "contribuicoes": 478,
    "cidade": "braga"
   },
   {
@@ -6730,7 +6748,7 @@
    "nome": "Walter Cruz",
    "avatar": "https://avatars.githubusercontent.com/u/98412662?s=96&u=f4af0c4459f0fc48096a1573a84294f2c7d1141b&v=4",
    "localizacao": "Porto, Portugal",
-   "seguidores": 266,
+   "seguidores": 267,
    "contribuicoes": 0,
    "cidade": "porto"
   },
@@ -6739,7 +6757,7 @@
    "nome": "Wanderson Dutra",
    "avatar": "https://avatars.githubusercontent.com/u/74315664?s=96&u=414ea40496f3c60bf0b2a41623fe366fc7d8c8cd&v=4",
    "localizacao": "Lisboa",
-   "seguidores": 694,
+   "seguidores": 693,
    "contribuicoes": 0,
    "cidade": "lisboa"
   },
@@ -6749,7 +6767,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/1130872?s=96&u=3677015f1077854e278ff32284b96735ae64e692&v=4",
    "localizacao": "Azores, Portugal",
    "seguidores": 1219,
-   "contribuicoes": 1160,
+   "contribuicoes": 1208,
    "cidade": "outra"
   },
   {
@@ -6767,7 +6785,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/286967?s=96&u=f1de5c1bc256c69ac5971f9f9ee85d3526975c9f&v=4",
    "localizacao": "Porto - Portugal ",
    "seguidores": 346,
-   "contribuicoes": 50,
+   "contribuicoes": 52,
    "cidade": "porto"
   },
   {
@@ -6775,8 +6793,8 @@
    "nome": "Wendell Adriel",
    "avatar": "https://avatars.githubusercontent.com/u/11641518?s=96&u=49ddd7ceee24ff1dfd54f04e56dbec3f8093e9c2&v=4",
    "localizacao": "Portugal",
-   "seguidores": 782,
-   "contribuicoes": 1682,
+   "seguidores": 783,
+   "contribuicoes": 1701,
    "cidade": "outra"
   },
   {
@@ -6794,7 +6812,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/3519109?s=96&u=b6504faa8475d85134f5ab3fc60e5ac82408a475&v=4",
    "localizacao": "Braga, Portugal",
    "seguidores": 41,
-   "contribuicoes": 658,
+   "contribuicoes": 666,
    "cidade": "braga"
   },
   {
@@ -6802,7 +6820,7 @@
    "nome": "ꜰʀᴀɴᴄɪꜱᴄᴏ ᴄᴀʀᴠᴀʟʜᴏ",
    "avatar": "https://avatars.githubusercontent.com/u/247057646?s=96&u=ad7b531a9f92b1bb11bf205d3c513f6cbb85a07d&v=4",
    "localizacao": "Portugal | Braga",
-   "seguidores": 68,
+   "seguidores": 67,
    "contribuicoes": 152,
    "cidade": "braga"
   },
@@ -6820,8 +6838,8 @@
    "nome": "Ivan Petrychenko",
    "avatar": "https://avatars.githubusercontent.com/u/40147621?s=96&u=d927c3b0b28b6d2b93cc761cf0f9db3fd07f5ddb&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 916,
-   "contribuicoes": 79,
+   "seguidores": 915,
+   "contribuicoes": 80,
    "cidade": "lisboa"
   },
   {
@@ -6830,7 +6848,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/2753404?s=96&u=312bb727901a04272c05201c336b1088e51e208d&v=4",
    "localizacao": "Braga",
    "seguidores": 10,
-   "contribuicoes": 174,
+   "contribuicoes": 189,
    "cidade": "braga"
   },
   {
@@ -6838,7 +6856,7 @@
    "nome": "Ben Jones",
    "avatar": "https://avatars.githubusercontent.com/u/1703155?s=96&v=4",
    "localizacao": "Lisbon / Berlin / London",
-   "seguidores": 315,
+   "seguidores": 316,
    "contribuicoes": 14,
    "cidade": "lisboa"
   },
@@ -6848,7 +6866,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/43456955?s=96&u=042535200d2160abd9d96f81ba708f8954c315e6&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 42,
-   "contribuicoes": 35,
+   "contribuicoes": 13,
    "cidade": "coimbra"
   },
   {
@@ -6857,7 +6875,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/63919176?s=96&u=293535667ea0b0f0c3fe89ab65a8790112cac22f&v=4",
    "localizacao": "Coimbra, Portugal",
    "seguidores": 2,
-   "contribuicoes": 593,
+   "contribuicoes": 596,
    "cidade": "coimbra"
   },
   {
@@ -6902,7 +6920,7 @@
    "avatar": "https://avatars.githubusercontent.com/u/167918958?s=96&u=60e6869a00b721970f774743d3d73940069a9155&v=4",
    "localizacao": "Coimbra",
    "seguidores": 4,
-   "contribuicoes": 334,
+   "contribuicoes": 328,
    "cidade": "coimbra"
   },
   {
@@ -6937,8 +6955,8 @@
    "nome": "zkcryptweb",
    "avatar": "https://avatars.githubusercontent.com/u/94915518?s=96&u=e2128199c269ecef0fd5c93cf3973064541e559f&v=4",
    "localizacao": "Lisbon",
-   "seguidores": 1221,
-   "contribuicoes": 464,
+   "seguidores": 1222,
+   "contribuicoes": 460,
    "cidade": "lisboa"
   },
   {
@@ -6960,99 +6978,99 @@
     "DiogoRibeiro7",
     "rcarmo",
     "Th0rgal",
-    "thesyncim",
     "PascalPixel",
+    "thesyncim",
     "daniel3303",
     "tritao",
     "FACorreiaa",
     "adolfousier",
     "infinityabundance",
-    "otaviojava",
     "rodrgds",
+    "otaviojava",
     "ricardoparro",
     "tsouza",
     "azevedodiogo",
     "rubenmarcus",
-    "motanelson",
-    "art-shen",
-    "snipe",
-    "joao-vasconcelos",
-    "Hugo0",
-    "jagmarques",
     "acidiney",
-    "carlosflorencio",
-    "hitchho",
-    "jvpts11",
-    "Jorl17",
+    "motanelson",
+    "snipe",
+    "art-shen",
+    "jagmarques",
+    "Hugo0",
+    "joao-vasconcelos",
     "gustavovalverde",
-    "nategeier",
+    "carlosflorencio",
+    "jvpts11",
+    "hitchho",
+    "dannyhw",
+    "Jorl17",
     "rgl",
+    "nategeier",
     "JoseRFJuniorLLMs",
-    "MaisonJF",
     "s0undt3ch",
+    "MaisonJF",
     "timlinux",
     "oliota",
     "neteinstein",
+    "peucastro",
     "nunocoracao",
     "tenequm",
-    "peucastro",
-    "adamchainz",
-    "almeidx",
-    "nelsonic",
-    "srtab",
     "akadjoker",
-    "dannyhw",
-    "SergioEstevao",
-    "pedrorocha-net",
+    "adamchainz",
+    "nelsonic",
+    "almeidx",
+    "srtab",
     "nunomaduro",
+    "pedrorocha-net",
+    "SergioEstevao",
     "joamag",
-    "ElianeOliota",
-    "nflaig",
     "SantiagoDevRel",
+    "nflaig",
+    "ElianeOliota",
     "leandrodamascena",
     "madarco",
     "vaporif",
     "RubenSousaDinis",
     "semihalev",
     "nublson",
-    "thomastabs",
     "rafael2k",
+    "jrnxf",
+    "thomastabs",
     "0xferit",
     "jcalado",
     "niquola",
     "brunoamaral",
-    "jrnxf",
     "tamtamchik",
     "rodloboz",
     "LyeZinho",
     "vgeorge",
     "andrefs",
-    "Diogo-Serra",
     "macabeus",
-    "nicko-ai",
-    "hugomrdias",
     "alexcastrodev",
-    "jcfs",
     "JGalego",
-    "DanielFran",
-    "filipecabaco",
-    "pmoura",
+    "Diogo-Serra",
+    "hugomrdias",
+    "nicko-ai",
     "Elfo404",
+    "filipecabaco",
+    "jcfs",
+    "DanielFran",
+    "BrunoAndreDias",
+    "pmoura",
     "EmersonSabino34",
-    "FabioPinheiro",
-    "roll",
     "gmatosferreira",
+    "roll",
+    "PedroLunet",
+    "bgcngm",
     "CesarNog",
     "goncalossilva",
     "dcversus",
-    "andreaTP",
-    "PedroLunet",
+    "FabioPinheiro",
     "joaodavidsilva",
-    "diogotcorreia",
-    "bgcngm",
     "natanloterio",
     "choraria",
-    "Denionline",
+    "andreaTP",
+    "diogotcorreia",
     "dariogriffo"
    ],
    "seguidores": [
@@ -7106,14 +7124,14 @@
     "rafegal",
     "WendellAdriel",
     "joaotavora",
-    "linesky",
     "joaomgcd",
+    "linesky",
     "pires",
     "jovbcorreia",
     "fidalgodev",
     "macabeus",
-    "andrew--r",
     "rcarmo",
+    "andrew--r",
     "rubsxyz",
     "tapmorales",
     "Wandersondu",
@@ -7138,8 +7156,8 @@
     "TGlide",
     "RuiRomano",
     "listochkin",
-    "reisdev",
     "mxssl",
+    "reisdev",
     "satazor",
     "jotavare",
     "isabelcosta",
@@ -7148,8 +7166,8 @@
     "Correia-jpv",
     "stevenroose",
     "FFY00",
-    "waldyrious",
     "alcueca",
+    "waldyrious",
     "kanytu",
     "porqueeuprogramo",
     "maciejhirsz",
@@ -7162,104 +7180,104 @@
    "contribuicoes": [
     "rcarmo",
     "Th0rgal",
-    "thesyncim",
     "PascalPixel",
+    "thesyncim",
     "daniel3303",
     "ricardoparro",
     "tsouza",
     "rubenmarcus",
     "motanelson",
-    "art-shen",
     "snipe",
-    "joao-vasconcelos",
+    "art-shen",
     "Hugo0",
+    "joao-vasconcelos",
+    "gustavovalverde",
     "carlosflorencio",
     "hitchho",
-    "gustavovalverde",
-    "nategeier",
     "rgl",
+    "nategeier",
     "s0undt3ch",
     "oliota",
     "nunocoracao",
     "adamchainz",
-    "SergioEstevao",
     "pedrorocha-net",
+    "SergioEstevao",
     "ElianeOliota",
     "madarco",
     "vaporif",
     "RubenSousaDinis",
     "semihalev",
     "nublson",
-    "thomastabs",
     "rafael2k",
+    "thomastabs",
     "0xferit",
     "niquola",
     "brunoamaral",
     "rodloboz",
+    "JGalego",
     "Diogo-Serra",
     "nicko-ai",
-    "jcfs",
-    "JGalego",
-    "filipecabaco",
     "Elfo404",
+    "filipecabaco",
+    "jcfs",
     "EmersonSabino34",
-    "FabioPinheiro",
     "gmatosferreira",
-    "dcversus",
-    "andreaTP",
     "PedroLunet",
-    "joaodavidsilva",
-    "diogotcorreia",
     "bgcngm",
+    "dcversus",
+    "FabioPinheiro",
+    "joaodavidsilva",
     "natanloterio",
+    "andreaTP",
+    "diogotcorreia",
     "joaosa",
-    "josemvcerqueira",
     "shayanb",
-    "enterprise46722",
+    "josemvcerqueira",
     "GigaHierz",
+    "enterprise46722",
     "alcides",
     "psd-coder",
-    "CoolAssPuppy",
     "JoseSoares01",
-    "thcp",
+    "CoolAssPuppy",
     "g8a9",
-    "balegas",
+    "thcp",
     "afsc19",
+    "balegas",
     "jonnyparris",
     "G4brym",
     "ricardoferreirax",
     "ilyador",
-    "g-andrade",
     "blasrodri",
+    "g-andrade",
     "joaopalmeiro",
     "temospena",
     "guilherme-andrade",
-    "ulissesferreira",
     "Bunn",
-    "elliothimmelfarb",
+    "ulissesferreira",
     "dreispt",
+    "elliothimmelfarb",
     "gundisalwa",
-    "TPereira324",
-    "joaovitoriasilva",
     "marmade",
     "kikoveiga",
     "oliche",
     "flaviomartins",
-    "CharlyMartin",
-    "abronan",
-    "egorkhmelev",
-    "kigiri",
-    "filipeom",
-    "Tavernari",
+    "joaovitoriasilva",
+    "TPereira324",
     "andrebras",
-    "talvasconcelos",
+    "egorkhmelev",
+    "abronan",
+    "andirsun",
+    "kigiri",
+    "Tavernari",
+    "CharlyMartin",
+    "filipeom",
     "zone-live",
     "dickhardt",
-    "carjorvaz",
-    "andirsun",
     "lucic71",
-    "flixlix",
-    "skitsanos"
+    "talvasconcelos",
+    "topemalheiro",
+    "fabiogiolito",
+    "flixlix"
    ],
    "seguidores": [
     "simplesteph",
@@ -7287,8 +7305,8 @@
     "yankovalenko94",
     "honeydatax",
     "linesky",
-    "andrew--r",
     "rcarmo",
+    "andrew--r",
     "Wandersondu",
     "dhanishgajjar",
     "jorgecarleitao",
@@ -7312,11 +7330,11 @@
     "kremalicious",
     "malerey",
     "enivaldoqueiroz",
+    "celso",
     "kigiri",
     "pulgamecanica",
     "diogotcorreia",
     "brunomikoski",
-    "celso",
     "yogiben",
     "rgl",
     "rogeriopvl",
@@ -7324,13 +7342,13 @@
     "gustavovalverde",
     "kaiosilveira",
     "psanrosa13",
-    "sgomes",
     "EnkrateiaLucca",
+    "sgomes",
     "all-an",
     "jbergstroem",
     "codacy-badger",
-    "afonsopc",
     "louisedesadeleer",
+    "afonsopc",
     "pedrorijo91",
     "MarcelloDuarte",
     "cyco130",
@@ -7359,9 +7377,9 @@
     "joaopaulolndev",
     "southgate",
     "dcsg",
+    "tamer1an",
     "emilebosch",
-    "ftonato",
-    "tamer1an"
+    "ftonato"
    ]
   },
   "porto": {
@@ -7369,10 +7387,10 @@
     "Correia-jpv",
     "infinityabundance",
     "rodrgds",
+    "dannyhw",
     "Jorl17",
     "MaisonJF",
     "peucastro",
-    "dannyhw",
     "joamag",
     "jrnxf",
     "tamtamchik",
@@ -7380,10 +7398,10 @@
     "hugomrdias",
     "goncalossilva",
     "choraria",
-    "Denionline",
     "dariogriffo",
-    "paulojmdias",
+    "Denionline",
     "bdmendes",
+    "paulojmdias",
     "levifig",
     "joseairosa",
     "buggins",
@@ -7392,27 +7410,27 @@
     "fpmirabile",
     "HenriqueSFernandes",
     "dcastro",
-    "avainfo",
-    "dpasukhi",
     "MessiasLima",
-    "simaopsbarbosa",
-    "Fabio-A-Sa",
+    "avainfo",
     "tskxz",
+    "Fabio-A-Sa",
+    "simaopsbarbosa",
+    "dpasukhi",
     "pedronfigueiredo",
-    "Benevanio",
     "duartecaldascardoso",
+    "Benevanio",
     "rquintino",
     "FernandoMiguel",
     "luisalima",
-    "emmesphere",
     "thiagobrez",
     "dani-77",
+    "emmesphere",
     "diogogomesaraujo",
-    "marcosstefani",
-    "SaraFreitas-dev",
     "jorgeatorres",
-    "frm",
+    "SaraFreitas-dev",
     "joaobispo",
+    "marcosstefani",
+    "frm",
     "Sirze01",
     "kiko-g",
     "berTrindade",
@@ -7420,50 +7438,50 @@
     "therappha",
     "mistic",
     "migsilva89",
-    "Juskocode",
     "pkoch",
-    "rfgamaral",
+    "Juskocode",
     "felipehillebrand-ops",
     "iurykrieger",
     "pablovqueiroz",
+    "rfgamaral",
+    "murillowelsi",
     "paulsp94",
     "vivaccar",
     "izzytoot",
-    "nelohenriq",
     "Albertoocosta",
-    "CLMartello",
+    "nelohenriq",
     "jpdias",
     "Daniela-Padilha",
-    "SirAlabar",
     "larocquel",
+    "rickmff",
     "isneru",
+    "SirAlabar",
+    "tesserato",
     "aquelemiguel",
     "fao89",
-    "tesserato",
     "DanielFonsecaa",
     "tallnato",
-    "tomas-sucena",
     "DFilipeS",
+    "tomas-sucena",
     "ltarkker",
-    "brunomachadors",
+    "CLMartello",
     "GabrielNunes12",
     "segurancadpm",
-    "mAd-5864",
-    "decioferreira",
-    "Hellom-World",
+    "brunomachadors",
     "xRuiAlves",
+    "decioferreira",
     "Ca-moes",
     "ubmit",
-    "murillowelsi",
-    "Vmvs007",
+    "mAd-5864",
+    "Hellom-World",
     "mmiguelo",
-    "mdfpva",
     "joaofgoncalves",
-    "lazamar",
+    "mdfpva",
     "andremartingo",
+    "Vmvs007",
     "lvendrame",
+    "lazamar",
     "tiagonoronha",
-    "Fernando-A-Rocha",
     "ticklemynausea",
     "Fyzu"
    ],
@@ -7484,9 +7502,9 @@
     "pedrommcarrasco",
     "danieljvsa",
     "bastos88",
+    "SaraFreitas-dev",
     "maxbyz",
     "andresilva",
-    "SaraFreitas-dev",
     "wenceslau",
     "arestivo",
     "rizo",
@@ -7504,9 +7522,9 @@
     "douglasramalho",
     "BrunoBernardino",
     "rconstanzo",
+    "antonio-pedro99",
     "Jumaruba",
     "Nuno-Jesus",
-    "antonio-pedro99",
     "goncalossilva",
     "carlosmccosta",
     "lucoiso",
@@ -7534,32 +7552,32 @@
     "ltarkker",
     "rafaelverger",
     "pintsized",
-    "thePeras",
     "Benevanio",
     "CBaquero",
-    "felipek",
-    "golangis",
+    "thePeras",
     "pkoch",
-    "samyuh",
+    "golangis",
     "joaopereirawd",
+    "samyuh",
+    "dariogriffo",
+    "felipek",
     "DanielFonsecaa",
     "hjdesigner",
     "matildeopbravo",
-    "dariogriffo",
     "lucashungaro",
     "ziliolu",
     "alvesjtiago",
     "snowhp",
-    "BrunoGeorgevich",
     "joao-conde",
     "rafaelcpalmeida",
     "Vmvs007",
+    "BrunoGeorgevich",
     "joaoreis16",
     "CasalMiriam",
+    "luisalima",
     "vitormeriat",
     "crsantos",
     "kozlinskei",
-    "luisalima",
     "azir9200",
     "christophermoura",
     "aquelemiguel",
@@ -7577,101 +7595,101 @@
     "nelsonic",
     "srtab",
     "BrunoAndreDias",
+    "dennisfsilva",
     "nicolastakashi",
     "naps62",
     "a104437ana",
+    "jrpereira",
     "Miguelii",
     "thiagovasconcellos",
     "rodrigoaraujo9",
     "bolt12",
-    "jrpereira",
     "imbrunosantoos",
-    "dennisfsilva",
     "ambs",
-    "jfranciscosousa",
     "pedromsilvapt",
     "xavierpinho",
     "Franciscoborges2002",
     "jcorreia11",
     "Luismpso",
-    "daviduartecf",
     "urchifox",
     "jessicabaptistello",
+    "jfranciscosousa",
+    "daviduartecf",
     "artursalgado",
     "AlexDobrushskiy",
     "IVSOP",
-    "waldyrious",
+    "rodrinac",
     "esdrassantos06",
+    "waldyrious",
     "voidbert",
     "luis7788",
-    "rodrinac",
-    "Diogoesteves11",
     "ianalvess",
+    "Diogoesteves11",
     "mayckol",
-    "luis25franca",
     "AndreCerqueira",
     "migueloliveira6",
+    "luis25franca",
     "Muniz1994",
     "Curio5813",
-    "mopanc",
     "reisportela",
+    "mopanc",
     "josecm",
-    "Patoinks",
-    "joaopaulobatistaazevedo",
-    "whynotsanty",
     "mtsguerra",
+    "Patoinks",
+    "whynotsanty",
     "BjornFJohansson",
-    "carolinavdias",
     "TurnGui",
-    "150TENET",
+    "joaopaulobatistaazevedo",
+    "carolinavdias",
     "jl-martins",
-    "DavideSilva",
     "mafaldasampaiomoura-cmyk",
+    "ribeiropdiogo",
     "cx-artur-ribeiro",
     "hmiguim",
-    "ribeiropdiogo",
     "kyar1s",
     "brunnolou",
-    "dabrelity1",
-    "pedromeruge",
     "RBraga01",
+    "pedromeruge",
+    "150TENET",
+    "DavideSilva",
+    "dabrelity1",
     "Jinjas",
     "pereiravp",
     "joaop21",
-    "Edegare",
+    "Guiguerreiro39",
     "iurig21",
     "ramigs",
+    "Edegare",
     "diogo-costa-silva",
-    "Guiguerreiro39",
     "flaviorg",
     "Eduard0Rocha",
-    "AnyTng",
-    "danielRep",
+    "Digazz19",
     "mikusher",
     "filipe3x",
-    "domingosdeeulariadumba",
+    "AnyTng",
+    "danielRep",
     "flaviaraujo",
-    "taveira60",
     "lassisg",
+    "domingosdeeulariadumba",
+    "taveira60",
     "luis100",
-    "JD557",
-    "simaosica",
-    "rrodrickk",
-    "fabiocosta191",
-    "MikeDM16",
+    "AndreNogueira",
     "felipejn",
+    "JD557",
+    "MikeDM16",
+    "fabiocosta191",
+    "simaosica",
     "camilagksantos",
+    "yarieldis",
     "Minigonga",
     "Ballordin",
+    "rrodrickk",
     "Diogo-Rodriigues",
     "Brito-MP",
+    "Mackgame4",
     "ruilopesm",
     "rfcosta85",
-    "AfonsoMartins26",
-    "HenriqueVon",
-    "yarieldis",
-    "OL-sergio",
-    "StkaaPa"
+    "HenriqueVon"
    ],
    "seguidores": [
     "nelsonic",
@@ -7700,8 +7718,8 @@
     "ambs",
     "pedrofp4444",
     "joaodiaslobo",
-    "antoniocapelo",
     "josecm",
+    "antoniocapelo",
     "rfcosta85",
     "ruipenso",
     "adcosta",
@@ -7726,26 +7744,26 @@
     "diogogmatos",
     "luispedrovieira30",
     "Pacifico53",
-    "xic0z",
     "puyol105",
     "VitorLelis",
+    "xic0z",
     "MFJess",
     "zbastos",
     "BjornFJohansson",
     "AfonsoMartins26",
+    "joselcvarela",
     "JoseNunoOliveira",
     "jcapels",
     "JD557",
-    "joselcvarela",
     "mopanc",
     "filipeguimaraes",
     "jfranciscosousa",
+    "srtab",
     "83Deadlock",
+    "andrefgneves",
     "erichkist",
     "miguelpinto98",
-    "srtab",
     "accunhamartins",
-    "andrefgneves",
     "rmdmachado",
     "goncalotomas",
     "helderrrg",
@@ -7766,12 +7784,12 @@
     "danielcarvalhopt",
     "diemesleno",
     "emanuel",
-    "gabrielasfc",
     "PedroBarbosa154",
     "ruifreitas",
     "A82516",
-    "cruz-f",
+    "gabrielasfc",
     "Lucena02",
+    "cruz-f",
     "EnzoVieira",
     "thiagovasconcellos"
    ]
@@ -7780,9 +7798,9 @@
    "contribuicoes": [
     "adolfousier",
     "jagmarques",
-    "lz20r",
     "juliareboucasleite",
     "RomarQ",
+    "lz20r",
     "khwx",
     "radcortez",
     "octaviofilipepereira",
@@ -7792,92 +7810,92 @@
     "sdsantos",
     "lgpy",
     "ivan-kalachikov",
-    "joanagmaia",
-    "luisfmsonegrao",
     "tiagofaraujo",
+    "joanagmaia",
     "oliverbill",
     "felipemaxrosa",
     "jfcmartins",
     "zalodias",
     "jpcercal",
-    "pakerwreah",
-    "mariobalca",
     "brunobat",
+    "mariobalca",
+    "pakerwreah",
     "joaosoaresesilva",
     "CarlossOliveira",
+    "luisfmsonegrao",
     "Joaodss",
-    "Jaliborc",
     "pprimor",
+    "Jaliborc",
     "joaoleal",
-    "6135",
-    "noegodinho",
-    "mariadriana-deemaze",
     "luiscunhacsc",
+    "6135",
+    "mariadriana-deemaze",
+    "noegodinho",
     "phi19",
     "migasantunes",
     "Kiurads",
-    "andrecj93",
     "joaoLouceiro",
+    "diogor0d",
     "zelario",
     "lfac-pt",
-    "diogor0d",
-    "DynamicPhysicsLab",
     "TheooAndre",
-    "TiagoPaiva4",
-    "adorilson",
+    "andrecj93",
     "MesutUluag",
+    "DynamicPhysicsLab",
+    "adorilson",
+    "TiagoPaiva4",
     "estevaoabreu",
-    "luanacarolinareis",
-    "mglraimundo",
+    "teshomederessa",
     "rcfduarte",
+    "luanacarolinareis",
     "Pedr0S22",
     "JaelsonS",
-    "teshomederessa",
     "MiguelGrilo",
     "psampaioc",
-    "DaviGama08",
+    "luizgabriellf",
     "oleksandry24",
     "BAKROOT",
     "MAPdC",
     "thiagohsr",
     "mariaiffonseca",
     "risantos",
-    "mcabralpinto",
+    "DaviGama08",
     "JoaoTMDias",
     "akcelgraca",
+    "mcabralpinto",
     "diogo-luz",
-    "tiagomendes04",
+    "jorgesousa",
     "Superar",
-    "carolina8104",
-    "McDoritos",
+    "tiagomendes04",
     "jopedroliveira",
-    "inesmarcal",
     "nibau-ramos",
+    "inesmarcal",
+    "McDoritos",
+    "carolina8104",
     "joaosantoss12",
-    "luizgabriellf",
     "bielpeclat",
+    "jpboliv",
     "cheiinho",
     "JohnyPeters",
-    "sjooaaoo",
-    "Cybonic",
-    "raquelmrsantos",
+    "httpirsh",
     "joaomanaia",
-    "AJPreto",
+    "raquelmrsantos",
     "lalmachado",
+    "AJPreto",
+    "davidcanas",
     "lcavadas",
+    "Cybonic",
+    "sjooaaoo",
     "joelsansana",
     "nandodani",
-    "davidcanas",
+    "mglraimundo",
     "ventgui28",
     "zehsilva",
-    "Leossilva099",
     "cemremete",
     "ze-dinis",
     "castroxdev",
     "ricardomar",
-    "Ramyad20",
-    "RuiDias22",
-    "fbatista"
+    "Leossilva099"
    ],
    "seguidores": [
     "radcortez",
@@ -7925,9 +7943,9 @@
     "antoniolucascr",
     "brNX",
     "davidcanas",
+    "luis-rei97",
     "RafaelAlves93",
     "SamuelCarinhas",
-    "luis-rei97",
     "nunorpj",
     "Squalexy",
     "jagmarques",
@@ -7952,11 +7970,11 @@
     "anamateus",
     "inesmarcal",
     "joaor",
-    "thiffany33",
+    "renatojmsantos",
     "dbgfribeiro",
     "joanagmaia",
     "pjaneiro",
-    "renatojmsantos",
+    "thiffany33",
     "tomasmcm",
     "ansisec",
     "cmfonseca",
@@ -7964,10 +7982,10 @@
     "disbeat",
     "jopedroliveira",
     "locci",
-    "mcabralpinto",
     "teresalazar13",
     "danielazevedo",
     "MarioBatalha",
+    "mcabralpinto",
     "noegodinho",
     "rfer",
     "bcaceiro",
