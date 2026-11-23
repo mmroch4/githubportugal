@@ -1,51 +1,51 @@
 {
- "geradoEm": "2026-11-16T14:04:03.389Z",
- "pessoas": 5111,
- "ativas": 3367,
- "contribuicoes": 1170855,
- "seguidores": 398155,
+ "geradoEm": "2026-11-23T16:13:41.713Z",
+ "pessoas": 5109,
+ "ativas": 3361,
+ "contribuicoes": 1202168,
+ "seguidores": 398428,
  "cidades": {
   "lisboa": 2003,
   "braga": 996,
   "coimbra": 989,
   "porto": 631,
-  "outra": 492
+  "outra": 490
  },
  "linguagens": {
-  "JavaScript": 767,
-  "Python": 707,
-  "TypeScript": 466,
-  "Java": 391,
-  "C": 322,
+  "JavaScript": 759,
+  "Python": 711,
+  "TypeScript": 467,
+  "Java": 388,
+  "C": 317,
   "HTML": 308,
-  "Jupyter Notebook": 184,
-  "C#": 172,
-  "C++": 152,
+  "Jupyter Notebook": 186,
+  "C#": 171,
+  "C++": 149,
   "PHP": 133,
   "Go": 104,
-  "Ruby": 100,
-  "Shell": 94,
-  "CSS": 87,
+  "Ruby": 98,
+  "Shell": 95,
+  "CSS": 89,
   "Kotlin": 77,
-  "Rust": 56,
-  "Swift": 52,
+  "Rust": 64,
+  "Swift": 53,
   "TeX": 33,
   "Dart": 30,
-  "Lua": 23,
   "R": 23,
   "Elixir": 21,
+  "Lua": 21,
   "Vue": 21,
   "Haskell": 17,
-  "MATLAB": 15,
+  "MATLAB": 16,
   "PowerShell": 14,
   "Scala": 14,
   "Objective-C": 14,
   "Makefile": 12,
   "Dockerfile": 11,
   "HCL": 11,
-  "Nix": 9,
   "Svelte": 8,
   "Roff": 8,
+  "Nix": 8,
   "SCSS": 7,
   "Solidity": 6,
   "Erlang": 6,
@@ -55,7 +55,6 @@
   "Astro": 5,
   "CoffeeScript": 5,
   "OCaml": 4,
-  "TSQL": 4,
   "Clojure": 4,
   "GDScript": 4,
   "Assembly": 4,
@@ -70,21 +69,22 @@
   "Gleam": 2,
   "Groovy": 2,
   "Batchfile": 2,
+  "TSQL": 2,
   "Vala": 2,
   "ABAP": 2,
   "Haxe": 2,
   "Fortran": 2,
-  "Arduino": 2,
   "VHDL": 2,
+  "Arduino": 2,
   "CMake": 2,
   "Rich Text Format": 2,
   "Prolog": 2,
   "Jinja": 2,
-  "PLSQL": 2,
   "Yacc": 2,
+  "PLSQL": 2,
   "GLSL": 1,
-  "Logtalk": 1,
   "OpenSCAD": 1,
+  "Logtalk": 1,
   "Pascal": 1,
   "PureScript": 1,
   "Racket": 1,
@@ -95,9 +95,9 @@
   "SuperCollider": 1,
   "Standard ML": 1,
   "Puppet": 1,
+  "WebAssembly": 1,
   "QML": 1,
   "MDX": 1,
-  "WebAssembly": 1,
   "Stata": 1,
   "Elm": 1,
   "XSLT": 1,
@@ -112,8 +112,8 @@
   "COBOL": 1,
   "ShaderLab": 1,
   "SourcePawn": 1,
-  "xBase": 1,
   "Promela": 1,
+  "xBase": 1,
   "Mustache": 1,
   "EJS": 1,
   "ASP": 1,
@@ -123,32 +123,32 @@
   {
    "minimo": 0,
    "maximo": 0,
-   "pessoas": 1744
+   "pessoas": 1748
   },
   {
    "minimo": 1,
    "maximo": 99,
-   "pessoas": 2187
+   "pessoas": 2164
   },
   {
    "minimo": 100,
    "maximo": 499,
-   "pessoas": 778
+   "pessoas": 787
   },
   {
    "minimo": 500,
    "maximo": 999,
-   "pessoas": 183
+   "pessoas": 184
   },
   {
    "minimo": 1000,
    "maximo": 2999,
-   "pessoas": 162
+   "pessoas": 167
   },
   {
    "minimo": 3000,
    "maximo": null,
-   "pessoas": 57
+   "pessoas": 59
   }
  ],
  "historico": [
@@ -163,6 +163,12 @@
    "pessoas": 5111,
    "ativas": 3367,
    "contribuicoes": 1170855
+  },
+  {
+   "data": "2026-11-23",
+   "pessoas": 5109,
+   "ativas": 3361,
+   "contribuicoes": 1202168
   }
  ]
 }
